@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClotMovement : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float retreatDistance;
 
@@ -12,8 +11,8 @@ public class ClotMovement : MonoBehaviour
     private Vector3 target;
     private void FixedUpdate()
     {
-        target = gameManager.currentCharacter.transform.position;     
-        if (gameManager.isUnited)
+        target = GameManager.currentCharacter.transform.position;     
+        if (GameManager.isUnited)
         {
             ClearBehaviour();
             currentBehaviour = StartCoroutine(AvoidEquilibrium());

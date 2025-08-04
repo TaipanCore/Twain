@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject DarkSide;
     [SerializeField] private Camera MainCamera;
 
-    public GameObject currentCharacter;
-    [HideInInspector] public bool isUnited;
+    public static GameObject currentCharacter;
+    [HideInInspector] public static bool isUnited;
 
     private void Start()
     {
@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
         LightSide.SetActive(false);
         DarkSide.SetActive(false);
         Equilibrium.SetActive(true);
-        Equilibrium.transform.position = currentCharacter.transform.position;
+        if (currentCharacter != null)
+            Equilibrium.transform.position = currentCharacter.transform.position;
         currentCharacter = Equilibrium;
         isUnited = !isUnited;
     }
@@ -35,9 +36,14 @@ public class GameManager : MonoBehaviour
     {
         Equilibrium.SetActive(false);
         LightSide.SetActive(true);
+        LightSide.GetComponent<BoxCollider2D>().enabled = true;
         DarkSide.SetActive(true);
-        LightSide.transform.position = currentCharacter.transform.position;
-        DarkSide.transform.position = currentCharacter.transform.position;
+        DarkSide.GetComponent<BoxCollider2D>().enabled = false;
+        if (currentCharacter != null)
+        {
+            LightSide.transform.position = currentCharacter.transform.position;
+            DarkSide.transform.position = currentCharacter.transform.position;
+        }       
         currentCharacter = LightSide;
         isUnited = !isUnited;
     }
@@ -45,10 +51,14 @@ public class GameManager : MonoBehaviour
     {
         if (currentCharacter == LightSide)
         {
+            LightSide.GetComponent<BoxCollider2D>().enabled = false;
+            DarkSide.GetComponent<BoxCollider2D>().enabled = true;
             currentCharacter = DarkSide;
         }
         else
         {
+            DarkSide.GetComponent<BoxCollider2D>().enabled = false;
+            LightSide.GetComponent<BoxCollider2D>().enabled = true;
             currentCharacter = LightSide;
         }
     }
@@ -63,7 +73,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.E) && LightSide.GetComponent<LightSideBehaviour>().isOnTrigger)
+            if (Input.GetKeyDown(KeyCode.E) && (LightSide.GetComponent<LightSideBehaviour>().isOnTrigger || DarkSide.GetComponent<DarkSideBehaviour>().isOnTrigger))
             {
                 Unite();
             }

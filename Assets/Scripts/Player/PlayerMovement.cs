@@ -3,23 +3,28 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
-    [SerializeField] GameManager gameManager;
 
-    private Vector3 movement;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
-        if (gameManager.currentCharacter == gameObject)
+        if (GameManager.currentCharacter == gameObject)
         {
             float horizontalMove = Input.GetAxis("Horizontal");
             float verticalMove = Input.GetAxis("Vertical");
-            movement = new Vector3(horizontalMove, verticalMove, 0f);           
+            movement = new Vector2(horizontalMove, verticalMove);           
         }
     }
     private void FixedUpdate()
     {
-        if (gameManager.currentCharacter == gameObject)
+        if (GameManager.currentCharacter == gameObject)
         {
-            transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
     }
 }
