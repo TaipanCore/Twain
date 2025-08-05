@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Unite();
+        Physics2D.IgnoreCollision(LightSide.GetComponent<BoxCollider2D>(), DarkSide.GetComponent<BoxCollider2D>(), true);
     }
     private void Update()
     {
@@ -36,9 +37,7 @@ public class GameManager : MonoBehaviour
     {
         Equilibrium.SetActive(false);
         LightSide.SetActive(true);
-        LightSide.GetComponent<BoxCollider2D>().enabled = true;
         DarkSide.SetActive(true);
-        DarkSide.GetComponent<BoxCollider2D>().enabled = false;
         if (currentCharacter != null)
         {
             LightSide.transform.position = currentCharacter.transform.position;
@@ -51,14 +50,10 @@ public class GameManager : MonoBehaviour
     {
         if (currentCharacter == LightSide)
         {
-            LightSide.GetComponent<BoxCollider2D>().enabled = false;
-            DarkSide.GetComponent<BoxCollider2D>().enabled = true;
             currentCharacter = DarkSide;
         }
         else
         {
-            DarkSide.GetComponent<BoxCollider2D>().enabled = false;
-            LightSide.GetComponent<BoxCollider2D>().enabled = true;
             currentCharacter = LightSide;
         }
     }

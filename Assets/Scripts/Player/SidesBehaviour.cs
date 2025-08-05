@@ -6,7 +6,7 @@ public class SidesBehaviour : MonoBehaviour
 {
     [HideInInspector] public bool isOnTrigger;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
