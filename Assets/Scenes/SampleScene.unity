@@ -478,7 +478,7 @@ Transform:
   m_GameObject: {fileID: 259643167}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 45.89, y: 5.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1086,13 +1086,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753749d43cb9ec3478db95089dd5d066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batterySprites:
+  chargeDisplayTime: 0.5
+  chargeHideTime: 0.8
+  _batterySprites:
   - {fileID: -1919287729, guid: a695c310035a56d4da2588a08ebe7579, type: 3}
   - {fileID: 1966848513, guid: a695c310035a56d4da2588a08ebe7579, type: 3}
   - {fileID: -208308055, guid: a695c310035a56d4da2588a08ebe7579, type: 3}
   - {fileID: 183547078, guid: a695c310035a56d4da2588a08ebe7579, type: 3}
   - {fileID: -2072222830, guid: a695c310035a56d4da2588a08ebe7579, type: 3}
-  isCharging: 0
 --- !u!1 &727456664
 GameObject:
   m_ObjectHideFlags: 0

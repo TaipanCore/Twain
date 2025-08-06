@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 709.3334
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Git for Unity
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 18
+  controlID: 100
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 41
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,11 +165,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 966.6667
-    height: 390
+    height: 389.33334
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 20
+  controlID: 42
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 239.33333
-    height: 390
+    height: 389.33334
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GridPaintPaletteWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -214,17 +214,17 @@ MonoBehaviour:
     x: 239.33333
     y: 0
     width: 727.3334
-    height: 390
-  m_MinSize: {x: 202, y: 221}
+    height: 389.33334
+  m_MinSize: {x: 242, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 12}
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,25 +235,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 390
+    y: 389.33334
     width: 966.6667
-    height: 269.3333
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 17}
+    height: 269.99997
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -273,14 +273,14 @@ MonoBehaviour:
     y: 0
     width: 313.3333
     height: 659.3333
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 21}
   - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -304,7 +304,7 @@ MonoBehaviour:
     x: 239.33334
     y: 72.66667
     width: 725.3334
-    height: 369
+    height: 368.33334
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -663,9 +663,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 42.30389, y: 8.590821, z: -1.8193517}
+    m_Target: {x: 41.812744, y: 7.912849, z: -1.8358315}
     speed: 2
-    m_Value: {x: 42.30389, y: 8.590821, z: -1.8193517}
+    m_Value: {x: 41.92981, y: 8.010287, z: -1.834037}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -715,9 +715,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.5194442
+    m_Target: 4.1673446
     speed: 2
-    m_Value: 2.5194442
+    m_Value: 3.9878898
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -765,7 +765,7 @@ MonoBehaviour:
     x: 0
     y: 72.66667
     width: 238.33333
-    height: 369
+    height: 368.33334
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -779,9 +779,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9a620000
+      m_SelectedIDs: 98610000
       m_LastClickedID: 0
-      m_ExpandedIDs: 1afbffff286100007c610000
+      m_ExpandedIDs: 1afbffff2c61000086610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -828,7 +828,7 @@ MonoBehaviour:
     x: 239.33334
     y: 72.66667
     width: 725.3334
-    height: 369
+    height: 368.33334
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -872,7 +872,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -882,22 +882,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 725.3334
-      height: 348
-    m_Scale: {x: 0.48333332, y: 0.48333332}
-    m_Translation: {x: 362.6667, y: 174}
+      height: 347.33334
+    m_Scale: {x: 0.48240742, y: 0.48240742}
+    m_Translation: {x: 362.6667, y: 173.66667}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -750.3449
+      x: -751.78503
       y: -360
-      width: 1500.6898
+      width: 1503.5701
       height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 0.48333332
-  m_LastWindowPixelSize: {x: 1088, y: 553.5}
+  m_defaultScale: 0.48240742
+  m_LastWindowPixelSize: {x: 1088, y: 552.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -926,7 +926,7 @@ MonoBehaviour:
     x: 239.33334
     y: 72.66667
     width: 725.3334
-    height: 369
+    height: 368.33334
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Zoom: -1
   m_ScrollPosition: {x: 0, y: 0}
   m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
+  m_SelectedSpriteRectGUID: 5e97eb03825dee720800000000000000
   m_LastUsedModuleTypeName: UnityEditor.U2D.Sprites.SpriteFrameModule
 --- !u!114 &17
 MonoBehaviour:
@@ -999,9 +999,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 462.6667
+    y: 462
     width: 965.6667
-    height: 248.33331
+    height: 248.99997
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1023,7 +1023,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/InteractiveObjects
+    - Assets/Sprites/Enviroment
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1031,16 +1031,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/InteractiveObjects
+  - Assets/Sprites/Enviroment
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\APP\Projects\Twain
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31.666687}
-    m_SelectedIDs: 82620000
-    m_LastClickedID: 25218
-    m_ExpandedIDs: 00000000f0610000f261000000ca9a3b
+    scrollPos: {x: 0, y: 59.00003}
+    m_SelectedIDs: a2650000
+    m_LastClickedID: 26018
+    m_ExpandedIDs: 00000000fa610000fc6100002062000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1068,7 +1068,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f0610000f2610000
+    m_ExpandedIDs: 00000000fa610000fc610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1093,10 +1093,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 98610000
+    m_LastClickedInstanceID: 24984
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000ac6100004a6100000000000054610000e061000092610000d461000070610000
+    m_ExpandedInstanceIDs: c6230000ac6100004a6100000000000054610000e061000092610000d461000070610000a4610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1145,9 +1145,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 462.6667
+    y: 462
     width: 965.6667
-    height: 248.33331
+    height: 248.99997
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1264,7 +1264,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 24818
+  m_LastSelectedObjectID: 24844
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1306,7 +1306,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 54
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1350,9 +1350,9 @@ MonoBehaviour:
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 1
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
@@ -1538,7 +1538,7 @@ MonoBehaviour:
       tracking: '[None]'
   changesView:
     currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 1
+    currentStatusEntriesHasUpdate: 0
     currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
@@ -1549,46 +1549,8 @@ MonoBehaviour:
         keys: []
         values: []
       folders:
-        keys:
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -1617,60 +1579,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -1690,27 +1598,239 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 1 changed file
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2025-08-05T14:34:24.122+03:00
+      updatedTimeString: 2025-08-05T23:35:18.586+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2025-08-05T14:52:37.087+03:00
+      updatedTimeString: 2025-08-05T23:35:09.516+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2025-08-05T13:04:57.427+03:00
+      updatedTimeString: 2025-08-05T23:23:30.890+03:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: c532cc6bb0806e59e992af0b483c5d073f17f4a2
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u0420\u0430\u0431\u043E\u0442\u0430 \u043D\u0430\u0434 \u0442\u0430\u0439\u043B\u043C\u0430\u043F\u0430\u043C\u0438"
+      description: 
+      timeString: 2025-08-04T21:48:37.000+03:00
+      commitTimeString: 2025-08-04T21:48:37.000+03:00
+      changes:
+      - path: Assets\Materials\Diffuse.mat
+        fullPath: D:\APP\Projects\Twain\Assets\Materials\Diffuse.mat
+        projectPath: Assets\Materials\Diffuse.mat
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: D:\APP\Projects\Twain\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Camera\CameraTracking.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Camera\CameraTracking.cs
+        projectPath: Assets\Scripts\Camera\CameraTracking.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies\ClotMovement.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Enemies\ClotMovement.cs
+        projectPath: Assets\Scripts\Enemies\ClotMovement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameManager\GameManager.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\GameManager\GameManager.cs
+        projectPath: Assets\Scripts\GameManager\GameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\DarkSideBehaviour.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\DarkSideBehaviour.cs
+        projectPath: Assets\Scripts\Player\DarkSideBehaviour.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\DarkSideBehaviour.cs.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\DarkSideBehaviour.cs.meta
+        projectPath: Assets\Scripts\Player\DarkSideBehaviour.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\EquilibriumBehaviour.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\EquilibriumBehaviour.cs
+        projectPath: Assets\Scripts\Player\EquilibriumBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\LightSideBehaviour.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\LightSideBehaviour.cs
+        projectPath: Assets\Scripts\Player\LightSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\PlayerMovement.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\PlayerMovement.cs
+        projectPath: Assets\Scripts\Player\PlayerMovement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\SidesBehaviour.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\SidesBehaviour.cs
+        projectPath: Assets\Scripts\Player\SidesBehaviour.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\SidesBehaviour.cs.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\SidesBehaviour.cs.meta
+        projectPath: Assets\Scripts\Player\SidesBehaviour.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tilemap.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap.meta
+        projectPath: Assets\Scripts\Tilemap.meta
+        originalPath: Assets\Materials.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tilemap\TilemapBordersCreator.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapBordersCreator.cs
+        projectPath: Assets\Scripts\Tilemap\TilemapBordersCreator.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tilemap\TilemapBordersCreator.cs.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapBordersCreator.cs.meta
+        projectPath: Assets\Scripts\Tilemap\TilemapBordersCreator.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tilemap\TilemapInfo.cs
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapInfo.cs
+        projectPath: Assets\Scripts\Tilemap\TilemapInfo.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Tilemap\TilemapInfo.cs.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapInfo.cs.meta
+        projectPath: Assets\Scripts\Tilemap\TilemapInfo.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Enviroment.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment.meta
+        projectPath: Assets\Sprites\Enviroment.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Enviroment\Ground tiles.png
+        fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Ground tiles.png
+        projectPath: Assets\Sprites\Enviroment\Ground tiles.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Enviroment\Ground tiles.png.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Ground tiles.png.meta
+        projectPath: Assets\Sprites\Enviroment\Ground tiles.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Enviroment\Solar panel and battery.png
+        fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Solar panel and
+          battery.png
+        projectPath: Assets\Sprites\Enviroment\Solar panel and battery.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Enviroment\Solar panel and battery.png.meta
+        fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Solar panel and
+          battery.png.meta
+        projectPath: Assets\Sprites\Enviroment\Solar panel and battery.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TilePalettes.meta
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes.meta
+        projectPath: Assets\TilePalettes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TilePalettes\GroundPalette.meta
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette.meta
+        projectPath: Assets\TilePalettes\GroundPalette.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TilePalettes\GroundPalette\Empty.asset
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Empty.asset
+        projectPath: Assets\TilePalettes\GroundPalette\Empty.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TilePalettes\GroundPalette\Empty.asset.meta
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Empty.asset.meta
+        projectPath: Assets\TilePalettes\GroundPalette\Empty.asset.meta
+        originalPath: Assets\Materials\Diffuse.mat.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\TilePalettes\GroundPalette\Ground.asset
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.asset
+        projectPath: Assets\TilePalettes\GroundPalette\Ground.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TilePalettes\GroundPalette\Ground.asset.meta
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.asset.meta
+        projectPath: Assets\TilePalettes\GroundPalette\Ground.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TilePalettes\GroundPalette\Ground.prefab
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.prefab
+        projectPath: Assets\TilePalettes\GroundPalette\Ground.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TilePalettes\GroundPalette\Ground.prefab.meta
+        fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.prefab.meta
+        projectPath: Assets\TilePalettes\GroundPalette\Ground.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: D:\APP\Projects\Twain\ProjectSettings\Physics2DSettings.asset
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: D:\APP\Projects\Twain\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 277609e3a170dc3983927f3a46f07e73af4b1365
       mergeA: 
       mergeB: 
@@ -2189,14 +2309,232 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2025-08-04T21:44:30.702+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2025-08-04T21:44:30.707+03:00
+      updatedTimeString: 2025-08-05T23:09:51.873+03:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: c532cc6bb0806e59e992af0b483c5d073f17f4a2
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u0420\u0430\u0431\u043E\u0442\u0430 \u043D\u0430\u0434 \u0442\u0430\u0439\u043B\u043C\u0430\u043F\u0430\u043C\u0438"
+        description: 
+        timeString: 2025-08-04T21:48:37.000+03:00
+        commitTimeString: 2025-08-04T21:48:37.000+03:00
+        changes:
+        - path: Assets\Materials\Diffuse.mat
+          fullPath: D:\APP\Projects\Twain\Assets\Materials\Diffuse.mat
+          projectPath: Assets\Materials\Diffuse.mat
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: D:\APP\Projects\Twain\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Camera\CameraTracking.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Camera\CameraTracking.cs
+          projectPath: Assets\Scripts\Camera\CameraTracking.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies\ClotMovement.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Enemies\ClotMovement.cs
+          projectPath: Assets\Scripts\Enemies\ClotMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameManager\GameManager.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\GameManager\GameManager.cs
+          projectPath: Assets\Scripts\GameManager\GameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\DarkSideBehaviour.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\DarkSideBehaviour.cs
+          projectPath: Assets\Scripts\Player\DarkSideBehaviour.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\DarkSideBehaviour.cs.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\DarkSideBehaviour.cs.meta
+          projectPath: Assets\Scripts\Player\DarkSideBehaviour.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\EquilibriumBehaviour.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\EquilibriumBehaviour.cs
+          projectPath: Assets\Scripts\Player\EquilibriumBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\LightSideBehaviour.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\LightSideBehaviour.cs
+          projectPath: Assets\Scripts\Player\LightSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\PlayerMovement.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\PlayerMovement.cs
+          projectPath: Assets\Scripts\Player\PlayerMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\SidesBehaviour.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\SidesBehaviour.cs
+          projectPath: Assets\Scripts\Player\SidesBehaviour.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\SidesBehaviour.cs.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Player\SidesBehaviour.cs.meta
+          projectPath: Assets\Scripts\Player\SidesBehaviour.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tilemap.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap.meta
+          projectPath: Assets\Scripts\Tilemap.meta
+          originalPath: Assets\Materials.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tilemap\TilemapBordersCreator.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapBordersCreator.cs
+          projectPath: Assets\Scripts\Tilemap\TilemapBordersCreator.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tilemap\TilemapBordersCreator.cs.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapBordersCreator.cs.meta
+          projectPath: Assets\Scripts\Tilemap\TilemapBordersCreator.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tilemap\TilemapInfo.cs
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapInfo.cs
+          projectPath: Assets\Scripts\Tilemap\TilemapInfo.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Tilemap\TilemapInfo.cs.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Scripts\Tilemap\TilemapInfo.cs.meta
+          projectPath: Assets\Scripts\Tilemap\TilemapInfo.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Enviroment.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment.meta
+          projectPath: Assets\Sprites\Enviroment.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Enviroment\Ground tiles.png
+          fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Ground tiles.png
+          projectPath: Assets\Sprites\Enviroment\Ground tiles.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Enviroment\Ground tiles.png.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Ground tiles.png.meta
+          projectPath: Assets\Sprites\Enviroment\Ground tiles.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Enviroment\Solar panel and battery.png
+          fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Solar panel and
+            battery.png
+          projectPath: Assets\Sprites\Enviroment\Solar panel and battery.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Enviroment\Solar panel and battery.png.meta
+          fullPath: D:\APP\Projects\Twain\Assets\Sprites\Enviroment\Solar panel and
+            battery.png.meta
+          projectPath: Assets\Sprites\Enviroment\Solar panel and battery.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TilePalettes.meta
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes.meta
+          projectPath: Assets\TilePalettes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TilePalettes\GroundPalette.meta
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette.meta
+          projectPath: Assets\TilePalettes\GroundPalette.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TilePalettes\GroundPalette\Empty.asset
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Empty.asset
+          projectPath: Assets\TilePalettes\GroundPalette\Empty.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TilePalettes\GroundPalette\Empty.asset.meta
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Empty.asset.meta
+          projectPath: Assets\TilePalettes\GroundPalette\Empty.asset.meta
+          originalPath: Assets\Materials\Diffuse.mat.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\TilePalettes\GroundPalette\Ground.asset
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.asset
+          projectPath: Assets\TilePalettes\GroundPalette\Ground.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TilePalettes\GroundPalette\Ground.asset.meta
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.asset.meta
+          projectPath: Assets\TilePalettes\GroundPalette\Ground.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TilePalettes\GroundPalette\Ground.prefab
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.prefab
+          projectPath: Assets\TilePalettes\GroundPalette\Ground.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TilePalettes\GroundPalette\Ground.prefab.meta
+          fullPath: D:\APP\Projects\Twain\Assets\TilePalettes\GroundPalette\Ground.prefab.meta
+          projectPath: Assets\TilePalettes\GroundPalette\Ground.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: D:\APP\Projects\Twain\ProjectSettings\Physics2DSettings.asset
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: D:\APP\Projects\Twain\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 277609e3a170dc3983927f3a46f07e73af4b1365
         mergeA: 
         mergeB: 
@@ -2807,7 +3145,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/Taipania/Twain.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -2818,13 +3156,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2025-08-05T14:34:24.122+03:00
+    updatedTimeString: 2025-08-05T23:35:18.586+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2025-08-05T14:52:37.096+03:00
+    updatedTimeString: 2025-08-05T23:35:20.235+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2025-08-05T14:52:37.087+03:00
+    updatedTimeString: 2025-08-05T23:35:09.516+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
