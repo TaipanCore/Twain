@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
         Unite();
         Physics2D.IgnoreCollision(LightSide.GetComponent<BoxCollider2D>(), DarkSide.GetComponent<BoxCollider2D>(), true);
     }

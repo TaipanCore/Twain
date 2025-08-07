@@ -46,7 +46,7 @@ public class BatteryBehaviour : MonoBehaviour
         set
         {
             _batteryCharge = Mathf.Clamp(value, 0f, 100f);
-            Debug.Log($"{Mathf.FloorToInt(_batteryCharge)}%");
+            //Debug.Log($"{Mathf.FloorToInt(_batteryCharge)}%");
         }
     }
     private void Start()
@@ -54,13 +54,13 @@ public class BatteryBehaviour : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _shortDelay = new WaitForSeconds(chargeDisplayTime);
         _longDelay = new WaitForSeconds(chargeHideTime);
-        _currentSprite = _batterySprites[0];
+        _currentSprite = _batterySprites[1];
     }
     private void Update()
     {
         if (_isCharging)
         {
-            _currentSprite = _batterySprites[Mathf.FloorToInt(_batteryCharge / 25f)];
+            _currentSprite = _batterySprites[Mathf.FloorToInt(_batteryCharge / 25f) + 1];
             if (_currentSprite == _batterySprites[_batterySprites.Length - 1])
                 isCharging = false;
         }
