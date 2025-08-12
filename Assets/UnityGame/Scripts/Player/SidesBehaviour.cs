@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class SidesBehaviour : MonoBehaviour
 {
-    [HideInInspector] public bool isOnTrigger;
+    [HideInInspector] public bool isOnPlayerTrigger;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            isOnTrigger = true;
+            isOnPlayerTrigger = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            isOnTrigger = false;
+            isOnPlayerTrigger = false;
         }
     }
 }

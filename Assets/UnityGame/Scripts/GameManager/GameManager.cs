@@ -16,8 +16,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
-        Unite();
-        
+        Unite();      
     }
     private void Update()
     {
@@ -63,18 +62,18 @@ public class GameManager : MonoBehaviour
     {
         if (isUnited)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (InputManager.uniteAndSeparateBtnPressed)
             {
                 Separate();
             }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.E) && (LightSide.GetComponent<LightSideBehaviour>().isOnTrigger || DarkSide.GetComponent<DarkSideBehaviour>().isOnTrigger))
+            if (InputManager.uniteAndSeparateBtnPressed && (LightSide.GetComponent<LightSideBehaviour>().isOnPlayerTrigger || DarkSide.GetComponent<DarkSideBehaviour>().isOnPlayerTrigger))
             {
                 Unite();
             }
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (InputManager.sidesChangeBtnPressed)
             {
                 ChangeSide();
             }

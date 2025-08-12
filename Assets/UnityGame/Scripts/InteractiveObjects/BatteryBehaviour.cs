@@ -8,13 +8,13 @@ public class BatteryBehaviour : MonoBehaviour
 {
     [SerializeField] private float chargeDisplayTime = 0.5f;
     [SerializeField] private float chargeHideTime = 1f;
-    private WaitForSeconds _shortDelay;
-    private WaitForSeconds _longDelay;
-    private Coroutine _blinking;
+    private WaitForSeconds shortDelay;
+    private WaitForSeconds longDelay;
+    private Coroutine blinking;
 
-    [SerializeField] private Sprite[] _batterySprites;
-    private Sprite _currentSprite;
-    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite[] batterySprites;
+    private Sprite currentSprite;
+    private SpriteRenderer spriteRenderer;
 
     private bool _isCharging;
     [HideInInspector] public bool isCharging
@@ -25,17 +25,17 @@ public class BatteryBehaviour : MonoBehaviour
             _isCharging = value;
             if (_isCharging)
             {
-                if (_blinking == null)
-                    _blinking = StartCoroutine(SpriteBlinking());
+                if (blinking == null)
+                    blinking = StartCoroutine(SpriteBlinking());
             }               
             else
             {
-                if (_blinking != null)
+                if (blinking != null)
                 {
-                    StopCoroutine(_blinking);
-                    _blinking = null;                  
+                    StopCoroutine(blinking);
+                    blinking = null;                  
                 }
-                _spriteRenderer.sprite = _currentSprite;
+                spriteRenderer.sprite = currentSprite;
             }
         }
     }
@@ -51,17 +51,17 @@ public class BatteryBehaviour : MonoBehaviour
     }
     private void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _shortDelay = new WaitForSeconds(chargeDisplayTime);
-        _longDelay = new WaitForSeconds(chargeHideTime);
-        _currentSprite = _batterySprites[1];
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        shortDelay = new WaitForSeconds(chargeDisplayTime);
+        longDelay = new WaitForSeconds(chargeHideTime);
+        currentSprite = batterySprites[1];
     }
     private void Update()
     {
         if (_isCharging)
         {
-            _currentSprite = _batterySprites[Mathf.FloorToInt(_batteryCharge / 25f) + 1];
-            if (_currentSprite == _batterySprites[_batterySprites.Length - 1])
+            currentSprite = batterySprites[Mathf.FloorToInt(_batteryCharge / 25f) + 1];
+            if (currentSprite == batterySprites[batterySprites.Length - 1])
                 isCharging = false;
         }
     }
@@ -69,10 +69,10 @@ public class BatteryBehaviour : MonoBehaviour
     {
         while (true)
         {
-            _spriteRenderer.sprite = _currentSprite;
-            yield return _shortDelay;
-            _spriteRenderer.sprite = _batterySprites[0];
-            yield return _longDelay;      
+            spriteRenderer.sprite = currentSprite;
+            yield return shortDelay;
+            spriteRenderer.sprite = batterySprites[0];
+            yield return longDelay;      
         }
     }
 }

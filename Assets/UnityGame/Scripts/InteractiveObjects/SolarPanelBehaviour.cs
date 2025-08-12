@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class SolarPanelBehaviour : MonoBehaviour
 {
-    [SerializeField] private BatteryBehaviour _batteryBehaviour;
-    [SerializeField] private float _panelEfficiency;
-    [SerializeField] private ParticleSystem _sparks;
+    [SerializeField] private BatteryBehaviour batteryBehaviour;
+    [SerializeField] private float panelEfficiency;
+    [SerializeField] private ParticleSystem sparks;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "LightSide" && _batteryBehaviour.batteryCharge < 100f)
+        if (collision.gameObject.name == "LightSide" && batteryBehaviour.batteryCharge < 100f)
         {
-            if (_sparks != null && !_sparks.isPlaying)
-                _sparks.Play();
-            _batteryBehaviour.isCharging = true;
+            if (sparks != null && !sparks.isPlaying)
+                sparks.Play();
+            batteryBehaviour.isCharging = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.name == "LightSide")
-            _batteryBehaviour.isCharging = false;
+            batteryBehaviour.isCharging = false;
     }
     private void Update()
     {
-        if (_batteryBehaviour.isCharging)
+        if (batteryBehaviour.isCharging)
         {
-            _batteryBehaviour.batteryCharge += Time.deltaTime * _panelEfficiency;
+            batteryBehaviour.batteryCharge += Time.deltaTime * panelEfficiency;
         }
     }
 }
