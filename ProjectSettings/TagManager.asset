@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 3752173097
+    locked: 0
+  - name: InteractiveObjects
+    uniqueID: 1887013877
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Darkness
+    uniqueID: 737728579
     locked: 0
