@@ -15,11 +15,11 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 42.666668
-    width: 1280
-    height: 709.3334
+    y: 42.56604
+    width: 2318.4907
+    height: 1213.585
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Git for Unity
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
-    height: 709.3333
+    width: 2318.4907
+    height: 1213.585
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
+    width: 2318.4907
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 689.3333
-    width: 1280
+    y: 1193.585
+    width: 2318.4907
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1280
-    height: 659.3333
+    width: 2318.4907
+    height: 1163.585
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 95
+  controlID: 99
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 966.6667
-    height: 659.3333
+    width: 1750.6416
+    height: 1163.585
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 39
+  controlID: 19
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 966.6667
-    height: 390
+    width: 1750.6416
+    height: 689.2076
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 40
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,13 +187,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 239.33333
-    height: 390
+    width: 432.90567
+    height: 689.2076
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
@@ -211,17 +211,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 239.33333
+    x: 432.90567
     y: 0
-    width: 727.3334
-    height: 390
+    width: 1317.736
+    height: 689.2076
   m_MinSize: {x: 242, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 13}
-  - {fileID: 15}
-  - {fileID: 20}
+  - {fileID: 12}
+  - {fileID: 14}
+  - {fileID: 19}
   m_Selected: 2
   m_LastSelected: 0
 --- !u!114 &10
@@ -240,17 +240,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 390
-    width: 966.6667
-    height: 269.3333
+    y: 689.2076
+    width: 1750.6416
+    height: 474.37738
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 19}
-  - {fileID: 16}
   - {fileID: 17}
+  - {fileID: 18}
+  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
@@ -263,568 +263,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 966.6667
+    x: 1750.6416
     y: 0
-    width: 313.3333
-    height: 659.3333
-  m_MinSize: {x: 276, y: 71}
+    width: 567.8491
+    height: 1163.585
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
+  - {fileID: 20}
   - {fileID: 21}
-  - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ffb9ccd5681bd841ae77e9e5571f770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Git for Unity
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 966.6667
-    y: 72.66667
-    width: 312.3333
-    height: 638.3333
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  progressMessageClearTime: -1
-  notificationClearTime: -1
-  timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
-  changeTab: 3
-  activeTab: 3
-  initProjectView:
-    hasCompletedInitialCheck: 1
-    isUserDataPresent: 1
-    lastCheckUserChangedEvent:
-      updatedTimeString: 2025-07-25T22:00:43.016+03:00
-      cacheType: 8
-  branchesView:
-    treeLocals:
-      IsRemote: 0
-      folders:
-        keys: []
-        values: []
-      checkedFileNodes:
-        keys: []
-        values: []
-      title: Local branches
-      pathSeparator: /
-      displayRootNode: 1
-      isSelectable: 1
-      isCheckable: 0
-      nodes: []
-      selectedNode:
-        path: 
-        label: 
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-    treeRemotes:
-      IsRemote: 1
-      folders:
-        keys: []
-        values: []
-      checkedFileNodes:
-        keys: []
-        values: []
-      title: Remote branches
-      pathSeparator: /
-      displayRootNode: 1
-      isSelectable: 1
-      isCheckable: 0
-      nodes: []
-      selectedNode:
-        path: 
-        label: 
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-    mode: 0
-    newBranchName: 
-    scroll: {x: 0, y: 0}
-    disableDelete: 0
-    disableCreate: 0
-    lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
-    lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 
-      cacheType: 0
-    currentBranch:
-      name: 
-      tracking: 
-    currentRemote:
-      name: 
-      url: 
-      login: 
-      user: 
-      host: 
-      function: 0
-      token: 
-    localBranches: []
-    remoteBranches: []
-  changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
-    commitBody: 
-    commitMessage: 
-    currentBranch: master
-    treeScroll: {x: 0, y: 0}
-    treeChanges:
-      assets:
-        keys: []
-        values: []
-      folders:
-        keys:
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-      checkedFileNodes:
-        keys: []
-        values: []
-      title: 
-      pathSeparator: \
-      displayRootNode: 0
-      isSelectable: 1
-      isCheckable: 1
-      isUsingGlobalSelection: 1
-      nodes:
-      - path: 
-        label: 
-        level: -1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      selectedNode:
-        path: 
-        label: 
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-    gitStatusEntries:
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 1 changed file
-    lastCurrentBranchChangedEvent:
-      updatedTimeString: 2025-07-27T22:15:44.167+03:00
-      cacheType: 1
-    lastStatusEntriesChangedEvent:
-      updatedTimeString: 2025-07-27T22:23:14.314+03:00
-      cacheType: 6
-    lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
-      cacheType: 7
-  historyView:
-    currentLogHasUpdate: 0
-    currentTrackingStatusHasUpdate: 0
-    logEntries:
-    - commitID: e3a3713e8abf3f1b2f3b9eac3de084722eadbf28
-      mergeA: 
-      mergeB: 
-      authorName: Ta1pan57
-      authorEmail: artpost05@bk.ru
-      commitEmail: artpost05@bk.ru
-      commitName: Ta1pan57
-      summary: Initial commit
-      description: 
-      timeString: 2025-07-25T22:00:46.000+03:00
-      commitTimeString: 2025-07-25T22:00:46.000+03:00
-      changes:
-      - path: .gitattributes
-        fullPath: D:\APP\Projects\Twain\.gitattributes
-        projectPath: .gitattributes
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: .gitignore
-        fullPath: D:\APP\Projects\Twain\.gitignore
-        projectPath: .gitignore
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\.gitignore
-        fullPath: D:\APP\Projects\Twain\Assets\.gitignore
-        projectPath: Assets\.gitignore
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-    statusAhead: 0
-    lastLogChangedEvent:
-      updatedTimeString: 2025-07-25T22:00:47.931+03:00
-      cacheType: 3
-    lastTrackingStatusChangedEvent:
-      updatedTimeString: 2025-07-25T22:00:47.645+03:00
-      cacheType: 5
-    historyControl:
-      scroll: {x: 0, y: 0}
-      entries:
-      - commitID: e3a3713e8abf3f1b2f3b9eac3de084722eadbf28
-        mergeA: 
-        mergeB: 
-        authorName: Ta1pan57
-        authorEmail: artpost05@bk.ru
-        commitEmail: artpost05@bk.ru
-        commitName: Ta1pan57
-        summary: Initial commit
-        description: 
-        timeString: 2025-07-25T22:00:46.000+03:00
-        commitTimeString: 2025-07-25T22:00:46.000+03:00
-        changes:
-        - path: .gitattributes
-          fullPath: D:\APP\Projects\Twain\.gitattributes
-          projectPath: .gitattributes
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: .gitignore
-          fullPath: D:\APP\Projects\Twain\.gitignore
-          projectPath: .gitignore
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\.gitignore
-          fullPath: D:\APP\Projects\Twain\Assets\.gitignore
-          projectPath: Assets\.gitignore
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      statusAhead: 0
-      selectedIndex: -1
-    selectedEntry:
-      commitID: 
-      mergeA: 
-      mergeB: 
-      authorName: 
-      authorEmail: 
-      commitEmail: 
-      commitName: 
-      summary: 
-      description: 
-      timeString: 0001-01-01T00:00:00.000+00:00
-      commitTimeString: 0001-01-01T00:00:00.000+00:00
-      changes: []
-    treeChanges:
-      assets:
-        keys: []
-        values: []
-      folders:
-        keys: []
-        values: []
-      checkedFileNodes:
-        keys: []
-        values: []
-      title: 
-      pathSeparator: /
-      displayRootNode: 0
-      isSelectable: 1
-      isCheckable: 0
-      isUsingGlobalSelection: 0
-      nodes: []
-      selectedNode:
-        path: 
-        label: 
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-    detailsScroll: {x: 0, y: 0}
-  settingsView:
-    gitPathView:
-      gitPath: 
-      gitLfsPath: 
-      errorMessage: 
-      resetToBundled: 0
-      resetToSystem: 0
-      changingManually: 0
-      installSettingsHidden: 0
-    hasRemote: 0
-    lastCurrentRemoteChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
-    newRepositoryRemoteUrl: 
-    repositoryRemoteName: 
-    repositoryRemoteUrl: 
-    scroll: {x: 0, y: 0}
-    userSettingsView:
-      gitName: 
-      gitEmail: 
-      newGitName: 
-      newGitEmail: 
-      needsSaving: 0
-      lastCheckUserChangedEvent:
-        updatedTimeString: 
-        cacheType: 0
-      configSettingsHidden: 0
-    repositorySettingsHidden: 0
-    generalSettingsHidden: 0
-    debugSettingsHidden: 0
-    uiSceneSettingsHidden: 0
-    uiProjectSettingsHidden: 0
-  locksView:
-    currentRemoteHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
-    keychainHasUpdate: 0
-    locksControl:
-      scroll: {x: 0, y: 0}
-      gitLockEntries: []
-      assets:
-        keys: []
-        values: []
-      gitStatusDictionary:
-        keys: []
-        values: []
-      selectedEntry:
-        gitLock:
-          id: 
-          path: 
-          owner:
-            name: 
-            email: 
-          lockedAtString: 
-        gitFileStatus: 0
-        lockedAt: 
-    lastCurrentRemoteChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
-    lastLocksChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
-    lastStatusEntriesChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
-    lockedFiles: []
-    gitStatusEntries: []
-    currentUsername: 
-    unlockFileMenuContent:
-      m_Text: Release Lock
-      m_Image: {fileID: 0}
-      m_Tooltip: 
-    forceUnlockFileMenuContent:
-      m_Text: Release Lock (forced)
-      m_Image: {fileID: 0}
-      m_Tooltip: 
-  hasRemote: 1
-  currentRemoteName: origin
-  currentBranch: master
-  currentRemoteUrl: https://github.com/Taipania/Twain.git
-  statusAhead: 0
-  statusBehind: 0
-  hasItemsToCommit: 1
-  isTrackingRemoteBranch: 1
-  currentBranchContent:
-    m_Text: master
-    m_Image: {fileID: 0}
-    m_Tooltip: Active branch
-  currentRemoteUrlContent:
-    m_Text: https://github.com/Taipania/Twain.git
-    m_Image: {fileID: 0}
-    m_Tooltip: Url of the origin remote
-  lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2025-07-26T22:32:12.834+03:00
-    cacheType: 1
-  lastTrackingStatusChangedEvent:
-    updatedTimeString: 2025-07-26T22:32:14.912+03:00
-    cacheType: 5
-  lastStatusEntriesChangedEvent:
-    updatedTimeString: 2025-07-26T23:21:31.354+03:00
-    cacheType: 6
-  pullButtonContent:
-    m_Text: Pull
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  pushButtonContent:
-    m_Text: Push
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  refreshButtonContent:
-    m_Text: Refresh
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  fetchButtonContent:
-    m_Text: Fetch
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  repositoryProgressValue: 0
-  repositoryProgressMessage: 
-  appManagerProgressValue: 1
-  appManagerProgressMessage: 
-  primaryConnectionUsername: 
---- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -844,10 +300,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 239.33334
-    y: 72.66667
-    width: 725.3334
-    height: 369
+    x: 432.90567
+    y: 72.452835
+    width: 1315.736
+    height: 668.2076
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1160,7 +616,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 48, y: 48}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -1206,9 +662,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -6.291764, y: -1.9998313, z: -2.4671144}
+    m_Target: {x: -1.3462192, y: 1.5153857, z: -0.07440936}
     speed: 2
-    m_Value: {x: -6.0633674, y: -2.0213006, z: -2.464771}
+    m_Value: {x: -1.3462192, y: 1.5153857, z: -0.07440936}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1258,9 +714,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.4417634
+    m_Target: 8.815189
     speed: 2
-    m_Value: 5.207429
+    m_Value: 8.815189
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1278,14 +734,14 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.17294987, y: 0.6189491, z: -0.14218967, w: -0.752848}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &14
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1306,9 +762,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 72.66667
-    width: 238.33333
-    height: 369
+    y: 72.452835
+    width: 431.90567
+    height: 668.2076
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1322,9 +778,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ea600000
-      m_LastClickedID: 24810
-      m_ExpandedIDs: 1afbffffea600000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1348,7 +804,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &15
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1368,10 +824,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 239.33334
-    y: 72.66667
-    width: 725.3334
-    height: 369
+    x: 432.90567
+    y: 72.452835
+    width: 1315.736
+    height: 668.2076
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1403,10 +859,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
+    m_HBaseRangeMin: -869.43396
+    m_HBaseRangeMax: 869.43396
+    m_VBaseRangeMin: -489.0566
+    m_VBaseRangeMax: 489.0566
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1415,7 +871,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1424,29 +880,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 725.3334
-      height: 348
-    m_Scale: {x: 0.48333332, y: 0.48333332}
-    m_Translation: {x: 362.6667, y: 174}
+      width: 1315.736
+      height: 647.2076
+    m_Scale: {x: 0.6616898, y: 0.6616898}
+    m_Translation: {x: 657.868, y: 323.6038}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -750.3449
-      y: -360
-      width: 1500.6898
-      height: 720
+      x: -994.2241
+      y: -489.05664
+      width: 1988.4482
+      height: 978.1133
     m_MinimalGUI: 1
-  m_defaultScale: 0.48333332
-  m_LastWindowPixelSize: {x: 1088, y: 553.5}
+  m_defaultScale: 0.6616898
+  m_LastWindowPixelSize: {x: 1452.7917, y: 737.8125}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &16
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1516,7 +972,7 @@ MonoBehaviour:
   m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &17
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1552,8 +1008,8 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 24218
---- !u!114 &18
+  m_LastSelectedObjectID: 24242
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1574,9 +1030,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 462.6667
-    width: 965.6667
-    height: 248.33331
+    y: 761.6604
+    width: 1749.6416
+    height: 453.37738
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1598,7 +1054,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Sprites
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1606,16 +1062,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\APP\Projects\Twain
+  m_LastProjectPath: D:\APP\Unity\Projects\Twain
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 20640000
-    m_LastClickedID: 25632
-    m_ExpandedIDs: 000000007c6100007e61000000ca9a3b
+    m_SelectedIDs: a8610000
+    m_LastClickedID: 25000
+    m_ExpandedIDs: 000000009861000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1643,7 +1099,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c6100007e610000
+    m_ExpandedIDs: 0000000098610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1670,7 +1126,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ac6100004a61000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1699,7 +1155,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 206.33333
---- !u!114 &19
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1720,9 +1176,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 462.6667
-    width: 965.6667
-    height: 248.33331
+    y: 761.6604
+    width: 1749.6416
+    height: 453.37738
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1733,7 +1189,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &20
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1753,10 +1209,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 239.33334
-    y: 72.66667
-    width: 725.3334
-    height: 369
+    x: 432.90567
+    y: 72.452835
+    width: 1315.736
+    height: 668.2076
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1767,7 +1223,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &21
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1787,10 +1243,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 966.6667
-    y: 72.66667
-    width: 312.3333
-    height: 638.3333
+    x: 1750.6415
+    y: 72.452835
+    width: 566.8491
+    height: 1142.585
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1814,3 +1270,1883 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffb9ccd5681bd841ae77e9e5571f770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Git for Unity
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1750.6415
+    y: 72.452835
+    width: 566.8491
+    height: 1142.585
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  progressMessageClearTime: -1
+  notificationClearTime: -1
+  timeSinceLastRotation: -1
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
+  changeTab: 3
+  activeTab: 3
+  initProjectView:
+    hasCompletedInitialCheck: 0
+    isUserDataPresent: 0
+    lastCheckUserChangedEvent:
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 8
+  branchesView:
+    treeLocals:
+      IsRemote: 0
+      folders:
+        keys:
+        - Local branches
+        values:
+        - path: Local branches
+          label: Local branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: Local branches
+      pathSeparator: /
+      displayRootNode: 1
+      isSelectable: 1
+      isCheckable: 0
+      nodes:
+      - path: Local branches
+        label: Local branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: master
+        label: master
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 1
+        treeIsCheckable: 0
+        checkState: 0
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+    treeRemotes:
+      IsRemote: 1
+      folders:
+        keys:
+        - Remote branches
+        - origin
+        values:
+        - path: Remote branches
+          label: Remote branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+        - path: origin
+          label: origin
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: Remote branches
+      pathSeparator: /
+      displayRootNode: 1
+      isSelectable: 1
+      isCheckable: 0
+      nodes:
+      - path: Remote branches
+        label: Remote branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin
+        label: origin
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/HEAD
+        label: HEAD
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/master
+        label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+    mode: 0
+    newBranchName: 
+    scroll: {x: 0, y: 0}
+    disableDelete: 1
+    disableCreate: 1
+    lastLocalAndRemoteBranchListChangedEvent:
+      updatedTimeString: 2025-08-01T22:42:03.236+03:00
+      cacheType: 2
+    lastCurrentBranchAndRemoteChange:
+      updatedTimeString: 2025-08-01T22:42:01.322+03:00
+      cacheType: 1
+    currentBranch:
+      name: master
+      tracking: origin/master
+    currentRemote:
+      name: origin
+      url: https://github.com/Taipania/Twain.git
+      login: 
+      user: 
+      host: 
+      function: 0
+      token: 
+    localBranches:
+    - name: master
+      tracking: origin/master
+    remoteBranches:
+    - name: origin/HEAD
+      tracking: '[None]'
+    - name: origin/master
+      tracking: '[None]'
+  changesView:
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
+    commitBody: 
+    commitMessage: 
+    currentBranch: master
+    treeScroll: {x: 0, y: 0}
+    treeChanges:
+      assets:
+        keys:
+        - 00000000000000001000000000000000
+        - f1e99e621f754e04681eb3c3cb82fa10
+        - 474f5a2bb3405b04f882ad1119fd96b3
+        - 2cda990e2423bbf4892e6590ba056729
+        - 6c325d4f90588854bb6c69d623d4de66
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Materials
+          label: Materials
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          label: SampleScene.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene.unity
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity
+            projectPath: Assets\Scenes\SampleScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Sprites
+          label: Sprites
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+      folders:
+        keys:
+        - Assets
+        - Assets\Materials
+        - Assets\Scenes
+        - Assets\Sprites
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Materials
+          label: Materials
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Sprites
+          label: Sprites
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: 
+      pathSeparator: \
+      displayRootNode: 0
+      isSelectable: 1
+      isCheckable: 1
+      isUsingGlobalSelection: 1
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Materials
+        label: Materials
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Materials\Diffuse.mat
+        label: Diffuse.mat
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Diffuse.mat
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat
+          projectPath: Assets\Materials\Diffuse.mat
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Materials\Diffuse.mat.meta
+        label: Diffuse.mat.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Diffuse.mat.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat.meta
+          projectPath: Assets\Materials\Diffuse.mat.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        label: SampleScene.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Sprites
+        label: Sprites
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Sprites\Enviroment.meta
+        label: Enviroment.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Sprites\Enviroment.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Enviroment.meta
+          projectPath: Assets\Sprites\Enviroment.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    gitStatusEntries:
+    - path: Assets\Materials\Diffuse.mat
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat
+      projectPath: Assets\Materials\Diffuse.mat
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Materials\Diffuse.mat.meta
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat.meta
+      projectPath: Assets\Materials\Diffuse.mat.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Sprites\Enviroment.meta
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Enviroment.meta
+      projectPath: Assets\Sprites\Enviroment.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 5 changed files
+    lastCurrentBranchChangedEvent:
+      updatedTimeString: 2025-08-12T21:28:24.090+03:00
+      cacheType: 1
+    lastStatusEntriesChangedEvent:
+      updatedTimeString: 2025-08-12T21:30:37.139+03:00
+      cacheType: 6
+    lastLocksChangedEvent:
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 7
+  historyView:
+    currentLogHasUpdate: 0
+    currentTrackingStatusHasUpdate: 0
+    logEntries:
+    - commitID: 277609e3a170dc3983927f3a46f07e73af4b1365
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u0422\u0435\u0441\u0442\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430
+        \u0441 \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A\u0430\u043C\u0438
+        \u0441\u0432\u0435\u0442\u0430"
+      description: 
+      timeString: 2025-07-31T23:52:17.000+03:00
+      commitTimeString: 2025-07-31T23:52:17.000+03:00
+      changes:
+      - path: Assets\Materials.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials.meta
+        projectPath: Assets\Materials.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Diffuse.mat
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat
+        projectPath: Assets\Materials\Diffuse.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Diffuse.mat.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat.meta
+        projectPath: Assets\Materials\Diffuse.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameManager\MouseTracker.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\MouseTracker.cs
+        projectPath: Assets\Scripts\GameManager\MouseTracker.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameManager\MouseTracker.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\MouseTracker.cs.meta
+        projectPath: Assets\Scripts\GameManager\MouseTracker.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\EquilibriumBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\EquilibriumBehaviour.cs
+        projectPath: Assets\Scripts\Player\EquilibriumBehaviour.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\EquilibriumBehaviour.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\EquilibriumBehaviour.cs.meta
+        projectPath: Assets\Scripts\Player\EquilibriumBehaviour.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 0359b4dc1a0b26b2045d3359f04fcad1f037a849
+      mergeA: 
+      mergeB: 
+      authorName: Ta1pan57
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Ta1pan57
+      summary: "\u041F\u0435\u0440\u0432\u044B\u0439 \u043A\u043E\u043C\u043C\u0438\u0442"
+      description: 
+      timeString: 2025-07-25T22:01:02.000+03:00
+      commitTimeString: 2025-07-25T22:01:02.000+03:00
+      changes:
+      - path: .vsconfig
+        fullPath: D:\APP\Unity\Projects\Twain\.vsconfig
+        projectPath: .vsconfig
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes.meta
+        projectPath: Assets\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity.meta
+        projectPath: Assets\Scenes\SampleScene.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts.meta
+        projectPath: Assets\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Camera.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Camera.meta
+        projectPath: Assets\Scripts\Camera.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Camera\CameraTracking.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Camera\CameraTracking.cs
+        projectPath: Assets\Scripts\Camera\CameraTracking.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Camera\CameraTracking.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Camera\CameraTracking.cs.meta
+        projectPath: Assets\Scripts\Camera\CameraTracking.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Enemies.meta
+        projectPath: Assets\Scripts\Enemies.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies\ClotMovement.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Enemies\ClotMovement.cs
+        projectPath: Assets\Scripts\Enemies\ClotMovement.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies\ClotMovement.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Enemies\ClotMovement.cs.meta
+        projectPath: Assets\Scripts\Enemies\ClotMovement.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameManager.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager.meta
+        projectPath: Assets\Scripts\GameManager.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameManager\GameManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\GameManager.cs
+        projectPath: Assets\Scripts\GameManager\GameManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GameManager\GameManager.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\GameManager.cs.meta
+        projectPath: Assets\Scripts\GameManager\GameManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player.meta
+        projectPath: Assets\Scripts\Player.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\LightSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\LightSideBehaviour.cs
+        projectPath: Assets\Scripts\Player\LightSideBehaviour.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\LightSideBehaviour.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\LightSideBehaviour.cs.meta
+        projectPath: Assets\Scripts\Player\LightSideBehaviour.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\PlayerMovement.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\PlayerMovement.cs
+        projectPath: Assets\Scripts\Player\PlayerMovement.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player\PlayerMovement.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\PlayerMovement.cs.meta
+        projectPath: Assets\Scripts\Player\PlayerMovement.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites.meta
+        projectPath: Assets\Sprites.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Clot.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Clot.meta
+        projectPath: Assets\Sprites\Clot.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Clot\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Clot\Idle.png
+        projectPath: Assets\Sprites\Clot\Idle.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Clot\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Clot\Idle.png.meta
+        projectPath: Assets\Sprites\Clot\Idle.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\DarkSide.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\DarkSide.meta
+        projectPath: Assets\Sprites\DarkSide.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\DarkSide\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\DarkSide\Idle.png
+        projectPath: Assets\Sprites\DarkSide\Idle.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\DarkSide\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\DarkSide\Idle.png.meta
+        projectPath: Assets\Sprites\DarkSide\Idle.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Equilibrium.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Equilibrium.meta
+        projectPath: Assets\Sprites\Equilibrium.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Equilibrium\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Equilibrium\Idle.png
+        projectPath: Assets\Sprites\Equilibrium\Idle.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\Equilibrium\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Equilibrium\Idle.png.meta
+        projectPath: Assets\Sprites\Equilibrium\Idle.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\LightSide.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\LightSide.meta
+        projectPath: Assets\Sprites\LightSide.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\LightSide\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\LightSide\Idle.png
+        projectPath: Assets\Sprites\LightSide\Idle.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\LightSide\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\LightSide\Idle.png.meta
+        projectPath: Assets\Sprites\LightSide\Idle.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: D:\APP\Unity\Projects\Twain\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: D:\APP\Unity\Projects\Twain\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\AudioManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\AudioManager.asset
+        projectPath: ProjectSettings\AudioManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ClusterInputManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\ClusterInputManager.asset
+        projectPath: ProjectSettings\ClusterInputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\DynamicsManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\DynamicsManager.asset
+        projectPath: ProjectSettings\DynamicsManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\EditorSettings.asset
+        projectPath: ProjectSettings\EditorSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\GraphicsSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\GraphicsSettings.asset
+        projectPath: ProjectSettings\GraphicsSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\InputManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\InputManager.asset
+        projectPath: ProjectSettings\InputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\MemorySettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\MemorySettings.asset
+        projectPath: ProjectSettings\MemorySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NavMeshAreas.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\NavMeshAreas.asset
+        projectPath: ProjectSettings\NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NetworkManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\NetworkManager.asset
+        projectPath: ProjectSettings\NetworkManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PackageManagerSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\PackageManagerSettings.asset
+        projectPath: ProjectSettings\PackageManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\Physics2DSettings.asset
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PresetManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\PresetManager.asset
+        projectPath: ProjectSettings\PresetManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectVersion.txt
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\ProjectVersion.txt
+        projectPath: ProjectSettings\ProjectVersion.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\QualitySettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\QualitySettings.asset
+        projectPath: ProjectSettings\QualitySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\SceneTemplateSettings.json
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\SceneTemplateSettings.json
+        projectPath: ProjectSettings\SceneTemplateSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TimeManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TimeManager.asset
+        projectPath: ProjectSettings\TimeManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\UnityConnectSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\UnityConnectSettings.asset
+        projectPath: ProjectSettings\UnityConnectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VFXManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\VFXManager.asset
+        projectPath: ProjectSettings\VFXManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VersionControlSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\VersionControlSettings.asset
+        projectPath: ProjectSettings\VersionControlSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\XRSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\XRSettings.asset
+        projectPath: ProjectSettings\XRSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.index
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Search.index
+        projectPath: UserSettings\Search.index
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Search.settings
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: e3a3713e8abf3f1b2f3b9eac3de084722eadbf28
+      mergeA: 
+      mergeB: 
+      authorName: Ta1pan57
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Ta1pan57
+      summary: Initial commit
+      description: 
+      timeString: 2025-07-25T22:00:46.000+03:00
+      commitTimeString: 2025-07-25T22:00:46.000+03:00
+      changes:
+      - path: .gitattributes
+        fullPath: D:\APP\Unity\Projects\Twain\.gitattributes
+        projectPath: .gitattributes
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .gitignore
+        fullPath: D:\APP\Unity\Projects\Twain\.gitignore
+        projectPath: .gitignore
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\.gitignore
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\.gitignore
+        projectPath: Assets\.gitignore
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    statusAhead: 0
+    lastLogChangedEvent:
+      updatedTimeString: 2025-08-12T21:30:39.658+03:00
+      cacheType: 3
+    lastTrackingStatusChangedEvent:
+      updatedTimeString: 2025-08-12T21:30:37.148+03:00
+      cacheType: 5
+    historyControl:
+      scroll: {x: 0, y: 0}
+      entries:
+      - commitID: 277609e3a170dc3983927f3a46f07e73af4b1365
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u0422\u0435\u0441\u0442\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430
+          \u0441 \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A\u0430\u043C\u0438
+          \u0441\u0432\u0435\u0442\u0430"
+        description: 
+        timeString: 2025-07-31T23:52:17.000+03:00
+        commitTimeString: 2025-07-31T23:52:17.000+03:00
+        changes:
+        - path: Assets\Materials.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials.meta
+          projectPath: Assets\Materials.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Diffuse.mat
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat
+          projectPath: Assets\Materials\Diffuse.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Diffuse.mat.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Materials\Diffuse.mat.meta
+          projectPath: Assets\Materials\Diffuse.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameManager\MouseTracker.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\MouseTracker.cs
+          projectPath: Assets\Scripts\GameManager\MouseTracker.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameManager\MouseTracker.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\MouseTracker.cs.meta
+          projectPath: Assets\Scripts\GameManager\MouseTracker.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\EquilibriumBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\EquilibriumBehaviour.cs
+          projectPath: Assets\Scripts\Player\EquilibriumBehaviour.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\EquilibriumBehaviour.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\EquilibriumBehaviour.cs.meta
+          projectPath: Assets\Scripts\Player\EquilibriumBehaviour.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 0359b4dc1a0b26b2045d3359f04fcad1f037a849
+        mergeA: 
+        mergeB: 
+        authorName: Ta1pan57
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Ta1pan57
+        summary: "\u041F\u0435\u0440\u0432\u044B\u0439 \u043A\u043E\u043C\u043C\u0438\u0442"
+        description: 
+        timeString: 2025-07-25T22:01:02.000+03:00
+        commitTimeString: 2025-07-25T22:01:02.000+03:00
+        changes:
+        - path: .vsconfig
+          fullPath: D:\APP\Unity\Projects\Twain\.vsconfig
+          projectPath: .vsconfig
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes.meta
+          projectPath: Assets\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scenes\SampleScene.unity.meta
+          projectPath: Assets\Scenes\SampleScene.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts.meta
+          projectPath: Assets\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Camera.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Camera.meta
+          projectPath: Assets\Scripts\Camera.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Camera\CameraTracking.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Camera\CameraTracking.cs
+          projectPath: Assets\Scripts\Camera\CameraTracking.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Camera\CameraTracking.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Camera\CameraTracking.cs.meta
+          projectPath: Assets\Scripts\Camera\CameraTracking.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Enemies.meta
+          projectPath: Assets\Scripts\Enemies.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies\ClotMovement.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Enemies\ClotMovement.cs
+          projectPath: Assets\Scripts\Enemies\ClotMovement.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies\ClotMovement.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Enemies\ClotMovement.cs.meta
+          projectPath: Assets\Scripts\Enemies\ClotMovement.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameManager.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager.meta
+          projectPath: Assets\Scripts\GameManager.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameManager\GameManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\GameManager.cs
+          projectPath: Assets\Scripts\GameManager\GameManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GameManager\GameManager.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\GameManager\GameManager.cs.meta
+          projectPath: Assets\Scripts\GameManager\GameManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player.meta
+          projectPath: Assets\Scripts\Player.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\LightSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\LightSideBehaviour.cs
+          projectPath: Assets\Scripts\Player\LightSideBehaviour.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\LightSideBehaviour.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\LightSideBehaviour.cs.meta
+          projectPath: Assets\Scripts\Player\LightSideBehaviour.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\PlayerMovement.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\PlayerMovement.cs
+          projectPath: Assets\Scripts\Player\PlayerMovement.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player\PlayerMovement.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Scripts\Player\PlayerMovement.cs.meta
+          projectPath: Assets\Scripts\Player\PlayerMovement.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites.meta
+          projectPath: Assets\Sprites.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Clot.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Clot.meta
+          projectPath: Assets\Sprites\Clot.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Clot\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Clot\Idle.png
+          projectPath: Assets\Sprites\Clot\Idle.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Clot\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Clot\Idle.png.meta
+          projectPath: Assets\Sprites\Clot\Idle.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\DarkSide.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\DarkSide.meta
+          projectPath: Assets\Sprites\DarkSide.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\DarkSide\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\DarkSide\Idle.png
+          projectPath: Assets\Sprites\DarkSide\Idle.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\DarkSide\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\DarkSide\Idle.png.meta
+          projectPath: Assets\Sprites\DarkSide\Idle.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Equilibrium.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Equilibrium.meta
+          projectPath: Assets\Sprites\Equilibrium.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Equilibrium\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Equilibrium\Idle.png
+          projectPath: Assets\Sprites\Equilibrium\Idle.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\Equilibrium\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\Equilibrium\Idle.png.meta
+          projectPath: Assets\Sprites\Equilibrium\Idle.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\LightSide.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\LightSide.meta
+          projectPath: Assets\Sprites\LightSide.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\LightSide\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\LightSide\Idle.png
+          projectPath: Assets\Sprites\LightSide\Idle.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\LightSide\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\Sprites\LightSide\Idle.png.meta
+          projectPath: Assets\Sprites\LightSide\Idle.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: D:\APP\Unity\Projects\Twain\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: D:\APP\Unity\Projects\Twain\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\AudioManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\AudioManager.asset
+          projectPath: ProjectSettings\AudioManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ClusterInputManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\ClusterInputManager.asset
+          projectPath: ProjectSettings\ClusterInputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\DynamicsManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\DynamicsManager.asset
+          projectPath: ProjectSettings\DynamicsManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\EditorSettings.asset
+          projectPath: ProjectSettings\EditorSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\GraphicsSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\GraphicsSettings.asset
+          projectPath: ProjectSettings\GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\InputManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\InputManager.asset
+          projectPath: ProjectSettings\InputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\MemorySettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\MemorySettings.asset
+          projectPath: ProjectSettings\MemorySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NavMeshAreas.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\NavMeshAreas.asset
+          projectPath: ProjectSettings\NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NetworkManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\NetworkManager.asset
+          projectPath: ProjectSettings\NetworkManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PackageManagerSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\PackageManagerSettings.asset
+          projectPath: ProjectSettings\PackageManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\Physics2DSettings.asset
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PresetManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\PresetManager.asset
+          projectPath: ProjectSettings\PresetManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectVersion.txt
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\ProjectVersion.txt
+          projectPath: ProjectSettings\ProjectVersion.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\QualitySettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\QualitySettings.asset
+          projectPath: ProjectSettings\QualitySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\SceneTemplateSettings.json
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\SceneTemplateSettings.json
+          projectPath: ProjectSettings\SceneTemplateSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TimeManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TimeManager.asset
+          projectPath: ProjectSettings\TimeManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\UnityConnectSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\UnityConnectSettings.asset
+          projectPath: ProjectSettings\UnityConnectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VFXManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\VFXManager.asset
+          projectPath: ProjectSettings\VFXManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VersionControlSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\VersionControlSettings.asset
+          projectPath: ProjectSettings\VersionControlSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\XRSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\XRSettings.asset
+          projectPath: ProjectSettings\XRSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.index
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Search.index
+          projectPath: UserSettings\Search.index
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Search.settings
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: e3a3713e8abf3f1b2f3b9eac3de084722eadbf28
+        mergeA: 
+        mergeB: 
+        authorName: Ta1pan57
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Ta1pan57
+        summary: Initial commit
+        description: 
+        timeString: 2025-07-25T22:00:46.000+03:00
+        commitTimeString: 2025-07-25T22:00:46.000+03:00
+        changes:
+        - path: .gitattributes
+          fullPath: D:\APP\Unity\Projects\Twain\.gitattributes
+          projectPath: .gitattributes
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .gitignore
+          fullPath: D:\APP\Unity\Projects\Twain\.gitignore
+          projectPath: .gitignore
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\.gitignore
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\.gitignore
+          projectPath: Assets\.gitignore
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      statusAhead: 0
+      selectedIndex: -1
+    selectedEntry:
+      commitID: 
+      mergeA: 
+      mergeB: 
+      authorName: 
+      authorEmail: 
+      commitEmail: 
+      commitName: 
+      summary: 
+      description: 
+      timeString: 0001-01-01T00:00:00.000+00:00
+      commitTimeString: 0001-01-01T00:00:00.000+00:00
+      changes: []
+    treeChanges:
+      assets:
+        keys: []
+        values: []
+      folders:
+        keys: []
+        values: []
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: 
+      pathSeparator: /
+      displayRootNode: 0
+      isSelectable: 1
+      isCheckable: 0
+      isUsingGlobalSelection: 0
+      nodes: []
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    detailsScroll: {x: 0, y: 0}
+  settingsView:
+    gitPathView:
+      gitPath: C:\Program Files\Git\cmd\git.exe
+      gitLfsPath: C:\Program Files\Git\cmd\git-lfs.exe
+      errorMessage: 
+      resetToBundled: 0
+      resetToSystem: 0
+      changingManually: 0
+      installSettingsHidden: 0
+    hasRemote: 1
+    lastCurrentRemoteChangedEvent:
+      updatedTimeString: 2025-08-12T21:28:24.090+03:00
+      cacheType: 1
+    newRepositoryRemoteUrl: https://github.com/Taipania/Twain.git
+    repositoryRemoteName: origin
+    repositoryRemoteUrl: https://github.com/Taipania/Twain.git
+    scroll: {x: 0, y: 0}
+    userSettingsView:
+      gitName: Taipania
+      gitEmail: artpost05@bk.ru
+      newGitName: Taipania
+      newGitEmail: artpost05@bk.ru
+      needsSaving: 0
+      lastCheckUserChangedEvent:
+        updatedTimeString: 2025-08-12T21:30:37.387+03:00
+        cacheType: 8
+      configSettingsHidden: 0
+    repositorySettingsHidden: 0
+    generalSettingsHidden: 0
+    debugSettingsHidden: 0
+    uiSceneSettingsHidden: 0
+    uiProjectSettingsHidden: 0
+  locksView:
+    currentRemoteHasUpdate: 1
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
+    keychainHasUpdate: 1
+    locksControl:
+      scroll: {x: 0, y: 0}
+      gitLockEntries: []
+      assets:
+        keys: []
+        values: []
+      gitStatusDictionary:
+        keys: []
+        values: []
+      selectedEntry:
+        gitLock:
+          id: 
+          path: 
+          owner:
+            name: 
+            email: 
+          lockedAtString: 
+        gitFileStatus: 0
+        lockedAt: "1 \u044F\u043D\u0432. 0001, 03:00"
+    lastCurrentRemoteChangedEvent:
+      updatedTimeString: 2025-08-01T22:42:01.322+03:00
+      cacheType: 1
+    lastLocksChangedEvent:
+      updatedTimeString: 2025-08-01T22:42:03.236+03:00
+      cacheType: 7
+    lastStatusEntriesChangedEvent:
+      updatedTimeString: 2025-08-01T22:42:03.503+03:00
+      cacheType: 6
+    lockedFiles: []
+    gitStatusEntries:
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    currentUsername: 
+    unlockFileMenuContent:
+      m_Text: Release Lock
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+    forceUnlockFileMenuContent:
+      m_Text: Release Lock (forced)
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+  hasRemote: 1
+  currentRemoteName: origin
+  currentBranch: master
+  currentRemoteUrl: https://github.com/Taipania/Twain.git
+  statusAhead: 0
+  statusBehind: 0
+  hasItemsToCommit: 1
+  isTrackingRemoteBranch: 1
+  currentBranchContent:
+    m_Text: master
+    m_Image: {fileID: 0}
+    m_Tooltip: Active branch
+  currentRemoteUrlContent:
+    m_Text: https://github.com/Taipania/Twain.git
+    m_Image: {fileID: 0}
+    m_Tooltip: Url of the origin remote
+  lastCurrentBranchAndRemoteChangedEvent:
+    updatedTimeString: 2025-08-12T21:28:24.090+03:00
+    cacheType: 1
+  lastTrackingStatusChangedEvent:
+    updatedTimeString: 2025-08-12T21:30:37.148+03:00
+    cacheType: 5
+  lastStatusEntriesChangedEvent:
+    updatedTimeString: 2025-08-12T21:30:37.139+03:00
+    cacheType: 6
+  pullButtonContent:
+    m_Text: Pull
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  pushButtonContent:
+    m_Text: Push
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  refreshButtonContent:
+    m_Text: Refresh
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  fetchButtonContent:
+    m_Text: Fetch
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  repositoryProgressValue: 0
+  repositoryProgressMessage: 
+  appManagerProgressValue: 1
+  appManagerProgressMessage: 
+  primaryConnectionUsername: 
