@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using NavMeshPlus.Components;
+using UnityEngine.AI;
 
 public class TilemapBordersCreator : MonoBehaviour
 {
     [SerializeField] private Tile BorderTile;
     [SerializeField] private TilemapInfo TilemapInfo;
+    [SerializeField] private NavMeshSurface navMesh;
     private void Start()
     {
         Tilemap borderTilemap = GetComponent<Tilemap>();
@@ -23,5 +26,6 @@ public class TilemapBordersCreator : MonoBehaviour
                 }
             }
         }
+        navMesh.BuildNavMesh();
     }
 }

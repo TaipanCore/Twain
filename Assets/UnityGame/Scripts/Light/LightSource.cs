@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireflyBehaviour : MonoBehaviour
+public class LightSource : MonoBehaviour
 {
     private float _range;
     [HideInInspector] public float range

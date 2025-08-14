@@ -62,18 +62,18 @@ public class GameManager : MonoBehaviour
     {
         if (isUnited)
         {
-            if (InputManager.uniteAndSeparateBtnPressed)
+            if (InputManager.uniteAndSeparateBtnDown)
             {
                 Separate();
             }
         }
         else
         {
-            if (InputManager.uniteAndSeparateBtnPressed && (LightSide.GetComponent<LightSideBehaviour>().isOnPlayerTrigger || DarkSide.GetComponent<DarkSideBehaviour>().isOnPlayerTrigger))
+            if (InputManager.uniteAndSeparateBtnDown && (LightSide.GetComponent<LightSideBehaviour>().isOnPlayerTrigger || DarkSide.GetComponent<DarkSideBehaviour>().isOnPlayerTrigger))
             {
                 Unite();
             }
-            if (InputManager.sidesChangeBtnPressed)
+            if (InputManager.sidesChangeBtnDown)
             {
                 ChangeSide();
             }

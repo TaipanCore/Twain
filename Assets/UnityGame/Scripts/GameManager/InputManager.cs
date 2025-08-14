@@ -7,14 +7,18 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode uniteAndSeparateBtn;
     [SerializeField] private KeyCode sidesChangeBtn;
 
-    [HideInInspector] public static bool uniteAndSeparateBtnPressed;
-    [HideInInspector] public static bool sidesChangeBtnPressed;
+    [HideInInspector] public static bool uniteAndSeparateBtnDown;
+    [HideInInspector] public static bool sidesChangeBtnDown;
     [HideInInspector] public static Vector2 movement;
+    [HideInInspector] public static bool leftMouseBtnDown;
+    [HideInInspector] public static bool leftMouseBtnUp;
 
     private void Update()
     {
-        uniteAndSeparateBtnPressed = Input.GetKeyDown(uniteAndSeparateBtn);
-        sidesChangeBtnPressed = Input.GetKeyDown(sidesChangeBtn);
+        uniteAndSeparateBtnDown = Input.GetKeyDown(uniteAndSeparateBtn);
+        sidesChangeBtnDown = Input.GetKeyDown(sidesChangeBtn);
         movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        leftMouseBtnDown = Input.GetMouseButtonDown(0);
+        leftMouseBtnUp = Input.GetMouseButtonUp(0);
     }
 }
