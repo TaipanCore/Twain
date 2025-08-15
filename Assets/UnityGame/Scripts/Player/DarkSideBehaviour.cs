@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class DarkSideBehaviour : SidesBehaviour
 {
-
+    private void Awake()
+    {
+        GameManager.DarkSide = gameObject;
+    }
 }

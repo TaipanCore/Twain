@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class LightSideBehaviour : SidesBehaviour
 {
     private enum State
@@ -21,8 +20,12 @@ public class LightSideBehaviour : SidesBehaviour
     private State state;
     private Transform distantLightTransform;
     
-    private void Start()
+    private void Awake()
     {
+        GameManager.LightSide = gameObject;
+    }
+    private void Start()
+    {       
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
         SetState(State.Normal);
     }
@@ -31,25 +34,28 @@ public class LightSideBehaviour : SidesBehaviour
         switch (state)
         {
             case State.Normal:
-                NormalBehaviour();
-                break;
-            case State.Focused:
-                FocusedBehaviour();
-                break;
+            NormalBehaviour();
+            break;
+        case State.Focused:
+            FocusedBehaviour();
+            break;
         }
     }
     private void SetState(State newState)
     {
-        state = newState;
-        switch (state)
+        if (state != newState)
         {
-            case State.Normal:
-                SetNormalSettings();
-                break;
-            case State.Focused:
-                SetFocusedSettings();
-                break;
-        }
+            state = newState;
+            switch (state)
+            {
+                case State.Normal:
+                    SetNormalSettings();
+                    break;
+                case State.Focused:
+                    SetFocusedSettings();
+                    break;
+            }
+        }       
     }
     private void SetNormalSettings()
     {

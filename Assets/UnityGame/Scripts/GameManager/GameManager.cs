@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject Equilibrium;
-    [SerializeField] private GameObject LightSide;
-    [SerializeField] private GameObject DarkSide;
-    [SerializeField] private Camera MainCamera;
+    public static GameObject Equilibrium;
+    public static GameObject LightSide;
+    public static GameObject DarkSide;
 
     public static GameObject currentCharacter;
-    [HideInInspector] public static bool isUnited;
+    public static bool isUnited;
 
     private void Start()
     {
         Application.targetFrameRate = 60;
-        Unite();      
+        Unite();
     }
     private void Update()
     {
