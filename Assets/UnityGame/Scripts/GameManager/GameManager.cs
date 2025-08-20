@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     private void Separate()
     {
         Equilibrium.SetActive(false);
-        Physics2D.IgnoreCollision(LightSide.GetComponent<BoxCollider2D>(), DarkSide.GetComponent<BoxCollider2D>(), true);
+        //Physics2D.IgnoreCollision(LightSide.GetComponent<BoxCollider2D>(), DarkSide.GetComponent<BoxCollider2D>(), true);
         LightSide.SetActive(true);
         DarkSide.SetActive(true);
         if (currentCharacter != null)

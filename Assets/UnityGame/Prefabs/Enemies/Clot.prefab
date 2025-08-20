@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7053414562665439019}
   - component: {fileID: -6697732733467346414}
   - component: {fileID: 1720709734849999363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Clot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   retreatDistance: 6
+  pointsOnCircle: 36
 --- !u!70 &-6697732733467346414
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.28
-  m_BaseOffset: 0.8125
+  m_Height: 0.46
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

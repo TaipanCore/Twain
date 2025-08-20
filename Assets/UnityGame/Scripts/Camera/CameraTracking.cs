@@ -6,6 +6,10 @@ public class CameraTracking : MonoBehaviour
 {
     [SerializeField] private float interpolationMultiplier;
 
+    private void Start()
+    {
+        transform.position = GameManager.Equilibrium.transform.position;
+    }
     private void FixedUpdate()
     {
         if (GameManager.currentCharacter != null)
