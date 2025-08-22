@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public static GameObject currentCharacter;
     public static bool isUnited;
 
+    public float uniteDistance;
+
     private void Start()
     {
         Application.targetFrameRate = 60;
@@ -35,7 +37,6 @@ public class GameManager : MonoBehaviour
     private void Separate()
     {
         Equilibrium.SetActive(false);
-        //Physics2D.IgnoreCollision(LightSide.GetComponent<BoxCollider2D>(), DarkSide.GetComponent<BoxCollider2D>(), true);
         LightSide.SetActive(true);
         DarkSide.SetActive(true);
         if (currentCharacter != null)
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (InputManager.uniteAndSeparateBtnDown && (LightSide.GetComponent<LightSideBehaviour>().isOnPlayerTrigger || DarkSide.GetComponent<DarkSideBehaviour>().isOnPlayerTrigger))
+            if (InputManager.uniteAndSeparateBtnDown && Utils.IsInRange(LightSide.transform.position, DarkSide.transform.position, uniteDistance))
             {
                 Unite();
             }

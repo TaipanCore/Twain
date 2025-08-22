@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1720709734849999363}
   m_Layer: 7
   m_Name: Clot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2c681fb2cf43048bbb81ba5e0e1933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitpoints: 50
+  _damage: 10
   moveSpeed: 6
   retreatDistance: 6
   pointsOnCircle: 36

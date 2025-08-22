@@ -1,11 +1,26 @@
+using System.Collections;
 using UnityEngine;
-public class LightSideBehaviour : SidesBehaviour
+public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 {
     private enum State
     {
         Normal,
         Focused
     }
+
+    [SerializeField] private float _hitpoints;
+    public float hitpoints
+    {
+        get => _hitpoints;
+        set
+        {
+            _hitpoints = value;
+            if (_hitpoints <= 0)
+                Die();
+        }
+    }
+    
+    [SerializeField] private float invulnerableTime;
 
     [SerializeField] private LightSideMovement movement;
 
@@ -15,7 +30,7 @@ public class LightSideBehaviour : SidesBehaviour
 
     [SerializeField] private LightSource distantLight;
     [SerializeField] private float focusedDistantLightRange;
-    [SerializeField] private float lightFollowSpeed;
+    [SerializeField] private float lightRotationSpeed;
 
     private State state;
     private Transform distantLightTransform;
@@ -84,11 +99,35 @@ public class LightSideBehaviour : SidesBehaviour
         {
             SetState(State.Normal);
         }
-        distantLightTransform.rotation = Quaternion.Lerp(distantLightTransform.rotation, CalculateRotationAngle(), Time.deltaTime * lightFollowSpeed);
+        distantLightTransform.rotation = Quaternion.Lerp(distantLightTransform.rotation, CalculateRotationAngle(), Time.deltaTime * lightRotationSpeed);
     }
     private Quaternion CalculateRotationAngle()
     {
         Vector3 vectorToTarget = MouseTracker.mousePosition - distantLightTransform.position;
         return Quaternion.Euler(0, 0, Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Enemy" && !isInvulnerable)
+        {
+            ReceiveDamage(other.GetComponent<IDamageDealer>().damage);
+        }
+    }
+    public void ReceiveDamage(float damage)
+    {
+        hitpoints -= damage;
+        GiveInvulnerability();
+    }
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+    private bool isInvulnerable = false;
+    private IEnumerator GiveInvulnerability()
+    {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerableTime);
+        isInvulnerable = false;
     }
 }

@@ -6,13 +6,34 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
-public class ClotBehaviour : MonoBehaviour
+public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver
 {
     private enum Behaviour
     {
         Idle,
         Hunt,
         Retreat
+    }
+
+    [SerializeField] private float _hitpoints;
+    public float hitpoints
+    {
+        get => _hitpoints;
+        set
+        {
+            _hitpoints = value;
+            if (_hitpoints <= 0)
+                Die();
+        }
+    }
+    [SerializeField] private float _damage;
+    public float damage
+    {
+        get => _damage;
+        set
+        {
+            _damage = value;
+        }
     }
 
     [SerializeField] private float moveSpeed;
@@ -105,7 +126,7 @@ public class ClotBehaviour : MonoBehaviour
     {
         while (true)
         {
-            if (!isInPanic || (isInPanic && !IsAgentMoving(agent)))
+            if (!isInPanic || (isInPanic && !Utils.IsAgentMoving(agent)))
             {
                 agent.SetDestination(GetRetreatPosition());
             }
@@ -127,7 +148,7 @@ public class ClotBehaviour : MonoBehaviour
             NavMeshPath path = new NavMeshPath();
             if (NavMesh.CalculatePath(transform.position, retreatPosition, NavMesh.AllAreas, path))
             {
-                float pathLength = GetPathLength(path);
+                float pathLength = Utils.GetPathLength(path);
                 if (pathLength < minPathLength)
                 {
                     nearestPosition = retreatPosition;
@@ -139,27 +160,20 @@ public class ClotBehaviour : MonoBehaviour
         }
         return nearestPosition;
     }
-    private float GetPathLength(NavMeshPath path)
-    {
-        float length = 0f;
-        for (int i = 1; i < path.corners.Length; i++)
-        {
-            length += Vector3.Distance(path.corners[i - 1], path.corners[i]);
-        }
-        return length;
-    }
-    private bool IsAgentMoving(NavMeshAgent agent)
-    {
-        if (!agent.hasPath)
-            return false;
-        return !agent.pathPending && agent.velocity.sqrMagnitude > 0.01f;
-    }
     private void SetupNavMeshAgent()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = moveSpeed;
+    }
+    public void ReceiveDamage(float damage)
+    {
+        hitpoints -= damage;
+    }
+    public void Die()
+    {
+        Destroy(gameObject);
     }
     /*
     private void OnDrawGizmos()
