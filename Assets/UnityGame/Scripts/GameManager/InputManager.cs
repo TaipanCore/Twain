@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour
     {
         uniteAndSeparateBtnDown = Input.GetKeyDown(uniteAndSeparateBtn);
         sidesChangeBtnDown = Input.GetKeyDown(sidesChangeBtn);
-        movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         leftMouseBtnDown = Input.GetMouseButtonDown(0);
         leftMouseBtnUp = Input.GetMouseButtonUp(0);
     }

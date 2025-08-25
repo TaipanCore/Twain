@@ -109,15 +109,16 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy" && !isInvulnerable)
+        IDamageDealer damageDealer = other.GetComponent<IDamageDealer>();
+        if (damageDealer != null && !isInvulnerable)
         {
-            ReceiveDamage(other.GetComponent<IDamageDealer>().damage);
+            ReceiveDamage(damageDealer.damage);
         }
     }
     public void ReceiveDamage(float damage)
     {
         hitpoints -= damage;
-        GiveInvulnerability();
+        StartCoroutine(GiveInvulnerability());
     }
     public void Die()
     {

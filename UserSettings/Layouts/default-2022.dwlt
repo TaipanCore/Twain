@@ -15,11 +15,11 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 42.666668
-    width: 1280
-    height: 709.3334
+    y: 42.56604
+    width: 2318.4907
+    height: 1213.585
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Tile Palette
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
-    height: 709.3333
+    width: 2318.4907
+    height: 1213.585
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
+    width: 2318.4907
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 689.3333
-    width: 1280
+    y: 1193.585
+    width: 2318.4907
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,8 +114,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1280
-    height: 659.3333
+    width: 2318.4907
+    height: 1163.585
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
@@ -139,8 +139,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 946
-    height: 659.3333
+    width: 1713.5095
+    height: 1163.585
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
@@ -164,8 +164,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 946
-    height: 423.33334
+    width: 1713.5095
+    height: 746.26416
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 220.66667
-    height: 423.33334
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 400.3019
+    height: 746.26416
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -206,25 +206,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GridPaintPaletteWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 220.66667
+    x: 400.3019
     y: 0
-    width: 725.3333
-    height: 423.33334
-  m_MinSize: {x: 202, y: 221}
+    width: 1313.2076
+    height: 746.26416
+  m_MinSize: {x: 242, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 12}
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,25 +235,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 423.33334
-    width: 946
-    height: 235.99997
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+    y: 746.26416
+    width: 1713.5095
+    height: 417.3208
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,12 +269,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 946
+    x: 1713.5095
     y: 0
-    width: 334
-    height: 659.3333
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 604.9812
+    height: 1163.585
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -301,10 +301,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 220.66667
-    y: 72.66667
-    width: 723.3333
-    height: 402.33334
+    x: 400.30188
+    y: 72.452835
+    width: 1311.2076
+    height: 725.26416
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: -195.66666}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: -0.000030517578}
       snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -346,7 +346,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -317.3333, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: -0.5534668, y: 0}
       snapCorner: 1
       id: unity-scene-view-toolbar
       index: 0
@@ -658,7 +658,7 @@ MonoBehaviour:
       collapsed: 1
       displayed: 1
       snapOffset: {x: -206.4906, y: -107.16977}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0.000030517578}
       snapCorner: 3
       id: AINavigationOverlay
       index: 1
@@ -676,9 +676,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 44.325867, y: 3.8935268, z: 0.38557824}
+    m_Target: {x: 4.146683, y: 0.7526992, z: 0.007208279}
     speed: 2
-    m_Value: {x: 44.325867, y: 3.8935268, z: 0.38557824}
+    m_Value: {x: 4.146683, y: 0.7526992, z: 0.007208279}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -728,9 +728,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.948016
+    m_Target: 9.279199
     speed: 2
-    m_Value: 6.948016
+    m_Value: 9.279199
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -776,9 +776,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 72.66667
-    width: 219.66667
-    height: 402.33334
+    y: 72.452835
+    width: 399.3019
+    height: 725.26416
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -792,9 +792,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b6620000
-      m_LastClickedID: 25270
-      m_ExpandedIDs: 1afbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1afbfffff461000028620000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -838,10 +838,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 220.66667
-    y: 72.66667
-    width: 723.3333
-    height: 402.33334
+    x: 400.30188
+    y: 72.452835
+    width: 1311.2076
+    height: 725.26416
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -873,10 +873,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
+    m_HBaseRangeMin: -869.43396
+    m_HBaseRangeMax: 869.43396
+    m_VBaseRangeMin: -489.0566
+    m_VBaseRangeMax: 489.0566
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -894,23 +894,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 723.3333
-      height: 381.33334
-    m_Scale: {x: 0.52962965, y: 0.52962965}
-    m_Translation: {x: 361.66666, y: 190.66667}
+      width: 1311.2076
+      height: 704.26416
+    m_Scale: {x: 0.72002316, y: 0.72002316}
+    m_Translation: {x: 655.6038, y: 352.13208}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -682.86707
-      y: -360
-      width: 1365.7341
-      height: 720
+      x: -910.53156
+      y: -489.0566
+      width: 1821.0631
+      height: 978.1132
     m_MinimalGUI: 1
-  m_defaultScale: 0.52962965
-  m_LastWindowPixelSize: {x: 1085, y: 603.5}
+  m_defaultScale: 0.72002316
+  m_LastWindowPixelSize: {x: 1447.7917, y: 800.8125}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -936,10 +936,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 220.66667
-    y: 72.66667
-    width: 723.3333
-    height: 411.66666
+    x: 400.30188
+    y: 72.452835
+    width: 1311.2076
+    height: 725.26416
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -972,8 +972,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 400.30188
     y: 72.452835
-    width: 1313.9246
-    height: 666.39624
+    width: 1311.2076
+    height: 725.26416
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1012,9 +1012,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 462
-    width: 946.3333
-    height: 248.99997
+    y: 818.717
+    width: 1712.5095
+    height: 396.3208
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1036,7 +1036,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UnityGame/Prefabs/Enemies
+    - Assets/UnityGame/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1044,16 +1044,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/UnityGame/Prefabs/Enemies
+  - Assets/UnityGame/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\APP\Projects\Twain
+  m_LastProjectPath: D:\APP\Unity\Projects\Twain
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3a680000
-    m_LastClickedID: 26682
-    m_ExpandedIDs: 00000000e4630000e6630000e8630000ea630000
+    scrollPos: {x: 0, y: 39.6792}
+    m_SelectedIDs: 32630000
+    m_LastClickedID: 25394
+    m_ExpandedIDs: 0000000030630000326300003463000036630000386300003a63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1081,7 +1081,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e4630000e6630000e8630000ea630000
+    m_ExpandedIDs: 0000000030630000326300003463000036630000386300003a630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1106,8 +1106,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 18fbffff
-    m_LastClickedInstanceID: -1256
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ac6100004a6100000000000054610000e061000092610000d461000070610000a4610000a6610000ca610000cc610000c06f00007a630000
     m_RenameOverlay:
@@ -1158,9 +1158,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 496
-    width: 945
-    height: 214.99997
+    y: 818.717
+    width: 1712.5095
+    height: 396.3208
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1277,7 +1277,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1256
+  m_LastSelectedObjectID: 25076
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1298,10 +1298,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 946
-    y: 72.66667
-    width: 333
-    height: 638.3333
+    x: 1713.5094
+    y: 72.452835
+    width: 603.9812
+    height: 1142.585
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1345,10 +1345,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 946
-    y: 72.66667
-    width: 333
-    height: 638.3333
+    x: 1713.5094
+    y: 72.452835
+    width: 603.9812
+    height: 1142.585
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1363,9 +1363,9 @@ MonoBehaviour:
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
+  currentTrackingStatusHasUpdate: 1
+  currentStatusEntriesHasUpdate: 1
+  repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
@@ -1556,24 +1556,14 @@ MonoBehaviour:
     commitBody: 
     commitMessage: 
     currentBranch: master
-    treeScroll: {x: 0, y: 25}
+    treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
         - 1b942447d00319a4d93260f4045c57a9
-        - a155424b9bc44f14fade5ca00e1519b4
-        - cd9d38bf3b1a8c34da52cbe8922b9819
-        - a938f43f076b28649afcb4d7f31b1eb2
         - 474f5a2bb3405b04f882ad1119fd96b3
         - 2cda990e2423bbf4892e6590ba056729
-        - 60b4fc75774cf0341b3cd425bd946ec2
-        - eeb05636797e4114989ef5cadc621ae4
-        - defa9f67f422a03498bd624f9f541092
-        - 84f14ccd37d8aa64286dadafebb1f4fb
-        - ab71504d71032f14e918958b87b1fdba
-        - 3bd01f907a75cc84ebdbea4d5e4c641b
-        - 7f2c681fb2cf43048bbb81ba5e0e1933
         values:
         - path: Assets
           label: Assets
@@ -1611,60 +1601,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Prefabs
-          label: Prefabs
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Prefabs\Enemies
-          label: Enemies
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-          label: Clot.prefab
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-            fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-            projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
         - path: Assets\UnityGame\Scenes
           label: Scenes
           level: 2
@@ -1696,134 +1632,8 @@ MonoBehaviour:
           isLocked: 0
           gitStatusEntry:
             path: Assets\UnityGame\Scenes\SampleScene.unity
-            fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
             projectPath: Assets\UnityGame\Scenes\SampleScene.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\UnityGame\Scenes\SampleScene
-          label: SampleScene
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-          label: NavMesh-NavMesh.asset
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-            fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-            projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\UnityGame\Scripts
-          label: Scripts
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Camera
-          label: Camera
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-          label: CameraTracking.cs
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-            fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-            projectPath: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\UnityGame\Scripts\Enemies
-          label: Enemies
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-          label: ClotBehaviour.cs
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-            fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-            projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
@@ -1831,13 +1641,7 @@ MonoBehaviour:
         keys:
         - Assets
         - Assets\UnityGame
-        - Assets\UnityGame\Prefabs
-        - Assets\UnityGame\Prefabs\Enemies
         - Assets\UnityGame\Scenes
-        - Assets\UnityGame\Scenes\SampleScene
-        - Assets\UnityGame\Scripts
-        - Assets\UnityGame\Scripts\Camera
-        - Assets\UnityGame\Scripts\Enemies
         - UserSettings
         - UserSettings\Layouts
         values:
@@ -1877,117 +1681,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Prefabs
-          label: Prefabs
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Prefabs\Enemies
-          label: Enemies
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
         - path: Assets\UnityGame\Scenes
           label: Scenes
           level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scenes\SampleScene
-          label: SampleScene
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts
-          label: Scripts
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Camera
-          label: Camera
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Enemies
-          label: Enemies
-          level: 3
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -2103,60 +1799,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Prefabs
-        label: Prefabs
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Prefabs\Enemies
-        label: Enemies
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-        label: Clot.prefab
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-          fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-          projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: Assets\UnityGame\Scenes
         label: Scenes
         level: 2
@@ -2188,134 +1830,8 @@ MonoBehaviour:
         isLocked: 0
         gitStatusEntry:
           path: Assets\UnityGame\Scenes\SampleScene.unity
-          fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
           projectPath: Assets\UnityGame\Scenes\SampleScene.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\UnityGame\Scenes\SampleScene
-        label: SampleScene
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-        label: NavMesh-NavMesh.asset
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-          fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-          projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\UnityGame\Scripts
-        label: Scripts
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Scripts\Camera
-        label: Camera
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-        label: CameraTracking.cs
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-          fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-          projectPath: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\UnityGame\Scripts\Enemies
-        label: Enemies
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-        label: ClotBehaviour.cs
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-          fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-          projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -2368,7 +1884,7 @@ MonoBehaviour:
         isLocked: 0
         gitStatusEntry:
           path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
           projectPath: UserSettings\Layouts\default-2022.dwlt
           originalPath: 
           indexStatus: 0
@@ -2393,48 +1909,24 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-      fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-      projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
     - path: Assets\UnityGame\Scenes\SampleScene.unity
-      fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
       projectPath: Assets\UnityGame\Scenes\SampleScene.unity
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-      fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-      projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-      fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-      projectPath: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-      fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-      projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
     - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+      fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
       projectPath: UserSettings\Layouts\default-2022.dwlt
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 6 changed files
+    changedFilesText: 2 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2025-08-20T16:47:13.751+03:00
+      updatedTimeString: 2025-08-24T15:56:21.154+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2025-08-20T16:51:12.463+03:00
+      updatedTimeString: 2025-08-24T16:15:51.033+03:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -7431,7 +6923,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/Taipania/Twain.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 0
+  hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -7442,13 +6934,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2025-08-16T22:39:49.279+03:00
+    updatedTimeString: 2025-08-23T21:44:27.710+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2025-08-16T22:39:49.645+03:00
+    updatedTimeString: 2025-08-23T22:17:38.809+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2025-08-16T22:39:49.631+03:00
+    updatedTimeString: 2025-08-23T22:17:38.800+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull

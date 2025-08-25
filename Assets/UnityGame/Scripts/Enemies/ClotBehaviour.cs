@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
-public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver
+public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbleAggro
 {
     private enum Behaviour
     {
@@ -35,6 +35,15 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver
             _damage = value;
         }
     }
+    private bool _isAggro;
+    public bool isAggro
+    {
+        get => _isAggro;
+        set
+        {
+            _isAggro = value;
+        }
+    }
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float retreatDistance;
@@ -44,10 +53,13 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver
     private Behaviour behaviour;
     private Vector3 target;
 
+    private Coroutine retreatCoroutine;
+    private bool isInPanic;
+
     private void Start()
     {
         SetupNavMeshAgent();
-        SetBehaviour(Behaviour.Hunt);
+        SetBehaviour(Behaviour.Idle);
     }
     private void FixedUpdate()
     {
@@ -86,14 +98,12 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver
     }
     private void SetIdleSettings()
     {
-
+        target = transform.position;
     }
     private void SetHuntSettings()
     {
 
     }
-    private Coroutine retreatCoroutine;
-    private bool isInPanic;
     private void SetRetreatSettings()
     {
         if (retreatCoroutine == null)
@@ -101,7 +111,10 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver
     }
     private void Idle()
     {
-
+        if (isAggro)
+        {
+            SetBehaviour(Behaviour.Hunt);
+        }
     }
     private void Hunt()
     {
@@ -116,9 +129,9 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver
     {
         if (!GameManager.isUnited)
         {
-            SetBehaviour(Behaviour.Hunt);
             StopCoroutine(retreatCoroutine);
             retreatCoroutine = null;
+            SetBehaviour(Behaviour.Hunt);
         }
         target = GameManager.Equilibrium.transform.position;
     }
