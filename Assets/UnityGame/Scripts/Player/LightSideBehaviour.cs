@@ -8,6 +8,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         Focused
     }
 
+<<<<<<< Updated upstream
     [SerializeField] private float _hitpoints;
     public float hitpoints
     {
@@ -24,6 +25,8 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 
     [SerializeField] private LightSideMovement movement;
 
+=======
+>>>>>>> Stashed changes
     [SerializeField] private LightSource circleLight;
     [SerializeField] private float baseCircleLightRange;
     [SerializeField] private float focusedCircleLightRange;
@@ -34,18 +37,23 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 
     private State state;
     private Transform distantLightTransform;
-    
+    private LightSideMovement movement;
+    private Animator animator;
+
     private void Awake()
     {
         GameManager.LightSide = gameObject;
     }
     private void Start()
-    {       
+    {
+        animator = GetComponent<Animator>();
+        movement = GetComponent<LightSideMovement>();
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
         SetState(State.Normal);
     }
     private void Update()
     {
+        animator.SetFloat("MovSpeed", movement.currentSpeed);
         switch (state)
         {
             case State.Normal:
@@ -77,6 +85,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         circleLight.range = baseCircleLightRange;
         distantLight.gameObject.SetActive(false);
         movement.moveSpeed = movement.baseMovSpeed;
+        animator.SetBool("IsFocused", false);
     }
     private void SetFocusedSettings()
     {
@@ -85,6 +94,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         distantLight.range = focusedDistantLightRange;
         distantLightTransform.rotation = CalculateRotationAngle();
         movement.moveSpeed = movement.focusedMovSpeed;
+        animator.SetBool("IsFocused", true);
     }
     private void NormalBehaviour()
     {

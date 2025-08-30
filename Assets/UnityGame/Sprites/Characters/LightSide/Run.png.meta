@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f113701010f236b408fc0b15ef4ad236
+guid: 78c393aef83f66445943235abce66e99
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: Run_0
       rect:
         serializedVersion: 2
         x: 1
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 211038b5ff0049a47b8f92d180aa623d
-      internalID: -146284314
+      spriteID: 3dfa0ec11f1b6684fa901e882738207f
+      internalID: -776971297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: Run_1
       rect:
         serializedVersion: 2
         x: 17
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87fe3b07a62cae2438878cdfda266148
-      internalID: 1392022168
+      spriteID: cdf9c97e5f3121d4e8dd166720f2d12b
+      internalID: -802941939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: Run_2
       rect:
         serializedVersion: 2
         x: 33
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59fd24f9ef1b0ec43b5804c94d43c2b8
-      internalID: 1158182916
+      spriteID: 5c8bd3263c52dd44d81db7a367188360
+      internalID: 1906353437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: Run_3
       rect:
         serializedVersion: 2
         x: 49
@@ -187,8 +187,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6e70543b90136b4ebdcc677f6af279a
-      internalID: 1840074544
+      spriteID: 737576e31fba6a44b883dcbb7f191133
+      internalID: -127345454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e927e332620bd44aa284088fa5b7407
+      internalID: -1519748501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674914c2182004343917a3c5c261d941
+      internalID: -1746334772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a227eebd10d95d94abec640561faffb2
+      internalID: 156398927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 0
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b8e7e883bdf5e4ab3dc472e71b625c
+      internalID: 1740714750
       vertices: []
       indices: 
       edges: []
@@ -204,10 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_0: -146284314
-      Idle_1: 1392022168
-      Idle_2: 1158182916
-      Idle_3: 1840074544
+      Run_0: -776971297
+      Run_1: -802941939
+      Run_2: 1906353437
+      Run_3: -127345454
+      Run_4: -1519748501
+      Run_5: -1746334772
+      Run_6: 156398927
+      Run_7: 1740714750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
