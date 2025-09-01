@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbleAggro
 {
-    private enum Behaviour
+    public enum State
     {
         Idle,
         Hunt,
@@ -50,7 +50,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     [SerializeField] private int pointsOnCircle;
 
     private NavMeshAgent agent;
-    private Behaviour behaviour;
+    private State state;
     private Vector3 target;
 
     private Coroutine retreatCoroutine;
@@ -59,42 +59,46 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     private void Start()
     {
         SetupNavMeshAgent();
-        SetBehaviour(Behaviour.Idle);
+        SetState(State.Idle);
     }
     private void FixedUpdate()
     {
-        switch (behaviour)
+        switch (state)
         {
-            case Behaviour.Idle:
+            case State.Idle:
                 Idle();
                 break;                
-            case Behaviour.Hunt:
+            case State.Hunt:
                 Hunt();
                 break;
-            case Behaviour.Retreat:
+            case State.Retreat:
                 Retreat();
                 break;   
         }
     }
 
-    private void SetBehaviour(Behaviour newBehaviour)
+    private void SetState(State newState)
     {
-        if (behaviour != newBehaviour)
+        if (state != newState)
         {
-            behaviour = newBehaviour;
-            switch (behaviour)
+            state = newState;
+            switch (state)
             {
-                case Behaviour.Idle:
+                case State.Idle:
                     SetIdleSettings();
                     break;
-                case Behaviour.Hunt:
+                case State.Hunt:
                     SetHuntSettings();
                     break;
-                case Behaviour.Retreat:
+                case State.Retreat:
                     SetRetreatSettings();
                     break;
             }
         }
+    }
+    public State GetState()
+    {
+        return state;
     }
     private void SetIdleSettings()
     {
@@ -113,14 +117,14 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     {
         if (isAggro)
         {
-            SetBehaviour(Behaviour.Hunt);
+            SetState(State.Hunt);
         }
     }
     private void Hunt()
     {
         if (GameManager.isUnited)
         {
-            SetBehaviour(Behaviour.Retreat);
+            SetState(State.Retreat);
         }
         target = GameManager.LightSide.transform.position;
         agent.SetDestination(target);
@@ -131,7 +135,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         {
             StopCoroutine(retreatCoroutine);
             retreatCoroutine = null;
-            SetBehaviour(Behaviour.Hunt);
+            SetState(State.Hunt);
         }
         target = GameManager.Equilibrium.transform.position;
     }

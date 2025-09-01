@@ -2,13 +2,12 @@ using System.Collections;
 using UnityEngine;
 public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 {
-    private enum State
+    public enum State
     {
         Normal,
         Focused
     }
 
-<<<<<<< Updated upstream
     [SerializeField] private float _hitpoints;
     public float hitpoints
     {
@@ -23,10 +22,6 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     
     [SerializeField] private float invulnerableTime;
 
-    [SerializeField] private LightSideMovement movement;
-
-=======
->>>>>>> Stashed changes
     [SerializeField] private LightSource circleLight;
     [SerializeField] private float baseCircleLightRange;
     [SerializeField] private float focusedCircleLightRange;
@@ -80,6 +75,10 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
             }
         }       
     }
+    public State GetState()
+    {
+        return state;
+    }
     private void SetNormalSettings()
     {
         circleLight.range = baseCircleLightRange;
@@ -98,14 +97,14 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     private void NormalBehaviour()
     {
-        if (InputManager.leftMouseBtnDown)
+        if (InputManager.leftMouseBtnDown && GameManager.currentCharacter == gameObject)
         {
             SetState(State.Focused);
         }
     }
     private void FocusedBehaviour()
     {
-        if (InputManager.leftMouseBtnUp)
+        if (InputManager.leftMouseBtnUp && GameManager.currentCharacter == gameObject)
         {
             SetState(State.Normal);
         }

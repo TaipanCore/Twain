@@ -5,23 +5,28 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float currentSpeed;
 
-    private Rigidbody2D rb;
-    private SpriteRenderer sr;
+    protected Rigidbody2D rb;
+    protected SpriteRenderer sr;
+    protected Vector2 movement;
 
-    private void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();       
     }
     private void FixedUpdate()
     {
         if (GameManager.currentCharacter == gameObject)
         {
-            Vector2 movement = InputManager.movement;
+            movement = InputManager.movement;
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
             currentSpeed = (movement * moveSpeed).magnitude;
-            if (movement.x != 0)
-                sr.flipX = movement.x < 0f;
+            FlipSprite();
         }
+    }
+    protected virtual void FlipSprite()
+    {
+        if (movement.x != 0)
+            sr.flipX = movement.x < 0f;
     }
 }
