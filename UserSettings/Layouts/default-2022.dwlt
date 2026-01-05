@@ -14,17 +14,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0.9056604
-    y: 49.81132
-    width: 1157.434
-    height: 1205.434
+    x: 0
+    y: 42.56604
+    width: 2318.4907
+    height: 1213.585
   m_ShowMode: 4
-  m_Title: Game
-  m_RootView: {fileID: 2}
+  m_Title: Project
+  m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: AnimationWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 533.43396
+    width: 1587.6228
+    height: 267.16986
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 21}
+  m_Panes:
+  - {fileID: 21}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 11}
+  - {fileID: 2}
+  m_Position:
+    serializedVersion: 2
+    x: 278.94342
+    y: 0
+    width: 1587.6228
+    height: 800.6038
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 8096, y: 16192}
+  vertical: 1
+  controlID: 45
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,22 +88,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
   - {fileID: 5}
-  - {fileID: 4}
+  - {fileID: 7}
+  - {fileID: 6}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1157.434
-    height: 1205.434
+    width: 2318.4907
+    height: 1213.585
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &3
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,12 +120,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1157.434
+    width: 2318.4907
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &4
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,61 +141,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1185.434
-    width: 1157.434
+    y: 1193.585
+    width: 2318.4907
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 6}
-  - {fileID: 11}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 1157.434
-    height: 1155.434
-  m_MinSize: {x: 300, y: 100}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 0
-  controlID: 18
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 7}
-  - {fileID: 10}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 855.84906
-    height: 1155.434
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 19
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,18 +160,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 8}
+  - {fileID: 13}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 2318.4907
+    height: 1163.585
+  m_MinSize: {x: 300, y: 150}
+  m_MaxSize: {x: 24288, y: 24288}
+  vertical: 0
+  controlID: 42
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
   - {fileID: 9}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 855.84906
-    height: 740.8302
-  m_MinSize: {x: 200, y: 50}
-  m_MaxSize: {x: 16192, y: 8096}
+    width: 1866.5662
+    height: 1163.585
+  m_MinSize: {x: 200, y: 150}
+  m_MaxSize: {x: 16192, y: 24288}
+  vertical: 1
+  controlID: 43
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1866.5662
+    height: 800.6038
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 20
---- !u!114 &8
+  controlID: 44
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,16 +238,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 200.15096
-    height: 740.8302
+    width: 278.94342
+    height: 800.6038
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,21 +262,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 200.15096
+    x: 0
     y: 0
-    width: 655.6981
-    height: 740.8302
+    width: 1587.6228
+    height: 533.43396
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 22}
   - {fileID: 14}
-  - {fileID: 15}
+  - {fileID: 24}
+  - {fileID: 16}
+  - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &10
+  m_LastSelected: 2
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,26 +286,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimationWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 740.8302
-    width: 855.84906
-    height: 414.60376
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+    y: 800.6038
+    width: 1866.5662
+    height: 362.98114
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 16}
-  - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 3
+  - {fileID: 20}
+  m_Selected: 0
   m_LastSelected: 2
---- !u!114 &11
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,19 +319,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 855.84906
+    x: 1866.5662
     y: 0
-    width: 301.5849
-    height: 1155.434
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 20}
+    width: 451.92456
+    height: 1163.585
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 20}
-  - {fileID: 21}
+  - {fileID: 22}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &12
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,10 +351,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 201.05661
-    y: 79.69811
-    width: 653.6981
-    height: 719.8302
+    x: 278.9434
+    y: 72.452835
+    width: 1585.6228
+    height: 512.43396
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -333,7 +383,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: -195.66666}
-      snapOffsetDelta: {x: 0, y: -0.000030517578}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -345,7 +395,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -317.8868, y: 0}
+      snapOffset: {x: -317.88684, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-scene-view-toolbar
@@ -676,9 +726,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.927966, y: -0.18874839, z: 0.04771065}
+    m_Target: {x: 8.45342, y: 0.37101045, z: 0.07513201}
     speed: 2
-    m_Value: {x: -3.927966, y: -0.18874839, z: 0.04771065}
+    m_Value: {x: 8.45342, y: 0.37101045, z: 0.07513201}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -728,9 +778,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.22892
+    m_Target: 2.4868305
     speed: 2
-    m_Value: 5.22892
+    m_Value: 2.4868305
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -755,7 +805,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &13
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -775,10 +825,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0.9056604
-    y: 79.69811
-    width: 199.15096
-    height: 719.8302
+    x: 0
+    y: 72.452835
+    width: 277.94342
+    height: 779.6038
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -792,9 +842,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6a620000
-      m_LastClickedID: 25194
-      m_ExpandedIDs: f8faffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -810,7 +860,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 10}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -818,7 +868,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -838,10 +888,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 201.05661
-    y: 79.69811
-    width: 653.6981
-    height: 719.8302
+    x: 278.9434
+    y: 72.452835
+    width: 1585.6228
+    height: 511.52832
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -852,7 +902,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &15
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -872,10 +922,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 201.05661
-    y: 79.69811
-    width: 653.6981
-    height: 719.8302
+    x: 278.9434
+    y: 72.452835
+    width: 1585.6228
+    height: 782.3208
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -888,12 +938,12 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_ShowAlpha: 0
   m_MipLevel: 0
-  m_Zoom: -1
-  m_ScrollPosition: {x: 0, y: 0}
+  m_Zoom: 27.60542
+  m_ScrollPosition: {x: 21.992992, y: 1.8156619}
   m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 211038b5ff0049a47b8f92d180aa623d
+  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
   m_LastUsedModuleTypeName: UnityEditor.U2D.Sprites.SpriteFrameModule
---- !u!114 &16
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -913,10 +963,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0.9056604
-    y: 820.5283
-    width: 854.84906
-    height: 393.60376
+    x: 0
+    y: 873.05664
+    width: 1865.5662
+    height: 341.98114
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -938,7 +988,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UnityGame/Sprites/Characters/DarkSide/Animations
+    - Assets/UnityGame/Sprites/Characters/Equilibrium
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -946,16 +996,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/UnityGame/Sprites/Characters/DarkSide/Animations
+  - Assets/UnityGame/Sprites/Characters/Equilibrium
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\APP\Unity\Projects\Twain
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fa630000
-    m_LastClickedID: 25594
-    m_ExpandedIDs: 000000007a630000c2630000c6630000c8630000d4630000d663000000ca9a3b
+    scrollPos: {x: 0, y: 32.73584}
+    m_SelectedIDs: cc630000
+    m_LastClickedID: 25548
+    m_ExpandedIDs: 00000000ac630000ca630000ce630000d063000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -971,7 +1021,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 12}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -983,7 +1033,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a630000
+    m_ExpandedIDs: 00000000ac630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1008,9 +1058,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fc610000
-    m_LastClickedInstanceID: 25084
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ac6100004a6100000000000054610000e061000092610000d461000070610000a4610000a6610000ca610000cc610000c06f00007a630000847c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1027,7 +1077,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1039,7 +1089,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 206.33333
---- !u!114 &17
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1059,10 +1109,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0.9056604
-    y: 820.5283
-    width: 854.84906
-    height: 393.60376
+    x: 0
+    y: 873.05664
+    width: 1865.5662
+    height: 341.98114
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1073,7 +1123,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &18
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1093,10 +1143,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0.9056604
-    y: 820.5283
-    width: 854.84906
-    height: 393.60376
+    x: 0
+    y: 873.05664
+    width: 1865.5662
+    height: 341.98114
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1111,15 +1161,16 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: -5531409872542637336, guid: b1be397b6076dbd4182553a7be531b12, type: 2}
     - {fileID: -1923414864766373709, guid: 7178a4089ea17e545b74ad20ad901802, type: 2}
+    - {fileID: -6754553210643076253, guid: d5c295629e80a3640aa955058289e0d7, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.86018217
+    - e00: 1
       e01: 0
       e02: 0
-      e03: 6.398163
+      e03: 343.47168
       e10: 0
-      e11: 0.86018217
+      e11: 1
       e12: 0
-      e13: 44.1812
+      e13: -4.66037
       e20: 0
       e21: 0
       e22: 1
@@ -1131,11 +1182,27 @@ MonoBehaviour:
     - e00: 1
       e01: 0
       e02: 0
-      e03: 19.452835
+      e03: 398.47168
       e10: 0
       e11: 1
       e12: 0
-      e13: 62.509438
+      e13: 35.33963
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.93400747
+      e01: 0
+      e02: 0
+      e03: 233.20148
+      e10: 0
+      e11: 0.93400747
+      e12: 0
+      e13: 48.335136
       e20: 0
       e21: 0
       e22: 1
@@ -1145,9 +1212,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 7178a4089ea17e545b74ad20ad901802, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: d5c295629e80a3640aa955058289e0d7, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1923414864766373709, guid: 7178a4089ea17e545b74ad20ad901802, type: 2}
+  - m_Target: {fileID: -6754553210643076253, guid: d5c295629e80a3640aa955058289e0d7, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1157,10 +1224,10 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 0
+  m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &19
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1180,10 +1247,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0.9056604
-    y: 820.5283
-    width: 854.84906
-    height: 393.60376
+    x: 278.9434
+    y: 605.8868
+    width: 1585.6228
+    height: 246.16986
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1196,8 +1263,8 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25194
---- !u!114 &20
+  m_LastSelectedObjectID: 25132
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1217,10 +1284,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 856.7547
-    y: 79.69811
-    width: 300.5849
-    height: 1134.434
+    x: 1866.566
+    y: 72.452835
+    width: 450.92456
+    height: 1142.585
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1244,7 +1311,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &21
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1264,9 +1331,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1713.5094
+    x: 1803.1698
     y: 72.452835
-    width: 603.9812
+    width: 514.3208
     height: 1142.585
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1278,13 +1345,13 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 116.24218040000001
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
@@ -1481,9 +1548,19 @@ MonoBehaviour:
         keys:
         - 00000000000000001000000000000000
         - 1b942447d00319a4d93260f4045c57a9
-        - defa9f67f422a03498bd624f9f541092
-        - 98c8f23e9c9fe90429e8b82e708cf31c
-        - 6c909b087b5f1bb46ad728ce9c55d8d5
+        - 474f5a2bb3405b04f882ad1119fd96b3
+        - 2cda990e2423bbf4892e6590ba056729
+        - 6c325d4f90588854bb6c69d623d4de66
+        - ba4ba1ccf96c1d246ac5d84076a9d81e
+        - 458d4b92dd6314e42affc1a693b7a6eb
+        - 644efba28cf7aed4e844ce0cacfe9697
+        - 9454a1e6e4c112a46b86e356b9616484
+        - b6f2222c498f80247acfdc11c89c875e
+        - 810da081d82d3f94f8d4f53ffede663a
+        - d1ff9b006918b3043a6593ec0daa6924
+        - 884afbcd190f74241980bee22038c9d1
+        - b1be397b6076dbd4182553a7be531b12
+        - d31c058203eedb744a82dfa8cde91715
         values:
         - path: Assets
           label: Assets
@@ -1521,8 +1598,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts
-          label: Scripts
+        - path: Assets\UnityGame\Scenes
+          label: Scenes
           level: 2
           isFolder: 1
           isContainer: 0
@@ -1539,27 +1616,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Player
-          label: Player
+        - path: Assets\UnityGame\Scenes\SampleScene.unity
+          label: SampleScene.unity
           level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-          label: LightSideBehaviour.cs
-          level: 4
           isFolder: 0
           isContainer: 0
           isCollapsed: 0
@@ -1569,9 +1628,207 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-            projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+            path: Assets\UnityGame\Scenes\SampleScene.unity
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+            projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\UnityGame\Sprites
+          label: Sprites
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters
+          label: Characters
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium
+          label: Equilibrium
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+          label: Attack.png
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          label: Idle.png
+          level: 5
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+          label: Shoot.png
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+          label: StunBullet.png
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\UnityGame\Sprites\Characters\LightSide
+          label: LightSide
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations
+          label: Animations
+          level: 5
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          label: LightSide.controller
+          level: 6
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+            projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          label: Run.anim
+          level: 6
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+            projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
@@ -1579,8 +1836,14 @@ MonoBehaviour:
         keys:
         - Assets
         - Assets\UnityGame
-        - Assets\UnityGame\Scripts
-        - Assets\UnityGame\Scripts\Player
+        - Assets\UnityGame\Scenes
+        - Assets\UnityGame\Sprites
+        - Assets\UnityGame\Sprites\Characters
+        - Assets\UnityGame\Sprites\Characters\Equilibrium
+        - Assets\UnityGame\Sprites\Characters\LightSide
+        - Assets\UnityGame\Sprites\Characters\LightSide\Animations
+        - UserSettings
+        - UserSettings\Layouts
         values:
         - path: Assets
           label: Assets
@@ -1618,8 +1881,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts
-          label: Scripts
+        - path: Assets\UnityGame\Scenes
+          label: Scenes
           level: 2
           isFolder: 1
           isContainer: 0
@@ -1636,9 +1899,117 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Scripts\Player
-          label: Player
+        - path: Assets\UnityGame\Sprites
+          label: Sprites
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters
+          label: Characters
           level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium
+          label: Equilibrium
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide
+          label: LightSide
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations
+          label: Animations
+          level: 5
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1682,6 +2053,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: .gitignore
+        label: .gitignore
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: .gitignore
+          fullPath: D:\APP\Unity\Projects\Twain\.gitignore
+          projectPath: .gitignore
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets
         label: Assets
         level: 0
@@ -1718,8 +2107,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Scripts
-        label: Scripts
+      - path: Assets\UnityGame\Scenes
+        label: Scenes
         level: 2
         isFolder: 1
         isContainer: 0
@@ -1736,8 +2125,44 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Scripts\Player
-        label: Player
+      - path: Assets\UnityGame\Scenes\SampleScene.unity
+        label: SampleScene.unity
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+          projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\UnityGame\Sprites
+        label: Sprites
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters
+        label: Characters
         level: 3
         isFolder: 1
         isContainer: 0
@@ -1754,9 +2179,45 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-        label: LightSideBehaviour.cs
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium
+        label: Equilibrium
         level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+        label: Attack.png
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
+        label: Attack.png.meta
+        level: 6
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -1766,9 +2227,225 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-          projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+        label: Idle.png
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+        label: Shoot.png
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
+        label: Shoot.png.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+        label: StunBullet.png
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
+        label: StunBullet.png.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UnityGame\Sprites\Characters\LightSide
+        label: LightSide
+        level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations
+        label: Animations
+        level: 5
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+        label: LightSide.controller
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+        label: Run.anim
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -1792,26 +2469,1233 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
-      projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+    - path: .gitignore
+      fullPath: D:\APP\Unity\Projects\Twain\.gitignore
+      projectPath: .gitignore
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 1 changed file
+    - path: Assets\UnityGame\Scenes\SampleScene.unity
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+      projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
+      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
+      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
+      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+      projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+      projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 12 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2025-09-01T00:26:58.423+03:00
+      updatedTimeString: 2026-01-04T23:42:45.578+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2025-09-01T00:28:12.163+03:00
+      updatedTimeString: 2026-01-04T23:42:47.846+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2025-09-01T00:26:59.203+03:00
+      updatedTimeString: 2026-01-04T23:42:47.545+03:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: 2463672f6906523654047bed6064fc556d90a182
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u0420\u0430\u0431\u043E\u0442\u0430 \u0441 \u0430\u043D\u0438\u043C\u0430\u0446\u0438\u044F\u043C\u0438
+        \u0441\u0432\u0435\u0442\u043B\u043E\u0439 \u0441\u0442\u043E\u0440\u043E\u043D\u044B"
+      description: 
+      timeString: 2025-08-30T14:20:51.000+03:00
+      commitTimeString: 2025-08-30T14:20:51.000+03:00
+      changes:
+      - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+        projectPath: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Run.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Run.png
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Run.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Run.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Run.png.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Run.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Walk.png
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Walk.png.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 6b47e0fe23830b435e2c655ae3a036726c193f82
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u0410\u0433\u0440 \u043A\u043B\u043E\u0442\u0430 \u043F\u0440\u0438
+        \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0438 \u0432 \u0441\u0432\u0435\u0442"
+      description: 
+      timeString: 2025-08-25T21:02:12.000+03:00
+      commitTimeString: 2025-08-25T21:02:12.000+03:00
+      changes:
+      - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene.unity
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+        projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\InputManager.cs
+        projectPath: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs
+        projectPath: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs.meta
+        projectPath: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Light\AggroTrigger.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\AggroTrigger.cs
+        projectPath: Assets\UnityGame\Scripts\Light\AggroTrigger.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Light\AggroTrigger.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\AggroTrigger.cs.meta
+        projectPath: Assets\UnityGame\Scripts\Light\AggroTrigger.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 32206b47ff99c65416322739406fcc8e4453b9ce
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u0438 \u043D\u0430\u043D\u0435\u0441\u0435\u043D\u0438\u0435
+        \u0443\u0440\u043E\u043D\u0430"
+      description: 
+      timeString: 2025-08-22T23:51:26.000+03:00
+      commitTimeString: 2025-08-22T23:51:26.000+03:00
+      changes:
+      - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Interfaces.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces.meta
+        projectPath: Assets\UnityGame\Scripts\Interfaces.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs
+        projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs.meta
+        projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs.meta
+        originalPath: Assets\UnityGame\Scripts\Player\SidesBehaviour.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs
+        projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs.meta
+        projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\SidesBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\SidesBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\SidesBehaviour.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\UnityUtils.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\UnityUtils.meta
+        projectPath: Assets\UnityGame\Scripts\UnityUtils.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\UnityUtils\Utils.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\UnityUtils\Utils.cs
+        projectPath: Assets\UnityGame\Scripts\UnityUtils\Utils.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\UnityUtils\Utils.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\UnityUtils\Utils.cs.meta
+        projectPath: Assets\UnityGame\Scripts\UnityUtils\Utils.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\Physics2DSettings.asset
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: f4c1b53d784c8e90103c58db256458be36017053
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u041E\u0442\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u0435
+        \u0438 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \u043F\u0430\u043D\u0438\u043A\u0438
+        \u0443 Clot"
+      description: 
+      timeString: 2025-08-20T22:24:21.000+03:00
+      commitTimeString: 2025-08-20T22:24:21.000+03:00
+      changes:
+      - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene.unity
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+        projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+        projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Camera\CameraTracking.cs
+        projectPath: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\NavMeshAreas.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\NavMeshAreas.asset
+        projectPath: ProjectSettings\NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: e0b978b80e37169663c465a9e8c18fca55d2a36f
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u0420\u0430\u0431\u043E\u0442\u0430 \u043D\u0430\u0434 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435\u043C
+        \u0432\u0440\u0430\u0433\u043E\u0432"
+      description: 
+      timeString: 2025-08-15T23:42:46.000+03:00
+      commitTimeString: 2025-08-15T23:42:46.000+03:00
+      changes:
+      - path: Assets\UnityGame\Prefabs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs.meta
+        projectPath: Assets\UnityGame\Prefabs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Prefabs\Enemies.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies.meta
+        projectPath: Assets\UnityGame\Prefabs\Enemies.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab.meta
+        projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene.unity
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+        projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs.meta
+        projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs.meta
+        originalPath: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+        projectPath: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\EquilibriumBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\EquilibriumBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\EquilibriumBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 612f85529b23bedc700bec2a4437f76edc5ee973
+      mergeA: 
+      mergeB: 
+      authorName: Taipania
+      authorEmail: artpost05@bk.ru
+      commitEmail: artpost05@bk.ru
+      commitName: Taipania
+      summary: "\u041F\u043E\u0432\u0435\u0434\u0435\u043D\u0438\u0435 \u0441\u0432\u0435\u0442\u043B\u043E\u0439
+        \u0441\u0442\u043E\u0440\u043E\u043D\u044B"
+      description: 
+      timeString: 2025-08-15T00:34:45.000+03:00
+      commitTimeString: 2025-08-15T00:34:45.000+03:00
+      changes:
+      - path: Assets\NavMeshComponents.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents.meta
+        projectPath: Assets\NavMeshComponents.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor.meta
+        projectPath: Assets\NavMeshComponents\Editor.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs.meta
+        originalPath: Assets\UnityGame\Scripts\Player\FireflyBehaviour.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\RootSources2dEditor.cs
+        projectPath: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\RootSources2dEditor.cs.meta
+        projectPath: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts.meta
+        projectPath: Assets\NavMeshComponents\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentOverride2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentOverride2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotate2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotate2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\CollectSources2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSources2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\CollectSources2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\CollectSources2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSources2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\CollectSources2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtension.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtension.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshLink.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshLink.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshLink.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshLink.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshLink.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshLink.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifier.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifier.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshSurface.cs
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshSurface.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\RootSources2d.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RootSources2d.cs
+        projectPath: Assets\NavMeshComponents\Scripts\RootSources2d.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\RootSources2d.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RootSources2d.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\RootSources2d.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs
+        projectPath: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs
+        projectPath: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs.meta
+        projectPath: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Materials\DiffuseMat.mat
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Materials\DiffuseMat.mat
+        projectPath: Assets\UnityGame\Materials\DiffuseMat.mat
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.meta
+        projectPath: Assets\UnityGame\Scenes\SampleScene.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene.unity
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+        projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+        projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset.meta
+        projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset.meta
+        originalPath: Assets\UnityGame\Materials\DiffuseMat.mat.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+        projectPath: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\InputManager.cs
+        projectPath: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Light.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light.meta
+        projectPath: Assets\UnityGame\Scripts\Light.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Light\LightSource.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\LightSource.cs
+        projectPath: Assets\UnityGame\Scripts\Light\LightSource.cs
+        originalPath: Assets\UnityGame\Scripts\Player\FireflyBehaviour.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Light\LightSource.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\LightSource.cs.meta
+        projectPath: Assets\UnityGame\Scripts\Light\LightSource.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\LightSideMovement.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideMovement.cs
+        projectPath: Assets\UnityGame\Scripts\Player\LightSideMovement.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\LightSideMovement.cs.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideMovement.cs.meta
+        projectPath: Assets\UnityGame\Scripts\Player\LightSideMovement.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+        projectPath: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Scripts\Tilemap\TilemapBordersCreator.cs
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Tilemap\TilemapBordersCreator.cs
+        projectPath: Assets\UnityGame\Scripts\Tilemap\TilemapBordersCreator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters.meta
+        projectPath: Assets\UnityGame\Sprites\Characters.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\Clot.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Clot.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\Clot.meta
+        originalPath: Assets\UnityGame\Sprites\Clot.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\Clot\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Clot\Idle.png
+        projectPath: Assets\UnityGame\Sprites\Characters\Clot\Idle.png
+        originalPath: Assets\UnityGame\Sprites\Clot\Idle.png
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\Clot\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Clot\Idle.png.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\Clot\Idle.png.meta
+        originalPath: Assets\UnityGame\Sprites\Clot\Idle.png.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\DarkSide.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\DarkSide.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\DarkSide.meta
+        originalPath: Assets\UnityGame\Sprites\DarkSide.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png
+        projectPath: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png
+        originalPath: Assets\UnityGame\Sprites\DarkSide\Idle.png
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png.meta
+        originalPath: Assets\UnityGame\Sprites\DarkSide\Idle.png.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium.meta
+        originalPath: Assets\UnityGame\Sprites\Equilibrium.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+        projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+        originalPath: Assets\UnityGame\Sprites\Equilibrium\Idle.png
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png.meta
+        originalPath: Assets\UnityGame\Sprites\Equilibrium\Idle.png.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide.meta
+        originalPath: Assets\UnityGame\Sprites\LightSide.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+        originalPath: Assets\UnityGame\Sprites\LightSide\Idle.png
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+        projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+        originalPath: Assets\UnityGame\Sprites\LightSide\Idle.png.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\SpriteMasks.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\SpriteMasks.meta
+        projectPath: Assets\UnityGame\Sprites\SpriteMasks.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png
+        projectPath: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png.meta
+        projectPath: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\UnityGame\Textures\ParticleText.png.meta
+        fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Textures\ParticleText.png.meta
+        projectPath: Assets\UnityGame\Textures\ParticleText.png.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: D:\APP\Unity\Projects\Twain\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: D:\APP\Unity\Projects\Twain\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 4e77411967599cc47950f2cbcb62c1fdc8ce82af
       mergeA: 
       mergeB: 
@@ -3592,14 +5476,1155 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2025-08-15T00:33:51.230+03:00
+      updatedTimeString: 2025-09-02T00:55:07.332+03:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2025-08-15T00:33:51.221+03:00
+      updatedTimeString: 2025-09-02T00:55:07.317+03:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: 2463672f6906523654047bed6064fc556d90a182
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u0420\u0430\u0431\u043E\u0442\u0430 \u0441 \u0430\u043D\u0438\u043C\u0430\u0446\u0438\u044F\u043C\u0438
+          \u0441\u0432\u0435\u0442\u043B\u043E\u0439 \u0441\u0442\u043E\u0440\u043E\u043D\u044B"
+        description: 
+        timeString: 2025-08-30T14:20:51.000+03:00
+        commitTimeString: 2025-08-30T14:20:51.000+03:00
+        changes:
+        - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+          projectPath: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Idle.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Walk.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Run.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Run.png
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Run.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Run.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Run.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Run.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Walk.png
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Walk.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Walk.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 6b47e0fe23830b435e2c655ae3a036726c193f82
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u0410\u0433\u0440 \u043A\u043B\u043E\u0442\u0430 \u043F\u0440\u0438
+          \u043F\u043E\u043F\u0430\u0434\u0430\u043D\u0438\u0438 \u0432 \u0441\u0432\u0435\u0442"
+        description: 
+        timeString: 2025-08-25T21:02:12.000+03:00
+        commitTimeString: 2025-08-25T21:02:12.000+03:00
+        changes:
+        - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+          projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\InputManager.cs
+          projectPath: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs
+          projectPath: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs.meta
+          projectPath: Assets\UnityGame\Scripts\Interfaces\IAbleAggro.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Light\AggroTrigger.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\AggroTrigger.cs
+          projectPath: Assets\UnityGame\Scripts\Light\AggroTrigger.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Light\AggroTrigger.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\AggroTrigger.cs.meta
+          projectPath: Assets\UnityGame\Scripts\Light\AggroTrigger.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 32206b47ff99c65416322739406fcc8e4453b9ce
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u0438 \u043D\u0430\u043D\u0435\u0441\u0435\u043D\u0438\u0435
+          \u0443\u0440\u043E\u043D\u0430"
+        description: 
+        timeString: 2025-08-22T23:51:26.000+03:00
+        commitTimeString: 2025-08-22T23:51:26.000+03:00
+        changes:
+        - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Interfaces.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces.meta
+          projectPath: Assets\UnityGame\Scripts\Interfaces.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs
+          projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs.meta
+          projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageDealer.cs.meta
+          originalPath: Assets\UnityGame\Scripts\Player\SidesBehaviour.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs
+          projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs.meta
+          projectPath: Assets\UnityGame\Scripts\Interfaces\IDamageReceiver.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\SidesBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\SidesBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\SidesBehaviour.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\UnityUtils.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\UnityUtils.meta
+          projectPath: Assets\UnityGame\Scripts\UnityUtils.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\UnityUtils\Utils.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\UnityUtils\Utils.cs
+          projectPath: Assets\UnityGame\Scripts\UnityUtils\Utils.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\UnityUtils\Utils.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\UnityUtils\Utils.cs.meta
+          projectPath: Assets\UnityGame\Scripts\UnityUtils\Utils.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\Physics2DSettings.asset
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: f4c1b53d784c8e90103c58db256458be36017053
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u041E\u0442\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u0435
+          \u0438 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \u043F\u0430\u043D\u0438\u043A\u0438
+          \u0443 Clot"
+        description: 
+        timeString: 2025-08-20T22:24:21.000+03:00
+        commitTimeString: 2025-08-20T22:24:21.000+03:00
+        changes:
+        - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+          projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+          projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Camera\CameraTracking.cs
+          projectPath: Assets\UnityGame\Scripts\Camera\CameraTracking.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\NavMeshAreas.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\NavMeshAreas.asset
+          projectPath: ProjectSettings\NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: D:\APP\Unity\Projects\Twain\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: e0b978b80e37169663c465a9e8c18fca55d2a36f
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u0420\u0430\u0431\u043E\u0442\u0430 \u043D\u0430\u0434 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435\u043C
+          \u0432\u0440\u0430\u0433\u043E\u0432"
+        description: 
+        timeString: 2025-08-15T23:42:46.000+03:00
+        commitTimeString: 2025-08-15T23:42:46.000+03:00
+        changes:
+        - path: Assets\UnityGame\Prefabs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs.meta
+          projectPath: Assets\UnityGame\Prefabs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Prefabs\Enemies.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies.meta
+          projectPath: Assets\UnityGame\Prefabs\Enemies.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Prefabs\Enemies\Clot.prefab.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Prefabs\Enemies\Clot.prefab.meta
+          projectPath: Assets\UnityGame\Prefabs\Enemies\Clot.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+          projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs.meta
+          projectPath: Assets\UnityGame\Scripts\Enemies\ClotBehaviour.cs.meta
+          originalPath: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+          projectPath: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\DarkSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\EquilibriumBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\EquilibriumBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\EquilibriumBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 612f85529b23bedc700bec2a4437f76edc5ee973
+        mergeA: 
+        mergeB: 
+        authorName: Taipania
+        authorEmail: artpost05@bk.ru
+        commitEmail: artpost05@bk.ru
+        commitName: Taipania
+        summary: "\u041F\u043E\u0432\u0435\u0434\u0435\u043D\u0438\u0435 \u0441\u0432\u0435\u0442\u043B\u043E\u0439
+          \u0441\u0442\u043E\u0440\u043E\u043D\u044B"
+        description: 
+        timeString: 2025-08-15T00:34:45.000+03:00
+        commitTimeString: 2025-08-15T00:34:45.000+03:00
+        changes:
+        - path: Assets\NavMeshComponents.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents.meta
+          projectPath: Assets\NavMeshComponents.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor.meta
+          projectPath: Assets\NavMeshComponents\Editor.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\AgentOverride2dEditor.cs.meta
+          originalPath: Assets\UnityGame\Scripts\Player\FireflyBehaviour.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\CollectSources2dEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshAssetManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\RootSources2dEditor.cs
+          projectPath: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Editor\RootSources2dEditor.cs.meta
+          projectPath: Assets\NavMeshComponents\Editor\RootSources2dEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts.meta
+          projectPath: Assets\NavMeshComponents\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentOverride2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentOverride2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\AgentOverride2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotate2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotate2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\AgentRotate2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\CollectSources2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSources2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\CollectSources2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\CollectSources2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSources2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\CollectSources2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtension.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtension.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtension.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshLink.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshLink.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshLink.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshLink.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshLink.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshLink.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifier.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifier.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifier.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshSurface.cs
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\NavMeshSurface.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\NavMeshSurface.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\RootSources2d.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RootSources2d.cs
+          projectPath: Assets\NavMeshComponents\Scripts\RootSources2d.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\RootSources2d.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RootSources2d.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\RootSources2d.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs
+          projectPath: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs
+          projectPath: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs.meta
+          projectPath: Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Materials\DiffuseMat.mat
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Materials\DiffuseMat.mat
+          projectPath: Assets\UnityGame\Materials\DiffuseMat.mat
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.meta
+          projectPath: Assets\UnityGame\Scenes\SampleScene.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene.unity
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
+          projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+          projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset.meta
+          projectPath: Assets\UnityGame\Scenes\SampleScene\NavMesh-NavMesh.asset.meta
+          originalPath: Assets\UnityGame\Materials\DiffuseMat.mat.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+          projectPath: Assets\UnityGame\Scripts\Enemies\ClotMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          projectPath: Assets\UnityGame\Scripts\GameManager\GameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\GameManager\InputManager.cs
+          projectPath: Assets\UnityGame\Scripts\GameManager\InputManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Light.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light.meta
+          projectPath: Assets\UnityGame\Scripts\Light.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Light\LightSource.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\LightSource.cs
+          projectPath: Assets\UnityGame\Scripts\Light\LightSource.cs
+          originalPath: Assets\UnityGame\Scripts\Player\FireflyBehaviour.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Light\LightSource.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Light\LightSource.cs.meta
+          projectPath: Assets\UnityGame\Scripts\Light\LightSource.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\LightSideBehaviour.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\LightSideMovement.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideMovement.cs
+          projectPath: Assets\UnityGame\Scripts\Player\LightSideMovement.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\LightSideMovement.cs.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\LightSideMovement.cs.meta
+          projectPath: Assets\UnityGame\Scripts\Player\LightSideMovement.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+          projectPath: Assets\UnityGame\Scripts\Player\PlayerMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Scripts\Tilemap\TilemapBordersCreator.cs
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scripts\Tilemap\TilemapBordersCreator.cs
+          projectPath: Assets\UnityGame\Scripts\Tilemap\TilemapBordersCreator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters.meta
+          projectPath: Assets\UnityGame\Sprites\Characters.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Clot.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Clot.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\Clot.meta
+          originalPath: Assets\UnityGame\Sprites\Clot.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Clot\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Clot\Idle.png
+          projectPath: Assets\UnityGame\Sprites\Characters\Clot\Idle.png
+          originalPath: Assets\UnityGame\Sprites\Clot\Idle.png
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Clot\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Clot\Idle.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\Clot\Idle.png.meta
+          originalPath: Assets\UnityGame\Sprites\Clot\Idle.png.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\DarkSide.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\DarkSide.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\DarkSide.meta
+          originalPath: Assets\UnityGame\Sprites\DarkSide.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png
+          projectPath: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png
+          originalPath: Assets\UnityGame\Sprites\DarkSide\Idle.png
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\DarkSide\Idle.png.meta
+          originalPath: Assets\UnityGame\Sprites\DarkSide\Idle.png.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium.meta
+          originalPath: Assets\UnityGame\Sprites\Equilibrium.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          originalPath: Assets\UnityGame\Sprites\Equilibrium\Idle.png
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png.meta
+          originalPath: Assets\UnityGame\Sprites\Equilibrium\Idle.png.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide.meta
+          originalPath: Assets\UnityGame\Sprites\LightSide.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png
+          originalPath: Assets\UnityGame\Sprites\LightSide\Idle.png
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Idle.png.meta
+          originalPath: Assets\UnityGame\Sprites\LightSide\Idle.png.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\SpriteMasks.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\SpriteMasks.meta
+          projectPath: Assets\UnityGame\Sprites\SpriteMasks.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png
+          projectPath: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png.meta
+          projectPath: Assets\UnityGame\Sprites\SpriteMasks\ConeMask.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\UnityGame\Textures\ParticleText.png.meta
+          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Textures\ParticleText.png.meta
+          projectPath: Assets\UnityGame\Textures\ParticleText.png.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: D:\APP\Unity\Projects\Twain\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: D:\APP\Unity\Projects\Twain\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 4e77411967599cc47950f2cbcb62c1fdc8ce82af
         mergeA: 
         mergeB: 
@@ -5381,7 +8406,7 @@ MonoBehaviour:
           indexStatus: 4
           workTreeStatus: 0
       statusAhead: 0
-      selectedIndex: 0
+      selectedIndex: 6
     selectedEntry:
       commitID: 4e77411967599cc47950f2cbcb62c1fdc8ce82af
       mergeA: 
@@ -6797,7 +9822,7 @@ MonoBehaviour:
   hasRemote: 1
   currentRemoteName: origin
   currentBranch: master
-  currentRemoteUrl: https://github.com/Taipania/Twain.git
+  currentRemoteUrl: https://github.com/TaipanCore/Twain.git
   statusAhead: 0
   statusBehind: 0
   hasItemsToCommit: 1
@@ -6807,17 +9832,17 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Active branch
   currentRemoteUrlContent:
-    m_Text: https://github.com/Taipania/Twain.git
+    m_Text: https://github.com/TaipanCore/Twain.git
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2025-08-31T14:09:45.224+03:00
+    updatedTimeString: 2026-01-04T00:02:44.822+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2025-08-31T14:09:45.546+03:00
+    updatedTimeString: 2026-01-04T00:03:06.703+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2025-08-31T14:11:30.056+03:00
+    updatedTimeString: 2026-01-04T00:03:06.681+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -6835,12 +9860,12 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0.9375
+  repositoryProgressValue: 0
   repositoryProgressMessage: 
-  appManagerProgressValue: 0.75
+  appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
---- !u!114 &22
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6860,10 +9885,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 201.05661
-    y: 79.69811
-    width: 653.6981
-    height: 719.8302
+    x: 278.9434
+    y: 72.452835
+    width: 1585.6228
+    height: 782.3208
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -6909,7 +9934,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -6918,23 +9943,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 653.6981
-      height: 698.8302
-    m_Scale: {x: 0.37593317, y: 0.37593317}
-    m_Translation: {x: 326.84906, y: 349.4151}
+      width: 1585.6228
+      height: 761.3208
+    m_Scale: {x: 0.7783565, y: 0.7783565}
+    m_Translation: {x: 792.8114, y: 380.6604}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -869.43396
-      y: -929.4607
-      width: 1738.8679
-      height: 1858.9214
+      x: -1018.57104
+      y: -489.05664
+      width: 2037.1421
+      height: 978.1133
     m_MinimalGUI: 1
-  m_defaultScale: 0.37593317
-  m_LastWindowPixelSize: {x: 721.7916, y: 794.8125}
+  m_defaultScale: 0.7783565
+  m_LastWindowPixelSize: {x: 1750.7917, y: 863.8125}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
