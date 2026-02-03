@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IDamageDealer
 {
-    float damage {  get; set; }
+    float damage { get; set; }
+    void DealDamage(float damage, IDamageReceiver target);
 }

@@ -6,13 +6,14 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
-public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbleAggro
+public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbleAggro, IStunnable
 {
     public enum State
     {
         Idle,
         Hunt,
-        Retreat
+        Retreat,
+        Stun
     }
 
     [SerializeField] private float _hitpoints;
@@ -26,6 +27,14 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
                 Die();
         }
     }
+    [SerializeField] private float _invulnerableTime;
+    private WaitForSeconds invulnerableDelay;
+    public float invulnerableTime
+    {
+        get => _invulnerableTime;
+        set => _invulnerableTime = value;
+    }
+    public bool isInvulnerable { get; set; } = false;
     [SerializeField] private float _damage;
     public float damage
     {
@@ -73,7 +82,10 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
                 break;
             case State.Retreat:
                 Retreat();
-                break;   
+                break;
+            case State.Stun:
+                Stun();
+                break; 
         }
     }
 
@@ -92,6 +104,9 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
                     break;
                 case State.Retreat:
                     SetRetreatSettings();
+                    break;
+                case State.Stun:
+                    SetStunSettings();
                     break;
             }
         }
@@ -112,6 +127,10 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     {
         if (retreatCoroutine == null)
             retreatCoroutine = StartCoroutine(RetreatCoroutine());
+    }
+    private void SetStunSettings()
+    {
+        
     }
     private void Idle()
     {
@@ -139,6 +158,17 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         }
         target = GameManager.Equilibrium.transform.position;
     }
+    private void Stun()
+    {
+        
+    }
+    private IEnumerator StunCoroutine(float stunTime)
+    {
+        agent.isStopped = true;
+        yield return new WaitForSeconds(stunTime);
+        agent.isStopped = false;
+        SetState(State.Retreat);
+    }
     private IEnumerator RetreatCoroutine()
     {
         while (true)
@@ -147,7 +177,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
             {
                 agent.SetDestination(GetRetreatPosition());
             }
-            yield return null;  
+            yield return null;
         }
     }
     private Vector3 GetRetreatPosition()
@@ -184,13 +214,39 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         agent.updateUpAxis = false;
         agent.speed = moveSpeed;
     }
+    public void ApplyStun(float time)
+    {
+        SetState(State.Stun);
+        StartCoroutine(StunCoroutine(time));
+    }
     public void ReceiveDamage(float damage)
     {
-        hitpoints -= damage;
+        if (!isInvulnerable)
+        {
+            hitpoints -= damage;
+            StartCoroutine(GiveInvulnerability());
+        }
+    }
+    public IEnumerator GiveInvulnerability()
+    {
+        isInvulnerable = true;
+        yield return invulnerableDelay;
+        isInvulnerable = false;
     }
     public void Die()
     {
         Destroy(gameObject);
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(GameManager.playerMask))
+        {
+            DealDamage(damage, damageReceiver);
+        }
+    }
+    public void DealDamage(float damage, IDamageReceiver target)
+    {
+        target.ReceiveDamage(damage);
     }
     /*
     private void OnDrawGizmos()

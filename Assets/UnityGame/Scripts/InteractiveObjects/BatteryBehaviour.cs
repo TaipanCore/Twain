@@ -7,9 +7,11 @@ using UnityEngine;
 public class BatteryBehaviour : MonoBehaviour
 {
     [SerializeField] private float chargeDisplayTime = 0.5f;
+    private WaitForSeconds chargeDisplayDelay;
+
     [SerializeField] private float chargeHideTime = 1f;
-    private WaitForSeconds shortDelay;
-    private WaitForSeconds longDelay;
+    private WaitForSeconds chargeHideDelay;
+
     private Coroutine blinking;
 
     [SerializeField] private Sprite[] batterySprites;
@@ -52,8 +54,8 @@ public class BatteryBehaviour : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        shortDelay = new WaitForSeconds(chargeDisplayTime);
-        longDelay = new WaitForSeconds(chargeHideTime);
+        chargeDisplayDelay = new WaitForSeconds(chargeDisplayTime);
+        chargeHideDelay = new WaitForSeconds(chargeHideTime);
         currentSprite = batterySprites[1];
     }
     private void Update()
@@ -70,9 +72,9 @@ public class BatteryBehaviour : MonoBehaviour
         while (true)
         {
             spriteRenderer.sprite = currentSprite;
-            yield return shortDelay;
+            yield return chargeDisplayDelay;
             spriteRenderer.sprite = batterySprites[0];
-            yield return longDelay;      
+            yield return chargeHideDelay;      
         }
     }
 }

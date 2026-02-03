@@ -24,4 +24,9 @@ public static class Utils
             return false;
         return !agent.pathPending && agent.velocity.sqrMagnitude > 0.01f;
     }
+    public static bool IsInLayerMask(this GameObject obj, LayerMask mask)
+    {
+        //»сходна€ единица сдвигаетс€ на obj.layer (номер сло€) бит влево
+        return ((1 << obj.layer) & mask) != 0;
+    }
 }

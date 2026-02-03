@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();       
+        sr = GetComponent<SpriteRenderer>();
     }
     private void FixedUpdate()
     {
@@ -21,12 +21,15 @@ public class PlayerMovement : MonoBehaviour
             movement = InputManager.movement;
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
             currentSpeed = (movement * moveSpeed).magnitude;
-            FlipSprite();
+            FlipCharacter();
         }
     }
-    protected virtual void FlipSprite()
+    protected virtual void FlipCharacter()
     {
         if (movement.x != 0)
-            sr.flipX = movement.x < 0f;
+            if (movement.x < 0f)
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            else
+                transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Characters info")]
     public static GameObject Equilibrium;
     public static GameObject LightSide;
     public static GameObject DarkSide;
@@ -14,9 +15,14 @@ public class GameManager : MonoBehaviour
 
     public float uniteDistance;
 
+    [Header("Player & enemy layer masks")]
+    public static LayerMask playerMask;
+    public static LayerMask enemyMask;
     private void Start()
     {
         Application.targetFrameRate = 60;
+        playerMask = LayerMask.GetMask("Player");
+        enemyMask = LayerMask.GetMask("Enemy");
         Unite();
     }
     private void Update()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [Header("Key bindings")]
     [SerializeField] private KeyCode uniteAndSeparateBtn;
     [SerializeField] private KeyCode sidesChangeBtn;
 
@@ -12,6 +13,8 @@ public class InputManager : MonoBehaviour
     [HideInInspector] public static Vector2 movement;
     [HideInInspector] public static bool leftMouseBtnDown;
     [HideInInspector] public static bool leftMouseBtnUp;
+    [HideInInspector] public static bool rightMouseBtnDown;
+    [HideInInspector] public static bool rightMouseBtnUp;
 
     private void Update()
     {
@@ -20,5 +23,7 @@ public class InputManager : MonoBehaviour
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         leftMouseBtnDown = Input.GetMouseButtonDown(0);
         leftMouseBtnUp = Input.GetMouseButtonUp(0);
+        rightMouseBtnDown = Input.GetMouseButtonDown(1);
+        rightMouseBtnUp = Input.GetMouseButtonUp(1);
     }
 }

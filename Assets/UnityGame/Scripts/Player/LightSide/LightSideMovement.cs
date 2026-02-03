@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LightSideMovement : PlayerMovement
 {
-    public float baseMovSpeed;
-    public float focusedMovSpeed;
+    public float baseMoveSpeed;
+    public float focusedMoveSpeed;
 
     private Animator animator;
 
@@ -15,7 +15,7 @@ public class LightSideMovement : PlayerMovement
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
-    protected override void FlipSprite()
+    protected override void FlipCharacter()
     {
         float mouseX = MouseTracker.mousePosition.x - transform.position.x;
         if (animator.GetBool("IsFocused"))

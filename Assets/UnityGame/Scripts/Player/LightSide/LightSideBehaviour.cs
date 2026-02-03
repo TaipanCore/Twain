@@ -20,12 +20,21 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         }
     }
     
-    [SerializeField] private float invulnerableTime;
+    [SerializeField] private float _invulnerableTime;
+    private WaitForSeconds invulnerableDelay;
+    public float invulnerableTime
+    {
+        get => _invulnerableTime;
+        set => _invulnerableTime = value;
+    }
+    public bool isInvulnerable { get; set; } = false;
 
+    [Header("Circle light")]
     [SerializeField] private LightSource circleLight;
     [SerializeField] private float baseCircleLightRange;
     [SerializeField] private float focusedCircleLightRange;
 
+    [Header("Distant light")]
     [SerializeField] private LightSource distantLight;
     [SerializeField] private float focusedDistantLightRange;
     [SerializeField] private float lightRotationSpeed;
@@ -44,6 +53,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         animator = GetComponent<Animator>();
         movement = GetComponent<LightSideMovement>();
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
+        invulnerableDelay = new WaitForSeconds(invulnerableTime);
         SetState(State.Normal);
     }
     private void Update()
@@ -52,14 +62,14 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         switch (state)
         {
             case State.Normal:
-            NormalBehaviour();
-            break;
-        case State.Focused:
-            FocusedBehaviour();
-            break;
+                NormalBehaviour();
+                break;
+            case State.Focused:
+                FocusedBehaviour();
+                break;
         }
     }
-    private void SetState(State newState)
+    public void SetState(State newState)
     {
         if (state != newState)
         {
@@ -67,10 +77,10 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
             switch (state)
             {
                 case State.Normal:
-                    SetNormalSettings();
+                    SetNormalState();
                     break;
                 case State.Focused:
-                    SetFocusedSettings();
+                    SetFocusedState();
                     break;
             }
         }       
@@ -79,20 +89,20 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     {
         return state;
     }
-    private void SetNormalSettings()
+    private void SetNormalState()
     {
         circleLight.range = baseCircleLightRange;
         distantLight.gameObject.SetActive(false);
-        movement.moveSpeed = movement.baseMovSpeed;
+        movement.moveSpeed = movement.baseMoveSpeed;
         animator.SetBool("IsFocused", false);
     }
-    private void SetFocusedSettings()
+    private void SetFocusedState()
     {
         circleLight.range = focusedCircleLightRange;
         distantLight.gameObject.SetActive(true);
         distantLight.range = focusedDistantLightRange;
         distantLightTransform.rotation = CalculateRotationAngle();
-        movement.moveSpeed = movement.focusedMovSpeed;
+        movement.moveSpeed = movement.focusedMoveSpeed;
         animator.SetBool("IsFocused", true);
     }
     private void NormalBehaviour()
@@ -116,28 +126,22 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         return Quaternion.Euler(0, 0, Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        IDamageDealer damageDealer = other.GetComponent<IDamageDealer>();
-        if (damageDealer != null && !isInvulnerable)
-        {
-            ReceiveDamage(damageDealer.damage);
-        }
-    }
     public void ReceiveDamage(float damage)
     {
-        hitpoints -= damage;
-        StartCoroutine(GiveInvulnerability());
+        if (!isInvulnerable)
+        {
+            hitpoints -= damage;
+            StartCoroutine(GiveInvulnerability());
+        }
+    }
+    public IEnumerator GiveInvulnerability()
+    {
+        isInvulnerable = true;
+        yield return invulnerableDelay;
+        isInvulnerable = false;
     }
     public void Die()
     {
         Destroy(gameObject);
-    }
-    private bool isInvulnerable = false;
-    private IEnumerator GiveInvulnerability()
-    {
-        isInvulnerable = true;
-        yield return new WaitForSeconds(invulnerableTime);
-        isInvulnerable = false;
     }
 }

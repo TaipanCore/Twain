@@ -6,8 +6,7 @@ public class AggroTrigger : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IAbleAggro ableAggro = collision.GetComponent<IAbleAggro>();
-        if (ableAggro != null)
+        if (collision.TryGetComponent(out IAbleAggro ableAggro))
         {
             ableAggro.isAggro = true;
         }
