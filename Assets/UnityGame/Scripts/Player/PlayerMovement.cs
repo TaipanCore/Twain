@@ -6,20 +6,20 @@ public class PlayerMovement : MonoBehaviour
     public float currentSpeed;
 
     protected Rigidbody2D rb;
-    protected SpriteRenderer sr;
+    protected SpriteRenderer spriteRenderer;
     protected Vector2 movement;
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (GameManager.currentCharacter == gameObject)
         {
             movement = InputManager.movement;
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
             currentSpeed = (movement * moveSpeed).magnitude;
             FlipCharacter();
         }

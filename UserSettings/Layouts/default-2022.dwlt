@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 709.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Animation
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -165,7 +165,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1002.6667
-    height: 454.66666
+    height: 454
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 150.66667
-    height: 454.66666
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 180.66667
+    height: 454
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -211,10 +211,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 150.66667
+    x: 180.66667
     y: 0
-    width: 852
-    height: 454.66666
+    width: 822
+    height: 454
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
@@ -235,25 +235,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: AnimationWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 454.66666
+    y: 454
     width: 1002.6667
-    height: 204.66666
+    height: 205.33331
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 3
+  m_LastSelected: 2
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,8 +273,8 @@ MonoBehaviour:
     y: 0
     width: 277.3333
     height: 659.3333
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -301,10 +301,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 150.66667
+    x: 180.66667
     y: 72.66667
-    width: 850
-    height: 433.66666
+    width: 820
+    height: 433
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -676,9 +676,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.12146, y: -4.5233054, z: -0.16281445}
+    m_Target: {x: -4.7141495, y: 0.7688693, z: -0.0062627024}
     speed: 2
-    m_Value: {x: -7.12146, y: -4.5233054, z: -0.16281445}
+    m_Value: {x: -4.679009, y: 0.7907194, z: -0.00763453}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -728,9 +728,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.461994
+    m_Target: 2.911316
     speed: 2
-    m_Value: 9.461994
+    m_Value: 3.0484984
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -777,8 +777,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 149.66667
-    height: 433.66666
+    width: 179.66667
+    height: 433
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -792,9 +792,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7e630000
-      m_LastClickedID: 25470
-      m_ExpandedIDs: 1afbffffca620000dc6200000e630000
+      m_SelectedIDs: ce6c0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 58f9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -838,10 +838,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 150.66667
+    x: 180.66667
     y: 72.66667
-    width: 850.6666
-    height: 433.66666
+    width: 820
+    height: 433
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -872,10 +872,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 150.66667
+    x: 180.66667
     y: 72.66667
-    width: 850
-    height: 433.66666
+    width: 820
+    height: 433
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -888,10 +888,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_ShowAlpha: 0
   m_MipLevel: 0
-  m_Zoom: -1
+  m_Zoom: 3.230357
   m_ScrollPosition: {x: 0, y: 0}
-  m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 3e48bef9db97e224886f915b58b5bd3f
+  m_SelectedObject: {fileID: 2800000, guid: 8a1e2fa9ccea13b4f802ae6b7e85f9d2, type: 3}
+  m_SelectedSpriteRectGUID: 34c7f1835746f8f4f99a8c6812ea509d
   m_LastUsedModuleTypeName: UnityEditor.U2D.Sprites.SpriteFrameModule
 --- !u!114 &16
 MonoBehaviour:
@@ -914,9 +914,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 527.3334
+    y: 526.6667
     width: 1001.6667
-    height: 183.66666
+    height: 184.33331
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -938,7 +938,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UnityGame/Scripts/Player/Equilibrium
+    - Assets/UnityGame/Sprites/Characters/Clot
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -946,16 +946,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/UnityGame/Scripts/Player/Equilibrium
+  - Assets/UnityGame/Sprites/Characters/Clot
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\APP\Projects\Twain
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 236.33334}
-    m_SelectedIDs: fa6b0000
-    m_LastClickedID: 27642
-    m_ExpandedIDs: 00000000c2640000c4640000c6640000c8640000ca640000cc640000ce640000666500006865000000ca9a3b
+    scrollPos: {x: 0, y: 347.6667}
+    m_SelectedIDs: 42650000
+    m_LastClickedID: 25922
+    m_ExpandedIDs: 00000000326500003465000036650000386500003a6500003c6500003e6500004065000042650000a46c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -983,7 +983,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c2640000c4640000c6640000c8640000ca640000cc640000ce640000
+    m_ExpandedIDs: 00000000326500003465000036650000386500003a6500003c6500003e6500004065000042650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1008,10 +1008,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: bc620000
-    m_LastClickedInstanceID: 25276
+    m_SelectedInstanceIDs: ce6c0000
+    m_LastClickedInstanceID: 27854
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000ac6100004a6100000000000054610000e061000092610000d461000070610000a4610000a6610000ca610000cc610000c06f00007a630000847c0000
+    m_ExpandedInstanceIDs: c6230000ac6100004a6100000000000054610000e061000092610000d461000070610000a4610000a6610000ca610000cc610000c06f00007a630000847c0000ce6c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1060,9 +1060,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 527.3334
+    y: 526.6667
     width: 1001.6667
-    height: 183.66666
+    height: 184.33331
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1094,9 +1094,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 527.3334
+    y: 526.6667
     width: 1001.6667
-    height: 183.66666
+    height: 184.33331
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1113,15 +1113,16 @@ MonoBehaviour:
     - {fileID: -1923414864766373709, guid: 7178a4089ea17e545b74ad20ad901802, type: 2}
     - {fileID: -6754553210643076253, guid: d5c295629e80a3640aa955058289e0d7, type: 2}
     - {fileID: -972878983904919319, guid: 5d367cb1025c8a04996b1456eeb0a4d9, type: 2}
+    - {fileID: 6649642827033834308, guid: 372e861a466580b479fdb688cd1fd77c, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.5929825
+    - e00: 0.6070175
       e01: 0
       e02: 0
-      e03: 152.10526
+      e03: 137.56143
       e10: 0
-      e11: 0.5929825
+      e11: 0.6070175
       e12: 0
-      e13: -20.578949
+      e13: -21.421051
       e20: 0
       e21: 0
       e22: 1
@@ -1146,14 +1147,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.7427742
+    - e00: 0.5242424
       e01: 0
       e02: 0
-      e03: 35.828735
+      e03: 78.51518
       e10: 0
-      e11: 0.7427742
+      e11: 0.5242424
       e12: 0
-      e13: -9.632908
+      e13: 4.515152
       e20: 0
       e21: 0
       e22: 1
@@ -1178,10 +1179,26 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.85730445
+      e01: 0
+      e02: 0
+      e03: 50.705406
+      e10: 0
+      e11: 0.85730445
+      e12: 0
+      e13: 35.031925
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: d5c295629e80a3640aa955058289e0d7, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 372e861a466580b479fdb688cd1fd77c, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -6754553210643076253, guid: d5c295629e80a3640aa955058289e0d7, type: 2}
+  - m_Target: {fileID: 6649642827033834308, guid: 372e861a466580b479fdb688cd1fd77c, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1215,9 +1232,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 527.3334
+    y: 526.6667
     width: 1001.6667
-    height: 183.66666
+    height: 184.33331
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1230,7 +1247,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25460
+  m_LastSelectedObjectID: 25394
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1272,7 +1289,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 162
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1298,10 +1315,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1803.1698
-    y: 72.452835
-    width: 514.3208
-    height: 1142.585
+    x: 1002.6667
+    y: 72.66667
+    width: 276.3333
+    height: 638.3333
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1509,25 +1526,16 @@ MonoBehaviour:
     commitBody: 
     commitMessage: 
     currentBranch: master
-    treeScroll: {x: 0, y: 0}
+    treeScroll: {x: 0, y: 52}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
         - 1b942447d00319a4d93260f4045c57a9
-        - 474f5a2bb3405b04f882ad1119fd96b3
-        - 2cda990e2423bbf4892e6590ba056729
-        - 6c325d4f90588854bb6c69d623d4de66
-        - ba4ba1ccf96c1d246ac5d84076a9d81e
-        - 458d4b92dd6314e42affc1a693b7a6eb
-        - 644efba28cf7aed4e844ce0cacfe9697
-        - 9454a1e6e4c112a46b86e356b9616484
-        - b6f2222c498f80247acfdc11c89c875e
-        - 810da081d82d3f94f8d4f53ffede663a
-        - d1ff9b006918b3043a6593ec0daa6924
-        - 884afbcd190f74241980bee22038c9d1
-        - b1be397b6076dbd4182553a7be531b12
-        - d31c058203eedb744a82dfa8cde91715
+        - defa9f67f422a03498bd624f9f541092
+        - 98c8f23e9c9fe90429e8b82e708cf31c
+        - aa2a8151fc1afa14fb5b6163a262a4b8
+        - 259ec77281a162647826c470aa603360
         values:
         - path: Assets
           label: Assets
@@ -1565,8 +1573,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Scenes
-          label: Scenes
+        - path: Assets\UnityGame\Scripts
+          label: Scripts
           level: 2
           isFolder: 1
           isContainer: 0
@@ -1583,44 +1591,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Scenes\SampleScene.unity
-          label: SampleScene.unity
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Scenes\SampleScene.unity
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
-            projectPath: Assets\UnityGame\Scenes\SampleScene.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\UnityGame\Sprites
-          label: Sprites
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters
-          label: Characters
+        - path: Assets\UnityGame\Scripts\Player
+          label: Player
           level: 3
           isFolder: 1
           isContainer: 0
@@ -1637,7 +1609,7 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters\Equilibrium
+        - path: Assets\UnityGame\Scripts\Player\Equilibrium
           label: Equilibrium
           level: 4
           isFolder: 1
@@ -1655,26 +1627,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-          label: Attack.png
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-          label: Idle.png
+        - path: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+          label: EquilibriumBehaviour.cs
           level: 5
           isFolder: 0
           isContainer: 0
@@ -1685,133 +1639,80 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-          label: Shoot.png
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-          label: StunBullet.png
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-            projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\UnityGame\Sprites\Characters\LightSide
-          label: LightSide
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations
-          label: Animations
-          level: 5
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-          label: LightSide.controller
-          level: 6
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-            projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-          label: Run.anim
-          level: 6
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-            fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-            projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+            path: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+            fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+            projectPath: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
       folders:
         keys:
+        - .idea
+        - .idea\.idea.Twain
+        - .idea\.idea.Twain\.idea
         - Assets
         - Assets\UnityGame
-        - Assets\UnityGame\Scenes
-        - Assets\UnityGame\Sprites
-        - Assets\UnityGame\Sprites\Characters
-        - Assets\UnityGame\Sprites\Characters\Equilibrium
-        - Assets\UnityGame\Sprites\Characters\LightSide
-        - Assets\UnityGame\Sprites\Characters\LightSide\Animations
+        - Assets\UnityGame\Scripts
+        - Assets\UnityGame\Scripts\Player
+        - Assets\UnityGame\Scripts\Player\Equilibrium
+        - Packages
         - UserSettings
         - UserSettings\Layouts
         values:
+        - path: .idea
+          label: .idea
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: .idea\.idea.Twain
+          label: .idea.Twain
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: .idea\.idea.Twain\.idea
+          label: .idea
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
         - path: Assets
           label: Assets
           level: 0
@@ -1848,8 +1749,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Scenes
-          label: Scenes
+        - path: Assets\UnityGame\Scripts
+          label: Scripts
           level: 2
           isFolder: 1
           isContainer: 0
@@ -1866,26 +1767,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites
-          label: Sprites
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters
-          label: Characters
+        - path: Assets\UnityGame\Scripts\Player
+          label: Player
           level: 3
           isFolder: 1
           isContainer: 0
@@ -1902,7 +1785,7 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters\Equilibrium
+        - path: Assets\UnityGame\Scripts\Player\Equilibrium
           label: Equilibrium
           level: 4
           isFolder: 1
@@ -1920,27 +1803,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters\LightSide
-          label: LightSide
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations
-          label: Animations
-          level: 5
+        - path: Packages
+          label: Packages
+          level: 0
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -2020,9 +1885,63 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: .gitignore
-        label: .gitignore
+      - path: .idea
+        label: .idea
         level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: .idea\.idea.Twain
+        label: .idea.Twain
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: .idea\.idea.Twain\.idea
+        label: .idea
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: .idea\.idea.Twain\.idea\.gitignore
+        label: .gitignore
+        level: 3
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -2032,12 +1951,48 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: .gitignore
-          fullPath: D:\APP\Unity\Projects\Twain\.gitignore
-          projectPath: .gitignore
+          path: .idea\.idea.Twain\.idea\.gitignore
+          fullPath: D:\APP\Projects\Twain\.idea\.idea.Twain\.idea\.gitignore
+          projectPath: .idea\.idea.Twain\.idea\.gitignore
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: .idea\.idea.Twain\.idea\indexLayout.xml
+        label: indexLayout.xml
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: .idea\.idea.Twain\.idea\indexLayout.xml
+          fullPath: D:\APP\Projects\Twain\.idea\.idea.Twain\.idea\indexLayout.xml
+          projectPath: .idea\.idea.Twain\.idea\indexLayout.xml
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: .idea\.idea.Twain\.idea\vcs.xml
+        label: vcs.xml
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: .idea\.idea.Twain\.idea\vcs.xml
+          fullPath: D:\APP\Projects\Twain\.idea\.idea.Twain\.idea\vcs.xml
+          projectPath: .idea\.idea.Twain\.idea\vcs.xml
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets
         label: Assets
         level: 0
@@ -2074,8 +2029,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Scenes
-        label: Scenes
+      - path: Assets\UnityGame\Scripts
+        label: Scripts
         level: 2
         isFolder: 1
         isContainer: 0
@@ -2092,44 +2047,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Scenes\SampleScene.unity
-        label: SampleScene.unity
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Scenes\SampleScene.unity
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
-          projectPath: Assets\UnityGame\Scenes\SampleScene.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\UnityGame\Sprites
-        label: Sprites
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Sprites\Characters
-        label: Characters
+      - path: Assets\UnityGame\Scripts\Player
+        label: Player
         level: 3
         isFolder: 1
         isContainer: 0
@@ -2146,7 +2065,7 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium
+      - path: Assets\UnityGame\Scripts\Player\Equilibrium
         label: Equilibrium
         level: 4
         isFolder: 1
@@ -2164,44 +2083,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-        label: Attack.png
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
-        label: Attack.png.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
-          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-        label: Idle.png
+      - path: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+        label: EquilibriumBehaviour.cs
         level: 5
         isFolder: 0
         isContainer: 0
@@ -2212,87 +2095,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
+          path: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+          fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+          projectPath: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-        label: Shoot.png
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
-        label: Shoot.png.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
-          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-        label: StunBullet.png
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
-        label: StunBullet.png.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
-          projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\UnityGame\Sprites\Characters\LightSide
-        label: LightSide
-        level: 4
+      - path: Packages
+        label: Packages
+        level: 0
         isFolder: 1
         isContainer: 0
         isCollapsed: 0
@@ -2308,27 +2119,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations
-        label: Animations
-        level: 5
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-        label: LightSide.controller
-        level: 6
+      - path: Packages\manifest.json
+        label: manifest.json
+        level: 1
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -2338,15 +2131,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
+          path: Packages\manifest.json
+          fullPath: D:\APP\Projects\Twain\Packages\manifest.json
+          projectPath: Packages\manifest.json
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-        label: Run.anim
-        level: 6
+      - path: Packages\packages-lock.json
+        label: packages-lock.json
+        level: 1
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -2356,9 +2149,9 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-          fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-          projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+          path: Packages\packages-lock.json
+          fullPath: D:\APP\Projects\Twain\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -2411,7 +2204,7 @@ MonoBehaviour:
         isLocked: 0
         gitStatusEntry:
           path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+          fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
           projectPath: UserSettings\Layouts\default-2022.dwlt
           originalPath: 
           indexStatus: 0
@@ -2436,87 +2229,57 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: .gitignore
-      fullPath: D:\APP\Unity\Projects\Twain\.gitignore
-      projectPath: .gitignore
+    - path: .idea\.idea.Twain\.idea\.gitignore
+      fullPath: D:\APP\Projects\Twain\.idea\.idea.Twain\.idea\.gitignore
+      projectPath: .idea\.idea.Twain\.idea\.gitignore
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: .idea\.idea.Twain\.idea\indexLayout.xml
+      fullPath: D:\APP\Projects\Twain\.idea\.idea.Twain\.idea\indexLayout.xml
+      projectPath: .idea\.idea.Twain\.idea\indexLayout.xml
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: .idea\.idea.Twain\.idea\vcs.xml
+      fullPath: D:\APP\Projects\Twain\.idea\.idea.Twain\.idea\vcs.xml
+      projectPath: .idea\.idea.Twain\.idea\vcs.xml
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+      fullPath: D:\APP\Projects\Twain\Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
+      projectPath: Assets\UnityGame\Scripts\Player\Equilibrium\EquilibriumBehaviour.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\UnityGame\Scenes\SampleScene.unity
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Scenes\SampleScene.unity
-      projectPath: Assets\UnityGame\Scenes\SampleScene.unity
+    - path: Packages\manifest.json
+      fullPath: D:\APP\Projects\Twain\Packages\manifest.json
+      projectPath: Packages\manifest.json
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
-      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Attack.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Idle.png
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
-      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\Shoot.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
-      projectPath: Assets\UnityGame\Sprites\Characters\Equilibrium\StunBullet.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-      projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\LightSide.controller
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-      fullPath: D:\APP\Unity\Projects\Twain\Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
-      projectPath: Assets\UnityGame\Sprites\Characters\LightSide\Animations\Run.anim
+    - path: Packages\packages-lock.json
+      fullPath: D:\APP\Projects\Twain\Packages\packages-lock.json
+      projectPath: Packages\packages-lock.json
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
     - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: D:\APP\Unity\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
+      fullPath: D:\APP\Projects\Twain\UserSettings\Layouts\default-2022.dwlt
       projectPath: UserSettings\Layouts\default-2022.dwlt
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 12 changed files
+    changedFilesText: 7 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2026-01-22T00:48:15.588+03:00
+      updatedTimeString: 2026-02-05T22:50:14.944+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2026-01-22T01:10:02.039+03:00
+      updatedTimeString: 2026-02-05T23:38:17.997+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2026-01-22T01:08:46.710+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -9803,13 +9566,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2026-01-04T00:02:44.822+03:00
+    updatedTimeString: 2026-02-04T18:20:13.685+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2026-01-04T00:03:06.703+03:00
+    updatedTimeString: 2026-02-04T18:20:19.067+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2026-01-04T00:03:06.681+03:00
+    updatedTimeString: 2026-02-04T19:08:44.768+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -9852,10 +9615,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 150.66667
+    x: 180.66667
     y: 72.66667
-    width: 850
-    height: 433.66666
+    width: 820
+    height: 433
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -9901,7 +9664,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -9910,23 +9673,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 850
-      height: 412.66666
-    m_Scale: {x: 0.57314813, y: 0.57314813}
-    m_Translation: {x: 425, y: 206.33333}
+      width: 820
+      height: 412
+    m_Scale: {x: 0.57222223, y: 0.57222223}
+    m_Translation: {x: 410, y: 206}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -741.5186
+      x: -716.5048
       y: -360
-      width: 1483.0372
+      width: 1433.0096
       height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 0.57314813
-  m_LastWindowPixelSize: {x: 1275, y: 650.5}
+  m_defaultScale: 0.57222223
+  m_LastWindowPixelSize: {x: 1230, y: 649.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000

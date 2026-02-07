@@ -1,19 +1,16 @@
-using NavMeshPlus.Extensions;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.UIElements;
 
 public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbleAggro, IStunnable
 {
+    private static readonly int PlayShock = Animator.StringToHash("PlayShock");
+    private static readonly int IdleAnim = Animator.StringToHash("Idle");
+
     public enum State
     {
         Idle,
         Hunt,
-        Retreat,
-        Stun
+        Retreat
     }
 
     [SerializeField] private float _hitpoints;
@@ -54,21 +51,17 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         }
     }
 
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float retreatDistance;
-    [SerializeField] private int pointsOnCircle;
-
-    private NavMeshAgent agent;
+    private ClotMovement movement;
+    private Animator animator;
     private State state;
-    private Vector3 target;
 
     private Coroutine retreatCoroutine;
-    private bool isInPanic;
 
     private void Start()
     {
-        SetupNavMeshAgent();
         SetState(State.Idle);
+        movement = GetComponent<ClotMovement>();
+        animator =  GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
@@ -83,9 +76,6 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
             case State.Retreat:
                 Retreat();
                 break;
-            case State.Stun:
-                Stun();
-                break; 
         }
     }
 
@@ -105,9 +95,6 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
                 case State.Retreat:
                     SetRetreatSettings();
                     break;
-                case State.Stun:
-                    SetStunSettings();
-                    break;
             }
         }
     }
@@ -117,7 +104,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     }
     private void SetIdleSettings()
     {
-        target = transform.position;
+        movement.target = transform.position;
     }
     private void SetHuntSettings()
     {
@@ -127,10 +114,6 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     {
         if (retreatCoroutine == null)
             retreatCoroutine = StartCoroutine(RetreatCoroutine());
-    }
-    private void SetStunSettings()
-    {
-        
     }
     private void Idle()
     {
@@ -145,8 +128,8 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         {
             SetState(State.Retreat);
         }
-        target = GameManager.LightSide.transform.position;
-        agent.SetDestination(target);
+        movement.target = GameManager.LightSide.transform.position;
+        movement.navMeshAgent.SetDestination(movement.target);
     }
     private void Retreat()
     {
@@ -156,67 +139,29 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
             retreatCoroutine = null;
             SetState(State.Hunt);
         }
-        target = GameManager.Equilibrium.transform.position;
-    }
-    private void Stun()
-    {
-        
+        movement.target = GameManager.Equilibrium.transform.position;
     }
     private IEnumerator StunCoroutine(float stunTime)
     {
-        agent.isStopped = true;
+        movement.navMeshAgent.isStopped = true;
+        animator.SetTrigger(PlayShock);
         yield return new WaitForSeconds(stunTime);
-        agent.isStopped = false;
-        SetState(State.Retreat);
+        animator.Play(IdleAnim);
+        movement.navMeshAgent.isStopped = false;
     }
     private IEnumerator RetreatCoroutine()
     {
         while (true)
         {
-            if (!isInPanic || (isInPanic && !Utils.IsAgentMoving(agent)))
+            if (!movement.isInPanic || (movement.isInPanic && !Utils.IsAgentMoving(movement.navMeshAgent)))
             {
-                agent.SetDestination(GetRetreatPosition());
+                movement.navMeshAgent.SetDestination(movement.GetRetreatPosition());
             }
             yield return null;
         }
     }
-    private Vector3 GetRetreatPosition()
-    {
-        Vector3 nearestPosition = target + (Vector3)Random.insideUnitCircle * (retreatDistance / 1.5f);
-        if (!isInPanic)
-            isInPanic = true;
-        float minPathLength = float.MaxValue;
-        float degreesStep = 360f / pointsOnCircle;
-        Vector2 retreatVector = (transform.position - target).normalized;
-        for (int i = 0; i < pointsOnCircle; i++)
-        {
-            retreatVector = Quaternion.Euler(0, 0, degreesStep) * retreatVector;
-            Vector3 retreatPosition = target + (Vector3)retreatVector * retreatDistance;
-            NavMeshPath path = new NavMeshPath();
-            if (NavMesh.CalculatePath(transform.position, retreatPosition, NavMesh.AllAreas, path))
-            {
-                float pathLength = Utils.GetPathLength(path);
-                if (pathLength < minPathLength)
-                {
-                    nearestPosition = retreatPosition;
-                    minPathLength = pathLength;              
-                }
-                if (isInPanic)
-                    isInPanic = false;
-            }
-        }
-        return nearestPosition;
-    }
-    private void SetupNavMeshAgent()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        agent.speed = moveSpeed;
-    }
     public void ApplyStun(float time)
     {
-        SetState(State.Stun);
         StartCoroutine(StunCoroutine(time));
     }
     public void ReceiveDamage(float damage)

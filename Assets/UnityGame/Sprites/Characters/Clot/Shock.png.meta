@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4f1cb0804eaa166489446585e9854940
+guid: d59523035e3346140b635e35e0ea02ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,85 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: Shock_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 27
+        height: 35
+      alignment: 9
+      pivot: {x: 0.3888889, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d9a8696cd6131048b8c65627f617ebd
-      internalID: -67834976
+      spriteID: 6144f23b08166eb4abeb5a6b2a1b1666
+      internalID: 1860401198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: Shock_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 27
         y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 27
+        height: 35
+      alignment: 9
+      pivot: {x: 0.3888889, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e353aa457b4e8a14bb42b2c330fb8bce
-      internalID: -699158483
+      spriteID: 294c23131a5955c4ba087d5d6fc70db1
+      internalID: -1471597342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: Shock_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 54
         y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 27
+        height: 35
+      alignment: 9
+      pivot: {x: 0.3888889, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74445a15dcdfde84595a1ca023ee3e75
-      internalID: 1626168701
+      spriteID: 2d243026838561042ac01581eb37a5bf
+      internalID: -773455722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: Shock_3
       rect:
         serializedVersion: 2
-        x: 99
+        x: 81
         y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 27
+        height: 35
+      alignment: 9
+      pivot: {x: 0.3888889, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17aa0814a98f84d4cb7a9521b5259f5d
-      internalID: -621933504
+      spriteID: fa9215183d4e993468206bd629b40048
+      internalID: -2045400212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shock_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 27
+        height: 35
+      alignment: 9
+      pivot: {x: 0.3888889, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73662beebe2a79e40ab2e1aca4f021f5
+      internalID: -366382134
       vertices: []
       indices: 
       edges: []
@@ -204,10 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_0: -67834976
-      Idle_1: -699158483
-      Idle_2: 1626168701
-      Idle_3: -621933504
+      Shock_0: 1860401198
+      Shock_1: -1471597342
+      Shock_2: -773455722
+      Shock_3: -2045400212
+      Shock_4: -366382134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

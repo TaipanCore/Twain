@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 {
+    private static readonly int IsFocused = Animator.StringToHash("IsFocused");
+
     public enum State
     {
         Normal,
@@ -58,7 +60,6 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     private void Update()
     {
-        animator.SetFloat("MovSpeed", movement.currentSpeed);
         switch (state)
         {
             case State.Normal:
@@ -94,7 +95,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         circleLight.range = baseCircleLightRange;
         distantLight.gameObject.SetActive(false);
         movement.moveSpeed = movement.baseMoveSpeed;
-        animator.SetBool("IsFocused", false);
+        animator.SetBool(IsFocused, false);
     }
     private void SetFocusedState()
     {
@@ -103,7 +104,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         distantLight.range = focusedDistantLightRange;
         distantLightTransform.rotation = CalculateRotationAngle();
         movement.moveSpeed = movement.focusedMoveSpeed;
-        animator.SetBool("IsFocused", true);
+        animator.SetBool(IsFocused, true);
     }
     private void NormalBehaviour()
     {

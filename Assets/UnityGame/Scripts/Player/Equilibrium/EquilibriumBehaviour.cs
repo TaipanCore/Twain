@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
 {
-
     [Header("Attack")]
     [SerializeField] private float _damage;
     public float damage
@@ -78,9 +77,9 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out IDamageReceiver damageReciever) && other.gameObject.IsInLayerMask(GameManager.enemyMask))
+        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(GameManager.enemyMask))
         {
-            DealDamage(damage, damageReciever);
+            DealDamage(damage, damageReceiver);
         }
     }
 }

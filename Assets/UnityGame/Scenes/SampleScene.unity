@@ -757,7 +757,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -14126,13 +14126,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 92270619095281199, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2090610176984030419, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.27
       objectReference: {fileID: 0}
     - target: {fileID: 2090610176984030419, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: 1.192
       objectReference: {fileID: 0}
     - target: {fileID: 2090610176984030419, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14166,9 +14170,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2539769424379796244, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539769424379796244, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.061
+      objectReference: {fileID: 0}
     - target: {fileID: 4511490837671407742, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
       propertyPath: m_Name
       value: Clot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3ce491c1e46538d4387c515dea9bef19, type: 3}
+    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: m_MaskAlphaCutoff
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: m_IsCustomRangeActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

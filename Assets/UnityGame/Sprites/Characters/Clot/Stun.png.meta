@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4f1cb0804eaa166489446585e9854940
+guid: d56c9439033a1aa408d59c5ce9b5d0e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: Stun_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.38636363, y: 0.5833333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d9a8696cd6131048b8c65627f617ebd
-      internalID: -67834976
+      spriteID: 616a43e919db57f4da1f39be3d44b210
+      internalID: 1235472709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: Stun_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 22
         y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.38636363, y: 0.5833333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e353aa457b4e8a14bb42b2c330fb8bce
-      internalID: -699158483
+      spriteID: 26c09ed0fb6f53048872dfc1b5b9c80d
+      internalID: -1226164178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: Stun_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.38636363, y: 0.5833333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb38fe83a1a67447af398b0416abe2e
+      internalID: -1885893953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stun_3
       rect:
         serializedVersion: 2
         x: 66
         y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.38636363, y: 0.5833333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74445a15dcdfde84595a1ca023ee3e75
-      internalID: 1626168701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_3
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 0
-        width: 33
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17aa0814a98f84d4cb7a9521b5259f5d
-      internalID: -621933504
+      spriteID: bb28c74493136a9478981348c65a52fd
+      internalID: -595081959
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_0: -67834976
-      Idle_1: -699158483
-      Idle_2: 1626168701
-      Idle_3: -621933504
+      Stun_0: 1235472709
+      Stun_1: -1226164178
+      Stun_2: -1885893953
+      Stun_3: -595081959
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
