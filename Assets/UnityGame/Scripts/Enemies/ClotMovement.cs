@@ -6,11 +6,11 @@ public class ClotMovement : MonoBehaviour
     private static readonly int MovSpeed = Animator.StringToHash("MovSpeed");
     private static readonly int RunAnimMultiplier = Animator.StringToHash("RunAnimMultiplier");
     
-    public float moveSpeed;
-    public float currentSpeed;
-    public float turnAroundSpeedThreshold;
-    public float retreatDistance;
-    public int pointsOnCircle;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float turnAroundSpeedThreshold;
+    [SerializeField] private float retreatDistance;
+    [SerializeField] private int pointsOnCircle;
+    
     [HideInInspector] public Vector3 target;
     [HideInInspector] public bool isInPanic;
     [HideInInspector] public NavMeshAgent navMeshAgent;
@@ -20,6 +20,7 @@ public class ClotMovement : MonoBehaviour
     private Transform objectTransform;
     private Animator animator;
     private Vector2 movementVector;
+    private float currentSpeed;
 
     private void Start()
     {

@@ -72,18 +72,15 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     public void SetState(State newState)
     {
-        if (state != newState)
+        state = newState;
+        switch (state)
         {
-            state = newState;
-            switch (state)
-            {
-                case State.Normal:
-                    SetNormalState();
-                    break;
-                case State.Focused:
-                    SetFocusedState();
-                    break;
-            }
+            case State.Normal:
+                SetNormalState();
+                break;
+            case State.Focused:
+                SetFocusedState();
+                break;
         }       
     }
     public State GetState()
@@ -127,6 +124,10 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         return Quaternion.Euler(0, 0, Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg);
     }
 
+    public float GetCurrentLightRange()
+    {
+        return state == State.Normal ? baseCircleLightRange : focusedCircleLightRange;
+    }
     public void ReceiveDamage(float damage)
     {
         if (!isInvulnerable)

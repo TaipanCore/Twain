@@ -59,9 +59,9 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
 
     private void Start()
     {
-        SetState(State.Idle);
         movement = GetComponent<ClotMovement>();
         animator =  GetComponent<Animator>();
+        SetState(State.Idle);
     }
     private void FixedUpdate()
     {
@@ -81,21 +81,18 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
 
     private void SetState(State newState)
     {
-        if (state != newState)
+        state = newState;
+        switch (state)
         {
-            state = newState;
-            switch (state)
-            {
-                case State.Idle:
-                    SetIdleSettings();
-                    break;
-                case State.Hunt:
-                    SetHuntSettings();
-                    break;
-                case State.Retreat:
-                    SetRetreatSettings();
-                    break;
-            }
+            case State.Idle:
+                SetIdleSettings();
+                break;
+            case State.Hunt:
+                SetHuntSettings();
+                break;
+            case State.Retreat:
+                SetRetreatSettings();
+                break;
         }
     }
     public State GetState()

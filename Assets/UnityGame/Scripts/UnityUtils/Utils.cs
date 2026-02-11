@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -26,7 +24,7 @@ public static class Utils
     }
     public static bool IsInLayerMask(this GameObject obj, LayerMask mask)
     {
-        //Исходная единица сдвигается на obj.layer (номер слоя) бит влево
+        //РСЃС…РѕРґРЅР°СЏ РµРґРёРЅРёС†Р° СЃРґРІРёРіР°РµС‚СЃСЏ РЅР° obj.layer (РЅРѕРјРµСЂ СЃР»РѕСЏ) Р±РёС‚ РІР»РµРІРѕ
         return ((1 << obj.layer) & mask) != 0;
     }
 }

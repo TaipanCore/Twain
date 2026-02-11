@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraTracking : MonoBehaviour
@@ -12,7 +10,7 @@ public class CameraTracking : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (GameManager.currentCharacter != null)
+        if (GameManager.currentCharacter)
         {
             Vector3 target = GameManager.currentCharacter.transform.position;
             transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, -10), Time.fixedDeltaTime * interpolationMultiplier);

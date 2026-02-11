@@ -182,7 +182,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.46666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -409,10 +409,10 @@ MonoBehaviour:
   _hitpoints: 50
   _invulnerableTime: 1.5
   circleLight: {fileID: 43573792}
-  baseCircleLightRange: 10
-  focusedCircleLightRange: 4.5
+  baseCircleLightRange: 5
+  focusedCircleLightRange: 2
   distantLight: {fileID: 1532493126}
-  focusedDistantLightRange: 10
+  focusedDistantLightRange: 5
   lightRotationSpeed: 7
 --- !u!50 &124919185
 Rigidbody2D:
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384d59b05dff4c469c3d03275c5ab5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6.5
+  moveSpeed: 6
   currentSpeed: 0
   baseMoveSpeed: 5.5
   focusedMoveSpeed: 3.5
@@ -8471,7 +8471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 840240925}
-  - component: {fileID: 840240924}
+  - component: {fileID: 840240933}
   - component: {fileID: 840240930}
   - component: {fileID: 840240923}
   - component: {fileID: 840240932}
@@ -8537,20 +8537,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &840240924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840240922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be485f71c556c543b5d2e15f4091654, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  currentSpeed: 0
 --- !u!4 &840240925
 Transform:
   m_ObjectHideFlags: 0
@@ -8600,7 +8586,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840240922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -8640,6 +8626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c626daaf16033494c88e0d46ba045f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifetimeInDarkness: 3
 --- !u!61 &840240931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8647,7 +8634,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840240922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -8706,6 +8693,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &840240933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840240922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8e1f7c18a9f644a9ac926ca50c89a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6.5
+  currentSpeed: 0
+  minFollowRadiusPercents: 25
+  maxFollowRadiusPercents: 80
 --- !u!1 &967741599
 GameObject:
   m_ObjectHideFlags: 0
@@ -14126,10 +14129,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 92270619095281199, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2090610176984030419, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.27
@@ -14170,33 +14169,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2539769424379796244, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2539769424379796244, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.061
-      objectReference: {fileID: 0}
     - target: {fileID: 4511490837671407742, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
       propertyPath: m_Name
       value: Clot
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3ce491c1e46538d4387c515dea9bef19, type: 3}
-    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
-      propertyPath: m_MaskAlphaCutoff
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109768592845764601, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
-      propertyPath: m_IsCustomRangeActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

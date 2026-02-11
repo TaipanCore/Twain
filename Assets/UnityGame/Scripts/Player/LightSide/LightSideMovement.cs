@@ -10,12 +10,13 @@ public class LightSideMovement : PlayerMovement
     public float focusedMoveSpeed;
 
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     protected override void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        base.Start();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     protected override void FixedUpdate()

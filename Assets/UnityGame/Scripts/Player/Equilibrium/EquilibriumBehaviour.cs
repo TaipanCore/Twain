@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
 {
+    private static readonly int MovSpeed = Animator.StringToHash("MovSpeed");
+    private static readonly int PlayAttack = Animator.StringToHash("PlayAttack");
+    private static readonly int PlayShoot = Animator.StringToHash("PlayShoot");
+
     [Header("Attack")]
     [SerializeField] private float _damage;
     public float damage
@@ -40,7 +44,7 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
     }
     private void Update()
     {
-        animator.SetFloat("MovSpeed", movement.currentSpeed);
+        animator.SetFloat(MovSpeed, movement.currentSpeed);
         if (movement.currentSpeed < 0.01f)
         {
             if (InputManager.leftMouseBtnDown && canAttack)
@@ -55,14 +59,14 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
     }
     private IEnumerator Attack()
     {
-        animator.SetTrigger("PlayAttack");
+        animator.SetTrigger(PlayAttack);
         canAttack = false;
         yield return attackDelay;
         canAttack = true;
     }
     private IEnumerator Shoot()
     {
-        animator.SetTrigger("PlayShoot");
+        animator.SetTrigger(PlayShoot);
         canShoot = false;
         yield return shootDelay;
         canShoot = true;

@@ -3,16 +3,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    public float currentSpeed;
+    [HideInInspector] public float currentSpeed;
 
     protected Rigidbody2D rb;
-    protected SpriteRenderer spriteRenderer;
     protected Vector2 movement;
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     protected virtual void FixedUpdate()
     {

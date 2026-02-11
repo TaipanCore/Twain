@@ -9,7 +9,7 @@ public class LightSource : MonoBehaviour
         set
         {
             _range = value;
-            transform.localScale = Vector3.one * _range;
+            transform.localScale = Vector3.one * (_range * 2f);
         }
     }
 }
