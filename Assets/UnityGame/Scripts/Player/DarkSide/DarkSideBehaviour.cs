@@ -6,6 +6,13 @@ public class DarkSideBehaviour : MonoBehaviour
     [SerializeField, Min(0)] public float lifetimeInDarkness;
     private WaitForSeconds dieInDarknessDelay;
     
+    [Header("Spikes")]
+    [SerializeField, Min(0)] private float spikesSpawnCooldown;
+    private float spikesCooldownTimer;
+    [SerializeField, Min(0)] private int numberOfSpikes;
+    [SerializeField, Min(0)] private float spikesLifetime;
+    [SerializeField] private GameObject spikesSpawner;
+    
     private Transform objectTransform;
     private Transform fireflyTransform;
     private LightSideBehaviour lightSideBehaviour;
@@ -23,6 +30,18 @@ public class DarkSideBehaviour : MonoBehaviour
         lightSideBehaviour = GameManager.LightSide.GetComponent<LightSideBehaviour>();
         dieInDarknessDelay = new WaitForSeconds(lifetimeInDarkness);
     }
+
+    private void Update()
+    {
+        if (spikesCooldownTimer > 0f && gameObject.activeInHierarchy)
+        {
+            spikesCooldownTimer -= Time.deltaTime;
+        }
+        if (InputManager.leftMouseBtnDown && spikesCooldownTimer <= 0f && GameManager.currentCharacter == gameObject)
+        {
+            SpawnSpikes();
+        }
+    }
     private void FixedUpdate()
     {
         if (!Utils.IsInRange(fireflyTransform.position, objectTransform.position, lightSideBehaviour.GetCurrentLightRange()))
@@ -37,6 +56,13 @@ public class DarkSideBehaviour : MonoBehaviour
                 dieCoroutine = null;
             }
         }
+    }
+    private void SpawnSpikes()
+    {
+        GameObject spawner = Instantiate(spikesSpawner, objectTransform.position, Quaternion.identity);
+        spawner.GetComponent<SpikesSpawner>().Initialize(numberOfSpikes,  spikesLifetime);
+        Destroy(spawner, spikesSpawnCooldown);
+        spikesCooldownTimer = spikesSpawnCooldown;
     }
     private IEnumerator DieInDarkness()
     {

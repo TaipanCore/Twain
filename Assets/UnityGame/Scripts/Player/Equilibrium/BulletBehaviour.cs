@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
@@ -27,5 +25,10 @@ public class BulletBehaviour : MonoBehaviour
             stunnable.ApplyStun(stunTime);
         }
         Destroy(gameObject);
+    }
+
+    public void Initialize(float stunTime)
+    {
+        this.stunTime = stunTime;
     }
 }

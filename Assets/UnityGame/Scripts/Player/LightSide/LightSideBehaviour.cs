@@ -23,13 +23,12 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     
     [SerializeField] private float _invulnerableTime;
-    private WaitForSeconds invulnerableDelay;
+    private float invulnerableTimer;
     public float invulnerableTime
     {
         get => _invulnerableTime;
         set => _invulnerableTime = value;
     }
-    public bool isInvulnerable { get; set; } = false;
 
     [Header("Circle light")]
     [SerializeField] private LightSource circleLight;
@@ -55,11 +54,12 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         animator = GetComponent<Animator>();
         movement = GetComponent<LightSideMovement>();
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
-        invulnerableDelay = new WaitForSeconds(invulnerableTime);
         SetState(State.Normal);
     }
     private void Update()
     {
+        if (invulnerableTimer > 0f)
+            invulnerableTimer -= Time.deltaTime;
         switch (state)
         {
             case State.Normal:
@@ -130,17 +130,15 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     public void ReceiveDamage(float damage)
     {
-        if (!isInvulnerable)
+        if (invulnerableTimer <= 0f)
         {
             hitpoints -= damage;
-            StartCoroutine(GiveInvulnerability());
+            GiveInvulnerability();
         }
     }
-    public IEnumerator GiveInvulnerability()
+    public void GiveInvulnerability()
     {
-        isInvulnerable = true;
-        yield return invulnerableDelay;
-        isInvulnerable = false;
+        invulnerableTimer = invulnerableTime;
     }
     public void Die()
     {

@@ -18,13 +18,12 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
         }
     }
     [SerializeField] private float attackCooldown;
-    private WaitForSeconds attackDelay;
-    private bool canAttack = true;
+    private float attackCooldownTimer;
 
     [Header("Shoot")]
     [SerializeField] private float shootCooldown;
-    private WaitForSeconds shootDelay;
-    private bool canShoot = true;
+    private float shootCooldownTimer;
+    [SerializeField] private float bulletStunTime;
     [SerializeField] private GameObject bulletPrefab;
 
     private Animator animator;
@@ -39,41 +38,43 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
         movement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
         spawnPoint = transform.Find("BulletSpawnPoint");
-        attackDelay = new WaitForSeconds(attackCooldown);
-        shootDelay = new WaitForSeconds(shootCooldown);
     }
     private void Update()
     {
         animator.SetFloat(MovSpeed, movement.currentSpeed);
+        if (gameObject.activeInHierarchy)
+        {
+            if (attackCooldownTimer > 0f)
+                attackCooldownTimer -= Time.deltaTime;
+            if (shootCooldownTimer > 0f)
+                shootCooldownTimer -= Time.deltaTime;
+        }
         if (movement.currentSpeed < 0.01f)
         {
-            if (InputManager.leftMouseBtnDown && canAttack)
+            if (InputManager.leftMouseBtnDown && attackCooldownTimer <= 0f)
             {
-                StartCoroutine(Attack());
+                Attack();
             }
-            if (InputManager.rightMouseBtnDown && canShoot)
+            if (InputManager.rightMouseBtnDown && shootCooldownTimer <= 0f)
             {
-                StartCoroutine(Shoot());
+                Shoot();
             }
         }
     }
-    private IEnumerator Attack()
+    private void Attack()
     {
         animator.SetTrigger(PlayAttack);
-        canAttack = false;
-        yield return attackDelay;
-        canAttack = true;
+        attackCooldownTimer = attackCooldown;
     }
-    private IEnumerator Shoot()
+    private void Shoot()
     {
         animator.SetTrigger(PlayShoot);
-        canShoot = false;
-        yield return shootDelay;
-        canShoot = true;
+        shootCooldownTimer = shootCooldown;
     }
     private void SpawnBullet()
     {
-        Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+        bullet.GetComponent<BulletBehaviour>().Initialize(bulletStunTime);
     }
     public void DealDamage(float damage, IDamageReceiver target)
     {

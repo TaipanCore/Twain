@@ -25,13 +25,13 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         }
     }
     [SerializeField] private float _invulnerableTime;
-    private WaitForSeconds invulnerableDelay;
+    private float invulnerableTimer;
     public float invulnerableTime
     {
         get => _invulnerableTime;
         set => _invulnerableTime = value;
     }
-    public bool isInvulnerable { get; set; } = false;
+    
     [SerializeField] private float _damage;
     public float damage
     {
@@ -63,8 +63,10 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         animator =  GetComponent<Animator>();
         SetState(State.Idle);
     }
-    private void FixedUpdate()
+    private void Update()
     {
+        if (invulnerableTimer > 0f)
+            invulnerableTimer -= Time.deltaTime;
         switch (state)
         {
             case State.Idle:
@@ -163,17 +165,15 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     }
     public void ReceiveDamage(float damage)
     {
-        if (!isInvulnerable)
+        if (invulnerableTimer <= 0f)
         {
             hitpoints -= damage;
-            StartCoroutine(GiveInvulnerability());
+            GiveInvulnerability();
         }
     }
-    public IEnumerator GiveInvulnerability()
+    public void GiveInvulnerability()
     {
-        isInvulnerable = true;
-        yield return invulnerableDelay;
-        isInvulnerable = false;
+        invulnerableTimer = invulnerableTime;
     }
     public void Die()
     {
