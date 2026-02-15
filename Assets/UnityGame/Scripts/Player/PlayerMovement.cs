@@ -21,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed = (movement * moveSpeed).magnitude;
             FlipCharacter();
         }
+        else
+        {
+            currentSpeed = 0f;
+        }
     }
     protected virtual void FlipCharacter()
     {

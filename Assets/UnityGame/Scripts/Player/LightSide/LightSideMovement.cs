@@ -22,8 +22,7 @@ public class LightSideMovement : PlayerMovement
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (GameManager.currentCharacter == gameObject)
-            animator.SetFloat(MovSpeed, currentSpeed);
+        animator.SetFloat(MovSpeed, currentSpeed);
     }
     protected override void FlipCharacter()
     {

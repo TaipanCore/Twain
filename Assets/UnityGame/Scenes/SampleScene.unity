@@ -8531,9 +8531,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetimeInDarkness: 3
-  spikesSpawnCooldown: 15
+  spikesSpawnCooldown: 1
   numberOfSpikes: 8
-  spikesLifetime: 5
+  spikesLifetime: 20
   spikesSpawner: {fileID: 2636088503007124049, guid: b9b685a0752fbe549a985a19760cdabd, type: 3}
 --- !u!95 &840240932
 Animator:

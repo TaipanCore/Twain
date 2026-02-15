@@ -13,17 +13,26 @@ public class SpikesSpawner : MonoBehaviour
     private int numberOfSpikes;
     float spikesLifetime;
     
+    private Transform objectTransform;
     private Vector3 direction;
     private Vector3 startPosition;
     private Tilemap tilemap;
     
     void Start()
     {
+        objectTransform = GetComponent<Transform>();
         spikesSpawnDelay = new WaitForSeconds(spikesSpawnTimeInterval);
         tilemap = GameObject.Find("Ground").GetComponent<Tilemap>();
         StartCoroutine(SpawnSpikes());
     }
 
+    void LateUpdate()
+    {
+        if (objectTransform.childCount == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     private IEnumerator SpawnSpikes()
     {
         direction = (MouseTracker.mousePosition - transform.position).normalized;

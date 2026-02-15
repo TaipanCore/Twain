@@ -61,7 +61,6 @@ public class DarkSideBehaviour : MonoBehaviour
     {
         GameObject spawner = Instantiate(spikesSpawner, objectTransform.position, Quaternion.identity);
         spawner.GetComponent<SpikesSpawner>().Initialize(numberOfSpikes,  spikesLifetime);
-        Destroy(spawner, spikesSpawnCooldown);
         spikesCooldownTimer = spikesSpawnCooldown;
     }
     private IEnumerator DieInDarkness()
