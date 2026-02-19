@@ -48,3 +48,4 @@ MonoBehaviour:
   stepBetweenSpikes: 0.7
   spawnPositionOffset: 1
   spikesSpawnTimeInterval: 0.1
+  particlesPrefab: {fileID: 3960427743103849942, guid: 5931b331e9093c84384941fec57fdf89, type: 3}
