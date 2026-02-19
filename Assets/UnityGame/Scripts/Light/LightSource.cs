@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LightSource : MonoBehaviour
 {
+    [SerializeField] private bool isAggroTrigger;
     private float _range;
     public float range
     {
@@ -10,6 +11,16 @@ public class LightSource : MonoBehaviour
         {
             _range = value;
             transform.localScale = Vector3.one * (_range * 2f);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isAggroTrigger)
+        {
+            if (collision.TryGetComponent(out IAbleAggro ableAggro))
+            {
+                ableAggro.isAggro = true;
+            }
         }
     }
 }
