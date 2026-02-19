@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float currentSpeed;
 
     protected Rigidbody2D rb;
-    protected Vector2 movement;
+    protected Vector2 movementVector;
 
     protected virtual void Start()
     {
@@ -16,9 +16,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (GameManager.currentCharacter == gameObject)
         {
-            movement = InputManager.movement;
-            rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
-            currentSpeed = (movement * moveSpeed).magnitude;
+            movementVector = InputManager.movement;
+            rb.MovePosition(rb.position + movementVector * (moveSpeed * Time.fixedDeltaTime));
+            currentSpeed = (movementVector * moveSpeed).magnitude;
             FlipCharacter();
         }
         else
@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
     }
     protected virtual void FlipCharacter()
     {
-        if (movement.x != 0)
-            if (movement.x < 0f)
+        if (movementVector.x != 0)
+            if (movementVector.x < 0f)
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             else
                 transform.rotation = Quaternion.Euler(0, 0, 0);

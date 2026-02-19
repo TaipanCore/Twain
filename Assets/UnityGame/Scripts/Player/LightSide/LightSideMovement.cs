@@ -29,10 +29,10 @@ public class LightSideMovement : PlayerMovement
         float mouseX = MouseTracker.mousePosition.x - transform.position.x;
         if (animator.GetBool(IsFocused))
         {
-            animator.SetFloat(WalkAnimReverse, Mathf.Sign(movement.x * mouseX));
-            movement.x = mouseX;
+            animator.SetFloat(WalkAnimReverse, Mathf.Sign(movementVector.x * mouseX));
+            movementVector.x = mouseX;
         }      
-        if (movement.x != 0)
-            spriteRenderer.flipX = movement.x < 0f;
+        if (movementVector.x != 0)
+            spriteRenderer.flipX = movementVector.x < 0f;
     }
 }

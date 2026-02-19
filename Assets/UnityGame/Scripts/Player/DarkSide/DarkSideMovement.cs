@@ -24,12 +24,12 @@ public class DarkSideMovement : PlayerMovement
     {
         if (GameManager.currentCharacter == gameObject)
         {
-            movement = InputManager.movement;
-            rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
+            movementVector = InputManager.movement;
+            rb.MovePosition(rb.position + movementVector * (moveSpeed * Time.fixedDeltaTime));
         }
         else if (GameManager.currentCharacter == GameManager.LightSide)
         {
-            movement = (fireflyTransform.position - objectTransform.position).normalized;
+            movementVector = (fireflyTransform.position - objectTransform.position).normalized;
             minFollowRadius = lightSideBehaviour.GetCurrentLightRange() * minFollowRadiusPercents / 100f;
             maxFollowRadius = lightSideBehaviour.GetCurrentLightRange() * maxFollowRadiusPercents / 100f;
             if (!Utils.IsInRange(objectTransform.position, fireflyTransform.position, maxFollowRadius))
@@ -37,7 +37,7 @@ public class DarkSideMovement : PlayerMovement
                 StartCoroutine(MoveToFirefly());
             }
         }
-        currentSpeed = (movement * moveSpeed).magnitude;
+        currentSpeed = (movementVector * moveSpeed).magnitude;
         FlipCharacter();
     }
     private IEnumerator MoveToFirefly()

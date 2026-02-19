@@ -57,6 +57,7 @@ public class DarkSideBehaviour : MonoBehaviour
             }
         }
     }
+    
     private void SpawnSpikes()
     {
         GameObject spawner = Instantiate(spikesSpawner, objectTransform.position, Quaternion.identity);

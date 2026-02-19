@@ -1,7 +1,6 @@
-using System.Collections;
 using UnityEngine;
 
-public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
+public class EquilibriumBehaviour : MonoBehaviour
 {
     private static readonly int MovSpeed = Animator.StringToHash("MovSpeed");
     private static readonly int PlayAttack = Animator.StringToHash("PlayAttack");
@@ -15,10 +14,12 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
         set
         {
             _damage = value;
+            hookBehaviour.GetComponent<HookBehaviour>().damage = _damage;
         }
     }
     [SerializeField] private float attackCooldown;
     private float attackCooldownTimer;
+    private HookBehaviour hookBehaviour;
 
     [Header("Shoot")]
     [SerializeField] private float shootCooldown;
@@ -37,6 +38,8 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
     {
         movement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
+        hookBehaviour = transform.Find("Hook").GetComponent<HookBehaviour>();
+        hookBehaviour.damage = damage;
         spawnPoint = transform.Find("BulletSpawnPoint");
     }
     private void Update()
@@ -75,16 +78,5 @@ public class EquilibriumBehaviour : MonoBehaviour, IDamageDealer
     {
         GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
         bullet.GetComponent<BulletBehaviour>().Initialize(bulletStunTime);
-    }
-    public void DealDamage(float damage, IDamageReceiver target)
-    {
-        target.ReceiveDamage(damage);
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(GameManager.enemyMask))
-        {
-            DealDamage(damage, damageReceiver);
-        }
     }
 }
