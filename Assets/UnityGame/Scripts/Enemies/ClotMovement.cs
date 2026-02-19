@@ -76,9 +76,14 @@ public class ClotMovement : MonoBehaviour
     private void FlipCharacter()
     {
         if (movementVector.x != 0)
-            if (clotBehaviour.GetState() == ClotBehaviour.State.Retreat && currentSpeed < turnAroundSpeedThreshold)
-                spriteRenderer.flipX = objectTransform.position.x > target.x;
+            if (movementVector.x < 0f)
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             else
-                spriteRenderer.flipX = movementVector.x < 0f;
+                
+        if (movementVector.x != 0)
+            if (clotBehaviour.GetState() == ClotBehaviour.State.Retreat && currentSpeed < turnAroundSpeedThreshold && objectTransform.position.x > target.x)
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            else
+                transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }
