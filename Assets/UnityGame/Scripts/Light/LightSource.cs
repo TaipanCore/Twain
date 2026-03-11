@@ -3,8 +3,8 @@ using UnityEngine;
 public class LightSource : MonoBehaviour
 {
     [SerializeField] private bool isAggroTrigger;
-    private float _range;
-    public float range
+    protected float _range;
+    public virtual float range
     {
         get { return _range; }
         set

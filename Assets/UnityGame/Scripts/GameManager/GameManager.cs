@@ -1,88 +1,77 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
+using DG.Tweening;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [Header("Characters info")]
-    public static GameObject Equilibrium;
-    public static GameObject LightSide;
-    public static GameObject DarkSide;
+    public static GameObject equilibrium;
+    public static GameObject lightSide;
+    public static GameObject darkSide;
 
     public static GameObject currentCharacter;
     public static bool isUnited;
 
-    public float uniteDistance;
-
     [Header("Player & enemy layer masks")]
     public static LayerMask playerMask;
     public static LayerMask enemyMask;
+    
+    [Header("Camera")]
+    public static GameObject mainCamera;
+    
+    [Header("Shrine of balance")]
+    public static GameObject shrineOfBalance;
+    
     private void Start()
     {
         Application.targetFrameRate = 60;
         playerMask = LayerMask.GetMask("Player");
         enemyMask = LayerMask.GetMask("Enemy");
-        Unite();
+        Separate();
     }
     private void Update()
     {
         CheckInputs();
     }
 
-    private void Unite()
+    public static void Unite()
     {
-        LightSide.SetActive(false);
-        DarkSide.SetActive(false);
-        Equilibrium.SetActive(true);
-        if (currentCharacter != null)
-            Equilibrium.transform.position = currentCharacter.transform.position;
-        currentCharacter = Equilibrium;
-        isUnited = !isUnited;
+        lightSide.SetActive(false);
+        darkSide.SetActive(false);
+        equilibrium.SetActive(true);
+        if (currentCharacter)
+            equilibrium.transform.position = lightSide.transform.position;
+        currentCharacter = equilibrium;
+        isUnited = true;
     }
-    private void Separate()
+    public static void Separate()
     {
-        Equilibrium.SetActive(false);
-        LightSide.SetActive(true);
-        DarkSide.SetActive(true);
-        if (currentCharacter != null)
+        equilibrium.SetActive(false);
+        lightSide.SetActive(true);
+        darkSide.SetActive(true);
+        if (currentCharacter)
         {
-            LightSide.transform.position = currentCharacter.transform.position;
-            DarkSide.transform.position = currentCharacter.transform.position;
+            lightSide.transform.position = currentCharacter.transform.position;
+            darkSide.transform.position = currentCharacter.transform.position;
         }       
-        currentCharacter = LightSide;
-        isUnited = !isUnited;
+        currentCharacter = lightSide;
+        isUnited = false;
     }
     private void ChangeSide()
     {
-        if (currentCharacter == LightSide)
+        if (currentCharacter == lightSide)
         {
-            currentCharacter = DarkSide;
+            currentCharacter = darkSide;
         }
         else
         {
-            currentCharacter = LightSide;
+            currentCharacter = lightSide;
         }
     }
     private void CheckInputs()
     {
-        if (isUnited)
+        if (InputManager.sidesChangeBtnDown && !isUnited)
         {
-            if (InputManager.uniteAndSeparateBtnDown)
-            {
-                Separate();
-            }
-        }
-        else
-        {
-            if (InputManager.uniteAndSeparateBtnDown && Utils.IsInRange(LightSide.transform.position, DarkSide.transform.position, uniteDistance))
-            {
-                Unite();
-            }
-            if (InputManager.sidesChangeBtnDown)
-            {
-                ChangeSide();
-            }
+            ChangeSide();
         }
     }
 }

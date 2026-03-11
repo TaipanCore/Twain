@@ -15,8 +15,8 @@ public class LightSideMovement : PlayerMovement
     protected override void Start()
     {
         base.Start();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator =  transform.Find("Appearance").GetComponent<Animator>();
+        spriteRenderer = transform.Find("Appearance").GetComponent<SpriteRenderer>();
     }
 
     protected override void FixedUpdate()

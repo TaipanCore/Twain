@@ -17,8 +17,8 @@ public class DarkSideMovement : PlayerMovement
     {
         base.Start();
         objectTransform = GetComponent<Transform>();
-        fireflyTransform = GameManager.LightSide.transform.Find("Firefly");
-        lightSideBehaviour = GameManager.LightSide.GetComponent<LightSideBehaviour>();
+        fireflyTransform = GameManager.lightSide.transform.Find("Firefly");
+        lightSideBehaviour = GameManager.lightSide.GetComponent<LightSideBehaviour>();
     }
     protected override void FixedUpdate()
     {
@@ -27,7 +27,7 @@ public class DarkSideMovement : PlayerMovement
             movementVector = InputManager.movement;
             rb.MovePosition(rb.position + movementVector * (moveSpeed * Time.fixedDeltaTime));
         }
-        else if (GameManager.currentCharacter == GameManager.LightSide)
+        else if (GameManager.currentCharacter == GameManager.lightSide)
         {
             movementVector = (fireflyTransform.position - objectTransform.position).normalized;
             minFollowRadius = lightSideBehaviour.GetCurrentLightRange() * minFollowRadiusPercents / 100f;

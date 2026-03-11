@@ -20,14 +20,14 @@ public class DarkSideBehaviour : MonoBehaviour
     
     private void Awake()
     {
-        GameManager.DarkSide = gameObject;
+        GameManager.darkSide = gameObject;
     }
 
     private void Start()
     {
         objectTransform = GetComponent<Transform>();
-        fireflyTransform = GameManager.LightSide.transform.Find("Firefly");
-        lightSideBehaviour = GameManager.LightSide.GetComponent<LightSideBehaviour>();
+        fireflyTransform = GameManager.lightSide.transform.Find("Firefly");
+        lightSideBehaviour = GameManager.lightSide.GetComponent<LightSideBehaviour>();
         dieInDarknessDelay = new WaitForSeconds(lifetimeInDarkness);
     }
 

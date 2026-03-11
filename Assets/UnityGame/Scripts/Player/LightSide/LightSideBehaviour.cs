@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 {
@@ -31,14 +30,15 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
 
     [Header("Circle light")]
-    [SerializeField] private LightSource circleLight;
+    [SerializeField] private CircleLight circleLight;
     [SerializeField] private float baseCircleLightRange;
     [SerializeField] private float focusedCircleLightRange;
 
     [Header("Distant light")]
-    [SerializeField] private LightSource distantLight;
+    [SerializeField] private FocusedLight distantLight;
     [SerializeField] private float focusedDistantLightRange;
     [SerializeField] private float lightRotationSpeed;
+    [SerializeField] private float etherDisappearSpeed;
 
     private State state;
     private Transform distantLightTransform;
@@ -47,13 +47,14 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 
     private void Awake()
     {
-        GameManager.LightSide = gameObject;
+        GameManager.lightSide = gameObject;
     }
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator =  transform.Find("Appearance").GetComponent<Animator>();
         movement = GetComponent<LightSideMovement>();
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
+        distantLight.etherDisappearSpeed = etherDisappearSpeed;
         SetState(State.Normal);
     }
     private void Update()
@@ -97,22 +98,22 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     private void SetFocusedState()
     {
         circleLight.range = focusedCircleLightRange;
-        distantLight.gameObject.SetActive(true);
         distantLight.range = focusedDistantLightRange;
         distantLightTransform.rotation = CalculateRotationAngle();
+        distantLight.gameObject.SetActive(true);
         movement.moveSpeed = movement.focusedMoveSpeed;
         animator.SetBool(IsFocused, true);
     }
     private void NormalBehaviour()
     {
-        if (InputManager.leftMouseBtnDown && GameManager.currentCharacter == gameObject)
+        if (InputManager.leftMouseBtn && GameManager.currentCharacter == gameObject)
         {
             SetState(State.Focused);
         }
     }
     private void FocusedBehaviour()
     {
-        if (InputManager.leftMouseBtnUp && GameManager.currentCharacter == gameObject)
+        if (!InputManager.leftMouseBtn && GameManager.currentCharacter == gameObject)
         {
             SetState(State.Normal);
         }

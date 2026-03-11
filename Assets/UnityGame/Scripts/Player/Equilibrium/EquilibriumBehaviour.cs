@@ -30,15 +30,17 @@ public class EquilibriumBehaviour : MonoBehaviour
     private Animator animator;
     private PlayerMovement movement;
     private Transform spawnPoint;
+    private CameraTracking mainCameraTracking;
     private void Awake()
     {
-        GameManager.Equilibrium = gameObject;
+        GameManager.equilibrium = gameObject;
     }
     private void Start()
     {
         movement = GetComponent<PlayerMovement>();
-        animator = GetComponent<Animator>();
-        hookBehaviour = transform.Find("Hook").GetComponent<HookBehaviour>();
+        animator = transform.Find("Appearance").GetComponent<Animator>();
+        mainCameraTracking = GameManager.mainCamera.GetComponent<CameraTracking>();
+        hookBehaviour = transform.Find("Appearance").Find("Hook").GetComponent<HookBehaviour>();
         hookBehaviour.damage = damage;
         spawnPoint = transform.Find("BulletSpawnPoint");
     }
@@ -74,9 +76,13 @@ public class EquilibriumBehaviour : MonoBehaviour
         animator.SetTrigger(PlayShoot);
         shootCooldownTimer = shootCooldown;
     }
-    private void SpawnBullet()
+    public void SpawnBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
         bullet.GetComponent<BulletBehaviour>().Initialize(bulletStunTime);
+    }
+    public void ShakeCameraFromSteps()
+    {
+        mainCameraTracking.ShakeCamera(0.3f, 0.075f);
     }
 }
