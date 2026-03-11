@@ -50,3 +50,6 @@ TagManager:
   - name: Darkness
     uniqueID: 737728579
     locked: 0
+  - name: AboveDarkness
+    uniqueID: 656288115
+    locked: 0

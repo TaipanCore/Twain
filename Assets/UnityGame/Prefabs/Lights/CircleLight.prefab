@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7955207024423900198}
   - component: {fileID: 1574431959638632861}
   - component: {fileID: 1418801307322233177}
-  - component: {fileID: 6296314979826758771}
+  - component: {fileID: 9121164330093787008}
   m_Layer: 6
   m_Name: CircleLight
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
-  m_MaskAlphaCutoff: 0.4
+  m_MaskAlphaCutoff: 1
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6296314979826758771
+--- !u!114 &9121164330093787008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9205905560339479363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5577ad0b17e0f47bede4972b02f0d4, type: 3}
+  m_Script: {fileID: 11500000, guid: aa297e181e5deb445a67462fb136b815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isAggroTrigger: 1

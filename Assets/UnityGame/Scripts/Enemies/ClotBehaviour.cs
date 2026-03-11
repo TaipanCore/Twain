@@ -127,7 +127,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         {
             SetState(State.Retreat);
         }
-        movement.target = GameManager.LightSide.transform.position;
+        movement.target = GameManager.lightSide.transform.position;
         movement.navMeshAgent.SetDestination(movement.target);
     }
     private void Retreat()
@@ -138,7 +138,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
             retreatCoroutine = null;
             SetState(State.Hunt);
         }
-        movement.target = GameManager.Equilibrium.transform.position;
+        movement.target = GameManager.equilibrium.transform.position;
     }
     private IEnumerator StunCoroutine(float stunTime)
     {
