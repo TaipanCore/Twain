@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class EquilibriumBehaviour : MonoBehaviour
@@ -30,7 +31,6 @@ public class EquilibriumBehaviour : MonoBehaviour
     private Animator animator;
     private PlayerMovement movement;
     private Transform spawnPoint;
-    private CameraTracking mainCameraTracking;
     private void Awake()
     {
         GameManager.equilibrium = gameObject;
@@ -39,7 +39,6 @@ public class EquilibriumBehaviour : MonoBehaviour
     {
         movement = GetComponent<PlayerMovement>();
         animator = transform.Find("Appearance").GetComponent<Animator>();
-        mainCameraTracking = GameManager.mainCamera.GetComponent<CameraTracking>();
         hookBehaviour = transform.Find("Appearance").Find("Hook").GetComponent<HookBehaviour>();
         hookBehaviour.damage = damage;
         spawnPoint = transform.Find("BulletSpawnPoint");
@@ -83,6 +82,6 @@ public class EquilibriumBehaviour : MonoBehaviour
     }
     public void ShakeCameraFromSteps()
     {
-        mainCameraTracking.ShakeCamera(0.3f, 0.075f);
+        GameManager.mainCamera.transform.DOShakePosition(0.3f, 0.075f);
     }
 }

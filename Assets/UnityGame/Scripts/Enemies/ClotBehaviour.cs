@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbleAggro, IStunnable
@@ -50,9 +51,12 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
             _isAggro = value;
         }
     }
+    
+    [SerializeField] private GameObject smokeParticlesPrefab;
 
     private ClotMovement movement;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private State state;
 
     private Coroutine retreatCoroutine;
@@ -61,6 +65,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     {
         movement = GetComponent<ClotMovement>();
         animator =  GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         SetState(State.Idle);
     }
     private void Update()
@@ -177,7 +182,8 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     }
     public void Die()
     {
-        Destroy(gameObject);
+        ParticleSystem smokeParticles = Instantiate(smokeParticlesPrefab, transform.position + new Vector3(0.15f, 0.5f), Quaternion.identity).GetComponent<ParticleSystem>();
+        spriteRenderer.DOFade(0f, smokeParticles.main.startLifetime.constantMin).SetEase(Ease.InQuad).OnComplete(() => Destroy(gameObject));
     }
     private void OnTriggerStay2D(Collider2D other)
     {

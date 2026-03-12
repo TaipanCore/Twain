@@ -193,6 +193,7 @@ MonoBehaviour:
   _hitpoints: 50
   _invulnerableTime: 0.5
   _damage: 10
+  smokeParticlesPrefab: {fileID: 1916055649572487455, guid: 1c31703b2420a02428ba96d90004b52b, type: 3}
 --- !u!114 &3711361218781495037
 MonoBehaviour:
   m_ObjectHideFlags: 0

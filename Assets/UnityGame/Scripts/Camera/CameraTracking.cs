@@ -24,8 +24,4 @@ public class CameraTracking : MonoBehaviour
             cameraPoint.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, -10), Time.fixedDeltaTime * interpolationMultiplier);
         }
     }
-    public void ShakeCamera(float duration, float strength)
-    {
-        transform.DOShakePosition(duration, strength);
-    }
 }
