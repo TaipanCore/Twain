@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class ShrineOfBalanceBehaviour : MonoBehaviour
 {
-    [SerializeField] private float uniteDistance;
-    [SerializeField] private float timeInEquilibriumForm;
-    [SerializeField] private int maxEtherCount;
+    [SerializeField, Min(0f)] private float uniteDistance;
+    [SerializeField, Min(0f)] private float timeInEquilibriumForm;
+    [SerializeField, Min(1)] private int maxEtherCount;
+    [SerializeField, Min(0f)] private float circleLightMaxRadius;
     [SerializeField] private AnimationCurve runesBlinkingIntensity;
 
     [HideInInspector] public bool isCharged;
@@ -24,14 +25,16 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
             {
                 if (_etherCount == maxEtherCount)
                 {
+                    circleLight.range = circleLightMaxRadius;
                     runesTween.Rewind();
-                    runesSpriteRenderer.DOFade(1f, 0f);
+                    runesSpriteRenderer.DOFade(1f, 0.1f);
                     runesParticleSystem.Play();
                     isCharged = true;
                 }
                 else
                 {
                    runesIntensity = (float)_etherCount / maxEtherCount;
+                   circleLight.range = runesIntensity * circleLightMaxRadius;
                    runesTween.timeScale = runesBlinkingIntensity.Evaluate(runesIntensity);
                    if (!runesTween.IsPlaying())
                    {
@@ -39,7 +42,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
                    } 
                 }
             }
-            Debug.Log($"{_etherCount}/{maxEtherCount}");
+            //Debug.Log($"{_etherCount}/{maxEtherCount}");
         }
     }
     
@@ -50,6 +53,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
     private SpriteRenderer equilibriumSpriteRenderer;
     
     private SpriteRenderer spriteRenderer;
+    private CircleLight circleLight;
     private SpriteRenderer runesSpriteRenderer;
     private ParticleSystem runesParticleSystem;
     private float runesIntensity;
@@ -65,6 +69,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
         lightSideSpriteRenderer = GameManager.lightSide.transform.Find("Appearance").GetComponent<SpriteRenderer>();
         darkSideSpriteRenderer = GameManager.darkSide.transform.Find("Appearance").GetComponent<SpriteRenderer>();
         equilibriumSpriteRenderer = GameManager.equilibrium.transform.Find("Appearance").GetComponent<SpriteRenderer>();
+        circleLight = transform.Find("CircleLight").GetComponent<CircleLight>();
         runesSpriteRenderer = transform.Find("Runes").GetComponent<SpriteRenderer>();
         runesParticleSystem = runesSpriteRenderer.transform.Find("BouncingUpRays").GetComponent<ParticleSystem>();
         runesTween = runesSpriteRenderer.DOFade(1f, 0.75f).SetLoops(-1, LoopType.Yoyo).Pause();
@@ -82,6 +87,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
             isCharged = false;
             _etherCount = 0;
             runesSpriteRenderer.DOFade(0f, 0f);
+            circleLight.range = 0f;
         }
     }
 
