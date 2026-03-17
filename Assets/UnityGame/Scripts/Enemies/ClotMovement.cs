@@ -11,7 +11,7 @@ public class ClotMovement : MonoBehaviour
     [SerializeField] private float retreatDistance;
     [SerializeField] private int pointsOnCircle;
     
-    [HideInInspector] public Vector3 target;
+    [HideInInspector] public Transform target;
     [HideInInspector] public bool isInPanic;
     [HideInInspector] public NavMeshAgent navMeshAgent;
     
@@ -48,16 +48,16 @@ public class ClotMovement : MonoBehaviour
     }
     public Vector3 GetRetreatPosition()
     {
-        Vector3 nearestPosition = target + (Vector3)Random.insideUnitCircle * (retreatDistance / 1.5f);
+        Vector3 nearestPosition = target.position + (Vector3)Random.insideUnitCircle * (retreatDistance / 1.5f);
         if (!isInPanic)
             isInPanic = true;
         float minPathLength = float.MaxValue;
         float degreesStep = 360f / pointsOnCircle;
-        Vector2 retreatVector = (transform.position - target).normalized;
+        Vector2 retreatVector = (transform.position - target.position).normalized;
         for (int i = 0; i < pointsOnCircle; i++)
         {
             retreatVector = Quaternion.Euler(0, 0, degreesStep) * retreatVector;
-            Vector3 retreatPosition = target + (Vector3)retreatVector * retreatDistance;
+            Vector3 retreatPosition = target.position + (Vector3)retreatVector * retreatDistance;
             NavMeshPath path = new NavMeshPath();
             if (NavMesh.CalculatePath(transform.position, retreatPosition, NavMesh.AllAreas, path))
             {
@@ -81,7 +81,7 @@ public class ClotMovement : MonoBehaviour
             else
                 
         if (movementVector.x != 0)
-            if (clotBehaviour.GetState() == ClotBehaviour.State.Retreat && currentSpeed < turnAroundSpeedThreshold && objectTransform.position.x > target.x)
+            if (clotBehaviour.GetState() == ClotBehaviour.State.Retreat && currentSpeed < turnAroundSpeedThreshold && objectTransform.position.x > target.position.x)
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             else
                 transform.rotation = Quaternion.Euler(0, 0, 0);

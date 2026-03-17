@@ -51,12 +51,16 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
             _isAggro = value;
         }
     }
-    
+
+    [SerializeField] private float cancelHuntPathLenght;
+    [SerializeField] private float timeToCancelHunt;
+    private WaitForSeconds cancelHuntTimer;
     [SerializeField] private GameObject smokeParticlesPrefab;
 
     private ClotMovement movement;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private Coroutine currentCancelHuntCoroutine;
     private State state;
 
     private Coroutine retreatCoroutine;
@@ -66,6 +70,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
         movement = GetComponent<ClotMovement>();
         animator =  GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        cancelHuntTimer = new WaitForSeconds(timeToCancelHunt);
         SetState(State.Idle);
     }
     private void Update()
@@ -108,14 +113,16 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     }
     private void SetIdleSettings()
     {
-        movement.target = transform.position;
+        isAggro = false;
+        movement.target = transform;
     }
     private void SetHuntSettings()
     {
-
+        movement.target = GameManager.lightSide.GetComponent<Transform>();
     }
     private void SetRetreatSettings()
     {
+        movement.target = GameManager.equilibrium.GetComponent<Transform>();
         if (retreatCoroutine == null)
             retreatCoroutine = StartCoroutine(RetreatCoroutine());
     }
@@ -128,12 +135,23 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     }
     private void Hunt()
     {
+        movement.navMeshAgent.SetDestination(movement.target.position);
         if (GameManager.isUnited)
         {
             SetState(State.Retreat);
         }
-        movement.target = GameManager.lightSide.transform.position;
-        movement.navMeshAgent.SetDestination(movement.target);
+        if (Utils.GetPathLength(movement.navMeshAgent.path) >= cancelHuntPathLenght)
+        {
+            currentCancelHuntCoroutine ??= StartCoroutine(CancelHuntCoroutine());
+        }
+        else
+        {
+            if (currentCancelHuntCoroutine != null)
+            {
+                StopCoroutine(currentCancelHuntCoroutine);
+                currentCancelHuntCoroutine = null;
+            }
+        }
     }
     private void Retreat()
     {
@@ -143,7 +161,12 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
             retreatCoroutine = null;
             SetState(State.Hunt);
         }
-        movement.target = GameManager.equilibrium.transform.position;
+    }
+
+    private IEnumerator CancelHuntCoroutine()
+    {
+        yield return cancelHuntTimer;
+        SetState(State.Idle);
     }
     private IEnumerator StunCoroutine(float stunTime)
     {
