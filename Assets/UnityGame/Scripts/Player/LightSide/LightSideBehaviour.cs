@@ -111,7 +111,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     private void FocusedBehaviour()
     {
-        if (!InputManager.leftMouseBtn && GameManager.currentCharacter == gameObject)
+        if (!(InputManager.leftMouseBtn && GameManager.currentCharacter == gameObject))
         {
             SetState(State.Normal);
         }
