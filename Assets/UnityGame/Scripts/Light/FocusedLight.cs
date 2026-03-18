@@ -3,12 +3,19 @@ using UnityEngine;
 
 public class FocusedLight : LightSource
 {
-    [HideInInspector] public float etherDisappearSpeed;
-    
     private Tween expandScaleAnim;
+    public override float range
+    {
+        get { return _range; }
+        set
+        {
+            _range = value;
+            expandScaleAnim.Restart();
+        }
+    }
     private void Start()
     {
-        expandScaleAnim = transform.DOScale(transform.localScale, 0.8f).From(Vector3.zero).SetAutoKill(false);
+        expandScaleAnim = transform.DOScale(Vector3.one * _range, 0.8f).From(Vector3.zero).SetAutoKill(false);
     }
     private void OnEnable()
     {

@@ -38,7 +38,6 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     [SerializeField] private FocusedLight distantLight;
     [SerializeField] private float focusedDistantLightRange;
     [SerializeField] private float lightRotationSpeed;
-    [SerializeField] private float etherDisappearSpeed;
 
     private State state;
     private Transform distantLightTransform;
@@ -54,7 +53,6 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         animator =  transform.Find("Appearance").GetComponent<Animator>();
         movement = GetComponent<LightSideMovement>();
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
-        distantLight.etherDisappearSpeed = etherDisappearSpeed;
         SetState(State.Normal);
     }
     private void Update()

@@ -11,7 +11,7 @@ public class CircleLight : LightSource
         {
             _range = value;
             currentAnim?.Kill();
-            currentAnim = transform.DOScale(Vector3.one * (_range * 2f), 0.25f).From(transform.localScale);
+            currentAnim = transform.DOScale(Vector3.one * (_range * 2f), 0.25f);
         }
     }
     private void OnEnable()

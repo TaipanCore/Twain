@@ -455,9 +455,8 @@ MonoBehaviour:
   baseCircleLightRange: 5
   focusedCircleLightRange: 2
   distantLight: {fileID: 1532493132}
-  focusedDistantLightRange: 5
+  focusedDistantLightRange: 10
   lightRotationSpeed: 7
-  etherDisappearSpeed: 1
 --- !u!50 &124919185
 Rigidbody2D:
   serializedVersion: 4
@@ -10890,6 +10889,37 @@ CapsuleCollider2D:
   m_Offset: {x: -0.02, y: -0.2}
   m_Size: {x: 0.7, y: 0.45}
   m_Direction: 1
+--- !u!1 &812832229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812832230}
+  m_Layer: 0
+  m_Name: RedEyesContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &812832230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812832229}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 840240925}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &840240922
 GameObject:
   m_ObjectHideFlags: 0
@@ -10923,6 +10953,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 162318398}
+  - {fileID: 812832230}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &840240926
@@ -10964,11 +10995,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c626daaf16033494c88e0d46ba045f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetimeInDarkness: 3
+  lifetimeInDarkness: 5
   spikesSpawnCooldown: 10
   numberOfSpikes: 8
   spikesLifetime: 5
   spikesSpawner: {fileID: 2636088503007124049, guid: b9b685a0752fbe549a985a19760cdabd, type: 3}
+  redEyesPrefab: {fileID: 3356399485029117005, guid: 95dff4aa9d8172a45a4c7983110f0e0c, type: 3}
+  eyesSpawnMaxRadius: 6
 --- !u!114 &840240933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22398,7 +22431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAggroTrigger: 1
-  etherDisappearSpeed: 1
 --- !u!1 &1542064325
 GameObject:
   m_ObjectHideFlags: 0
