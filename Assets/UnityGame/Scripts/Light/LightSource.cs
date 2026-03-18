@@ -23,4 +23,20 @@ public class LightSource : MonoBehaviour
             }
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out DarkSideBehaviour darkSideBehaviour))
+        {
+            if (!darkSideBehaviour.isInLight)
+                darkSideBehaviour.isInLight = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out DarkSideBehaviour darkSideBehaviour))
+        {
+            darkSideBehaviour.isInLight = false;
+        }
+    }
 }

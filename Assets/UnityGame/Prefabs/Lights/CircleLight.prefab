@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1574431959638632861}
   - component: {fileID: 1418801307322233177}
   - component: {fileID: 9121164330093787008}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: CircleLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,4 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa297e181e5deb445a67462fb136b815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAggroTrigger: 1
+  isAggroTrigger: 0

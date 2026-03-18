@@ -15,10 +15,33 @@ public class DarkSideBehaviour : MonoBehaviour
     [SerializeField] private GameObject spikesSpawner;
     [SerializeField] private GameObject redEyesPrefab;
     [SerializeField] private float eyesSpawnMaxRadius;
+
+    private bool _isInLight;
+    public bool isInLight
+    {
+        get => _isInLight;
+        set
+        {
+            _isInLight = value;
+            if (!gameObject.activeInHierarchy)
+                return;
+            if (!_isInLight)
+            {
+                dieCoroutine ??= StartCoroutine(DieInDarkness());
+            }
+            else
+            {
+                if (dieCoroutine != null)
+                {
+                    StopCoroutine(dieCoroutine);
+                    dieCoroutine = null;
+                    DestroyAllEyes();
+                }
+            }
+        }
+    }
     
     private Transform objectTransform;
-    private Transform fireflyTransform;
-    private LightSideBehaviour lightSideBehaviour;
     private Coroutine dieCoroutine;
     private GameObject redEyesContainer;
     private HashSet<GameObject> redEyesSet = new ();
@@ -31,8 +54,6 @@ public class DarkSideBehaviour : MonoBehaviour
     private void Start()
     {
         objectTransform = GetComponent<Transform>();
-        fireflyTransform = GameManager.lightSide.transform.Find("Firefly");
-        lightSideBehaviour = GameManager.lightSide.GetComponent<LightSideBehaviour>();
         redEyesContainer = transform.Find("RedEyesContainer").gameObject;
     }
 
@@ -52,22 +73,7 @@ public class DarkSideBehaviour : MonoBehaviour
     {
         redEyesContainer.transform.rotation = Quaternion.identity;
     }
-    private void FixedUpdate()
-    {
-        if (!Utils.IsInRange(fireflyTransform.position, objectTransform.position, lightSideBehaviour.GetCurrentLightRange()))
-        {
-            dieCoroutine ??= StartCoroutine(DieInDarkness());
-        }
-        else
-        {
-            if (dieCoroutine != null)
-            {
-                StopCoroutine(dieCoroutine);
-                dieCoroutine = null;
-                DestroyAllEyes();
-            }
-        }
-    }
+    
     private void DestroyAllEyes()
     {
         foreach (GameObject eye in redEyesSet)
@@ -88,8 +94,11 @@ public class DarkSideBehaviour : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < lifetimeInDarkness)
         {
-            Vector3 insideCirclePosition = Random.insideUnitCircle;
-            redEyesSet.Add(Instantiate(redEyesPrefab, objectTransform.position + insideCirclePosition.normalized + insideCirclePosition * eyesSpawnMaxRadius, Quaternion.identity, redEyesContainer.transform));
+            if (GameManager.currentCharacter == gameObject)
+            {
+                Vector3 insideCirclePosition = Random.insideUnitCircle;
+                redEyesSet.Add(Instantiate(redEyesPrefab, objectTransform.position + insideCirclePosition.normalized + insideCirclePosition * eyesSpawnMaxRadius, Quaternion.identity, redEyesContainer.transform));
+            }
             float currentDelay = Mathf.Lerp(0.5f, 0.1f, elapsedTime / lifetimeInDarkness);
             yield return new WaitForSeconds(currentDelay);
             elapsedTime += currentDelay;
