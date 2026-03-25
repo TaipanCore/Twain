@@ -201,6 +201,12 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbl
     }
     public void GiveInvulnerability()
     {
+        Tween blinkingTween = spriteRenderer.DOFade(0.4f, 0.15f).SetLoops(-1, LoopType.Yoyo);
+        DOVirtual.DelayedCall(invulnerableTime, () =>
+        {
+            blinkingTween.Kill();
+            spriteRenderer.DOFade(1f, 0f);
+        });
         invulnerableTimer = invulnerableTime;
     }
     public void Die()

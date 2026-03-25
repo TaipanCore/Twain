@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
 {
@@ -42,6 +43,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     private State state;
     private Transform distantLightTransform;
     private LightSideMovement movement;
+    private SpriteRenderer spriteRenderer;
     private Animator animator;
 
     private void Awake()
@@ -51,6 +53,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     private void Start()
     {
         animator =  transform.Find("Appearance").GetComponent<Animator>();
+        spriteRenderer = transform.Find("Appearance").GetComponent<SpriteRenderer>();
         movement = GetComponent<LightSideMovement>();
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
         SetState(State.Normal);
@@ -137,6 +140,12 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     public void GiveInvulnerability()
     {
+        Tween blinkingTween = spriteRenderer.DOFade(0.4f, 0.15f).SetLoops(-1, LoopType.Yoyo);
+        DOVirtual.DelayedCall(invulnerableTime, () =>
+        {
+            blinkingTween.Kill();
+            spriteRenderer.DOFade(1f, 0f);
+        });
         invulnerableTimer = invulnerableTime;
     }
     public void Die()
