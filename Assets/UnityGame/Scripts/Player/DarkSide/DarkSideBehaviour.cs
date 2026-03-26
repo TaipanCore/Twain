@@ -94,13 +94,13 @@ public class DarkSideBehaviour : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < lifetimeInDarkness)
         {
+            float currentDelay = Mathf.Lerp(0.5f, 0.1f, elapsedTime / lifetimeInDarkness);
+            yield return new WaitForSeconds(currentDelay);
             if (GameManager.currentCharacter == gameObject)
             {
                 Vector3 insideCirclePosition = Random.insideUnitCircle;
                 redEyesSet.Add(Instantiate(redEyesPrefab, objectTransform.position + insideCirclePosition.normalized + insideCirclePosition * eyesSpawnMaxRadius, Quaternion.identity, redEyesContainer.transform));
             }
-            float currentDelay = Mathf.Lerp(0.5f, 0.1f, elapsedTime / lifetimeInDarkness);
-            yield return new WaitForSeconds(currentDelay);
             elapsedTime += currentDelay;
         }
         Destroy(gameObject);
