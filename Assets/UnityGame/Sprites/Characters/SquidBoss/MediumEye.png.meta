@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 78c393aef83f66445943235abce66e99
+guid: 920c5603e8c411a4597739258c02b9ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,8 +70,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run_0
+      name: MediumEye_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 14
-        height: 22
+        x: 0
+        y: 18
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dfa0ec11f1b6684fa901e882738207f
-      internalID: -776971297
+      spriteID: 82df883eed463ba42816dcd9c3e4fbda
+      internalID: -1944372336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_1
+      name: MediumEye_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 0
-        width: 14
-        height: 22
+        x: 16
+        y: 18
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdf9c97e5f3121d4e8dd166720f2d12b
-      internalID: -802941939
+      spriteID: 6bbdc0fa5de7b004987c4850a0a39322
+      internalID: 1641094820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_2
+      name: MediumEye_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 14
-        height: 22
+        x: 32
+        y: 18
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8bd3263c52dd44d81db7a367188360
-      internalID: 1906353437
+      spriteID: c30ce47a260c55b4583a64a1060e5364
+      internalID: -1385546473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_3
+      name: MediumEye_3
       rect:
         serializedVersion: 2
-        x: 49
-        y: 0
-        width: 14
-        height: 22
+        x: 48
+        y: 18
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 737576e31fba6a44b883dcbb7f191133
-      internalID: -127345454
+      spriteID: 6d73444fc717aad4fba2a4e592c6bc05
+      internalID: -325167512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_4
+      name: MediumEye_4
       rect:
         serializedVersion: 2
-        x: 65
+        x: 0
         y: 0
-        width: 14
-        height: 22
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e927e332620bd44aa284088fa5b7407
-      internalID: -1519748501
+      spriteID: 141f69903db0b6b4cba4ae74485b007a
+      internalID: -1452401034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_5
+      name: MediumEye_5
       rect:
         serializedVersion: 2
-        x: 81
+        x: 16
         y: 0
-        width: 14
-        height: 22
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 674914c2182004343917a3c5c261d941
-      internalID: -1746334772
+      spriteID: 318bb4435fc7dda4494480c1fa5c992d
+      internalID: -818740711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_6
+      name: MediumEye_6
       rect:
         serializedVersion: 2
-        x: 97
+        x: 32
         y: 0
-        width: 14
-        height: 22
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a227eebd10d95d94abec640561faffb2
-      internalID: 156398927
+      spriteID: a12c515b182899f47bec716ffb0b8047
+      internalID: -1210643649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_7
+      name: MediumEye_7
       rect:
         serializedVersion: 2
-        x: 113
+        x: 48
         y: 0
-        width: 14
-        height: 22
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28b8e7e883bdf5e4ab3dc472e71b625c
-      internalID: 1740714750
+      spriteID: 79ddf0ec10044d4479b5f3bd8fcb29ef
+      internalID: -1553910967
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Run_0: -776971297
-      Run_1: -802941939
-      Run_2: 1906353437
-      Run_3: -127345454
-      Run_4: -1519748501
-      Run_5: -1746334772
-      Run_6: 156398927
-      Run_7: 1740714750
+      MediumEye_0: -1944372336
+      MediumEye_1: 1641094820
+      MediumEye_2: -1385546473
+      MediumEye_3: -325167512
+      MediumEye_4: -1452401034
+      MediumEye_5: -818740711
+      MediumEye_6: -1210643649
+      MediumEye_7: -1553910967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

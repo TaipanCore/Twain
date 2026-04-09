@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 2828698130283651047}
   - component: {fileID: 9211817399437794273}
   - component: {fileID: 9098822120996490186}
+  - component: {fileID: 650155461641532859}
+  - component: {fileID: 1836380983993713766}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -236,4 +238,53 @@ MonoBehaviour:
   - {fileID: 9743693, guid: 88e24236c2c28364987a304f1beadd8b, type: 3}
   - {fileID: 655116237, guid: 88e24236c2c28364987a304f1beadd8b, type: 3}
   - {fileID: 1367424898, guid: 88e24236c2c28364987a304f1beadd8b, type: 3}
-  framesPerSecond: 10
+  framerate: 10
+  loopAnimation: 1
+  playOnStart: 1
+--- !u!114 &650155461641532859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353508005159254862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be24fe4ec2e0afd4883b5460a93ec890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &1836380983993713766
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353508005159254862}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.75}
+  m_Size: {x: 0.6, y: 0.25}
+  m_Direction: 1

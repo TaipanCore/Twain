@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 78c393aef83f66445943235abce66e99
+guid: d5fac6a3d2aa97f4e937fdeb38aa7cc3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -110,169 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run_0
+      name: HighTentacle_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 69
+        height: 61
+      alignment: 9
+      pivot: {x: 0.98550725, y: 0.016393442}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dfa0ec11f1b6684fa901e882738207f
-      internalID: -776971297
+      spriteID: f12d7f3cd2e00a74e8a04d9425141ac7
+      internalID: 1144003546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_1
+      name: HighTentacle_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 69
         y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 69
+        height: 61
+      alignment: 9
+      pivot: {x: 0.98550725, y: 0.016393442}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdf9c97e5f3121d4e8dd166720f2d12b
-      internalID: -802941939
+      spriteID: 9808e336c58879c46bd61e81c4e4f05c
+      internalID: 1245235723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_2
+      name: HighTentacle_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 138
         y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 69
+        height: 61
+      alignment: 9
+      pivot: {x: 0.98550725, y: 0.016393442}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8bd3263c52dd44d81db7a367188360
-      internalID: 1906353437
+      spriteID: a84c5e0c26121444e941631850307fa1
+      internalID: -893096605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_3
+      name: HighTentacle_3
       rect:
         serializedVersion: 2
-        x: 49
+        x: 207
         y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 69
+        height: 61
+      alignment: 9
+      pivot: {x: 0.98550725, y: 0.016393442}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 737576e31fba6a44b883dcbb7f191133
-      internalID: -127345454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run_4
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e927e332620bd44aa284088fa5b7407
-      internalID: -1519748501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run_5
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 674914c2182004343917a3c5c261d941
-      internalID: -1746334772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run_6
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a227eebd10d95d94abec640561faffb2
-      internalID: 156398927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run_7
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 0
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28b8e7e883bdf5e4ab3dc472e71b625c
-      internalID: 1740714750
+      spriteID: c51e297b3653bb24683074b21987fc30
+      internalID: -258929968
       vertices: []
       indices: 
       edges: []
@@ -288,14 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Run_0: -776971297
-      Run_1: -802941939
-      Run_2: 1906353437
-      Run_3: -127345454
-      Run_4: -1519748501
-      Run_5: -1746334772
-      Run_6: 156398927
-      Run_7: 1740714750
+      HighTentacle_0: 1144003546
+      HighTentacle_1: 1245235723
+      HighTentacle_2: -893096605
+      HighTentacle_3: -258929968
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

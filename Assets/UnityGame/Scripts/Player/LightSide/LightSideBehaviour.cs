@@ -7,7 +7,8 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     public enum State
     {
         Normal,
-        Focused
+        Focused,
+        WithoutFirefly
     }
 
     [SerializeField] private float _hitpoints;
@@ -45,6 +46,10 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     private LightSideMovement movement;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private Transform fireflyTransform;
+    private Vector3 fireflyLocalPoint;
+    private TrailRenderer fireflyTrail;
+    private DarknessDeath darknessDeath;
 
     private void Awake()
     {
@@ -56,6 +61,10 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         spriteRenderer = transform.Find("Appearance").GetComponent<SpriteRenderer>();
         movement = GetComponent<LightSideMovement>();
         distantLightTransform = distantLight.gameObject.GetComponent<Transform>();
+        fireflyTransform = transform.Find("Firefly");
+        fireflyLocalPoint = fireflyTransform.localPosition;
+        fireflyTrail = fireflyTransform.GetComponent<TrailRenderer>();
+        darknessDeath = GetComponent<DarknessDeath>();
         SetState(State.Normal);
     }
     private void Update()
@@ -70,6 +79,9 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
             case State.Focused:
                 FocusedBehaviour();
                 break;
+            case State.WithoutFirefly:
+                WithoutFireflyBehaviour();
+                break;
         }
     }
     public void SetState(State newState)
@@ -83,8 +95,12 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
             case State.Focused:
                 SetFocusedState();
                 break;
+            case State.WithoutFirefly:
+                SetWithoutFireflyState();
+                break;
         }       
     }
+
     public State GetState()
     {
         return state;
@@ -105,6 +121,11 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         movement.moveSpeed = movement.focusedMoveSpeed;
         animator.SetBool(IsFocused, true);
     }
+    private void SetWithoutFireflyState()
+    {
+        darknessDeath.enabled = true;
+        SetNormalState();
+    }
     private void NormalBehaviour()
     {
         if (InputManager.leftMouseBtn && GameManager.currentCharacter == gameObject)
@@ -120,15 +141,40 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         }
         distantLightTransform.rotation = Quaternion.Lerp(distantLightTransform.rotation, CalculateRotationAngle(), Time.deltaTime * lightRotationSpeed);
     }
+
+    private void WithoutFireflyBehaviour()
+    {
+        
+    }
     private Quaternion CalculateRotationAngle()
     {
         Vector3 vectorToTarget = MouseTracker.mousePosition - distantLightTransform.position;
         return Quaternion.Euler(0, 0, Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg);
     }
 
+    public Transform TakeFirefly(Transform newParent)
+    {
+        fireflyTransform.SetParent(newParent);
+        SetState(State.WithoutFirefly);
+        fireflyTrail.emitting = true;
+        fireflyTransform.DOMove(newParent.position, 0.25f);
+        return fireflyTransform;
+    }
+
+    public void ReturnFirefly()
+    {
+        fireflyTransform.SetParent(transform);
+        fireflyTransform.DOLocalMove(fireflyLocalPoint, 0.25f).OnComplete(() =>
+        {
+            SetState(State.Normal);
+            darknessDeath.isInLight = true;
+            darknessDeath.enabled = false;
+            fireflyTrail.emitting = false;
+        });
+    }
     public float GetCurrentLightRange()
     {
-        return state == State.Normal ? baseCircleLightRange : focusedCircleLightRange;
+        return state == State.Focused ? focusedCircleLightRange : baseCircleLightRange;
     }
     public void ReceiveDamage(float damage)
     {

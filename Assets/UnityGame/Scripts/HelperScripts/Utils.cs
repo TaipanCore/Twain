@@ -27,4 +27,18 @@ public static class Utils
         //Исходная единица сдвигается на obj.layer (номер слоя) бит влево
         return ((1 << obj.layer) & mask) != 0;
     }
+
+    public static T[] GetRandomElements<T>(T[] sourceArray, int count)
+    {
+        T[] array = (T[])sourceArray.Clone();
+        count = Mathf.Min(count, array.Length);
+        T[] result = new T[count];
+        for (int i = 0; i < count; i++)
+        {
+            int randomIndex = Random.Range(i, array.Length);
+            result[i] = array[randomIndex]; 
+            (array[i], array[randomIndex]) = (array[randomIndex], array[i]);
+        }
+        return result;
+    } 
 }

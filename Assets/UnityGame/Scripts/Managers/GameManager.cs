@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         playerMask = LayerMask.GetMask("Player");
         enemyMask = LayerMask.GetMask("Enemy");
         Separate();
+        InputManager.canPlayerInput = true;
     }
     private void Update()
     {

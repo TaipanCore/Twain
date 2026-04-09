@@ -25,17 +25,17 @@ public class LightSource : MonoBehaviour
     }
     protected virtual void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out DarkSideBehaviour darkSideBehaviour))
+        if (collision.TryGetComponent(out DarknessDeath darknessDeath))
         {
-            if (!darkSideBehaviour.isInLight)
-                darkSideBehaviour.isInLight = true;
+            if (!darknessDeath.isInLight)
+                darknessDeath.isInLight = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out DarkSideBehaviour darkSideBehaviour))
+        if (collision.TryGetComponent(out DarknessDeath darknessDeath))
         {
-            darkSideBehaviour.isInLight = false;
+            darknessDeath.isInLight = false;
         }
     }
 }
