@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class DarkSideBehaviour : MonoBehaviour
 {
-    [SerializeField, Min(0)] public float lifetimeInDarkness;
-    
     [Header("Spikes")]
     [SerializeField, Min(0)] private float spikesSpawnCooldown;
     private float spikesCooldownTimer;

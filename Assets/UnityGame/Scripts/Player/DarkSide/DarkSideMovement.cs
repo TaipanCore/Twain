@@ -12,6 +12,8 @@ public class DarkSideMovement : PlayerMovement
     
     private float minFollowRadius;
     private float maxFollowRadius;
+    private Coroutine moveCoroutine;
+    private DarknessDeath darknessDeath;
 
     protected override void Start()
     {
@@ -19,6 +21,7 @@ public class DarkSideMovement : PlayerMovement
         objectTransform = GetComponent<Transform>();
         fireflyTransform = GameManager.lightSide.transform.Find("Firefly");
         lightSideBehaviour = GameManager.lightSide.GetComponent<LightSideBehaviour>();
+        darknessDeath = GetComponent<DarknessDeath>();
     }
     protected override void FixedUpdate()
     {
@@ -34,7 +37,7 @@ public class DarkSideMovement : PlayerMovement
             maxFollowRadius = lightSideBehaviour.GetCurrentLightRange() * maxFollowRadiusPercents / 100f;
             if (!Utils.IsInRange(objectTransform.position, fireflyTransform.position, maxFollowRadius))
             {
-                StartCoroutine(MoveToFirefly());
+                moveCoroutine ??= StartCoroutine(MoveToFirefly());
             }
         }
         currentSpeed = (movementVector * moveSpeed).magnitude;
@@ -47,6 +50,7 @@ public class DarkSideMovement : PlayerMovement
             rb.MovePosition(Vector3.MoveTowards(objectTransform.position, fireflyTransform.position, moveSpeed * Time.fixedDeltaTime));
             yield return null;
         }
+        moveCoroutine = null;
     }
     /*private void OnDrawGizmos()
     {

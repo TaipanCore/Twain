@@ -1,4 +1,4 @@
-using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
 
     public static GameObject currentCharacter;
     public static bool isUnited;
+    
+    [Header("Inventory")]
+    public static List<GameObject> inventory = new List<GameObject>();
 
     [Header("Player & enemy layer masks")]
     public static LayerMask playerMask;
