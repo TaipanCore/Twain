@@ -22,20 +22,16 @@ public class LightSource : MonoBehaviour
                 ableAggro.isAggro = true;
             }
         }
-    }
-    protected virtual void OnTriggerStay2D(Collider2D collision)
-    {
         if (collision.TryGetComponent(out DarknessDeath darknessDeath))
         {
-            if (!darknessDeath.isInLight)
-                darknessDeath.isInLight = true;
+            darknessDeath.EnterLight(this);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out DarknessDeath darknessDeath))
         {
-            darknessDeath.isInLight = false;
+            darknessDeath.ExitLight(this);
         }
     }
 }

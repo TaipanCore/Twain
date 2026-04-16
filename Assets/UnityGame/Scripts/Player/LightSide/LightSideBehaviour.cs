@@ -111,6 +111,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         distantLight.gameObject.SetActive(false);
         movement.moveSpeed = movement.baseMoveSpeed;
         animator.SetBool(IsFocused, false);
+        darknessDeath.EnterLight(circleLight);
     }
     private void SetFocusedState()
     {
@@ -123,7 +124,6 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     private void SetWithoutFireflyState()
     {
-        darknessDeath.enabled = true;
         SetNormalState();
     }
     private void NormalBehaviour()
@@ -167,8 +167,6 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
         fireflyTransform.DOLocalMove(fireflyLocalPoint, 0.25f).OnComplete(() =>
         {
             SetState(State.Normal);
-            darknessDeath.isInLight = true;
-            darknessDeath.enabled = false;
             fireflyTrail.emitting = false;
         });
     }

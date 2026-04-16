@@ -9,30 +9,8 @@ public class DarknessDeath : MonoBehaviour
     [SerializeField] private GameObject redEyesPrefab;
     [SerializeField] private float eyesSpawnMaxRadius;
     
-    private bool _isInLight;
-    public bool isInLight
-    {
-        get => _isInLight;
-        set
-        {
-            _isInLight = value;
-            if (!gameObject.activeInHierarchy)
-                return;
-            if (!_isInLight)
-            {
-                dieCoroutine ??= StartCoroutine(DieInDarkness());
-            }
-            else
-            {
-                if (dieCoroutine != null)
-                {
-                    StopCoroutine(dieCoroutine);
-                    dieCoroutine = null;
-                    DestroyAllEyes();
-                }
-            }
-        }
-    }
+    public HashSet<LightSource> lightSources { get; private set; } = new HashSet<LightSource>();
+    
     private Transform objectTransform;
     private Coroutine dieCoroutine;
     private GameObject redEyesContainer;
@@ -55,7 +33,27 @@ public class DarknessDeath : MonoBehaviour
     {
         redEyesContainer.transform.rotation = Quaternion.identity;
     }
-    
+
+    public void EnterLight(LightSource source)
+    {
+        lightSources.Add(source);
+        if (dieCoroutine != null)
+        {
+            StopCoroutine(dieCoroutine);
+            dieCoroutine = null;
+            DestroyAllEyes();
+        }
+    }
+    public void ExitLight(LightSource source)
+    {
+        if (!gameObject.activeInHierarchy)
+            return;
+        lightSources.Remove(source);
+        if (lightSources.Count == 0)
+        {
+            dieCoroutine ??= StartCoroutine(DieInDarkness());
+        }
+    }
     private void DestroyAllEyes()
     {
         foreach (GameObject eye in redEyesSet)
@@ -71,11 +69,8 @@ public class DarknessDeath : MonoBehaviour
         {
             float currentDelay = Mathf.Lerp(0.5f, 0.1f, elapsedTime / lifetimeInDarkness);
             yield return new WaitForSeconds(currentDelay);
-            if (GameManager.currentCharacter == gameObject)
-            {
-                Vector3 insideCirclePosition = Random.insideUnitCircle;
-                redEyesSet.Add(Instantiate(redEyesPrefab, objectTransform.position + insideCirclePosition.normalized + insideCirclePosition * eyesSpawnMaxRadius, Quaternion.identity, redEyesContainer.transform));
-            }
+            Vector3 insideCirclePosition = Random.insideUnitCircle;
+            redEyesSet.Add(Instantiate(redEyesPrefab, objectTransform.position + insideCirclePosition.normalized + insideCirclePosition * eyesSpawnMaxRadius, Quaternion.identity, redEyesContainer.transform));
             elapsedTime += currentDelay;
         }
         Destroy(gameObject);

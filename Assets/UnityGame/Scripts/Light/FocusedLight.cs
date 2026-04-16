@@ -21,9 +21,8 @@ public class FocusedLight : LightSource
     {
         expandScaleAnim.Restart();
     }
-    protected override void OnTriggerStay2D(Collider2D collision)
+    protected void OnTriggerStay2D(Collider2D collision)
     {
-        base.OnTriggerStay2D(collision);
         if (collision.TryGetComponent(out IEtherContainer etherContainer))
         {
             etherContainer.SpawnEtherParticle();

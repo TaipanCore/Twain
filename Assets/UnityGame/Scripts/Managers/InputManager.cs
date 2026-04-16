@@ -3,7 +3,6 @@ using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
 {
-    [FormerlySerializedAs("uniteAndSeparateBtn")]
     [Header("Key bindings")]
     [SerializeField] private KeyCode uniteBtn;
     [SerializeField] private KeyCode sidesChangeBtn;
