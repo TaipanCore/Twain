@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5.5
-  turnAroundSpeedThreshold: 4
+  turnAroundSpeedThreshold: 3.5
   retreatDistance: 6
   pointsOnCircle: 36
   target: {fileID: 0}

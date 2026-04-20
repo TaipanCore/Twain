@@ -182,7 +182,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.044025064, g: 0.044025064, b: 0.044025064, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.4862745}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -459,6 +459,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3711361218781495037, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
+      propertyPath: turnAroundSpeedThreshold
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4511490837671407742, guid: a938f43f076b28649afcb4d7f31b1eb2, type: 3}
       propertyPath: m_Name
       value: Clot
@@ -720,6 +724,63 @@ MonoBehaviour:
   lifetimeInDarkness: 5
   redEyesPrefab: {fileID: 3356399485029117005, guid: 95dff4aa9d8172a45a4c7983110f0e0c, type: 3}
   eyesSpawnMaxRadius: 5
+--- !u!1001 &146419668
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 379301949649240973, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408648942888299298, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
+      propertyPath: m_Name
+      value: BlueFirefly
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bff2fb7aba55c9d4fb2e5b0f19a8be94, type: 3}
 --- !u!1 &162318397
 GameObject:
   m_ObjectHideFlags: 0
@@ -34226,7 +34287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniteDistance: 1.5
   timeInEquilibriumForm: 15
-  maxEtherCount: 100
+  maxEtherCount: 2
   circleLightMaxRadius: 7
   runesBlinkingIntensity:
     serializedVersion: 2
@@ -45865,14 +45926,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch
       objectReference: {fileID: 0}
-    - target: {fileID: 9211817399437794273, guid: b479771e4fff28d40a79c52c3e932bd2, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211817399437794273, guid: b479771e4fff28d40a79c52c3e932bd2, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -57269,7 +57322,7 @@ Transform:
   m_GameObject: {fileID: 1542064325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.98, y: 146.03, z: -10}
+  m_LocalPosition: {x: 9.2, y: 24.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63887,3 +63940,4 @@ SceneRoots:
   - {fileID: 902444764}
   - {fileID: 2039955059}
   - {fileID: 223106032}
+  - {fileID: 146419668}

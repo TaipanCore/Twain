@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class CircleLight : LightSource
 {
-    private Tween currentAnim;
+    protected Tween currentAnim;
+    protected delegate void VoidDelegate();
+    protected VoidDelegate LowPriorityAnim;
     public override float range
     {
         get { return _range; }
@@ -11,12 +13,12 @@ public class CircleLight : LightSource
         {
             _range = value;
             currentAnim?.Kill();
-            currentAnim = transform.DOScale(Vector3.one * (_range * 2f), 0.25f);
+            currentAnim = transform.DOScale(Vector3.one * (_range * 2f), 0.25f).OnComplete(() => LowPriorityAnim?.Invoke());
         }
     }
     private void OnEnable()
     {
         currentAnim?.Kill();
-        currentAnim = transform.DOScale(transform.localScale, 0.8f).From(Vector3.zero);
+        currentAnim = transform.DOScale(transform.localScale, 0.8f).From(Vector3.zero).OnComplete(() => LowPriorityAnim?.Invoke());
     }
 }
