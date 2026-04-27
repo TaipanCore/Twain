@@ -107,7 +107,7 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     private void SetNormalState()
     {
-        circleLight.range = baseCircleLightRange;
+        circleLight.SetRange(baseCircleLightRange, 0.25f);
         distantLight.gameObject.SetActive(false);
         movement.moveSpeed = movement.baseMoveSpeed;
         animator.SetBool(IsFocused, false);
@@ -115,8 +115,8 @@ public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
     }
     private void SetFocusedState()
     {
-        circleLight.range = focusedCircleLightRange;
-        distantLight.range = focusedDistantLightRange;
+        circleLight.SetRange(focusedCircleLightRange, 0.25f);
+        distantLight.SetRange(focusedDistantLightRange);
         distantLightTransform.rotation = CalculateRotationAngle();
         distantLight.gameObject.SetActive(true);
         movement.moveSpeed = movement.focusedMoveSpeed;

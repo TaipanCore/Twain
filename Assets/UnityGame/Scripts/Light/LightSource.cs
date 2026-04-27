@@ -3,16 +3,8 @@ using UnityEngine;
 public class LightSource : MonoBehaviour
 {
     [SerializeField] private bool isAggroTrigger;
-    protected float _range;
-    public virtual float range
-    {
-        get { return _range; }
-        set
-        {
-            _range = value;
-            transform.localScale = Vector3.one * (_range * 2f);
-        }
-    }
+    protected float range;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isAggroTrigger)
@@ -33,5 +25,15 @@ public class LightSource : MonoBehaviour
         {
             darknessDeath.ExitLight(this);
         }
+    }
+    
+    public virtual void SetRange(float newRange)
+    {
+        range = newRange;
+        transform.localScale = Vector3.one * (range * 2f);
+    }
+    public virtual float GetRange()
+    {
+        return range;
     }
 }

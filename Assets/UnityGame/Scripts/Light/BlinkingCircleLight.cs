@@ -13,6 +13,6 @@ public class BlinkingCircleLight : CircleLight
     }
     private void BlinkingAnim()
     {
-        currentAnim = transform.DOScale(transform.localScale * blinkingRadiusMultiplier, blinkDuration).SetLoops(-1, LoopType.Yoyo).SetEase(blinkEase);
+        currentAnim = transform.DOScale(Vector3.one * (range * 2f * blinkingRadiusMultiplier), blinkDuration).SetLoops(-1, LoopType.Yoyo).SetEase(blinkEase);
     }
 }

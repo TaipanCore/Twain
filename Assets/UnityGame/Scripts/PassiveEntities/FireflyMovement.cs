@@ -1,4 +1,3 @@
-using System.Numerics;
 using DG.Tweening;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
@@ -8,17 +7,17 @@ using Vector3 = UnityEngine.Vector3;
 public class FireflyMovement : MonoBehaviour
 {
 
-    [SerializeField] private float pathPointsSpread;
-    [SerializeField] private int pathPointsCount;
-    [SerializeField] private float pathDuration;
-    [SerializeField] private Transform pathEndPoint;
+    [SerializeField, Min(0)] private float pathPointsSpread;
+    [SerializeField, Min(0)] private int pathPointsCount;
+    [SerializeField, Min(0)] private float lightRange;
     
     private Vector2 movement;
     private Vector3 previousPosition;
+    private CircleLight circleLight;
 
-    private void Start()
+    private void Awake()
     {
-        transform.DOPath(GeneratePath(pathPointsCount, pathEndPoint.position), pathDuration, PathType.CatmullRom, gizmoColor:Color.yellow);
+        circleLight = transform.GetComponentInChildren<CircleLight>();
     }
     private void Update()
     {
@@ -27,15 +26,24 @@ public class FireflyMovement : MonoBehaviour
         FlipSprite();
     }
 
+    public Tween MoveAlongPath(Vector3 endPoint, float pathDuration)
+    {
+        Sequence sequence = DOTween.Sequence();
+        sequence
+            .Append(transform.DOPath(GeneratePath(pathPointsCount, endPoint), pathDuration, PathType.CatmullRom))
+            .Join(DOVirtual.DelayedCall(pathDuration - 2f, () => circleLight.SetRange(0f, 2f)))
+            .AppendCallback(() => circleLight.SetRange(lightRange));
+        return sequence;
+    }
     private Vector3[] GeneratePath(int pointsCount, Vector3 endPosition)
     {
         Vector3[] path = new Vector3[pointsCount];
         path[pointsCount - 1] = endPosition;
         Vector3 direction = endPosition - transform.position;
-        Vector3 stepVector = new Vector2(direction.x, direction.y) / pointsCount;
+        Vector2 stepVector = new Vector2(direction.x, direction.y) / pointsCount;
         for (int i = 0; i < pointsCount - 1; i++)
         {
-            path[i] = transform.position + stepVector * i + Random.insideUnitSphere * pathPointsSpread;
+            path[i] = transform.position + (Vector3)(stepVector * i + Random.insideUnitCircle * pathPointsSpread);
         }
         return path;
     }

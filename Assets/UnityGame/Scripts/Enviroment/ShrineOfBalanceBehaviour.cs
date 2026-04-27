@@ -25,7 +25,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
             {
                 if (_etherCount == maxEtherCount)
                 {
-                    circleLight.range = circleLightMaxRadius;
+                    circleLight.SetRange(circleLightMaxRadius, 0.25f);
                     runesTween.Rewind();
                     runesSpriteRenderer.DOFade(1f, 0.1f);
                     runesParticleSystem.Play();
@@ -34,7 +34,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
                 else
                 {
                    runesIntensity = (float)_etherCount / maxEtherCount;
-                   circleLight.range = runesIntensity * circleLightMaxRadius;
+                   circleLight.SetRange(runesIntensity * circleLightMaxRadius,0.25f);
                    runesTween.timeScale = runesBlinkingIntensity.Evaluate(runesIntensity);
                    if (!runesTween.IsPlaying())
                    {
@@ -73,7 +73,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
             isCharged = false;
             _etherCount = 0;
             runesSpriteRenderer.DOFade(0f, 0f);
-            circleLight.range = 0f;
+            circleLight.SetRange(0f, 0.25f);
         }
     }
 }

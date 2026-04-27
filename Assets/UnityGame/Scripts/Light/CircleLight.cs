@@ -6,19 +6,30 @@ public class CircleLight : LightSource
     protected Tween currentAnim;
     protected delegate void VoidDelegate();
     protected VoidDelegate LowPriorityAnim;
-    public override float range
+    
+    private void Awake()
     {
-        get { return _range; }
-        set
-        {
-            _range = value;
-            currentAnim?.Kill();
-            currentAnim = transform.DOScale(Vector3.one * (_range * 2f), 0.25f).OnComplete(() => LowPriorityAnim?.Invoke());
-        }
+        range = transform.localScale.x / 2f;
     }
     private void OnEnable()
     {
         currentAnim?.Kill();
-        currentAnim = transform.DOScale(transform.localScale, 0.8f).From(Vector3.zero).OnComplete(() => LowPriorityAnim?.Invoke());
+        currentAnim = transform.DOScale(Vector3.one * (range * 2f), 0.25f).From(Vector3.zero).OnComplete(() => LowPriorityAnim?.Invoke());
+    }
+
+    public override void SetRange(float newRange)
+    {
+        range = newRange;
+        transform.localScale = Vector3.one * (range * 2f);
+    }
+    public void SetRange(float newRange, float duration)
+    {
+        range = newRange;
+        currentAnim?.Kill();
+        currentAnim = transform.DOScale(Vector3.one * (range * 2f), duration).OnComplete(() => LowPriorityAnim?.Invoke());
+    }
+    public override float GetRange()
+    {
+        return range;
     }
 }

@@ -39,7 +39,7 @@ public class TentacleBehaviour : MonoBehaviour
         if (!retreatTween.IsActive() && !attackTween.IsActive())
         {
             attackTween = transform.DOMove(firefly.position, timeToReachTarget)
-                .OnComplete(() => firefly.Find("CircleLight").GetComponent<CircleLight>().range = 0f);
+                .OnComplete(() => firefly.Find("CircleLight").GetComponent<CircleLight>().SetRange(0f, 0.25f));
         }
     }
     public void Retreat()

@@ -3,23 +3,13 @@ using UnityEngine;
 
 public class FocusedLight : LightSource
 {
-    private Tween expandScaleAnim;
-    public override float range
+    private void Awake()
     {
-        get { return _range; }
-        set
-        {
-            _range = value;
-            expandScaleAnim.Restart();
-        }
-    }
-    private void Start()
-    {
-        expandScaleAnim = transform.DOScale(Vector3.one * _range, 0.8f).From(Vector3.zero).SetAutoKill(false);
+        range = transform.localScale.x;
     }
     private void OnEnable()
     {
-        expandScaleAnim.Restart();
+        transform.DOScale(Vector3.one * range, 0.8f).From(Vector3.zero);
     }
     protected void OnTriggerStay2D(Collider2D collision)
     {
@@ -27,5 +17,20 @@ public class FocusedLight : LightSource
         {
             etherContainer.SpawnEtherParticle();
         }
+    }
+    
+    public override void SetRange(float newRange)
+    {
+        range = newRange;
+        transform.localScale = Vector3.one * range;
+    }
+    public void SetRange(float newRange, float duration)
+    {
+        range = newRange;
+        transform.DOScale(Vector3.one * range, duration).From(Vector3.zero);
+    }
+    public override float GetRange()
+    {
+        return range;
     }
 }

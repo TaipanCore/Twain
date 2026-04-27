@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4592943096102972186}
   - component: {fileID: 6068667890379741427}
+  - component: {fileID: 3219130225689082592}
   - component: {fileID: 6720934731252378126}
   m_Layer: 0
   m_Name: GreenFirefly
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4411179492960660802}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 63.88, y: 13.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -86,6 +87,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3219130225689082592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411179492960660802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3a9cc322cc9cb4b8e5cebca42fdc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathPointsSpread: 8
+  pathPointsCount: 8
+  lightRange: 1.25
 --- !u!114 &6720934731252378126
 MonoBehaviour:
   m_ObjectHideFlags: 0
