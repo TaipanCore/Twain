@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 24
         width: 11
         height: 12
       alignment: 0
@@ -134,8 +134,8 @@ TextureImporter:
       name: KeyShards_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
+        x: 11
+        y: 24
         width: 11
         height: 12
       alignment: 0
@@ -155,8 +155,8 @@ TextureImporter:
       name: KeyShards_2
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
+        x: 22
+        y: 24
         width: 11
         height: 12
       alignment: 0
@@ -168,6 +168,132 @@ TextureImporter:
       bones: []
       spriteID: 7e91a54c3a2c2e648bc5e99f04884d11
       internalID: 2057561152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyShards_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602f36b4cc3763e4da3031ddba241d86
+      internalID: 84473312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyShards_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 12
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca0b15e2286c5b40911e88b2a14b8b1
+      internalID: 1458724917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyShards_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 12
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f49a92be218094387f7684bb6a0b47
+      internalID: 2029526138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyShards_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5132a27f684d1348adc91f2c9309c77
+      internalID: 1352313221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyShards_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a720884af62f8134faf7d30b42725107
+      internalID: -1733084742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyShards_8
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbcbd050396c6849bff6c0e7e8caae7
+      internalID: -748792287
       vertices: []
       indices: 
       edges: []
@@ -186,6 +312,12 @@ TextureImporter:
       KeyShards_0: 612545057
       KeyShards_1: -1804724444
       KeyShards_2: 2057561152
+      KeyShards_3: 84473312
+      KeyShards_4: 1458724917
+      KeyShards_5: 2029526138
+      KeyShards_6: 1352313221
+      KeyShards_7: -1733084742
+      KeyShards_8: -748792287
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

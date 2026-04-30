@@ -21,6 +21,7 @@ public class ShardSlot : MonoBehaviour
                 spriteRenderer.sortingLayerName = "Ground";
                 spriteRenderer.sortingOrder = 2;
                 requiredShard.GetComponent<ParticleSystem>().Stop();
+                requiredShard.GetComponent<SimpleAnimator>().Restart();
                 OnGetShard?.Invoke();
             });
             GetComponent<Collider2D>().enabled = false;
