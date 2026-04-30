@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class SquidShrineBehaviour : MonoBehaviour
 {
-    [SerializeField] SquidBossBehaviour squidBossBehaviour;
-    [SerializeField] CapsuleCollider2D activationCollider;
+    [SerializeField] private SquidBossBehaviour squidBossBehaviour;
+    [SerializeField] private CapsuleCollider2D activationCollider;
     
-    private Transform fireflyPoint;
+    private Transform fireflyPoint; 
     private Transform firefly;
     private Vector3 fireflyOldLocalPosition;
     private void Start()
