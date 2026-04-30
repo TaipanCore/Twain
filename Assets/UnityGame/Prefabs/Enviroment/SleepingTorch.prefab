@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8353508005159254862
+--- !u!1 &8072762907971549465
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2828698130283651047}
-  - component: {fileID: 9211817399437794273}
-  - component: {fileID: 5302616283212238799}
-  - component: {fileID: 650155461641532859}
-  - component: {fileID: 1836380983993713766}
+  - component: {fileID: 7134432556935839167}
+  - component: {fileID: 7468455697758825023}
+  - component: {fileID: 4762999082998683159}
+  - component: {fileID: 8793949318374967036}
+  - component: {fileID: 36925588766672073}
+  - component: {fileID: 3512435294953188615}
   m_Layer: 0
-  m_Name: Torch
+  m_Name: SleepingTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &2828698130283651047
+--- !u!4 &7134432556935839167
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353508005159254862}
+  m_GameObject: {fileID: 8072762907971549465}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1611413712531999965}
+  - {fileID: 5528590047910569253}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9211817399437794273
+--- !u!212 &7468455697758825023
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353508005159254862}
+  m_GameObject: {fileID: 8072762907971549465}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 1887013877
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1367424898, guid: 88e24236c2c28364987a304f1beadd8b, type: 3}
+  m_Sprite: {fileID: 1745139573, guid: 88e24236c2c28364987a304f1beadd8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,13 +89,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5302616283212238799
+--- !u!114 &4762999082998683159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353508005159254862}
+  m_GameObject: {fileID: 8072762907971549465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd61bc6a26f55754e80f0c3e0acd7f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8793949318374967036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8072762907971549465}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed6150e4c7081434fb3d76c83effc315, type: 3}
@@ -107,26 +120,26 @@ MonoBehaviour:
   - {fileID: 1367424898, guid: 88e24236c2c28364987a304f1beadd8b, type: 3}
   framerate: 10
   loopAnimation: 1
-  playOnStart: 1
---- !u!114 &650155461641532859
+  playOnStart: 0
+--- !u!114 &36925588766672073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353508005159254862}
+  m_GameObject: {fileID: 8072762907971549465}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be24fe4ec2e0afd4883b5460a93ec890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &1836380983993713766
+--- !u!70 &3512435294953188615
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353508005159254862}
+  m_GameObject: {fileID: 8072762907971549465}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -155,13 +168,13 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.6, y: 0.25}
   m_Direction: 1
---- !u!1001 &8663367228488636667
+--- !u!1001 &2512988769708323075
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2828698130283651047}
+    m_TransformParent: {fileID: 7134432556935839167}
     m_Modifications:
     - target: {fileID: -7329810055438167571, guid: ca44caf7ec45a9d4ab6b3d320f71eb07, type: 3}
       propertyPath: blinkEase
@@ -231,13 +244,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlinkingCircleLight
       objectReference: {fileID: 0}
+    - target: {fileID: 9205905560339479363, guid: ca44caf7ec45a9d4ab6b3d320f71eb07, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca44caf7ec45a9d4ab6b3d320f71eb07, type: 3}
---- !u!4 &1611413712531999965 stripped
+--- !u!4 &5528590047910569253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7955207024423900198, guid: ca44caf7ec45a9d4ab6b3d320f71eb07, type: 3}
-  m_PrefabInstance: {fileID: 8663367228488636667}
+  m_PrefabInstance: {fileID: 2512988769708323075}
   m_PrefabAsset: {fileID: 0}
