@@ -49,6 +49,6 @@ public class FireflyMovement : MonoBehaviour
     }
     private void FlipSprite()
     {
-        transform.rotation = Quaternion.Euler(0, movement.x > 0f ? 180 : 0, 0);
+        transform.rotation = Quaternion.Euler(0, movement.x > 0f ? 0 : 180, 0);
     }
 }

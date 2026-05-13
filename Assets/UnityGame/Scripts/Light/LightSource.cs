@@ -5,7 +5,7 @@ public class LightSource : MonoBehaviour
     [SerializeField] private bool isAggroTrigger;
     protected float range;
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (isAggroTrigger)
         {
@@ -19,7 +19,7 @@ public class LightSource : MonoBehaviour
             darknessDeath.EnterLight(this);
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out DarknessDeath darknessDeath))
         {

@@ -1,6 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
-public class LightSideBehaviour : MonoBehaviour, IDamageReceiver
+using UnityGame.Scripts.Interfaces;
+
+public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
 {
     private static readonly int IsFocused = Animator.StringToHash("IsFocused");
 

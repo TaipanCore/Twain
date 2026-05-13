@@ -7,7 +7,5 @@ public interface IDamageReceiver
 {
     float hitpoints { get; set; }
     void ReceiveDamage(float damage);
-    float invulnerableTime { get; set; }
-    void GiveInvulnerability();
     void Die();
 }

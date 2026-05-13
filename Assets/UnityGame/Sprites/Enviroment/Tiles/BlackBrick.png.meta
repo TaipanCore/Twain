@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 091b09712b6a8734c952b9694a471d67
+guid: 998cf6627d9ef2249ae0fa89545780ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,28 +110,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground tiles_0
+      name: BlackBrick_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
+        x: 0
+        y: 48
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88ebfe1600f3fb9438f9392d93d46ea4
-      internalID: -1604181898
+      spriteID: bb74bfe7c9aa8a84182f20a78e6e8754
+      internalID: -954569562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Empty
+      name: BlackBrick_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dab6ce637d34794ca41a3950ad752ec
+      internalID: 277313511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9719d4d118c0e47439eeff3b97aba544
+      internalID: 661161314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe183871650396244970f3f9c224aebf
+      internalID: -1189117043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c3324b25f3bb144888877a5cc90ed5
+      internalID: 569582579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4242bcd8a581a468c09e63607da0b8
+      internalID: 972871172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01cbf77eea5e2a4d87cb40b248b2fe5
+      internalID: -1049178445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff83b072b3a979b47aa29ce9d5ada6fc
+      internalID: 982476574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_8
       rect:
         serializedVersion: 2
         x: 0
@@ -139,24 +286,41 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: -8}
-        - {x: -8, y: 8}
-        - {x: 8, y: 8}
-        - {x: 8, y: -8}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9be6c5c98d8a9b45b42bd6186d902a7
-      internalID: -1548759913
+      spriteID: e1800998d9fbaf24b9d3621ac22f9de4
+      internalID: 813916760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground tiles_1
+      name: BlackBrick_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e0953b6302f974e803946788dd5530
+      internalID: -1002776340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackBrick_10
       rect:
         serializedVersion: 2
         x: 32
@@ -164,20 +328,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cff9697c592f770419ef140b982ac9ad
-      internalID: 1172267533
+      spriteID: d1354edd0938afd41a0305765d017d91
+      internalID: 394571057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground tiles_2
+      name: BlackBrick_11
       rect:
         serializedVersion: 2
         x: 48
@@ -185,41 +349,41 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6fec4f86116b79488370a043e17a1e1
-      internalID: -1363555322
+      spriteID: f4a6bdb71d5746c4d8799663c6e225f5
+      internalID: -1969256553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground tiles_3
+      name: BlackBrick_12
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
+        x: 0
+        y: 0
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fdf31745ad7b5b40b1d08ceb8d452f4
-      internalID: -918211844
+      spriteID: 05f3ef64b9c22df408b275b4f60858e9
+      internalID: -1350146004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground tiles_4
+      name: BlackBrick_13
       rect:
         serializedVersion: 2
         x: 16
@@ -227,20 +391,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50ec0394d93b28c4cb484593c0899a1a
-      internalID: -1017773860
+      spriteID: 06163c62d9bb9a64c9204e9e5ac71174
+      internalID: 2013598884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground tiles_5
+      name: BlackBrick_14
       rect:
         serializedVersion: 2
         x: 32
@@ -248,20 +412,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7098a380c3a83bc49a7b3465e20b830f
-      internalID: -1885474236
+      spriteID: 3493e4774f0a2b445bfe16737580f235
+      internalID: 529343117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground tiles_6
+      name: BlackBrick_15
       rect:
         serializedVersion: 2
         x: 48
@@ -269,35 +433,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c050492690714cf42a1a2eef4794d2f7
-      internalID: -797569309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground tiles_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd9f5702d163c9f4eb65518af07bf53d
-      internalID: 331469037
+      spriteID: cead7ad1d329e204b9ffdcf78facfb59
+      internalID: 374427686
       vertices: []
       indices: 
       edges: []
@@ -313,16 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Empty: -1889146965
-      Ground tiles_0: -797569309
-      Ground tiles_1: -919492156
-      Ground tiles_2: -919492156
-      Ground tiles_3: 331469037
-      Ground tiles_4: -797569309
-      Ground tiles_5: -1885474236
-      Ground tiles_6: -1017773860
-      Ground tiles_7: -918211844
-      Ground tiles_8: -1363555322
+      BlackBrick_0: -954569562
+      BlackBrick_1: 277313511
+      BlackBrick_10: 394571057
+      BlackBrick_11: -1969256553
+      BlackBrick_12: -1350146004
+      BlackBrick_13: 2013598884
+      BlackBrick_14: 529343117
+      BlackBrick_15: 374427686
+      BlackBrick_2: 661161314
+      BlackBrick_3: -1189117043
+      BlackBrick_4: 569582579
+      BlackBrick_5: 972871172
+      BlackBrick_6: -1049178445
+      BlackBrick_7: 982476574
+      BlackBrick_8: 813916760
+      BlackBrick_9: -1002776340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

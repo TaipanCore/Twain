@@ -1,8 +1,9 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityGame.Scripts.Interfaces;
 
-public class ClotBehaviour : MonoBehaviour, IDamageDealer, IDamageReceiver, IAbleAggro, IStunnable
+public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageReceiver, IAbleAggro, IStunnable
 {
     private static readonly int PlayShock = Animator.StringToHash("PlayShock");
     private static readonly int IdleAnim = Animator.StringToHash("Idle");
