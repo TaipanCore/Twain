@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviour
     public static LayerMask playerMask;
     public static LayerMask enemyMask;
     
-    [Header("Camera")]
+    [Header("Cameras")]
     public static GameObject mainCamera;
+    public static GameObject mapCamera;
     
     [Header("Shrine of balance")]
     public static GameObject shrineOfBalance;

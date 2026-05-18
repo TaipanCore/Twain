@@ -14,7 +14,7 @@ public class MouseTracker : MonoBehaviour
     private static Vector3 GetMousePosition()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 10f; //Чтобы попасть в плоскость z = 0 при камере z = -10
+        mousePos.z = 10f; //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ z = 0 пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ z = -10
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
 }

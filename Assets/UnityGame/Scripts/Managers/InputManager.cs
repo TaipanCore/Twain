@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
 {
@@ -7,25 +6,29 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode uniteBtn;
     [SerializeField] private KeyCode sidesChangeBtn;
     [SerializeField] private KeyCode interactiveBtn;
+    [SerializeField] private KeyCode mapBtn;
 
-    [HideInInspector] public static bool canPlayerInput;
+    public static bool canPlayerInput;
         
-    [HideInInspector] public static bool uniteBtnDown;
-    [HideInInspector] public static bool sidesChangeBtnDown;
-    [HideInInspector] public static bool interactiveBtnDown;
-    [HideInInspector] public static Vector2 movement;
-    [HideInInspector] public static bool leftMouseBtn;
-    [HideInInspector] public static bool leftMouseBtnDown;
-    [HideInInspector] public static bool leftMouseBtnUp;
-    [HideInInspector] public static bool rightMouseBtn;
-    [HideInInspector] public static bool rightMouseBtnDown;
-    [HideInInspector] public static bool rightMouseBtnUp;
+    public static bool uniteBtnDown;
+    public static bool sidesChangeBtnDown;
+    public static bool interactiveBtnDown;
+    public static bool mapBtnDown;
+    public static Vector2 movement;
+    public static bool leftMouseBtn;
+    public static bool leftMouseBtnDown;
+    public static bool leftMouseBtnUp;
+    public static bool rightMouseBtn;
+    public static bool rightMouseBtnDown;
+    public static bool rightMouseBtnUp;
+    public static float mouseWheel;
 
     private void Update()
     {
         uniteBtnDown = canPlayerInput && Input.GetKeyDown(uniteBtn);
         sidesChangeBtnDown = canPlayerInput && Input.GetKeyDown(sidesChangeBtn);
         interactiveBtnDown = canPlayerInput && Input.GetKeyDown(interactiveBtn);
+        mapBtnDown = canPlayerInput && Input.GetKeyDown(mapBtn);
         movement = canPlayerInput ? new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized : Vector2.zero;
         leftMouseBtn = canPlayerInput && Input.GetMouseButton(0);
         leftMouseBtnDown = canPlayerInput && Input.GetMouseButtonDown(0);
@@ -33,5 +36,6 @@ public class InputManager : MonoBehaviour
         rightMouseBtn = canPlayerInput && Input.GetMouseButton(1);
         rightMouseBtnDown = canPlayerInput && Input.GetMouseButtonDown(1);
         rightMouseBtnUp = canPlayerInput && Input.GetMouseButtonUp(1);
+        mouseWheel = canPlayerInput ? Input.GetAxisRaw("Mouse ScrollWheel") : 0f;
     }
 }
