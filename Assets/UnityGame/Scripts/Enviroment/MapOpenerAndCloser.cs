@@ -6,6 +6,7 @@ public class MapOpenerAndCloser : MonoBehaviour
     private Camera mainCamera;
     private Camera mapCamera;
     private bool isMapOpen;
+    private bool canOpenMap;
     private Tween expandTween;
 
     private void Start()
@@ -16,11 +17,23 @@ public class MapOpenerAndCloser : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && InputManager.mapBtnDown)
+        if (other.gameObject.CompareTag("Player"))
+            canOpenMap = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            canOpenMap = false;
+    }
+
+    private void Update()
+    {
+        if (InputManager.mapBtnDown)
         {
-            if (!isMapOpen)
-                OpenMap(other.transform.position);
-            else
+            if (!isMapOpen && canOpenMap)
+                OpenMap(GameManager.currentCharacter.transform.position);
+            else if (isMapOpen)
                 CloseMap();
         }
     }
@@ -30,13 +43,14 @@ public class MapOpenerAndCloser : MonoBehaviour
         GameManager.mapCamera.SetActive(true);
         GameManager.mainCamera.SetActive(false);
         mapCamera.transform.position = new Vector3(openPosition.x, openPosition.y, mapCamera.transform.position.z);
-        expandTween = mapCamera.DOOrthoSize(30f, 3f).SetEase(Ease.OutCubic);
+        expandTween = mapCamera.DOOrthoSize(30f, 3f).SetEase(Ease.OutCubic).SetUpdate(true);
         expandTween.OnUpdate(() =>
         {
             if (InputManager.mouseWheel != 0)
                 expandTween.Kill();
         });
         isMapOpen = true;
+        Time.timeScale = 0f;
     }
     
     private void CloseMap()
@@ -47,5 +61,6 @@ public class MapOpenerAndCloser : MonoBehaviour
         mapCamera.orthographicSize = mainCamera.orthographicSize;
         GameManager.mapCamera.SetActive(false);
         isMapOpen = false;
+        Time.timeScale = 1f;
     }
 }
