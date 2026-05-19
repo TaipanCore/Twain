@@ -54,14 +54,15 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     }
 
     [SerializeField] private float cancelHuntPathLenght;
-    [SerializeField] private float timeToCancelHunt;
-    private WaitForSeconds cancelHuntTimer;
+    [SerializeField] protected float timeToCancelHunt;
+    protected WaitForSeconds cancelHuntTimer;
     [SerializeField] private GameObject smokeParticlesPrefab;
 
-    private ClotMovement movement;
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    protected ClotMovement movement;
+    protected Animator animator;
+    protected SpriteRenderer spriteRenderer;
     private Coroutine currentCancelHuntCoroutine;
+    private Coroutine stunCoroutine;
     private State state;
 
     private Coroutine retreatCoroutine;
@@ -92,7 +93,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         }
     }
 
-    private void SetState(State newState)
+    protected void SetState(State newState)
     {
         state = newState;
         switch (state)
@@ -112,7 +113,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     {
         return state;
     }
-    private void SetIdleSettings()
+    protected virtual void SetIdleSettings()
     {
         isAggro = false;
         movement.target = transform;
@@ -120,14 +121,16 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     private void SetHuntSettings()
     {
         movement.target = GameManager.lightSide.GetComponent<Transform>();
+        movement.SetMoveSpeed();
     }
     private void SetRetreatSettings()
     {
         movement.target = GameManager.equilibrium.GetComponent<Transform>();
         if (retreatCoroutine == null)
             retreatCoroutine = StartCoroutine(RetreatCoroutine());
+        movement.SetMoveSpeed();
     }
-    private void Idle()
+    protected virtual void Idle()
     {
         if (isAggro)
         {
@@ -139,6 +142,8 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         movement.navMeshAgent.SetDestination(movement.target.position);
         if (GameManager.isUnited)
         {
+            StopCoroutine(currentCancelHuntCoroutine);
+            currentCancelHuntCoroutine = null;
             SetState(State.Retreat);
         }
         if (Utils.GetPathLength(movement.navMeshAgent.path) >= cancelHuntPathLenght)
@@ -176,6 +181,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         yield return new WaitForSeconds(stunTime);
         animator.Play(IdleAnim);
         movement.navMeshAgent.isStopped = false;
+        stunCoroutine = null;
     }
     private IEnumerator RetreatCoroutine()
     {
@@ -190,7 +196,11 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     }
     public void ApplyStun(float time)
     {
-        StartCoroutine(StunCoroutine(time));
+        if (stunCoroutine != null)
+        {
+            StopCoroutine(stunCoroutine);
+            stunCoroutine = StartCoroutine(StunCoroutine(time));
+        }
     }
     public void ReceiveDamage(float damage)
     {

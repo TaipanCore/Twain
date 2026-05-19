@@ -9,7 +9,7 @@ public class ClotMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float turnAroundSpeedThreshold;
     [SerializeField] private float retreatDistance;
-    [SerializeField] private int pointsOnCircle;
+    [SerializeField] private int retreatPointsOnCircle;
     
     [HideInInspector] public Transform target;
     [HideInInspector] public bool isInPanic;
@@ -36,42 +36,53 @@ public class ClotMovement : MonoBehaviour
         movementVector = navMeshAgent.velocity;
         currentSpeed = movementVector.magnitude;
         animator.SetFloat(MovSpeed, currentSpeed);
-        animator.SetFloat(RunAnimMultiplier, movementVector.x < 0f != spriteRenderer.flipX ? -currentSpeed / moveSpeed : currentSpeed / moveSpeed);
+        animator.SetFloat(RunAnimMultiplier, movementVector.x < 0f != Mathf.Approximately(Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y), -1) ? -currentSpeed / moveSpeed : currentSpeed / moveSpeed);
         FlipCharacter();
     }
+    
     private void SetupNavMeshAgent()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
+    }
+    
+    public void SetMoveSpeed()
+    {
         navMeshAgent.speed = moveSpeed;
     }
+
     public Vector3 GetRetreatPosition()
     {
-        Vector3 nearestPosition = target.position + (Vector3)Random.insideUnitCircle * (retreatDistance / 1.5f);
+        return GetOnCircleNavMeshPosition(retreatDistance,  retreatPointsOnCircle);
+    }
+    
+    protected Vector3 GetOnCircleNavMeshPosition(float circleRadius, int pointsOnCircle)
+    {
+        Vector3 validPosition = target.position + (Vector3)Random.insideUnitCircle * (circleRadius / 1.5f);
         if (!isInPanic)
             isInPanic = true;
         float minPathLength = float.MaxValue;
         float degreesStep = 360f / pointsOnCircle;
-        Vector2 retreatVector = (transform.position - target.position).normalized;
+        Vector2 movingVector = (target != transform ? (Vector2)(transform.position - target.position) : Random.insideUnitCircle).normalized;
         for (int i = 0; i < pointsOnCircle; i++)
         {
-            retreatVector = Quaternion.Euler(0, 0, degreesStep) * retreatVector;
-            Vector3 retreatPosition = target.position + (Vector3)retreatVector * retreatDistance;
+            movingVector = Quaternion.Euler(0, 0, degreesStep) * movingVector;
+            Vector3 movingPosition = target.position + (Vector3)movingVector * circleRadius;
             NavMeshPath path = new NavMeshPath();
-            if (NavMesh.CalculatePath(transform.position, retreatPosition, NavMesh.AllAreas, path))
+            if (NavMesh.CalculatePath(transform.position, movingPosition, NavMesh.AllAreas, path))
             {
                 float pathLength = Utils.GetPathLength(path);
                 if (pathLength < minPathLength)
                 {
-                    nearestPosition = retreatPosition;
+                    validPosition = movingPosition;
                     minPathLength = pathLength;              
                 }
                 if (isInPanic)
                     isInPanic = false;
             }
         }
-        return nearestPosition;
+        return validPosition;
     }
     private void FlipCharacter()
     {
