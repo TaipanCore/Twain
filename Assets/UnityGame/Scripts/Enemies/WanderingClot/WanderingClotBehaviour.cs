@@ -8,8 +8,8 @@ public class WanderingClotBehaviour : ClotBehaviour
     
     protected override void SetIdleSettings()
     {
-        base.SetIdleSettings();
-        wanderingMovement.SetWanderingMoveSpeed();
+        isAggro = false;
+        wanderingMovement.SetMoveState(State.Idle);
         wanderingCoroutine ??= StartCoroutine(WanderingCoroutine());
     }
 
@@ -29,7 +29,7 @@ public class WanderingClotBehaviour : ClotBehaviour
         {
             if (!Utils.IsAgentMoving(movement.navMeshAgent))
             {
-                movement.navMeshAgent.SetDestination(wanderingMovement.GetWanderingPosition());
+                movement.navMeshAgent.SetPath(wanderingMovement.GetOnCirclePositionForCurrentState());
             }
             yield return null;
         }

@@ -194,7 +194,7 @@ MonoBehaviour:
   _invulnerableTime: 0.5
   _damage: 10
   cancelHuntPathLenght: 10
-  timeToCancelHunt: 5
+  timeToCancelHunt: 10
   smokeParticlesPrefab: {fileID: 1916055649572487455, guid: 1c31703b2420a02428ba96d90004b52b, type: 3}
 --- !u!114 &3711361218781495037
 MonoBehaviour:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5.5
-  turnAroundSpeedThreshold: 3.5
+  turnAroundSpeedThreshold: 4
   retreatDistance: 6
   retreatPointsOnCircle: 36
   target: {fileID: 0}

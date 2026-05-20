@@ -6,26 +6,25 @@ public class ClotMovement : MonoBehaviour
     private static readonly int MovSpeed = Animator.StringToHash("MovSpeed");
     private static readonly int RunAnimMultiplier = Animator.StringToHash("RunAnimMultiplier");
     
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float turnAroundSpeedThreshold;
-    [SerializeField] private float retreatDistance;
-    [SerializeField] private int retreatPointsOnCircle;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected float turnAroundSpeedThreshold;
+    [SerializeField] protected float retreatDistance;
+    [SerializeField] protected int retreatPointsOnCircle;
     
     [HideInInspector] public Transform target;
     [HideInInspector] public bool isInPanic;
     [HideInInspector] public NavMeshAgent navMeshAgent;
     
     private ClotBehaviour clotBehaviour;
-    private SpriteRenderer spriteRenderer;
     private Transform objectTransform;
     private Animator animator;
     private Vector2 movementVector;
     private float currentSpeed;
+    protected ClotBehaviour.State currentState;
 
     private void Start()
     {
         clotBehaviour = GetComponent<ClotBehaviour>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         objectTransform = GetComponent<Transform>();
         animator = GetComponent<Animator>();
@@ -39,6 +38,26 @@ public class ClotMovement : MonoBehaviour
         animator.SetFloat(RunAnimMultiplier, movementVector.x < 0f != Mathf.Approximately(Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y), -1) ? -currentSpeed / moveSpeed : currentSpeed / moveSpeed);
         FlipCharacter();
     }
+
+    public virtual void SetMoveState(ClotBehaviour.State state)
+    {
+        currentState = state;
+        switch (state)
+        {
+            case ClotBehaviour.State.Idle:
+                target = transform;
+                navMeshAgent.speed = 0f;
+                break;
+            case ClotBehaviour.State.Hunt:
+                target = GameManager.lightSide.GetComponent<Transform>();
+                navMeshAgent.speed = moveSpeed;
+                break;
+            case ClotBehaviour.State.Retreat:
+                target = GameManager.equilibrium.GetComponent<Transform>();
+                navMeshAgent.speed = moveSpeed;
+                break;
+        }
+    }
     
     private void SetupNavMeshAgent()
     {
@@ -46,20 +65,16 @@ public class ClotMovement : MonoBehaviour
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
     }
-    
-    public void SetMoveSpeed()
-    {
-        navMeshAgent.speed = moveSpeed;
-    }
 
-    public Vector3 GetRetreatPosition()
+    public virtual NavMeshPath GetOnCirclePositionForCurrentState()
     {
-        return GetOnCircleNavMeshPosition(retreatDistance,  retreatPointsOnCircle);
+        return GetOnCircleNavMeshPosition(retreatDistance,  retreatPointsOnCircle, true);
     }
     
-    protected Vector3 GetOnCircleNavMeshPosition(float circleRadius, int pointsOnCircle)
+    public NavMeshPath GetOnCircleNavMeshPosition(float circleRadius, int pointsOnCircle, bool needShortestPath = false)
     {
-        Vector3 validPosition = target.position + (Vector3)Random.insideUnitCircle * (circleRadius / 1.5f);
+        NavMeshPath validPath = new NavMeshPath();
+        NavMesh.CalculatePath(transform.position, target.position + (Vector3)Random.insideUnitCircle * (circleRadius / 1.5f), NavMesh.AllAreas, validPath);
         if (!isInPanic)
             isInPanic = true;
         float minPathLength = float.MaxValue;
@@ -72,17 +87,24 @@ public class ClotMovement : MonoBehaviour
             NavMeshPath path = new NavMeshPath();
             if (NavMesh.CalculatePath(transform.position, movingPosition, NavMesh.AllAreas, path))
             {
-                float pathLength = Utils.GetPathLength(path);
-                if (pathLength < minPathLength)
-                {
-                    validPosition = movingPosition;
-                    minPathLength = pathLength;              
-                }
                 if (isInPanic)
                     isInPanic = false;
+                if (needShortestPath)
+                {
+                    float pathLength = Utils.GetPathLength(path);
+                    if (pathLength < minPathLength)
+                    {
+                        validPath = path;
+                        minPathLength = pathLength;              
+                    }
+                }
+                else
+                {
+                    return path;
+                }
             }
         }
-        return validPosition;
+        return validPath;
     }
     private void FlipCharacter()
     {
@@ -98,4 +120,9 @@ public class ClotMovement : MonoBehaviour
             }
         }
     }
+    /*private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(target.position, retreatDistance);
+    }*/
 }

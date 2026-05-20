@@ -142,7 +142,7 @@ MonoBehaviour:
   _invulnerableTime: 0.5
   _damage: 10
   cancelHuntPathLenght: 10
-  timeToCancelHunt: 5
+  timeToCancelHunt: 10
   smokeParticlesPrefab: {fileID: 1916055649572487455, guid: 1c31703b2420a02428ba96d90004b52b, type: 3}
 --- !u!114 &8224560447982076686
 MonoBehaviour:

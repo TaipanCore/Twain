@@ -38,20 +38,23 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     public float damage
     {
         get => _damage;
-        set
-        {
-            _damage = value;
-        }
+        set => _damage = value;
     }
+
     private bool _isAggro;
     public bool isAggro
     {
         get => _isAggro;
         set
         {
-            _isAggro = value;
+            if (!(isIgnoreLight && value))
+            {
+                _isAggro = value;
+            }
         }
     }
+    
+    public bool isIgnoreLight { get; private set; }
 
     [SerializeField] private float cancelHuntPathLenght;
     [SerializeField] protected float timeToCancelHunt;
@@ -61,6 +64,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     protected ClotMovement movement;
     protected Animator animator;
     protected SpriteRenderer spriteRenderer;
+    protected Collider2D objectCollider;
     private Coroutine currentCancelHuntCoroutine;
     private Coroutine stunCoroutine;
     private State state;
@@ -72,6 +76,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         movement = GetComponent<ClotMovement>();
         animator =  GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        objectCollider = GetComponent<Collider2D>();
         cancelHuntTimer = new WaitForSeconds(timeToCancelHunt);
         SetState(State.Idle);
     }
@@ -116,19 +121,16 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     protected virtual void SetIdleSettings()
     {
         isAggro = false;
-        movement.target = transform;
+        movement.SetMoveState(State.Idle);
     }
     private void SetHuntSettings()
     {
-        movement.target = GameManager.lightSide.GetComponent<Transform>();
-        movement.SetMoveSpeed();
+        movement.SetMoveState(State.Hunt);
     }
     private void SetRetreatSettings()
     {
-        movement.target = GameManager.equilibrium.GetComponent<Transform>();
-        if (retreatCoroutine == null)
-            retreatCoroutine = StartCoroutine(RetreatCoroutine());
-        movement.SetMoveSpeed();
+        movement.SetMoveState(State.Retreat);
+        retreatCoroutine ??= StartCoroutine(RetreatCoroutine());
     }
     protected virtual void Idle()
     {
@@ -139,13 +141,19 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     }
     private void Hunt()
     {
-        movement.navMeshAgent.SetDestination(movement.target.position);
+        if (!isAggro)
+        {
+            SetState(State.Idle);
+            return;
+        }
         if (GameManager.isUnited)
         {
             StopCoroutine(currentCancelHuntCoroutine);
             currentCancelHuntCoroutine = null;
             SetState(State.Retreat);
+            return;
         }
+        movement.navMeshAgent.SetDestination(movement.target.position);
         if (Utils.GetPathLength(movement.navMeshAgent.path) >= cancelHuntPathLenght)
         {
             currentCancelHuntCoroutine ??= StartCoroutine(CancelHuntCoroutine());
@@ -161,6 +169,11 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     }
     private void Retreat()
     {
+        if (!isAggro)
+        {
+            SetState(State.Idle);
+            return;
+        }
         if (!GameManager.isUnited)
         {
             StopCoroutine(retreatCoroutine);
@@ -189,7 +202,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         {
             if (!movement.isInPanic || (movement.isInPanic && !Utils.IsAgentMoving(movement.navMeshAgent)))
             {
-                movement.navMeshAgent.SetDestination(movement.GetRetreatPosition());
+                movement.navMeshAgent.SetPath(movement.GetOnCirclePositionForCurrentState());
             }
             yield return null;
         }
@@ -202,13 +215,21 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             stunCoroutine = StartCoroutine(StunCoroutine(time));
         }
     }
-    public void ReceiveDamage(float damage)
+    public void ReceiveDamage(float receivedDamage)
     {
         if (invulnerableTimer <= 0f)
         {
-            hitpoints -= damage;
+            hitpoints -= receivedDamage;
             GiveInvulnerability();
         }
+    }
+    public IEnumerator IgnoreLight(float time)
+    {
+        isIgnoreLight = true;
+        yield return new WaitForSeconds(time);
+        isIgnoreLight = false;
+        objectCollider.enabled = false;
+        objectCollider.enabled = true;
     }
     public void GiveInvulnerability()
     {
@@ -232,15 +253,8 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             DealDamage(damage, damageReceiver);
         }
     }
-    public void DealDamage(float damage, IDamageReceiver target)
+    public void DealDamage(float dealedDamage, IDamageReceiver target)
     {
-        target.ReceiveDamage(damage);
+        target.ReceiveDamage(dealedDamage);
     }
-    /*
-    private void OnDrawGizmos()
-    {      
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(target, retreatDistance);
-    }
-    */
 }
