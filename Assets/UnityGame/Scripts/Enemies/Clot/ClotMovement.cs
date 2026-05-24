@@ -13,7 +13,7 @@ public class ClotMovement : MonoBehaviour
     
     [HideInInspector] public Transform target;
     [HideInInspector] public bool isInPanic;
-    [HideInInspector] public NavMeshAgent navMeshAgent;
+    [SerializeField] public NavMeshAgent navMeshAgent;
     
     private ClotBehaviour clotBehaviour;
     private Transform objectTransform;
@@ -25,7 +25,6 @@ public class ClotMovement : MonoBehaviour
     private void Start()
     {
         clotBehaviour = GetComponent<ClotBehaviour>();
-        navMeshAgent = GetComponent<NavMeshAgent>();
         objectTransform = GetComponent<Transform>();
         animator = GetComponent<Animator>();
         SetupNavMeshAgent();

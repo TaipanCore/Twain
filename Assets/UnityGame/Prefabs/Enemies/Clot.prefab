@@ -214,7 +214,7 @@ MonoBehaviour:
   retreatPointsOnCircle: 36
   target: {fileID: 0}
   isInPanic: 0
-  navMeshAgent: {fileID: 0}
+  navMeshAgent: {fileID: 1720709734849999363}
 --- !u!114 &6369657606197382779
 MonoBehaviour:
   m_ObjectHideFlags: 0
