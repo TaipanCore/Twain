@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode sidesChangeBtn;
     [SerializeField] private KeyCode interactiveBtn;
     [SerializeField] private KeyCode mapBtn;
+    [SerializeField] private KeyCode pauseBtn;
 
     public static bool canPlayerInput;
         
@@ -22,20 +23,32 @@ public class InputManager : MonoBehaviour
     public static bool rightMouseBtnDown;
     public static bool rightMouseBtnUp;
     public static float mouseWheel;
+    
+    public static bool HUDPauseBtnDown;
 
     private void Update()
     {
-        uniteBtnDown = canPlayerInput && Input.GetKeyDown(uniteBtn);
-        sidesChangeBtnDown = canPlayerInput && Input.GetKeyDown(sidesChangeBtn);
-        interactiveBtnDown = canPlayerInput && Input.GetKeyDown(interactiveBtn);
-        mapBtnDown = canPlayerInput && Input.GetKeyDown(mapBtn);
-        movement = canPlayerInput ? new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized : Vector2.zero;
-        leftMouseBtn = canPlayerInput && Input.GetMouseButton(0);
-        leftMouseBtnDown = canPlayerInput && Input.GetMouseButtonDown(0);
-        leftMouseBtnUp = canPlayerInput && Input.GetMouseButtonUp(0);
-        rightMouseBtn = canPlayerInput && Input.GetMouseButton(1);
-        rightMouseBtnDown = canPlayerInput && Input.GetMouseButtonDown(1);
-        rightMouseBtnUp = canPlayerInput && Input.GetMouseButtonUp(1);
-        mouseWheel = canPlayerInput ? Input.GetAxisRaw("Mouse ScrollWheel") : 0f;
+        if (canPlayerInput)
+        {
+            uniteBtnDown = Input.GetKeyDown(uniteBtn);
+            sidesChangeBtnDown = Input.GetKeyDown(sidesChangeBtn);
+            interactiveBtnDown = Input.GetKeyDown(interactiveBtn);
+            mapBtnDown = Input.GetKeyDown(mapBtn);
+            leftMouseBtn = Input.GetMouseButton(0);
+            leftMouseBtnDown = Input.GetMouseButtonDown(0);
+            leftMouseBtnUp = Input.GetMouseButtonUp(0);
+            rightMouseBtn = Input.GetMouseButton(1);
+            rightMouseBtnDown = Input.GetMouseButtonDown(1);
+            rightMouseBtnUp = Input.GetMouseButtonUp(1);
+            
+            movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            mouseWheel = Input.GetAxisRaw("Mouse ScrollWheel");
+        }
+        else
+        {
+            movement = Vector2.zero;
+            mouseWheel = 0f;
+        }
+        HUDPauseBtnDown = Input.GetKeyDown(pauseBtn);
     }
 }
