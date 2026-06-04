@@ -27,6 +27,7 @@ public class DarkSideBehaviour : MonoBehaviour
         if (spikesCooldownTimer > 0f && gameObject.activeInHierarchy)
         {
             spikesCooldownTimer -= Time.deltaTime;
+            GameManager.HUD.mouseCursor.SetSpikesRecharge((spikesSpawnCooldown - spikesCooldownTimer) / spikesSpawnCooldown);
         }
         if (InputManager.leftMouseBtnDown && spikesCooldownTimer <= 0f && GameManager.currentCharacter == gameObject)
         {
@@ -38,6 +39,7 @@ public class DarkSideBehaviour : MonoBehaviour
     {
         GameObject spawner = Instantiate(spikesSpawner, objectTransform.position, Quaternion.identity);
         spawner.GetComponent<SpikesSpawner>().Initialize(numberOfSpikes,  spikesLifetime);
+        GameManager.HUD.mouseCursor.SetSpikesRecharge(0f);
         spikesCooldownTimer = spikesSpawnCooldown;
     }
 }

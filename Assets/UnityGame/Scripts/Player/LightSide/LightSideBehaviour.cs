@@ -181,6 +181,7 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
         if (invulnerableTimer <= 0f)
         {
             hitpoints -= damage;
+            GameManager.HUD.healthBar.SetValue(hitpoints);
             GiveInvulnerability();
         }
     }

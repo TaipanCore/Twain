@@ -5,6 +5,7 @@ public class MapOpenerAndCloser : MonoBehaviour
 {
     private Camera mainCamera;
     private Camera mapCamera;
+    private Canvas HUDCanvas;
     private bool isMapOpen;
     private bool canOpenMap;
     private Tween expandTween;
@@ -13,6 +14,7 @@ public class MapOpenerAndCloser : MonoBehaviour
     {
         mainCamera = GameManager.mainCamera.GetComponent<Camera>();
         mapCamera = GameManager.mapCamera.GetComponent<Camera>();
+        HUDCanvas = GameObject.Find("HUD").GetComponent<Canvas>();
     }
     
     private void OnTriggerStay2D(Collider2D other)
@@ -41,6 +43,7 @@ public class MapOpenerAndCloser : MonoBehaviour
     private void OpenMap(Vector3 openPosition)
     {
         GameManager.mapCamera.SetActive(true);
+        HUDCanvas.worldCamera = mapCamera;
         GameManager.mainCamera.SetActive(false);
         mapCamera.transform.position = new Vector3(openPosition.x, openPosition.y, mapCamera.transform.position.z);
         expandTween = mapCamera.DOOrthoSize(30f, 3f).SetEase(Ease.OutCubic).SetUpdate(true);
@@ -56,6 +59,7 @@ public class MapOpenerAndCloser : MonoBehaviour
     private void CloseMap()
     {
         GameManager.mainCamera.SetActive(true);
+        HUDCanvas.worldCamera = mainCamera;
         if (expandTween.IsActive())
             expandTween.Kill();
         mapCamera.orthographicSize = mainCamera.orthographicSize;

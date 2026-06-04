@@ -49,9 +49,16 @@ public class EquilibriumBehaviour : MonoBehaviour
         if (gameObject.activeInHierarchy)
         {
             if (attackCooldownTimer > 0f)
+            {
                 attackCooldownTimer -= Time.deltaTime;
+                GameManager.HUD.mouseCursor.SetAttackRecharge((attackCooldown - attackCooldownTimer) / attackCooldown);
+            }
+
             if (shootCooldownTimer > 0f)
+            {
                 shootCooldownTimer -= Time.deltaTime;
+                GameManager.HUD.mouseCursor.SetShootRecharge((shootCooldown - shootCooldownTimer) / shootCooldown);
+            }
         }
         if (movement.currentSpeed < 0.01f)
         {
@@ -68,11 +75,13 @@ public class EquilibriumBehaviour : MonoBehaviour
     private void Attack()
     {
         animator.SetTrigger(PlayAttack);
+        GameManager.HUD.mouseCursor.SetAttackRecharge(0f);
         attackCooldownTimer = attackCooldown;
     }
     private void Shoot()
     {
         animator.SetTrigger(PlayShoot);
+        GameManager.HUD.mouseCursor.SetShootRecharge(0f);
         shootCooldownTimer = shootCooldown;
     }
     public void SpawnBullet()

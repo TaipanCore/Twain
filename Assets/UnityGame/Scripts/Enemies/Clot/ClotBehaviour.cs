@@ -148,8 +148,11 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         }
         if (GameManager.isUnited)
         {
-            StopCoroutine(currentCancelHuntCoroutine);
-            currentCancelHuntCoroutine = null;
+            if (currentCancelHuntCoroutine != null)
+            {
+                StopCoroutine(currentCancelHuntCoroutine);
+                currentCancelHuntCoroutine = null;
+            }
             SetState(State.Retreat);
             return;
         }

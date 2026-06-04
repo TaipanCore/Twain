@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,9 +10,10 @@ public class GameManager : MonoBehaviour
 
     public static GameObject currentCharacter;
     public static bool isUnited;
-    
-    [Header("Inventory")]
-    public static List<GameObject> inventory = new List<GameObject>();
+    public static event Action<GameObject> OnCharacterChange;
+
+    [Header("HUD")]
+    public static HUD HUD;
 
     [Header("Player & enemy layer masks")]
     public static LayerMask playerMask;
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
             equilibrium.transform.position = lightSide.transform.position;
         currentCharacter = equilibrium;
         isUnited = true;
+        OnCharacterChange?.Invoke(currentCharacter);
     }
     public static void Separate()
     {
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
         {
             currentCharacter = lightSide;
         }
+        OnCharacterChange?.Invoke(currentCharacter);
     }
     private void CheckInputs()
     {

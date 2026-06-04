@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShrineOfBalanceBehaviour : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
                     runesTween.Rewind();
                     runesSpriteRenderer.DOFade(1f, 0.1f);
                     runesParticleSystem.Play();
+                    equilibriumChargeBackground.DOFade(1f, 0f);
                     isCharged = true;
                 }
                 else
@@ -51,6 +53,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
     private ParticleSystem runesParticleSystem;
     private float runesIntensity;
     private Tween runesTween;
+    private Image equilibriumChargeBackground;
     private void Awake()
     {
         GameManager.shrineOfBalance = gameObject;
@@ -62,13 +65,23 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
         runesSpriteRenderer = transform.Find("Runes").GetComponent<SpriteRenderer>();
         runesParticleSystem = runesSpriteRenderer.transform.Find("BouncingUpRays").GetComponent<ParticleSystem>();
         runesTween = runesSpriteRenderer.DOFade(1f, 0.75f).SetLoops(-1, LoopType.Yoyo).Pause();
+        equilibriumChargeBackground = GameManager.HUD.equilibriumCharge.transform.Find("Background").GetComponent<Image>();
+        equilibriumChargeBackground.DOFade(0.5f, 0f);
     }
     private void Update()
     {
         if (InputManager.uniteBtnDown && isCharged && Utils.IsInRange(GameManager.lightSide.transform.position, GameManager.darkSide.transform.position, uniteDistance))
         {
             GameManager.Unite();
-            DOVirtual.DelayedCall(timeInEquilibriumForm, GameManager.Separate);
+            DOVirtual.Float(1f, 0f, timeInEquilibriumForm, value =>
+            {
+                equilibriumChargeBackground.fillAmount = value;
+            }).OnComplete(() =>
+            {
+                equilibriumChargeBackground.fillAmount = 1f;
+                equilibriumChargeBackground.DOFade(0.5f, 0f);
+                GameManager.Separate();
+            });
             runesParticleSystem.Stop();
             isCharged = false;
             _etherCount = 0;

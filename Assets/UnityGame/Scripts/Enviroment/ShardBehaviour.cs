@@ -12,10 +12,10 @@ public class ShardBehaviour : MonoBehaviour
     {
         if (InputManager.interactiveBtnDown)
         {
-            if (other.gameObject.IsInLayerMask(GameManager.playerMask))
+            if (other.gameObject.IsInLayerMask(GameManager.playerMask) && takeCollider.enabled)
             {
                 takeCollider.enabled = false;
-                GameManager.inventory.Add(gameObject);
+                GameManager.HUD.inventory.AddItem(gameObject);
                 gameObject.SetActive(false);
             }
         }

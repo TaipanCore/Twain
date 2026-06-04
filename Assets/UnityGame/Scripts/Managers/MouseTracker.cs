@@ -1,16 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseTracker : MonoBehaviour
 {
-    public static Vector3 mousePosition
-    {
-        get
-        {
-            return GetMousePosition();
-        }
-    }
+    public static Vector3 mousePosition => GetMousePosition();
+    
     private static Vector3 GetMousePosition()
     {
         Vector3 mousePos = Input.mousePosition;
