@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menus_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: cd9ab0a673e47804c95653102b6a76e9, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 298604187648
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730269372416
+    m_Localized: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 848615854080
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 967968968704
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22481661321216
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23265429938176
+    m_Localized: Global
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22677539512320
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23184362430464
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22925678731264
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23039122071552
+    m_Localized: Russian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23619458555904
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23882193952768
+    m_Localized: Sound effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24187577032704
+    m_Localized: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1210379073114112
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1210374379687936
+    m_Localized: '<sprite name="WASD"> - move
+
+      <sprite name="E"> - interactive
+
+      <sprite
+      name="M"> - open/close map
+
+      <sprite name="SPACE"> - unite in <sprite
+      name="Equilibrium"> form
+
+      <sprite name="TAB"> - change side
+
+      <sprite
+      name="LMB"> - focus <sprite name="LightSide">, spikes <sprite name="DarkSide">,
+      attack <sprite name="Equilibrium">
+
+      <sprite name="RMB"> - shoot <sprite
+      name="Equilibrium">
+
+      <sprite name="ESC"> - pause'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

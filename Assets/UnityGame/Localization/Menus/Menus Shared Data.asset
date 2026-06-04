@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Menus Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Menus
+  m_TableCollectionNameGuidString: cd9ab0a673e47804c95653102b6a76e9
+  m_Entries:
+  - m_Id: 298604187648
+    m_Key: main_menu_continue_btn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730269372416
+    m_Key: main_menu_new_game_btn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 848615854080
+    m_Key: main_menu_options_btn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 967968968704
+    m_Key: main_menu_quit_btn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22481661321216
+    m_Key: options_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22677539512320
+    m_Key: options_language_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22925678731264
+    m_Key: options_language_english
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23039122071552
+    m_Key: options_language_russian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23184362430464
+    m_Key: options_audio_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23265429938176
+    m_Key: options_audio_global
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23619458555904
+    m_Key: options_audio_music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23882193952768
+    m_Key: options_audio_sound_effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24187577032704
+    m_Key: options_controls_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1210374379687936
+    m_Key: options_controls_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1210379073114112
+    m_Key: options_back_btn
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8646811944029782040
+  references:
+    version: 2
+    RefIds:
+    - rid: 8646811944029782040
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1780235518541

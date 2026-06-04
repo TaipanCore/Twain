@@ -53,3 +53,6 @@ TagManager:
   - name: AboveDarkness
     uniqueID: 656288115
     locked: 0
+  - name: HUD
+    uniqueID: 2102911991
+    locked: 0
