@@ -10,21 +10,28 @@ public class ShardSlot : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && InputManager.interactiveBtnDown && GameManager.HUD.inventory.items.ContainsKey(requiredShard))
+        if (collision.CompareTag("Player") && G.input.interactiveBtnDown && G.HUD.inventory.items.ContainsKey(requiredShard))
         {
-            if (!requiredShard.activeInHierarchy)
-                requiredShard.SetActive(true);
-            GameManager.HUD.inventory.RemoveItem(requiredShard);
-            SpriteRenderer spriteRenderer = requiredShard.GetComponent<SpriteRenderer>();
-            spriteRenderer.sortingLayerName = "InteractiveObjects";
-            spriteRenderer.sortingOrder = 2;
-            requiredShard.transform.DOMove(transform.position, 0.5f).OnComplete(() =>
-            {
-                requiredShard.GetComponent<ParticleSystem>().Stop();
-                requiredShard.GetComponent<SimpleAnimator>().Restart();
-                OnGetShard?.Invoke();
-            });
+            MoveShardToSlot();
+            G.HUD.inventory.RemoveItem(requiredShard);
             GetComponent<Collider2D>().enabled = false;
         }
+    }
+
+    public void MoveShardToSlot()
+    {
+        if (!requiredShard.activeInHierarchy)
+            requiredShard.SetActive(true);
+        SpriteRenderer spriteRenderer = requiredShard.GetComponent<SpriteRenderer>();
+        spriteRenderer.sortingLayerName = "InteractiveObjects";
+        spriteRenderer.sortingOrder = 2;
+        if (G.HUD.inventory.items.TryGetValue(requiredShard, out var inventoryShard))
+            requiredShard.transform.position = inventoryShard.transform.position;
+        requiredShard.transform.DOMove(transform.position, 0.5f).OnComplete(() =>
+        {
+            requiredShard.GetComponent<ParticleSystem>().Stop();
+            requiredShard.GetComponent<SimpleAnimator>().Restart();
+            OnGetShard?.Invoke();
+        });
     }
 }

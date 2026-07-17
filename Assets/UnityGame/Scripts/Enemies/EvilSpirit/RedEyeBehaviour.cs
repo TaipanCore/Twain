@@ -14,7 +14,7 @@ public class RedEyeBehaviour : MonoBehaviour, IDamageDealer
     
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(GameManager.playerMask))
+        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(G.playerMask))
         {
             DealDamage(damage, damageReceiver);
         }

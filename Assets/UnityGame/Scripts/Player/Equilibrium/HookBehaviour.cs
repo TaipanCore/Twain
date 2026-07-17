@@ -15,10 +15,10 @@ public class HookBehaviour : MonoBehaviour, IDamageDealer
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(GameManager.enemyMask))
+        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(G.enemyMask))
         {
             Time.timeScale = 0.1f;
-            GameManager.mainCamera.transform.DOShakePosition(0.25f, 0.15f).SetEase(Ease.OutBounce).OnComplete(() => Time.timeScale = 1f);
+            G.mainCamera.transform.DOShakePosition(0.25f, 0.15f).SetEase(Ease.OutBounce).OnComplete(() => Time.timeScale = 1f);
             DealDamage(damage, damageReceiver);
         }
     }

@@ -12,12 +12,14 @@ public class ClotScareZone : MonoBehaviour
     {
         if (collision.TryGetComponent(out ClotBehaviour behaviour))
         {
-            ClotMovement movement = behaviour.GetComponent<ClotMovement>();
-            StartCoroutine(behaviour.IgnoreLight(5f));
-            behaviour.isAggro = false;
-            movement.navMeshAgent.speed = scaredMoveSpeed;
-            movement.navMeshAgent.SetPath(movement.GetOnCircleNavMeshPosition(scareMovingDistance, scarePointsOnCircle));
-            StartCoroutine(WaitForEndOfPath(movement.navMeshAgent, movement));
+            if (!behaviour.isIgnoreLight)
+            {
+                StartCoroutine(behaviour.IgnoreLight(5f));
+                ClotMovement movement = behaviour.GetComponent<ClotMovement>();
+                movement.navMeshAgent.speed = scaredMoveSpeed;
+                movement.navMeshAgent.SetPath(movement.GetOnCircleNavMeshPosition(scareMovingDistance, scarePointsOnCircle));
+                StartCoroutine(WaitForEndOfPath(movement.navMeshAgent, movement));
+            }
         }
     }
 

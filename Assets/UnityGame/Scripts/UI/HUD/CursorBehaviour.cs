@@ -14,7 +14,7 @@ public class CursorBehaviour : MonoBehaviour
 
     private void Start()
     {
-        GameManager.OnCharacterChange += ChangeCursor;
+        G.characters.CharacterChange += ChangeCursor;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
         parentCanvas = transform.parent.GetComponent<Canvas>();
@@ -28,6 +28,10 @@ public class CursorBehaviour : MonoBehaviour
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvasTransform, Input.mousePosition, parentCanvas.worldCamera, out mousePos);
         cursorTransform.localPosition = mousePos;
+    }
+    private void OnDestroy()
+    {
+        G.characters.CharacterChange -= ChangeCursor;
     }
 
     public void SetSpikesRecharge(float value)
@@ -47,17 +51,17 @@ public class CursorBehaviour : MonoBehaviour
     {
         switch (newCharacter)
         {
-            case { } character when character == GameManager.lightSide:
+            case { } character when character == G.characters.lightSide:
                 darkSideSpikesRecharge.enabled = false;
                 equilibriumAttackRecharge.enabled = false;
                 equilibriumShootRecharge.enabled = false;
                 break;
-            case { } character when character == GameManager.darkSide:
+            case { } character when character == G.characters.darkSide:
                 darkSideSpikesRecharge.enabled = true;
                 equilibriumAttackRecharge.enabled = false;
                 equilibriumShootRecharge.enabled = false;
                 break;
-            case { } character when character == GameManager.equilibrium:
+            case { } character when character == G.characters.equilibrium:
                 darkSideSpikesRecharge.enabled = false;
                 equilibriumAttackRecharge.enabled = true;
                 equilibriumShootRecharge.enabled = true;

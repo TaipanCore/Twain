@@ -13,24 +13,24 @@ public class SpriteOrderInLayerController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        lightSideSpriteRenderer = GameManager.lightSide.transform.Find("Appearance").GetComponent<SpriteRenderer>();
-        darkSideSpriteRenderer = GameManager.darkSide.transform.Find("Appearance").GetComponent<SpriteRenderer>();
-        equilibriumSpriteRenderer = GameManager.equilibrium.transform.Find("Appearance").GetComponent<SpriteRenderer>();
+        lightSideSpriteRenderer = G.characters.lightSide.transform.Find("Appearance").GetComponent<SpriteRenderer>();
+        darkSideSpriteRenderer = G.characters.darkSide.transform.Find("Appearance").GetComponent<SpriteRenderer>();
+        equilibriumSpriteRenderer = G.characters.equilibrium.transform.Find("Appearance").GetComponent<SpriteRenderer>();
     }
     
     void Update()
     {
-        playerTransform = GameManager.currentCharacter.transform;
+        playerTransform = G.characters.currentCharacter.transform;
         FindPlayerSpriteRenderer();
         CheckSpriteOrderInLayer();
     }
     private void FindPlayerSpriteRenderer()
     {
-        if (GameManager.currentCharacter == GameManager.lightSide)
+        if (G.characters.currentCharacter == G.characters.lightSide)
             playerSpriteRenderer = lightSideSpriteRenderer;
-        else if (GameManager.currentCharacter == GameManager.darkSide)
+        else if (G.characters.currentCharacter == G.characters.darkSide)
             playerSpriteRenderer = darkSideSpriteRenderer;
-        else if (GameManager.currentCharacter == GameManager.equilibrium)
+        else if (G.characters.currentCharacter == G.characters.equilibrium)
             playerSpriteRenderer = equilibriumSpriteRenderer;
     }
     private void CheckSpriteOrderInLayer()

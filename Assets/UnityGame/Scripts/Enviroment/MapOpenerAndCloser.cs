@@ -12,8 +12,8 @@ public class MapOpenerAndCloser : MonoBehaviour
 
     private void Start()
     {
-        mainCamera = GameManager.mainCamera.GetComponent<Camera>();
-        mapCamera = GameManager.mapCamera.GetComponent<Camera>();
+        mainCamera = G.mainCamera.GetComponent<Camera>();
+        mapCamera = G.mapCamera.GetComponent<Camera>();
         HUDCanvas = GameObject.Find("HUD").GetComponent<Canvas>();
     }
     
@@ -31,10 +31,10 @@ public class MapOpenerAndCloser : MonoBehaviour
 
     private void Update()
     {
-        if (InputManager.mapBtnDown)
+        if (G.input.mapBtnDown)
         {
             if (!isMapOpen && canOpenMap)
-                OpenMap(GameManager.currentCharacter.transform.position);
+                OpenMap(G.characters.currentCharacter.transform.position);
             else if (isMapOpen)
                 CloseMap();
         }
@@ -42,14 +42,14 @@ public class MapOpenerAndCloser : MonoBehaviour
 
     private void OpenMap(Vector3 openPosition)
     {
-        GameManager.mapCamera.SetActive(true);
+        G.mapCamera.SetActive(true);
         HUDCanvas.worldCamera = mapCamera;
-        GameManager.mainCamera.SetActive(false);
+        G.mainCamera.SetActive(false);
         mapCamera.transform.position = new Vector3(openPosition.x, openPosition.y, mapCamera.transform.position.z);
         expandTween = mapCamera.DOOrthoSize(30f, 3f).SetEase(Ease.OutCubic).SetUpdate(true);
         expandTween.OnUpdate(() =>
         {
-            if (InputManager.mouseWheel != 0)
+            if (G.input.mouseWheel != 0)
                 expandTween.Kill();
         });
         isMapOpen = true;
@@ -58,12 +58,12 @@ public class MapOpenerAndCloser : MonoBehaviour
     
     private void CloseMap()
     {
-        GameManager.mainCamera.SetActive(true);
+        G.mainCamera.SetActive(true);
         HUDCanvas.worldCamera = mainCamera;
         if (expandTween.IsActive())
             expandTween.Kill();
         mapCamera.orthographicSize = mainCamera.orthographicSize;
-        GameManager.mapCamera.SetActive(false);
+        G.mapCamera.SetActive(false);
         isMapOpen = false;
         Time.timeScale = 1f;
     }

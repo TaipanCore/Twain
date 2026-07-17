@@ -5,6 +5,7 @@ public class EtherSpawner : MonoBehaviour, IEtherContainer
     [SerializeField] private AnimationCurve etherSpawnRate;
     [SerializeField] private float spreadRange;
     [SerializeField] private int _etherCount;
+    
     public int etherCount
     {
         get => _etherCount;
@@ -14,16 +15,16 @@ public class EtherSpawner : MonoBehaviour, IEtherContainer
         }
     }
     private int maxEtherCount;
-
-    private ShrineOfBalanceBehaviour shrineBehaviour;
+    
     private Transform target;
     private GameObjectsPool etherPool;
     private float etherSpawnCooldownTimer;
     private Transform etherSpawnPoint;
+    private ShrineOfBalanceBehaviour shrineBehaviour;
 
     private void Start()
     {
-        shrineBehaviour = GameManager.shrineOfBalance.GetComponent<ShrineOfBalanceBehaviour>();
+        shrineBehaviour = GameObject.Find("ShrineOfBalance").GetComponent<ShrineOfBalanceBehaviour>();
         target = shrineBehaviour.transform.Find("EtherMagnetPoint").GetComponent<Transform>();
         etherPool = GameObject.Find("EtherPool").GetComponent<GameObjectsPool>();
         etherSpawnPoint = transform.Find("EtherSpawnPoint");

@@ -26,7 +26,7 @@ public class LightSideMovement : PlayerMovement
     }
     protected override void FlipCharacter()
     {
-        float mouseX = MouseTracker.mousePosition.x - transform.position.x;
+        float mouseX = G.mouseTracker.mousePosition.x - transform.position.x;
         if (animator.GetBool(IsFocused))
         {
             animator.SetFloat(WalkAnimReverse, Mathf.Sign(movementVector.x * mouseX));

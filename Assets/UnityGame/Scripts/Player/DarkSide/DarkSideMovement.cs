@@ -20,19 +20,19 @@ public class DarkSideMovement : PlayerMovement
     {
         base.Start();
         objectTransform = GetComponent<Transform>();
-        fireflyTransform = GameManager.lightSide.transform.Find("Firefly");
-        lightSideBehaviour = GameManager.lightSide.GetComponent<LightSideBehaviour>();
+        fireflyTransform = G.characters.lightSide.transform.Find("Firefly");
+        lightSideBehaviour = G.characters.lightSide.GetComponent<LightSideBehaviour>();
         darknessDeath = GetComponent<DarknessDeath>();
-        lightSideCircleLight = GameManager.lightSide.transform.Find("Firefly").Find("CircleLight").GetComponent<CircleLight>();
+        lightSideCircleLight = G.characters.lightSide.transform.Find("Firefly").Find("CircleLight").GetComponent<CircleLight>();
     }
     protected override void FixedUpdate()
     {
-        if (GameManager.currentCharacter == gameObject)
+        if (G.characters.currentCharacter == gameObject)
         {
-            movementVector = InputManager.movement;
+            movementVector = G.input.movement;
             rb.MovePosition(rb.position + movementVector * (moveSpeed * Time.fixedDeltaTime));
         }
-        else if (GameManager.currentCharacter == GameManager.lightSide && (darknessDeath.lightSources.Contains(lightSideCircleLight) || darknessDeath.lightSources.Count == 0))
+        else if (G.characters.currentCharacter == G.characters.lightSide && (darknessDeath.lightSources.Contains(lightSideCircleLight) || darknessDeath.lightSources.Count == 0))
         {
             movementVector = (fireflyTransform.position - objectTransform.position).normalized;
             minFollowRadius = lightSideBehaviour.GetCurrentLightRange() * minFollowRadiusPercents / 100f;

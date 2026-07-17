@@ -1,24 +1,20 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShrineOfBalanceBehaviour : MonoBehaviour
+public class ShrineOfBalanceBehaviour : MonoBehaviour, ISaveLoadObject
 {
-    [SerializeField, Min(0f)] private float uniteDistance;
-    [SerializeField, Min(0f)] private float timeInEquilibriumForm;
     [SerializeField, Min(1)] private int maxEtherCount;
     [SerializeField, Min(0f)] private float circleLightMaxRadius;
     [SerializeField] private AnimationCurve runesBlinkingIntensity;
 
-    [HideInInspector] public bool isCharged;
+    private bool isCharged;
     
     private int _etherCount;
     public int etherCount
     {
-        get
-        {
-            return _etherCount;
-        }
+        get => _etherCount;
         set
         {
             _etherCount = Mathf.Clamp(value, 0, maxEtherCount);
@@ -30,7 +26,6 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
                     runesTween.Rewind();
                     runesSpriteRenderer.DOFade(1f, 0.1f);
                     runesParticleSystem.Play();
-                    equilibriumChargeBackground.DOFade(1f, 0f);
                     isCharged = true;
                 }
                 else
@@ -54,39 +49,43 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour
     private float runesIntensity;
     private Tween runesTween;
     private Image equilibriumChargeBackground;
+
     private void Awake()
     {
-        GameManager.shrineOfBalance = gameObject;
+        RegisterInSaveLoadSystem();
     }
-
     private void Start()
     {
         circleLight = transform.Find("CircleLight").GetComponent<CircleLight>();
         runesSpriteRenderer = transform.Find("Runes").GetComponent<SpriteRenderer>();
         runesParticleSystem = runesSpriteRenderer.transform.Find("BouncingUpRays").GetComponent<ParticleSystem>();
         runesTween = runesSpriteRenderer.DOFade(1f, 0.75f).SetLoops(-1, LoopType.Yoyo).Pause();
-        equilibriumChargeBackground = GameManager.HUD.equilibriumCharge.transform.Find("Background").GetComponent<Image>();
-        equilibriumChargeBackground.DOFade(0.5f, 0f);
+        equilibriumChargeBackground = G.HUD.equilibriumCharge.transform.Find("Background").GetComponent<Image>();
     }
-    private void Update()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (InputManager.uniteBtnDown && isCharged && Utils.IsInRange(GameManager.lightSide.transform.position, GameManager.darkSide.transform.position, uniteDistance))
+        if (G.input.interactiveBtnDown && collision.gameObject.CompareTag("Player") && !G.characters.hasEquilibriumCharge)
         {
-            GameManager.Unite();
-            DOVirtual.Float(1f, 0f, timeInEquilibriumForm, value =>
-            {
-                equilibriumChargeBackground.fillAmount = value;
-            }).OnComplete(() =>
-            {
-                equilibriumChargeBackground.fillAmount = 1f;
-                equilibriumChargeBackground.DOFade(0.5f, 0f);
-                GameManager.Separate();
-            });
-            runesParticleSystem.Stop();
+            G.characters.hasEquilibriumCharge = true;
+            equilibriumChargeBackground.DOFade(1f, 0f);
             isCharged = false;
+            runesParticleSystem.Stop();
             _etherCount = 0;
             runesSpriteRenderer.DOFade(0f, 0f);
             circleLight.SetRange(0f, 0.25f);
         }
+    }
+    
+    public String objectId => GetComponent<ObjectId>().id;
+    public void RegisterInSaveLoadSystem() => G.gameSaveLoad.Register(this);
+    public ObjectSaveLoadData PackData()
+    {
+        return new ObjectSaveLoadData(objectId, new System.Object[] { etherCount });
+    }
+    public void UnpackData(ObjectSaveLoadData dataToUnpack)
+    {
+        //data[0] - etherCount
+        if(int.TryParse(dataToUnpack.data[0].ToString(), out var parsedEtherCount)) 
+            etherCount = parsedEtherCount;
     }
 }

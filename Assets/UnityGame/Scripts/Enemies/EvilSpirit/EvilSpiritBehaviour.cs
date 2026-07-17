@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using DG.Tweening;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocusedLight, IAbleAggro
+public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocusedLight, IAbleAggro, ISaveLoadObject
 {
     private static readonly int PlayIdle = Animator.StringToHash("PlayIdle");
     private static readonly int PlayHunt = Animator.StringToHash("PlayHunt");
@@ -20,6 +23,7 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
         Die
     }
     
+    [SerializeField] private GameObject redKeyShard;
     [Header("Navigation")]
     [SerializeField] private Transform target;
     [SerializeField] private float maxDistanceToTarget;
@@ -66,22 +70,28 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     private float dashTimer;
     private TrailRenderer redEyeTrail;
     private ParticleSystem steamParticles;
-    private GameObject redKeyShard;
+    private GameObject redKeyShardImage;
     private float maxHitpoints;
     private Vector2 movement;
     private Vector3 previousPosition;
     private Animator animator;
     private State state;
 
+    private void Awake()
+    {
+        RegisterInSaveLoadSystem();
+    }
     private void Start()
     {
         redEyeTrail = transform.Find("RedEye").GetComponent<TrailRenderer>();
         steamParticles = transform.Find("SteamParticles").GetComponent<ParticleSystem>();
         transform.Find("RedEye").GetComponent<RedEyeBehaviour>().damage = damage;
-        redKeyShard = transform.Find("RedKeyShard").gameObject;
+        redKeyShard.SetActive(false);
+        redKeyShardImage = transform.Find("RedKeyShardImage").gameObject;
         animator = GetComponent<Animator>();
         maxHitpoints = hitpoints;
         dashTimer = timeInLightToDash;
+        G.characters.PlayerDied += OnPlayerDied;
         SetState(State.Idle);
     }
     private void FixedUpdate()
@@ -138,25 +148,25 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     private void SetIdleSettings()
     {
         isAggro = false;
-        redKeyShard.SetActive(true);
+        redKeyShardImage.SetActive(true);
         redEyeTrail.emitting = false;
         animator.SetTrigger(PlayIdle);
     }
     private void SetHuntSettings()
     {
-        redKeyShard.SetActive(true);
+        redKeyShardImage.SetActive(true);
         redEyeTrail.emitting = false;
         animator.SetTrigger(PlayHunt);
     }
     private void SetAttackSettings()
     {
-        redKeyShard.SetActive(false);
+        redKeyShardImage.SetActive(false);
         redEyeTrail.emitting = true;
         animator.SetTrigger(PlayAttack);
     }
     private void SetDashSettings()
     {
-        redKeyShard.SetActive(false);
+        redKeyShardImage.SetActive(false);
         redEyeTrail.emitting = true;
         int countOfDashes = hitpoints / maxHitpoints > 0.5f ? Random.Range(1, 3) : Random.Range(2, 4);
         StartCoroutine(DoDashes(countOfDashes));
@@ -212,17 +222,41 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     }
     public void Die()
     {
+        G.enemiesDieStates.SetDieState(objectId);
+        G.characters.PlayerDied -= OnPlayerDied;
         GetComponent<SpriteRenderer>().DOFade(0f, 0.5f).SetEase(Ease.InSine).OnComplete(() =>
         {
             redKeyShard.GetComponent<Collider2D>().enabled = true;
-            redKeyShard.transform.SetParent(null);
-            redKeyShard.transform.rotation = new Quaternion();
+            redKeyShard.transform.position = redKeyShardImage.transform.position;
             redKeyShard.transform.DOMoveY(transform.position.y, 0.25f).SetEase(Ease.InBack);
             Destroy(gameObject);
         });
     }
+    private void OnPlayerDied()
+    {
+        isAggro = false;
+        hitpoints = maxHitpoints;
+    }
     private void FlipSprite()
     {
         transform.rotation = Quaternion.Euler(0, movement.x > 0f ? 0 : 180, 0);
+    }
+    
+    public String objectId => GetComponent<ObjectId>().id;
+    public void RegisterInSaveLoadSystem() => G.gameSaveLoad.Register(this);
+    public ObjectSaveLoadData PackData()
+    {
+        return new ObjectSaveLoadData(objectId, new System.Object[] { hitpoints, state, transform.position });
+    }
+    public void UnpackData(ObjectSaveLoadData dataToUnpack)
+    {
+        //data[0] - hitpoints
+        if(float.TryParse(dataToUnpack.data[0].ToString(), out var parsedHitpoints))
+            hitpoints = parsedHitpoints;
+        //data[1] - state
+        if (Enum.TryParse(dataToUnpack.data[1].ToString(), out State parsedState))
+            SetState(parsedState);
+        //data[2] - position
+        transform.position = ((JObject)dataToUnpack.data[2]).ToObject<Vector3>();
     }
 }

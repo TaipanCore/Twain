@@ -104,6 +104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firefly: {fileID: 0}
+  tentacleAnimator: {fileID: 4678049201468994555}
+  startTransform: {fileID: 0}
+  currentState: 0
   timeToReachTarget: 0
   timeToRetreat: 0
 --- !u!114 &4678049201468994555

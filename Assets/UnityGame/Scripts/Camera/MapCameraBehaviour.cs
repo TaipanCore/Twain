@@ -14,35 +14,35 @@ public class MapCameraBehaviour : MonoBehaviour
     
     private void Awake()
     {
-        GameManager.mapCamera = gameObject;
+        G.mapCamera = gameObject;
         gameObject.SetActive(false);
     }
 
     private void Start()
     {
         mapBounds = GameObject.Find("Darkness").GetComponent<SpriteRenderer>().bounds;
-        mapCamera = GameManager.mapCamera.GetComponent<Camera>();
-        mainCamera = GameManager.mainCamera.GetComponent<Camera>();
+        mapCamera = G.mapCamera.GetComponent<Camera>();
+        mainCamera = G.mainCamera.GetComponent<Camera>();
     }
 
     private void Update()
     {
-        if (InputManager.leftMouseBtnDown)
+        if (G.input.leftMouseBtnDown)
         {
-            previousMousePos = MouseTracker.mousePosition;
+            previousMousePos = G.mouseTracker.mousePosition;
         }
-        if (InputManager.leftMouseBtn)
+        if (G.input.leftMouseBtn)
         {
-            currentMousePos = MouseTracker.mousePosition;
+            currentMousePos = G.mouseTracker.mousePosition;
             Vector3 movement = previousMousePos - currentMousePos;
             float clampedX = Mathf.Clamp(transform.position.x + movement.x, mapBounds.min.x, mapBounds.max.x);
             float clampedY = Mathf.Clamp(transform.position.y + movement.y, mapBounds.min.y, mapBounds.max.y);
             transform.position = new Vector3(clampedX, clampedY, transform.position.z);
-            previousMousePos = MouseTracker.mousePosition;
+            previousMousePos = G.mouseTracker.mousePosition;
         }
-        if (InputManager.mouseWheel != 0f)
+        if (G.input.mouseWheel != 0f)
         {
-            mapCamera.orthographicSize = Mathf.Clamp(mapCamera.orthographicSize - InputManager.mouseWheel * cameraZoomSpeed, mainCamera.orthographicSize, maxCameraSize);
+            mapCamera.orthographicSize = Mathf.Clamp(mapCamera.orthographicSize - G.input.mouseWheel * cameraZoomSpeed, mainCamera.orthographicSize, maxCameraSize);
         }
     }
 }

@@ -45,14 +45,13 @@ public class ClotMovement : MonoBehaviour
         {
             case ClotBehaviour.State.Idle:
                 target = transform;
-                navMeshAgent.speed = 0f;
                 break;
             case ClotBehaviour.State.Hunt:
-                target = GameManager.lightSide.GetComponent<Transform>();
+                target = G.characters.lightSide.GetComponent<Transform>();
                 navMeshAgent.speed = moveSpeed;
                 break;
             case ClotBehaviour.State.Retreat:
-                target = GameManager.equilibrium.GetComponent<Transform>();
+                target = G.characters.equilibrium.GetComponent<Transform>();
                 navMeshAgent.speed = moveSpeed;
                 break;
         }

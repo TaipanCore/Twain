@@ -1,8 +1,11 @@
+using System;
 using DG.Tweening;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityGame.Scripts.Interfaces;
+using DarknessDeathData = DarknessDeath.DarknessDeathData;
 
-public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
+public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver, ISaveLoadObject
 {
     private static readonly int IsFocused = Animator.StringToHash("IsFocused");
 
@@ -52,10 +55,11 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
     private Vector3 fireflyLocalPoint;
     private TrailRenderer fireflyTrail;
     private DarknessDeath darknessDeath;
+    private float maxHitpoints;
 
     private void Awake()
     {
-        GameManager.lightSide = gameObject;
+        RegisterInSaveLoadSystem();
     }
     private void Start()
     {
@@ -67,7 +71,7 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
         fireflyLocalPoint = fireflyTransform.localPosition;
         fireflyTrail = fireflyTransform.GetComponent<TrailRenderer>();
         darknessDeath = GetComponent<DarknessDeath>();
-        SetState(State.Normal);
+        maxHitpoints = hitpoints;
     }
     private void Update()
     {
@@ -130,14 +134,14 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
     }
     private void NormalBehaviour()
     {
-        if (InputManager.leftMouseBtn && GameManager.currentCharacter == gameObject)
+        if (G.input.leftMouseBtn && G.characters.currentCharacter == gameObject)
         {
             SetState(State.Focused);
         }
     }
     private void FocusedBehaviour()
     {
-        if (!(InputManager.leftMouseBtn && GameManager.currentCharacter == gameObject))
+        if (!(G.input.leftMouseBtn && G.characters.currentCharacter == gameObject))
         {
             SetState(State.Normal);
         }
@@ -150,16 +154,19 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
     }
     private Quaternion CalculateRotationAngle()
     {
-        Vector3 vectorToTarget = MouseTracker.mousePosition - distantLightTransform.position;
+        Vector3 vectorToTarget = G.mouseTracker.mousePosition - distantLightTransform.position;
         return Quaternion.Euler(0, 0, Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg);
     }
 
-    public Transform TakeFirefly(Transform newParent)
+    public Transform TakeFirefly(Transform newParent, float duration = 0.25f)
     {
         fireflyTransform.SetParent(newParent);
         SetState(State.WithoutFirefly);
         fireflyTrail.emitting = true;
-        fireflyTransform.DOMove(newParent.position, 0.25f);
+        if (duration != 0f)
+            fireflyTransform.DOMove(newParent.position, duration);
+        else
+            fireflyTransform.position = newParent.position;
         return fireflyTransform;
     }
 
@@ -181,7 +188,7 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
         if (invulnerableTimer <= 0f)
         {
             hitpoints -= damage;
-            GameManager.HUD.healthBar.SetValue(hitpoints);
+            G.HUD.healthBar.SetValue(hitpoints);
             GiveInvulnerability();
         }
     }
@@ -192,11 +199,48 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver
         {
             blinkingTween.Kill();
             spriteRenderer.DOFade(1f, 0f);
-        });
+        }, false);
         invulnerableTimer = invulnerableTime;
+    }
+
+    public void RestoreHealth()
+    {
+        hitpoints = maxHitpoints;
+        G.HUD.healthBar.SetValue(hitpoints);
     }
     public void Die()
     {
-        Destroy(gameObject);
+        G.characters.GameOver();
+    }
+    
+    public String objectId => GetComponent<ObjectId>().id;
+    public void RegisterInSaveLoadSystem() => G.gameSaveLoad.Register(this);
+    public ObjectSaveLoadData PackData()
+    {
+        return new ObjectSaveLoadData(objectId, new System.Object[]
+        {
+            transform.position,
+            state,
+            hitpoints,
+            invulnerableTimer,
+            GetComponent<DarknessDeath>().PackDarknessDeathData()
+        });
+    }
+    public void UnpackData(ObjectSaveLoadData dataToUnpack)
+    {
+        //data[0] - position
+        transform.position = ((JObject)dataToUnpack.data[0]).ToObject<Vector3>();
+        //data[1] - state
+        if (Enum.TryParse(dataToUnpack.data[1].ToString(), out State parsedState))
+            SetState(parsedState);
+        //data[2] - hitpoints
+        if (float.TryParse(dataToUnpack.data[2].ToString(), out var parsedHitpoints))
+            hitpoints = parsedHitpoints;
+        //data[3] - invulnerableTimer
+        if (float.TryParse(dataToUnpack.data[3].ToString(), out var parsedInvulnerableTimer))
+            invulnerableTimer = parsedInvulnerableTimer;
+        //data[4] - darknessDeathData
+        DarknessDeathData serializedDarknessDeathData = ((JObject)dataToUnpack.data[4]).ToObject<DarknessDeathData>();
+        GetComponent<DarknessDeath>().UnpackDarknessDeathData(serializedDarknessDeathData);
     }
 }

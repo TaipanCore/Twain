@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4595461784783650784}
+  - component: {fileID: 6498640627549775760}
   - component: {fileID: 3057591037711045198}
   - component: {fileID: 6522632806603192629}
   - component: {fileID: 8224560447982076686}
@@ -74,6 +75,19 @@ Transform:
   - {fileID: 845452015431327515}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6498640627549775760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6984748718311648527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb60047fde3f9b4a84ee0eb9ef9d1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
 --- !u!212 &3057591037711045198
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -144,6 +158,7 @@ MonoBehaviour:
   cancelHuntPathLenght: 10
   timeToCancelHunt: 10
   smokeParticlesPrefab: {fileID: 1916055649572487455, guid: 1c31703b2420a02428ba96d90004b52b, type: 3}
+  etherSpawner: {fileID: 3286248775633920142}
 --- !u!114 &8224560447982076686
 MonoBehaviour:
   m_ObjectHideFlags: 0

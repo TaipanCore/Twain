@@ -14,9 +14,9 @@ public class PlayerMovement : MonoBehaviour
     }
     protected virtual void FixedUpdate()
     {
-        if (GameManager.currentCharacter == gameObject)
+        if (G.characters.currentCharacter == gameObject)
         {
-            movementVector = InputManager.movement;
+            movementVector = G.input.movement;
             rb.MovePosition(rb.position + movementVector * (moveSpeed * Time.fixedDeltaTime));
             currentSpeed = (movementVector * moveSpeed).magnitude;
             FlipCharacter();

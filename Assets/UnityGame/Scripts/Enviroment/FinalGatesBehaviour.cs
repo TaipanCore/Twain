@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class FinalGatesBehaviour : MonoBehaviour
+public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
 {
+    [SerializeField] private float gatesChargeTime;
     [SerializeField] private AnimationCurve betweenRunesDelayCurve;
     [Header("Red shard")]
     [SerializeField] private SpriteRenderer redShardSprite;
@@ -27,11 +29,16 @@ public class FinalGatesBehaviour : MonoBehaviour
     private float currentBetweenRunesDelay;
     private float currentTimer;
     private int currentRune;
-    private List<SpriteRenderer> sequence = new List<SpriteRenderer>();
+    private List<SpriteRenderer> sequence = new ();
     private SpriteRenderer onGatesRunesSprite;
     private Tween onGatesRunesTween;
     private Tween runesBlinkingSpeedUpTween;
-    
+    private bool isCharging;
+
+    private void Awake()
+    {
+        RegisterInSaveLoadSystem();
+    }
     private void Start()
     {
         redShardSlot = redShardSprite.GetComponent<ShardSlot>();
@@ -65,8 +72,9 @@ public class FinalGatesBehaviour : MonoBehaviour
     {
         if (collision.TryGetComponent(out LightSideBehaviour _) && shardsMask == 0b111)
         {
+            isCharging = true;
             onGatesRunesTween.Restart();
-            runesBlinkingSpeedUpTween = DOVirtual.Float(0f, 1f, 20f, value =>
+            runesBlinkingSpeedUpTween ??= DOVirtual.Float(0f, 1f, gatesChargeTime, value =>
             {
                 currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(value);
             });
@@ -76,8 +84,9 @@ public class FinalGatesBehaviour : MonoBehaviour
     {
         if (collision.TryGetComponent(out LightSideBehaviour _) && shardsMask == 0b111)
         {
+            isCharging = false;
             onGatesRunesTween.PlayBackwards();
-            runesBlinkingSpeedUpTween.Kill();
+            runesBlinkingSpeedUpTween?.Kill();
             currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(0f);
         }
     }
@@ -127,5 +136,63 @@ public class FinalGatesBehaviour : MonoBehaviour
             newSequence.AddRange(greenShardRunes);
         }
         return newSequence;
+    }
+    
+    public String objectId => GetComponent<ObjectId>().id;
+    public void RegisterInSaveLoadSystem() => G.gameSaveLoad.Register(this);
+    public ObjectSaveLoadData PackData()
+    {
+        float runesBlinkingSpeedUpTweenElapsedTime = isCharging ? runesBlinkingSpeedUpTween.Elapsed(false) : 0f;
+        return new ObjectSaveLoadData(objectId, new System.Object[]
+        {
+            shardsMask,
+            currentRune,
+            isCharging,
+            runesBlinkingSpeedUpTweenElapsedTime
+        });
+    }
+    public void UnpackData(ObjectSaveLoadData dataToUnpack)
+    {
+        //data[0] - shardsMask
+        if (byte.TryParse(dataToUnpack.data[0].ToString(), out var parsedShardsMask))
+        {
+            shardsMask = parsedShardsMask;
+            if ((shardsMask & RED_BIT) != 0)
+            {
+                redShardSlot.MoveShardToSlot();
+                redShardSlot.GetComponent<Collider2D>().enabled = false;
+            }
+            if ((shardsMask & BLUE_BIT) != 0)
+            {
+                blueShardSlot.MoveShardToSlot();
+                blueShardSlot.GetComponent<Collider2D>().enabled = false;
+            }
+            if ((shardsMask & GREEN_BIT) != 0)
+            {
+                greenShardSlot.MoveShardToSlot();
+                greenShardSlot.GetComponent<Collider2D>().enabled = false;
+            }
+        }
+        //data[1] - currentRune
+        if (int.TryParse(dataToUnpack.data[1].ToString(), out var parsedCurrentRune))
+        {
+            currentRune = parsedCurrentRune;
+        }
+        //data[2] - isCharging
+        if (bool.TryParse(dataToUnpack.data[2].ToString(), out var parsedIsCharging))
+        {
+            isCharging = parsedIsCharging;
+        }
+        //data[3] - runesBlinkingSpeedUpTweenElapsedTime
+        if (float.TryParse(dataToUnpack.data[3].ToString(), out var parsedElapsedTime))
+        {
+            if (isCharging)
+            {
+                runesBlinkingSpeedUpTween = DOVirtual.Float(parsedElapsedTime / gatesChargeTime, 1f, gatesChargeTime - parsedElapsedTime, value =>
+                {
+                    currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(value);
+                });
+            }
+        }
     }
 }

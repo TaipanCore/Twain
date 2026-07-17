@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using DG.Tweening;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityGame.Scripts.Interfaces;
 
-public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageReceiver, IAbleAggro, IStunnable
+public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageReceiver, IAbleAggro, IStunnable, ISaveLoadObject
 {
     private static readonly int PlayShock = Animator.StringToHash("PlayShock");
     private static readonly int IdleAnim = Animator.StringToHash("Idle");
@@ -58,26 +60,28 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
 
     [SerializeField] private float cancelHuntPathLenght;
     [SerializeField] protected float timeToCancelHunt;
-    protected WaitForSeconds cancelHuntTimer;
     [SerializeField] private GameObject smokeParticlesPrefab;
+    [SerializeField] private EtherSpawner etherSpawner;
 
     protected ClotMovement movement;
     protected Animator animator;
     protected SpriteRenderer spriteRenderer;
     protected Collider2D objectCollider;
-    private Coroutine currentCancelHuntCoroutine;
-    private Coroutine stunCoroutine;
+    private Tween cancelHuntTween;
+    private Tween stunTween;
     private State state;
-
-    private Coroutine retreatCoroutine;
-
+    
+    private void Awake()
+    {
+        RegisterInSaveLoadSystem();
+    }
     private void Start()
     {
         movement = GetComponent<ClotMovement>();
         animator =  GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         objectCollider = GetComponent<Collider2D>();
-        cancelHuntTimer = new WaitForSeconds(timeToCancelHunt);
+        G.characters.PlayerDied += OnPlayerDied;
         SetState(State.Idle);
     }
     private void Update()
@@ -125,12 +129,14 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     }
     private void SetHuntSettings()
     {
+        isAggro = true;
         movement.SetMoveState(State.Hunt);
     }
     private void SetRetreatSettings()
     {
+        isAggro = true;
         movement.SetMoveState(State.Retreat);
-        retreatCoroutine ??= StartCoroutine(RetreatCoroutine());
+        StartCoroutine(RetreatCoroutine());
     }
     protected virtual void Idle()
     {
@@ -146,12 +152,12 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             SetState(State.Idle);
             return;
         }
-        if (GameManager.isUnited)
+        if (G.characters.isUnited)
         {
-            if (currentCancelHuntCoroutine != null)
+            if (cancelHuntTween != null)
             {
-                StopCoroutine(currentCancelHuntCoroutine);
-                currentCancelHuntCoroutine = null;
+                cancelHuntTween.Kill();
+                cancelHuntTween = null;
             }
             SetState(State.Retreat);
             return;
@@ -159,14 +165,14 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         movement.navMeshAgent.SetDestination(movement.target.position);
         if (Utils.GetPathLength(movement.navMeshAgent.path) >= cancelHuntPathLenght)
         {
-            currentCancelHuntCoroutine ??= StartCoroutine(CancelHuntCoroutine());
+            cancelHuntTween ??= StartCancelHuntTween(timeToCancelHunt);
         }
         else
         {
-            if (currentCancelHuntCoroutine != null)
+            if (cancelHuntTween != null)
             {
-                StopCoroutine(currentCancelHuntCoroutine);
-                currentCancelHuntCoroutine = null;
+                cancelHuntTween.Kill();
+                cancelHuntTween = null;
             }
         }
     }
@@ -177,31 +183,30 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             SetState(State.Idle);
             return;
         }
-        if (!GameManager.isUnited)
+        if (!G.characters.isUnited)
         {
-            StopCoroutine(retreatCoroutine);
-            retreatCoroutine = null;
             SetState(State.Hunt);
         }
     }
 
-    private IEnumerator CancelHuntCoroutine()
+    private Tween StartCancelHuntTween(float time)
     {
-        yield return cancelHuntTimer;
-        SetState(State.Idle);
+        return DOVirtual.DelayedCall(time, () => SetState(State.Idle), false);
     }
-    private IEnumerator StunCoroutine(float stunTime)
+    private Tween StartStunTween(float time)
     {
         movement.navMeshAgent.isStopped = true;
         animator.SetTrigger(PlayShock);
-        yield return new WaitForSeconds(stunTime);
-        animator.Play(IdleAnim);
-        movement.navMeshAgent.isStopped = false;
-        stunCoroutine = null;
+        return DOVirtual.DelayedCall(time, () =>
+        {
+            animator.Play(IdleAnim);
+            movement.navMeshAgent.isStopped = false;
+            stunTween = null;
+        }, false);
     }
     private IEnumerator RetreatCoroutine()
     {
-        while (true)
+        while (state == State.Retreat)
         {
             if (!movement.isInPanic || (movement.isInPanic && !Utils.IsAgentMoving(movement.navMeshAgent)))
             {
@@ -212,11 +217,8 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     }
     public void ApplyStun(float time)
     {
-        if (stunCoroutine != null)
-        {
-            StopCoroutine(stunCoroutine);
-            stunCoroutine = StartCoroutine(StunCoroutine(time));
-        }
+        stunTween?.Kill();
+        stunTween = StartStunTween(time);
     }
     public void ReceiveDamage(float receivedDamage)
     {
@@ -226,6 +228,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             GiveInvulnerability();
         }
     }
+    
     public IEnumerator IgnoreLight(float time)
     {
         isIgnoreLight = true;
@@ -241,23 +244,73 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         {
             blinkingTween.Kill();
             spriteRenderer.DOFade(1f, 0f);
-        });
+        },false);
         invulnerableTimer = invulnerableTime;
     }
     public void Die()
     {
+        G.enemiesDieStates.SetDieState(objectId);
+        G.characters.PlayerDied -= OnPlayerDied;
         ParticleSystem smokeParticles = Instantiate(smokeParticlesPrefab, transform.position + new Vector3(0.15f, 0.5f), Quaternion.identity).GetComponent<ParticleSystem>();
         spriteRenderer.DOFade(0f, smokeParticles.main.startLifetime.constantMin).SetEase(Ease.InQuad).OnComplete(() => Destroy(gameObject));
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(GameManager.playerMask))
+        if (other.TryGetComponent(out IDamageReceiver damageReceiver) && other.gameObject.IsInLayerMask(G.playerMask))
         {
             DealDamage(damage, damageReceiver);
         }
     }
+
+    private void OnPlayerDied()
+    {
+        isAggro = false;
+    }
     public void DealDamage(float dealedDamage, IDamageReceiver target)
     {
         target.ReceiveDamage(dealedDamage);
+    }
+
+    public String objectId => GetComponent<ObjectId>().id;
+    public void RegisterInSaveLoadSystem() => G.gameSaveLoad.Register(this);
+    public ObjectSaveLoadData PackData()
+    {
+        float cancelHuntTweenRemainingSeconds = cancelHuntTween.IsActive() ? timeToCancelHunt - cancelHuntTween.Elapsed(false) : 0f;
+        float stunTweenRemainingSeconds = stunTween.IsActive() ? stunTween.Duration() - stunTween.Elapsed(false) : 0f;
+        return new ObjectSaveLoadData(objectId, new System.Object[]
+        {
+            hitpoints,
+            state,
+            transform.position,
+            invulnerableTimer,
+            cancelHuntTweenRemainingSeconds,
+            stunTweenRemainingSeconds,
+            etherSpawner.etherCount
+        });
+    }
+    public void UnpackData(ObjectSaveLoadData dataToUnpack)
+    {
+        //data[0] - hitpoints
+        if (float.TryParse(dataToUnpack.data[0].ToString(), out var parsedHitpoints))
+            hitpoints = parsedHitpoints;
+        //data[1] - state
+        if (Enum.TryParse(dataToUnpack.data[1].ToString(), out State parsedState))
+            SetState(parsedState);
+        //data[2] - position
+        movement.navMeshAgent.Warp(((JObject)dataToUnpack.data[2]).ToObject<Vector3>());
+        //data[3] - invulnerableTimer
+        if (float.TryParse(dataToUnpack.data[3].ToString(), out var parsedInvulnerableTimer))
+            invulnerableTimer = parsedInvulnerableTimer;
+        //data[4] - cancelHuntTweenRemainingSeconds
+        if (float.TryParse(dataToUnpack.data[4].ToString(), out var parsedCancelHuntTweenRemainingSeconds))
+            if (!Mathf.Approximately(parsedCancelHuntTweenRemainingSeconds, 0f))
+                cancelHuntTween = StartCancelHuntTween(parsedCancelHuntTweenRemainingSeconds);
+        //data[5] - stunTweenRemainingSeconds
+        if (float.TryParse(dataToUnpack.data[5].ToString(), out var parsedStunTweenRemainingSeconds))
+            if (!Mathf.Approximately(parsedStunTweenRemainingSeconds, 0f))
+                stunTween = StartStunTween(parsedStunTweenRemainingSeconds);
+        //data[6] - etherCount
+        if (int.TryParse(dataToUnpack.data[6].ToString(), out var parsedEtherCount))
+            etherSpawner.etherCount = parsedEtherCount;
     }
 }

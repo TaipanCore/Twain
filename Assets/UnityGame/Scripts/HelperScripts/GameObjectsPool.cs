@@ -23,15 +23,15 @@ public class GameObjectsPool : MonoBehaviour
         gameObj.SetActive(false);
         return gameObj;
     }
-    public GameObject Get(Action<GameObject> GetAction)
+    public GameObject Get(Action<GameObject> GetAction = null)
     {
         GameObject gameObj = pool.Count > 0 ? pool.Dequeue() : CreateNewObject();
-        GetAction(gameObj);
+        GetAction?.Invoke(gameObj);
         gameObj.SetActive(true);
         activeObjects.Add(gameObj);
         return gameObj;
     }
-    public void Return(GameObject gameObj, Action<GameObject> ReturnAction)
+    public void Return(GameObject gameObj, Action<GameObject> ReturnAction = null)
     {
         if (!gameObj)
         {
@@ -40,7 +40,7 @@ public class GameObjectsPool : MonoBehaviour
         }
         if (activeObjects.Contains(gameObj))
         {
-            ReturnAction(gameObj);
+            ReturnAction?.Invoke(gameObj);
             gameObj.SetActive(false);
             activeObjects.Remove(gameObj);
             pool.Enqueue(gameObj);

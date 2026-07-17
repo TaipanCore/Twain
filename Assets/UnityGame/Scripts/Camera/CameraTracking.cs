@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 
 public class CameraTracking : MonoBehaviour
@@ -9,18 +8,18 @@ public class CameraTracking : MonoBehaviour
 
     private void Awake()
     {
-        GameManager.mainCamera = gameObject;
+        G.mainCamera = gameObject;
     }
     private void Start()
     {
         cameraPoint = GetComponent<Transform>().parent;
-        cameraPoint.position = GameManager.equilibrium.transform.position;
+        cameraPoint.position = G.characters.equilibrium.transform.position;
     }
     private void FixedUpdate()
     {
-        if (GameManager.currentCharacter)
+        if (G.characters.currentCharacter)
         {
-            Vector3 target = GameManager.currentCharacter.transform.position;
+            Vector3 target = G.characters.currentCharacter.transform.position;
             cameraPoint.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, -10), Time.fixedDeltaTime * interpolationMultiplier);
         }
     }

@@ -4,25 +4,35 @@ using UnityEngine;
 
 public class TentacleBehaviour : MonoBehaviour
 {
-    [SerializeField] private Transform firefly;
+    public enum State
+    {
+        Idle,
+        Attack,
+        Retreat
+    }
     
-    [HideInInspector] public event Action OnDefeated;
+    [SerializeField] private Transform firefly;
+    [SerializeField] private SimpleAnimatorWithColliders tentacleAnimator;
+    [SerializeField] private Transform startTransform;
+
+    [HideInInspector] public State currentState;
+    public event Action OnDefeated;
+    
     [HideInInspector] public float timeToReachTarget;
     [HideInInspector] public float timeToRetreat;
     
-    private SimpleAnimatorWithColliders tentacleAnimator;
-    private Vector3 startPosition;
     private Tween attackTween;
     private Tween retreatTween;
+    
+    
     private ParticleSystem darkEmitParticles;
     private Transform darkEmitParticlesTransform;
     
     private void Start()
     {
-        startPosition = transform.position;
-        tentacleAnimator = GetComponent<SimpleAnimatorWithColliders>();
         darkEmitParticlesTransform = transform.Find("DarkEmitParticles");
         darkEmitParticles = darkEmitParticlesTransform.GetComponent<ParticleSystem>();
+        currentState = State.Idle;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,6 +48,7 @@ public class TentacleBehaviour : MonoBehaviour
     {
         if (!retreatTween.IsActive() && !attackTween.IsActive())
         {
+            currentState = State.Attack;
             attackTween = transform.DOMove(firefly.position, timeToReachTarget)
                 .OnComplete(() => firefly.Find("CircleLight").GetComponent<CircleLight>().SetRange(0f, 0.25f));
         }
@@ -48,10 +59,43 @@ public class TentacleBehaviour : MonoBehaviour
         {
             attackTween?.Kill();
             int baseFramerate = tentacleAnimator.GetFramerate();
-            retreatTween = transform.DOMove(startPosition, timeToRetreat)
+            currentState = State.Retreat;
+            retreatTween = transform.DOMove(startTransform.position, timeToRetreat)
                 .OnStart(() => tentacleAnimator.SetFramerate(baseFramerate * 2))
-                .OnComplete(() => tentacleAnimator.SetFramerate(baseFramerate));
+                .OnComplete(() =>
+                {
+                    currentState = State.Idle;
+                    tentacleAnimator.SetFramerate(baseFramerate);
+                });
             OnDefeated?.Invoke();
         }
+    }
+
+    public float GetStateElapsedTime()
+    {
+        switch (currentState)
+        {
+            case State.Attack:
+                return attackTween.Elapsed(false);
+            case State.Retreat:
+                return retreatTween.Elapsed(false);
+            default:
+                return 0f;
+        }
+    }
+    
+    [Serializable]
+    public class TentacleData
+    {
+        public TentacleData(Vector3 position, State state, float stateElapsedTime)
+        {
+            this.position = position;
+            this.state = state;
+            this.stateElapsedTime = stateElapsedTime;
+        }
+        
+        public Vector3 position;
+        public State state;
+        public float stateElapsedTime;
     }
 }

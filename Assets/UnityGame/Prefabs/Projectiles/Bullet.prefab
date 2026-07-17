@@ -175,6 +175,7 @@ MonoBehaviour:
   lifeTime: 2
   acceleration: 100
   stunTime: 3
+  rb: {fileID: 3346339592373915098}
 --- !u!95 &5887772714577280743
 Animator:
   serializedVersion: 5

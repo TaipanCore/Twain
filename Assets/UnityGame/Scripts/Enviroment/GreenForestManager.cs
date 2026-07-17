@@ -1,8 +1,14 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
+using FireflyData = FireflyMovement.FireflyData;
 
-public class GreenForestManager : MonoBehaviour
+public class GreenForestManager : MonoBehaviour, ISaveLoadObject
 {
     [SerializeField, Min(0)] private float delayBetweenFirefliesSpawn;
     private WaitForSeconds firefliesSpawnTimer;
@@ -11,15 +17,18 @@ public class GreenForestManager : MonoBehaviour
     [SerializeField, Min(0)] private float fireflyLifetime;
     [SerializeField] private Transform[] fireflySpawnPoints;
     [SerializeField] private Transform travelerFireflySpawnPoint;
-    
-    private GameObjectsPool blueFireflyPool;
-    private GameObjectsPool greenFireflyPool;
+    [SerializeField] private GameObjectsPool blueFireflyPool;
+    [SerializeField] private GameObjectsPool greenFireflyPool;
+
+    private Dictionary<GameObject, GameObjectsPool> activeFirefliesAndPools = new ();
     private bool playerInForest;
-    
-    void Start()
+
+    private void Awake()
     {
-        blueFireflyPool = GameObject.Find("BlueFireflyPool").GetComponent<GameObjectsPool>();
-        greenFireflyPool = GameObject.Find("GreenFireflyPool").GetComponent<GameObjectsPool>();
+        RegisterInSaveLoadSystem();
+    }
+    private void Start()
+    {
         firefliesSpawnTimer = new WaitForSeconds(delayBetweenFirefliesSpawn);
         travelerFireflySpawnTimer = new WaitForSeconds(delayBetweenTravelerFirefliesSpawn);
     }
@@ -57,12 +66,43 @@ public class GreenForestManager : MonoBehaviour
             yield return travelerFireflySpawnTimer;
         }
     }
-    private void FireflyLifeCycle(Vector3 startPosition, Vector3 endPosition, float duration)
+    private void FireflyLifeCycle(Vector3 startPosition, Vector3 endPosition, float duration, Vector3[] path = null, GameObjectsPool pool = null)
     {
-        GameObjectsPool pool = Random.Range(0, 2) == 0 ? blueFireflyPool : greenFireflyPool;
-        GameObject firefly = pool.Get(_ => { });
+        pool ??= Random.Range(0, 2) == 0 ? blueFireflyPool : greenFireflyPool;
+        GameObject firefly = pool.Get();
+        activeFirefliesAndPools.Add(firefly, pool);
         firefly.transform.position = startPosition;
-        firefly.GetComponent<FireflyMovement>().MoveAlongPath(endPosition, duration).OnComplete(() => pool.Return(firefly, _ => { }));
+        firefly.GetComponent<FireflyMovement>().MoveAlongPath(endPosition, duration, path).OnComplete(() =>
+        {
+            activeFirefliesAndPools.Remove(firefly);
+            pool.Return(firefly);
+        });
+    }
+    
+    public String objectId => GetComponent<ObjectId>().id;
+    public void RegisterInSaveLoadSystem() => G.gameSaveLoad.Register(this);
+    public ObjectSaveLoadData PackData()
+    {
+        List<FireflyData> firefliesData = new ();
+        foreach (KeyValuePair<GameObject, GameObjectsPool> pair in activeFirefliesAndPools)
+        {
+            char color = pair.Value == blueFireflyPool ? 'b' : 'g';
+            firefliesData.Add(pair.Key.GetComponent<FireflyMovement>().PackFireflyData(color));
+        }
+        return new ObjectSaveLoadData(objectId, new System.Object[]
+        {
+            firefliesData
+        });
+    }
+    public void UnpackData(ObjectSaveLoadData dataToUnpack)
+    {
+        //data[0] - firefliesData
+        FireflyData[] firefliesData = ((JArray)dataToUnpack.data[0]).ToObject<FireflyData[]>();
+        foreach (FireflyData data in firefliesData)
+        {
+            GameObjectsPool pool = data.color == 'b' ? blueFireflyPool : greenFireflyPool;
+            FireflyLifeCycle(data.position, data.restOfPath.Last(), data.pathRestOfTime, data.restOfPath, pool);
+        }
     }
 }
 

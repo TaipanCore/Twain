@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class MapExplorer : MonoBehaviour
+public class MapExplorer : MonoBehaviour, ISaveLoadObject
 {
     [SerializeField] private TilemapInfo groundTilemapInfo;
     [SerializeField] private TileBase exploredTile;
@@ -17,13 +20,19 @@ public class MapExplorer : MonoBehaviour
     private Tilemap mapTilemap;
     private TilemapInfo mapTilemapInfo;
     private Coroutine mapExplorerCoroutine;
+    private bool isInitialized;
 
+    private void Awake()
+    {
+        RegisterInSaveLoadSystem();
+    }
     private void Start()
     {
         mapTilemap = GetComponent<Tilemap>();
         mapTilemapInfo = GetComponent<TilemapInfo>();
         timerBetweenMapUpdates = new WaitForSeconds(delayBetweenMapUpdates);
-        BuildUnexploredMap();
+        if (!isInitialized)
+            BuildUnexploredMap();
         StartMapExploration();
     }
 
@@ -40,27 +49,29 @@ public class MapExplorer : MonoBehaviour
 
     private void BuildUnexploredMap()
     {
+        isInitialized = true;
         foreach (var tile in groundTilemapInfo.allTiles)
         {
             mapTilemap.SetTile(tile.Key, exploredTile);
             mapTilemap.SetColor(tile.Key, Color.black);
         }
         mapTilemapInfo.UpdateAllTiles();
+        isInitialized = true;
     }
     
     private IEnumerator MapExplorerCoroutine()
     {
         while (true)
         {
-            switch (GameManager.currentCharacter)
+            switch (G.characters.currentCharacter)
             {
-                case var obj when obj == GameManager.lightSide:
+                case var obj when obj == G.characters.lightSide:
                     ExploreMap(whenInLightSideColliders);
                     break;
-                case var obj when obj == GameManager.darkSide:
+                case var obj when obj == G.characters.darkSide:
                     ExploreMap(whenInDarkSideColliders);
                     break;
-                case var obj when obj == GameManager.equilibrium:
+                case var obj when obj == G.characters.equilibrium:
                     ExploreMap(whenInEquilibriumColliders);
                     break;
             }
@@ -85,6 +96,29 @@ public class MapExplorer : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    
+    public String objectId => GetComponent<ObjectId>().id;
+    public void RegisterInSaveLoadSystem() => G.gameSaveLoad.Register(this);
+    public ObjectSaveLoadData PackData()
+    {
+        List<Vector3Int> serializedExploredTilesPositions = new ();
+        foreach (Vector3Int position in mapTilemapInfo.allTiles.Keys)
+        {
+            if(mapTilemap.GetColor(position) == Color.white)
+                serializedExploredTilesPositions.Add(position);
+        }
+        return new ObjectSaveLoadData(objectId, new System.Object[] { serializedExploredTilesPositions });
+    }
+    public void UnpackData(ObjectSaveLoadData dataToUnpack)
+    {
+        BuildUnexploredMap();
+        //data[0] - exploredTilesPositions
+        List<Vector3Int> serializedExploredTilesPositions = ((JArray)dataToUnpack.data[0]).ToObject<List<Vector3Int>>();
+        foreach (Vector3Int position in serializedExploredTilesPositions)
+        {
+            mapTilemap.SetColor(position, Color.white);
         }
     }
 }

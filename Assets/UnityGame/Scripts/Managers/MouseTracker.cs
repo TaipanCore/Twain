@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class MouseTracker : MonoBehaviour
 {
-    public static Vector3 mousePosition => GetMousePosition();
+    public Vector3 mousePosition => GetMousePosition();
+
+    private void Awake()
+    {
+        G.mouseTracker = this;
+    }
     
-    private static Vector3 GetMousePosition()
+    private Vector3 GetMousePosition()
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10f; //����� ������� � ��������� z = 0 ��� ������ z = -10

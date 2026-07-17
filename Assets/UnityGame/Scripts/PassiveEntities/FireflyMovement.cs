@@ -1,6 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
+using Random = UnityEngine.Random;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
@@ -13,6 +17,8 @@ public class FireflyMovement : MonoBehaviour
     
     private Vector2 movement;
     private Vector3 previousPosition;
+    private Sequence pathSequence;
+    private List<Vector3> restOfPath;
     private CircleLight circleLight;
 
     private void Awake()
@@ -26,13 +32,22 @@ public class FireflyMovement : MonoBehaviour
         FlipSprite();
     }
 
-    public Tween MoveAlongPath(Vector3 endPoint, float pathDuration)
+    public Tween MoveAlongPath(Vector3 endPoint, float pathDuration, Vector3[] path = null)
     {
+        path ??= GeneratePath(pathPointsCount, endPoint);
+        restOfPath = path.ToList();
         Sequence sequence = DOTween.Sequence();
         sequence
-            .Append(transform.DOPath(GeneratePath(pathPointsCount, endPoint), pathDuration, PathType.CatmullRom))
-            .Join(DOVirtual.DelayedCall(pathDuration - 2f, () => circleLight.SetRange(0f, 2f)))
+            .Append(transform.DOPath(path, pathDuration, PathType.CatmullRom)
+                .OnWaypointChange(waypointIndex =>
+                {
+                    if (path.Length < waypointIndex)
+                        restOfPath.Remove(path[waypointIndex]);
+                }))
+            .Join(DOVirtual.DelayedCall(pathDuration - 2f, () => circleLight.SetRange(0f, 2f), false))
             .AppendCallback(() => circleLight.SetRange(lightRange));
+        pathSequence = sequence;
+        sequence.OnComplete(() => pathSequence = null);
         return sequence;
     }
     private Vector3[] GeneratePath(int pointsCount, Vector3 endPosition)
@@ -50,5 +65,32 @@ public class FireflyMovement : MonoBehaviour
     private void FlipSprite()
     {
         transform.rotation = Quaternion.Euler(0, movement.x > 0f ? 0 : 180, 0);
+    }
+
+    [Serializable]
+    public class FireflyData
+    {
+        public FireflyData(Vector3 position, Vector3[] restOfPath, float pathRestOfTime, char color)
+        {
+            this.position = position;
+            this.restOfPath = restOfPath;
+            this.pathRestOfTime = pathRestOfTime;
+            this.color = color;
+        }
+
+        public Vector3 position;
+        public Vector3[] restOfPath;
+        public float pathRestOfTime;
+        public char color;
+    }
+
+    public FireflyData PackFireflyData(char color)
+    {
+        return new FireflyData(
+            transform.position,
+            restOfPath.ToArray(),
+            pathSequence.Duration(false) - pathSequence.Elapsed(false),
+            color
+        );
     }
 }

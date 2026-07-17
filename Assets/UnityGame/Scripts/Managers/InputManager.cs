@@ -9,23 +9,27 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode mapBtn;
     [SerializeField] private KeyCode pauseBtn;
 
-    public static bool canPlayerInput;
+    [HideInInspector] public bool canPlayerInput = true;
         
-    public static bool uniteBtnDown;
-    public static bool sidesChangeBtnDown;
-    public static bool interactiveBtnDown;
-    public static bool mapBtnDown;
-    public static Vector2 movement;
-    public static bool leftMouseBtn;
-    public static bool leftMouseBtnDown;
-    public static bool leftMouseBtnUp;
-    public static bool rightMouseBtn;
-    public static bool rightMouseBtnDown;
-    public static bool rightMouseBtnUp;
-    public static float mouseWheel;
+    [HideInInspector] public bool uniteBtnDown;
+    [HideInInspector] public bool sidesChangeBtnDown;
+    [HideInInspector] public bool interactiveBtnDown;
+    [HideInInspector] public bool mapBtnDown;
+    [HideInInspector] public Vector2 movement;
+    [HideInInspector] public bool leftMouseBtn;
+    [HideInInspector] public bool leftMouseBtnDown;
+    [HideInInspector] public bool leftMouseBtnUp;
+    [HideInInspector] public bool rightMouseBtn;
+    [HideInInspector] public bool rightMouseBtnDown;
+    [HideInInspector] public bool rightMouseBtnUp;
+    [HideInInspector] public float mouseWheel;
     
-    public static bool HUDPauseBtnDown;
+    [HideInInspector] public bool HUDPauseBtnDown;
 
+    private void Awake()
+    {
+        G.input = this;
+    }
     private void Update()
     {
         if (canPlayerInput)

@@ -5,11 +5,11 @@ public class MainMenu : MonoBehaviour
 {
     public void ContinueGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
     public void NewGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
     public void QuitGame()
     {

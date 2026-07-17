@@ -18,11 +18,11 @@ public class WanderingClotMovement : ClotMovement
                 navMeshAgent.speed = wanderingMoveSpeed;
                 break;
             case ClotBehaviour.State.Hunt:
-                target = GameManager.lightSide.GetComponent<Transform>();
+                target = G.characters.lightSide.GetComponent<Transform>();
                 navMeshAgent.speed = moveSpeed;
                 break;
             case ClotBehaviour.State.Retreat:
-                target = GameManager.equilibrium.GetComponent<Transform>();
+                target = G.characters.equilibrium.GetComponent<Transform>();
                 navMeshAgent.speed = moveSpeed;
                 break;
         }

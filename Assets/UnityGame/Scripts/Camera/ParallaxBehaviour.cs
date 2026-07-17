@@ -10,7 +10,7 @@ public class ParallaxBehaviour : MonoBehaviour
     
     private void Start()
     {
-        cameraTransform = GameManager.mainCamera.GetComponent<Transform>();
+        cameraTransform = G.mainCamera.GetComponent<Transform>();
         lastCameraPosition = cameraTransform.position;
     }
     private void Update()

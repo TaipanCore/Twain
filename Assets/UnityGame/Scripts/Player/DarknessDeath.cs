@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DarknessDeath : MonoBehaviour
 {
@@ -9,29 +11,37 @@ public class DarknessDeath : MonoBehaviour
     [SerializeField] private GameObject redEyesPrefab;
     [SerializeField] private float eyesSpawnMaxRadius;
     
-    public HashSet<LightSource> lightSources { get; private set; } = new HashSet<LightSource>();
+    public HashSet<LightSource> lightSources { get; private set; } = new ();
     
     private Transform objectTransform;
     private Coroutine dieCoroutine;
     private GameObject redEyesContainer;
     private HashSet<GameObject> redEyesSet = new ();
+    private float invulnerabilityTimer;
+    private float coroutineElapsedTime;
 
     private void Start()
     {
-        objectTransform = GetComponent<Transform>();
-        if (transform.Find("RedEyesContainer"))
-        {
-            redEyesContainer = transform.Find("RedEyesContainer").gameObject;
-        }
-        else
-        {
-            GameObject container = new GameObject("RedEyesContainer");
-            redEyesContainer = Instantiate(container, objectTransform.position, Quaternion.identity, transform);
-        }
+        redEyesContainer = InitializeContainer();
+    }
+
+    private void Update()
+    {
+        if (invulnerabilityTimer > 0)
+            invulnerabilityTimer -= Time.deltaTime;
     }
     private void LateUpdate()
     {
         redEyesContainer.transform.rotation = Quaternion.identity;
+    }
+
+    public GameObject InitializeContainer()
+    {
+        objectTransform = GetComponent<Transform>();
+        if (transform.Find("RedEyesContainer"))
+            return transform.Find("RedEyesContainer").gameObject;
+        GameObject container = new GameObject("RedEyesContainer");
+        return Instantiate(container, objectTransform.position, Quaternion.identity, transform);
     }
 
     public void EnterLight(LightSource source)
@@ -54,6 +64,11 @@ public class DarknessDeath : MonoBehaviour
             dieCoroutine ??= StartCoroutine(DieInDarkness());
         }
     }
+
+    public void GiveDarknessInvulnerability(float time)
+    {
+        invulnerabilityTimer = time;
+    }
     private void DestroyAllEyes()
     {
         foreach (GameObject eye in redEyesSet)
@@ -62,17 +77,51 @@ public class DarknessDeath : MonoBehaviour
         }
         redEyesSet.Clear();
     }
-    private IEnumerator DieInDarkness()
+    private IEnumerator DieInDarkness(float elapsedTime = 0f)
     {
-        float elapsedTime = 0f;
-        while (elapsedTime < lifetimeInDarkness)
+        coroutineElapsedTime = elapsedTime;
+        while (coroutineElapsedTime < lifetimeInDarkness)
         {
-            float currentDelay = Mathf.Lerp(0.5f, 0.1f, elapsedTime / lifetimeInDarkness);
+            float currentDelay = Mathf.Lerp(0.5f, 0.1f, coroutineElapsedTime / lifetimeInDarkness);
             yield return new WaitForSeconds(currentDelay);
             Vector3 insideCirclePosition = Random.insideUnitCircle;
             redEyesSet.Add(Instantiate(redEyesPrefab, objectTransform.position + insideCirclePosition.normalized + insideCirclePosition * eyesSpawnMaxRadius, Quaternion.identity, redEyesContainer.transform));
-            elapsedTime += currentDelay;
+            coroutineElapsedTime += currentDelay;
         }
-        Destroy(gameObject);
+        yield return new WaitWhile(() => invulnerabilityTimer > 0);
+        G.characters.GameOver();
+    }
+
+    public DarknessDeathData PackDarknessDeathData()
+    {
+        List<Vector3> redEyesPositions = new ();
+        foreach (GameObject eye in redEyesSet)
+            redEyesPositions.Add(eye.transform.position);
+        return new DarknessDeathData(dieCoroutine != null, coroutineElapsedTime, redEyesPositions.ToArray());
+    }
+
+    public void UnpackDarknessDeathData(DarknessDeathData data)
+    {
+        if (data.isDieCoroutineActive)
+        {
+            dieCoroutine ??= StartCoroutine(DieInDarkness(data.elapsedTime));
+            foreach (Vector3 eyePosition in data.redEyesPositions)
+                redEyesSet.Add(Instantiate(redEyesPrefab, eyePosition, Quaternion.identity, redEyesContainer.transform));
+        }
+    }
+
+    [Serializable]
+    public class DarknessDeathData
+    {
+        public DarknessDeathData(bool isDieCoroutineActive, float elapsedTime, Vector3[] redEyesPositions)
+        {
+            this.isDieCoroutineActive = isDieCoroutineActive;
+            this.elapsedTime = elapsedTime;
+            this.redEyesPositions = redEyesPositions;
+        }
+
+        public bool isDieCoroutineActive;
+        public float elapsedTime;
+        public Vector3[] redEyesPositions;
     }
 }
