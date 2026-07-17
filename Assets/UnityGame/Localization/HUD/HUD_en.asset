@@ -23,7 +23,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 148712345600
-    m_Localized: Press for return to the main menu
+    m_Localized: Press to return to the main menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14268295413911552
+    m_Localized: Game Over!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14268737967509504
+    m_Localized: Press to respawn
     m_Metadata:
       m_Items: []
   references:

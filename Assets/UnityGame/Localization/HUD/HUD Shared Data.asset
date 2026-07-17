@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: hud_return_btn
     m_Metadata:
       m_Items: []
+  - m_Id: 14268295413911552
+    m_Key: hud_game_over_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14268737967509504
+    m_Key: hud_game_over_btn
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
