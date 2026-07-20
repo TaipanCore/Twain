@@ -16,10 +16,14 @@ public static class G
     public static HUD HUD;
     public static GamePause gamePause;
     public static GameOver gameOver;
+    
+    //Saves
+    public static bool isDefaultGameSaveExists;
 
-    //Player & enemy layer masks
+    //Layer masks
     public static LayerMask playerMask => LayerMask.GetMask("Player");
     public static LayerMask enemyMask => LayerMask.GetMask("Enemy");
+    public static LayerMask highObjectsMask => LayerMask.GetMask("HighObject");
     
     //Cameras
     public static GameObject mainCamera;

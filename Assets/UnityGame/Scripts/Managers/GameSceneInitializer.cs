@@ -5,7 +5,10 @@ public class GameSceneInitializer : MonoBehaviour
     private void Start()
     {
         G.gameSaveLoad.AddAllObjectsToSave();
-        G.gameSaveLoad.LoadGame();
+        if (G.isDefaultGameSaveExists)
+            G.gameSaveLoad.LoadGame();
+        else
+            G.gameSaveLoad.LoadGame("EmptyGameSave.json");
         
         G.gamePause.Resume();
     }

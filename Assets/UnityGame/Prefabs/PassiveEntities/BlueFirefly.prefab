@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6612633675044155435}
   - component: {fileID: 5228394907053833119}
   - component: {fileID: 6302971893454827075}
+  - component: {fileID: 1626226339085072442}
   m_Layer: 0
   m_Name: BlueFirefly
   m_TagString: Untagged
@@ -128,6 +129,18 @@ MonoBehaviour:
   framerate: 10
   loopAnimation: 1
   playOnStart: 1
+--- !u!114 &1626226339085072442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4408648942888299298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be24fe4ec2e0afd4883b5460a93ec890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4322296614959574714
 PrefabInstance:
   m_ObjectHideFlags: 0

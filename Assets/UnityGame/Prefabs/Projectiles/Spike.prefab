@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6853595138247525507}
   - component: {fileID: 6152189396649740919}
-  - component: {fileID: 5275979113068142679}
+  - component: {fileID: 469633192733927637}
+  - component: {fileID: 7173617073906708227}
   - component: {fileID: -4623798428708197062}
   m_Layer: 0
   m_Name: Spike
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5275979113068142679
+--- !u!114 &469633192733927637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5219555029723966225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d6eb9519e38164e9688c6089aee2b9, type: 3}
+  m_Script: {fileID: 11500000, guid: ed6150e4c7081434fb3d76c83effc315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationSprites:
@@ -104,6 +105,20 @@ MonoBehaviour:
   - {fileID: 1699491276, guid: 5db1bd32203289a4ba106a1d274cfb11, type: 3}
   - {fileID: -1868258032, guid: 5db1bd32203289a4ba106a1d274cfb11, type: 3}
   framerate: 20
+  loopAnimation: 0
+  playOnStart: 1
+--- !u!114 &7173617073906708227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5219555029723966225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be24fe4ec2e0afd4883b5460a93ec890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!208 &-4623798428708197062
 NavMeshObstacle:
   m_ObjectHideFlags: 0
