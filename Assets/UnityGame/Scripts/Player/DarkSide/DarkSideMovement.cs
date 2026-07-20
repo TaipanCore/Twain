@@ -9,6 +9,7 @@ public class DarkSideMovement : PlayerMovement
     private Transform objectTransform;
     private Transform fireflyTransform;
     private LightSideBehaviour lightSideBehaviour;
+    private CircleCollider2D objectCollider;
     
     private float minFollowRadius;
     private float maxFollowRadius;
@@ -20,6 +21,7 @@ public class DarkSideMovement : PlayerMovement
     {
         base.Start();
         objectTransform = GetComponent<Transform>();
+        objectCollider = GetComponent<CircleCollider2D>();
         fireflyTransform = G.characters.lightSide.transform.Find("Firefly");
         lightSideBehaviour = G.characters.lightSide.GetComponent<LightSideBehaviour>();
         darknessDeath = GetComponent<DarknessDeath>();
@@ -53,9 +55,12 @@ public class DarkSideMovement : PlayerMovement
     {
         while (!Utils.IsInRange(objectTransform.position, fireflyTransform.position, minFollowRadius))
         {
+            objectCollider.excludeLayers = G.highObjectsMask;
             rb.MovePosition(Vector3.MoveTowards(objectTransform.position, fireflyTransform.position, moveSpeed * Time.fixedDeltaTime));
             yield return null;
         }
+
+        objectCollider.excludeLayers = 0;
         moveCoroutine = null;
     }
     /*private void OnDrawGizmos()
