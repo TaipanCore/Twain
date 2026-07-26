@@ -55,12 +55,12 @@ public class DarkSideMovement : PlayerMovement
     {
         while (!Utils.IsInRange(objectTransform.position, fireflyTransform.position, minFollowRadius))
         {
-            objectCollider.excludeLayers = G.highObjectsMask;
+            objectCollider.excludeLayers|= G.highObjectsMask;
             rb.MovePosition(Vector3.MoveTowards(objectTransform.position, fireflyTransform.position, moveSpeed * Time.fixedDeltaTime));
             yield return null;
         }
 
-        objectCollider.excludeLayers = 0;
+        objectCollider.excludeLayers &= ~G.highObjectsMask;
         moveCoroutine = null;
     }
     /*private void OnDrawGizmos()

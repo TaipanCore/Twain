@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DefaultExecutionOrder(-1)]
+[DefaultExecutionOrder(-5)]
 public class GameSaveLoadManager : MonoBehaviour
 {
     private List<ISaveLoadObject> saveLoadObjects = new ();
@@ -12,7 +12,7 @@ public class GameSaveLoadManager : MonoBehaviour
     private void Awake()
     {
         G.gameSaveLoad = this;
-        saveLoadSystem = new SaveLoadSystem();
+        saveLoadSystem = new SaveLoadSystem(); 
     }
 
     public void Register(ISaveLoadObject obj)

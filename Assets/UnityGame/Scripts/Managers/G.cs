@@ -5,6 +5,7 @@ public static class G
     //Managers
     public static CharactersManager characters;
     public static InputManager input;
+    public static AudioManager audio;
     public static MouseTracker mouseTracker;
     public static GameSaveLoadManager gameSaveLoad;
     

@@ -7605,7 +7605,7 @@ GameObject:
   - component: {fileID: 304508738}
   - component: {fileID: 304508746}
   - component: {fileID: 304508745}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9700,6 +9700,7 @@ GameObject:
   - component: {fileID: 573982008}
   - component: {fileID: 573982007}
   - component: {fileID: 573982006}
+  - component: {fileID: 573982009}
   m_Layer: 5
   m_Name: ReturnToMainMenuBtn
   m_TagString: Untagged
@@ -9821,6 +9822,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573982004}
   m_CullTransparentMesh: 1
+--- !u!114 &573982009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573982004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1740ffbf879304196882a0c699881d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerEnter: {fileID: 8300000, guid: ccbc54f74b0d64942933d8fc3d6358c8, type: 3}
+  onPointerClick: {fileID: 8300000, guid: 7e5db29ecc557c84cbc6570ddf4df967, type: 3}
 --- !u!1001 &582902223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115354,6 +115369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b310eb824de48e243bf028a8c3c4d067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapOpenSound: {fileID: 8300000, guid: 142eccf8c9033c2419f35c41d90eb762, type: 3}
 --- !u!114 &793096994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115753,7 +115769,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -135742,6 +135758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseElements: {fileID: 781745403}
+  pauseSound: {fileID: 8300000, guid: df52d43d4d39b30499d22c81f0a75830, type: 3}
+  unpauseSound: {fileID: 8300000, guid: 77caafe1e7831ae4ba0088faddb12495, type: 3}
 --- !u!114 &986619287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135772,6 +135790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverElements: {fileID: 491527424}
+  gameOverSound: {fileID: 8300000, guid: 07d0f3e88f1119c4991260114708e0ba, type: 3}
+  playerRespawnSound: {fileID: 8300000, guid: bfc60414a4b3ed541a668bf82e3ee145, type: 3}
 --- !u!1 &992224957
 GameObject:
   m_ObjectHideFlags: 0
@@ -141530,6 +141550,7 @@ GameObject:
   - component: {fileID: 1159955454}
   - component: {fileID: 1159955453}
   - component: {fileID: 1159955455}
+  - component: {fileID: 1159955456}
   m_Layer: 0
   m_Name: MapCamera
   m_TagString: MainCamera
@@ -141617,6 +141638,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCameraSize: 50
   cameraZoomSpeed: 10
+--- !u!81 &1159955456
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159955449}
+  m_Enabled: 1
 --- !u!4 &1192476546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7955207024423900198, guid: 84d9aef6aec7aa64dbbf151ba7b505c6, type: 3}
@@ -156578,6 +156607,7 @@ GameObject:
   - component: {fileID: 1762584700}
   - component: {fileID: 1762584699}
   - component: {fileID: 1762584698}
+  - component: {fileID: 1762584701}
   m_Layer: 5
   m_Name: RespawnBtn
   m_TagString: Untagged
@@ -156699,6 +156729,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762584696}
   m_CullTransparentMesh: 1
+--- !u!114 &1762584701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762584696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1740ffbf879304196882a0c699881d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerEnter: {fileID: 8300000, guid: ccbc54f74b0d64942933d8fc3d6358c8, type: 3}
+  onPointerClick: {fileID: 8300000, guid: 7e5db29ecc557c84cbc6570ddf4df967, type: 3}
 --- !u!1001 &1772889887
 PrefabInstance:
   m_ObjectHideFlags: 0

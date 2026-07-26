@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,14 +12,17 @@ public class MainMenu : MonoBehaviour
         G.isDefaultGameSaveExists = File.Exists(defaultGameSavePath);
         if (!G.isDefaultGameSaveExists)
             transform.Find("ContinueBtn").gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
     
     public void ContinueGame()
     {
+        DOTween.KillAll();
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
     public void NewGame()
     {
+        DOTween.KillAll();
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
     public void QuitGame()

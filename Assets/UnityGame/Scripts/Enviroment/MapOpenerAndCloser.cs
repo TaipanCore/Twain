@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MapOpenerAndCloser : MonoBehaviour
 {
+    [SerializeField] private AudioClip mapOpenSound;
+    
     private Camera mainCamera;
     private Camera mapCamera;
     private Canvas HUDCanvas;
@@ -46,6 +48,7 @@ public class MapOpenerAndCloser : MonoBehaviour
         HUDCanvas.worldCamera = mapCamera;
         G.mainCamera.SetActive(false);
         mapCamera.transform.position = new Vector3(openPosition.x, openPosition.y, mapCamera.transform.position.z);
+        G.audio.PlaySoundEffect(mapOpenSound, pitchMin: 0.65f, pitchMax: 0.75f);
         expandTween = mapCamera.DOOrthoSize(30f, 3f).SetEase(Ease.OutCubic).SetUpdate(true);
         expandTween.OnUpdate(() =>
         {

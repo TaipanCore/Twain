@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23265429938176
-    m_Localized: Global
+    m_Localized: Master
     m_Metadata:
       m_Items: []
   - m_Id: 22677539512320
@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23184362430464
-    m_Localized: Audio
+    m_Localized: Volume
     m_Metadata:
       m_Items: []
   - m_Id: 22925678731264
