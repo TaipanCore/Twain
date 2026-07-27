@@ -15,6 +15,10 @@ MonoBehaviour:
   m_TableCollectionName: Menus
   m_TableCollectionNameGuidString: cd9ab0a673e47804c95653102b6a76e9
   m_Entries:
+  - m_Id: 20609394004873216
+    m_Key: main_menu_confirmation_text
+    m_Metadata:
+      m_Items: []
   - m_Id: 298604187648
     m_Key: main_menu_continue_btn
     m_Metadata:
@@ -31,24 +35,12 @@ MonoBehaviour:
     m_Key: main_menu_quit_btn
     m_Metadata:
       m_Items: []
-  - m_Id: 22481661321216
-    m_Key: options_title
+  - m_Id: 20609946738642944
+    m_Key: main_menu_confirmation_yes
     m_Metadata:
       m_Items: []
-  - m_Id: 22677539512320
-    m_Key: options_language_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 22925678731264
-    m_Key: options_language_english
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23039122071552
-    m_Key: options_language_russian
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23184362430464
-    m_Key: options_audio_title
+  - m_Id: 20609949066481664
+    m_Key: main_menu_confirmation_no
     m_Metadata:
       m_Items: []
   - m_Id: 23265429938176
@@ -63,16 +55,36 @@ MonoBehaviour:
     m_Key: options_audio_sound_effects
     m_Metadata:
       m_Items: []
-  - m_Id: 24187577032704
-    m_Key: options_controls_title
+  - m_Id: 23184362430464
+    m_Key: options_audio_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1210379073114112
+    m_Key: options_back_btn
     m_Metadata:
       m_Items: []
   - m_Id: 1210374379687936
     m_Key: options_controls_description
     m_Metadata:
       m_Items: []
-  - m_Id: 1210379073114112
-    m_Key: options_back_btn
+  - m_Id: 24187577032704
+    m_Key: options_controls_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22925678731264
+    m_Key: options_language_english
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23039122071552
+    m_Key: options_language_russian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22677539512320
+    m_Key: options_language_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22481661321216
+    m_Key: options_title
     m_Metadata:
       m_Items: []
   m_Metadata:

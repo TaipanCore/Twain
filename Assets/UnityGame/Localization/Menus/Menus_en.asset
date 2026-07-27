@@ -97,6 +97,22 @@ MonoBehaviour:
       <sprite name="ESC"> - pause'
     m_Metadata:
       m_Items: []
+  - m_Id: 20609394004873216
+    m_Localized: 'Are you sure you want to start a new game?
+
+
+      Your current
+      game progress will be lost'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20609946738642944
+    m_Localized: Start new game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20609949066481664
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

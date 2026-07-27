@@ -20,10 +20,19 @@ public class MainMenu : MonoBehaviour
         DOTween.KillAll();
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
-    public void NewGame()
+    public void NewGame(bool isConfirmed)
     {
-        DOTween.KillAll();
-        SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+        if (!G.isDefaultGameSaveExists)
+            isConfirmed = true;
+        if (isConfirmed)
+        {
+            DOTween.KillAll();
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+        }
+        else
+        {
+            transform.Find("ConfirmationDialog").gameObject.SetActive(true);
+        }
     }
     public void QuitGame()
     {
