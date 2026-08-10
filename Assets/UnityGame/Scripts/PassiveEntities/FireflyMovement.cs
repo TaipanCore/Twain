@@ -20,16 +20,24 @@ public class FireflyMovement : MonoBehaviour
     private Sequence pathSequence;
     private List<Vector3> restOfPath;
     private CircleLight circleLight;
+    private FireflySounds fireflySounds;
+    private AudioSource fireflyLifeSound;
 
-    private void Awake()
+    private void Start()
     {
         circleLight = transform.GetComponentInChildren<CircleLight>();
+        fireflySounds = GetComponent<FireflySounds>();
     }
     private void Update()
     {
         movement = transform.position - previousPosition;
         previousPosition = transform.position;
         FlipSprite();
+    }
+
+    private void OnDisable()
+    {
+        
     }
 
     public Tween MoveAlongPath(Vector3 endPoint, float pathDuration, Vector3[] path = null)
@@ -44,10 +52,26 @@ public class FireflyMovement : MonoBehaviour
                     if (path.Length < waypointIndex)
                         restOfPath.Remove(path[waypointIndex]);
                 }))
-            .Join(DOVirtual.DelayedCall(pathDuration - 2f, () => circleLight.SetRange(0f, 2f), false))
+            .Join(DOVirtual.DelayedCall(Mathf.Clamp(0.5f, 0f, pathDuration), () =>
+            {
+                fireflyLifeSound = fireflySounds.PlayFireflyLifeSound();
+                fireflyLifeSound.transform.parent = transform;
+            }, false))
+            .Join(DOVirtual.DelayedCall(Mathf.Clamp(pathDuration - 0.5f, 0f, pathDuration), () =>
+            {
+                fireflyLifeSound.transform.parent = G.audio.transform;
+                fireflyLifeSound.Stop();
+            }, false))
+            .Join(DOVirtual.DelayedCall(Mathf.Clamp(pathDuration - 2f, 0f, pathDuration), () =>
+            {
+                circleLight.SetRange(0f, 2f);
+            }, false))
             .AppendCallback(() => circleLight.SetRange(lightRange));
         pathSequence = sequence;
-        sequence.OnComplete(() => pathSequence = null);
+        sequence.OnComplete(() =>
+        {
+            pathSequence = null;
+        });
         return sequence;
     }
     private Vector3[] GeneratePath(int pointsCount, Vector3 endPosition)

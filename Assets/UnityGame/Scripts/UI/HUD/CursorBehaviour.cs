@@ -11,6 +11,7 @@ public class CursorBehaviour : UICursorFollower
     {
         base.Start();
         G.characters.CharacterChange += ChangeCursor;
+        G.HUD.StateChange += SetCursorVisibility;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
         darkSideSpikesRecharge = transform.Find("DarkSideSpikesRecharge/Fill").GetComponent<Image>();
@@ -33,6 +34,21 @@ public class CursorBehaviour : UICursorFollower
     public void SetShootRecharge(float value)
     {
         equilibriumShootRecharge.fillAmount = value;
+    }
+
+    private void SetCursorVisibility(HUD.State state)
+    {
+        switch (state)
+        {
+            case HUD.State.Game:
+                Cursor.visible = false;
+                break;
+            case HUD.State.GameOver:
+            case HUD.State.GameComplete:
+            case HUD.State.Pause:
+                Cursor.visible = true;
+                break;
+        }
     }
     
     private void ChangeCursor(GameObject newCharacter)

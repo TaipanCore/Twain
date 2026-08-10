@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4115052209508967311}
   - component: {fileID: 203916931472239984}
   - component: {fileID: 988540900587565333}
+  - component: {fileID: -8401127142691434987}
   m_Layer: 0
   m_Name: HighTentacle
   m_TagString: Untagged
@@ -426,6 +427,18 @@ PolygonCollider2D:
       - {x: -1.6864929, y: 2.7516365}
       - {x: -2.1295166, y: 3.1821938}
   m_UseDelaunayMesh: 0
+--- !u!210 &-8401127142691434987
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8482053784212841170}
+  m_Enabled: 1
+  m_SortingLayerID: 1887013877
+  m_SortingLayer: -1
+  m_SortingOrder: -1
+  m_SortAtRoot: 1
 --- !u!1001 &5690606330877014307
 PrefabInstance:
   m_ObjectHideFlags: 0

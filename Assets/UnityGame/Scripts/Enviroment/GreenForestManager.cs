@@ -39,6 +39,8 @@ public class GreenForestManager : MonoBehaviour, ISaveLoadObject
             playerInForest = true;
             StartCoroutine(SpawnFireflies());
             StartCoroutine(SpawnTravelerFirefly());
+            if (gameObject.activeInHierarchy)
+                G.audio.PlayMusic(G.music.forestMusic, fadeDuration: 15f);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -46,6 +48,8 @@ public class GreenForestManager : MonoBehaviour, ISaveLoadObject
         if (collision.TryGetComponent(out DarkSideBehaviour _))
         {
             playerInForest = false;
+            if (gameObject.activeInHierarchy)
+                G.audio.PlayMusic(G.music.labyrinthMusic);
         }
     }
 

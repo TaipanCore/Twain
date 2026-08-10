@@ -25,6 +25,7 @@ public class InputManager : MonoBehaviour
     [HideInInspector] public float mouseWheel;
     
     [HideInInspector] public bool HUDPauseBtnDown;
+    [HideInInspector] public bool HUDAnyKeyDown;
 
     private void Awake()
     {
@@ -54,5 +55,6 @@ public class InputManager : MonoBehaviour
             mouseWheel = 0f;
         }
         HUDPauseBtnDown = Input.GetKeyDown(pauseBtn);
+        HUDAnyKeyDown = Input.anyKeyDown;
     }
 }

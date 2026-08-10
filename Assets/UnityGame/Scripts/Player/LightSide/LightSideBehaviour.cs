@@ -188,6 +188,7 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver, IS
         if (invulnerableTimer <= 0f)
         {
             hitpoints -= damage;
+            GetComponentInChildren<LightSideSounds>().PlayDamagedSound();
             G.HUD.healthBar.SetValue(hitpoints);
             GiveInvulnerability();
         }

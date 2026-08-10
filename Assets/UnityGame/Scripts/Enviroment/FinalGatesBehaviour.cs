@@ -20,6 +20,8 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
     private const byte RED_BIT = 0b001;
     private const byte BLUE_BIT = 0b010;
     private const byte GREEN_BIT = 0b100;
+
+    private const byte NUMBER_OF_RUNES = 12;
     
     private byte shardsMask;
     private ShardSlot redShardSlot;
@@ -33,7 +35,11 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
     private SpriteRenderer onGatesRunesSprite;
     private Tween onGatesRunesTween;
     private Tween runesBlinkingSpeedUpTween;
+    private AudioSource finalGatesAudio;
+    private Tween audioFadeTween;
     private bool isCharging;
+    private FinalGatesSounds finalGatesSounds;
+    
 
     private void Awake()
     {
@@ -48,6 +54,7 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
         greenShardSlot = greenShardSprite.GetComponent<ShardSlot>();
         greenShardSlot.OnGetShard += OnGetGreenShard;
         onGatesRunesSprite = transform.Find("ActiveRunes").GetComponent<SpriteRenderer>();
+        finalGatesSounds = GetComponent<FinalGatesSounds>();
         onGatesRunesTween = onGatesRunesSprite.DOFade(1f, 0.75f).SetAutoKill(false).Pause();
         currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(0f);
     }
@@ -65,6 +72,12 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
                 {
                     currentRune = 0;
                 }
+                if (isCharging && finalGatesAudio)
+                {
+                    float currentCycleDuration = Mathf.Max(currentBetweenRunesDelay * NUMBER_OF_RUNES, 0.01f);
+                    finalGatesAudio.pitch = finalGatesAudio.clip.length / currentCycleDuration;
+                    finalGatesAudio.volume = 10f / finalGatesAudio.pitch;
+                }
             }
         }
     }
@@ -74,9 +87,26 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
         {
             isCharging = true;
             onGatesRunesTween.Restart();
+            if (!finalGatesAudio)
+            {
+                finalGatesAudio = finalGatesSounds.PlayChargingSound();
+            }
+            else
+            {
+                audioFadeTween?.Kill();
+                finalGatesAudio.time = 0f;
+                finalGatesAudio.volume = 1f;
+            }
             runesBlinkingSpeedUpTween ??= DOVirtual.Float(0f, 1f, gatesChargeTime, value =>
             {
                 currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(value);
+
+            }).OnComplete(() =>
+            {
+                G.gameComplete.EndGame();
+                finalGatesAudio.Stop();
+                finalGatesAudio = null;
+                currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(0f);
             });
         }
     }
@@ -87,10 +117,18 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
             isCharging = false;
             onGatesRunesTween.PlayBackwards();
             runesBlinkingSpeedUpTween?.Kill();
+            runesBlinkingSpeedUpTween = null;
+            if (finalGatesAudio)
+            {
+                audioFadeTween = DOVirtual.Float(1f, 0f, 0.5f, value =>
+                {
+                    finalGatesAudio.volume = value;
+                }).OnComplete(() => finalGatesAudio = null).SetEase(Ease.OutQuart);
+            }
             currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(0f);
         }
     }
-
+    
     private void OnGetRedShard()
     {
         shardsMask |= 1 << 0;

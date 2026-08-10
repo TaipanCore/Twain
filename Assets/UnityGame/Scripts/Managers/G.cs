@@ -6,6 +6,7 @@ public static class G
     public static CharactersManager characters;
     public static InputManager input;
     public static AudioManager audio;
+    public static MusicContainer music;
     public static MouseTracker mouseTracker;
     public static GameSaveLoadManager gameSaveLoad;
     
@@ -17,6 +18,7 @@ public static class G
     public static HUD HUD;
     public static GamePause gamePause;
     public static GameOver gameOver;
+    public static GameComplete gameComplete;
     
     //Saves
     public static bool isDefaultGameSaveExists;

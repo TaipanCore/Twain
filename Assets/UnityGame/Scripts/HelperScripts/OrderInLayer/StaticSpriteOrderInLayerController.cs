@@ -5,7 +5,6 @@ using UnityEngine.Rendering;
 public class StaticSpriteOrderInLayerController : MonoBehaviour
 {
     [SerializeField] protected bool useParentPosition;
-
     
     protected static readonly int orderMultiplier = 10;
     

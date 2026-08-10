@@ -45,12 +45,34 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
         {
             _isInFocusedLight = value;
             if (_isInFocusedLight)
+            {
+                inLightSounds ??= evilSpiritSounds.PlayInFocusedLightSound();
                 steamParticles.Play();
+            }
             else
+            {
+                inLightSounds?.Stop();
+                inLightSounds = null;
                 steamParticles.Stop();
+            }
         }
     }
-    public bool isAggro { get; set; }
+
+    private bool _isAggro;
+    public bool isAggro
+    {
+        get => _isAggro;
+        set
+        {
+            if (!isAggro && value)
+            {
+                evilSpiritSounds.PlayAggroSound();
+                G.audio.PlayMusic(G.music.evilSpiritMusic, fadeDuration: 5f);
+            }
+            _isAggro = value;
+        }
+        
+    }
     
     [Header("Health")]
     [SerializeField] private float _hitpoints;
@@ -75,6 +97,8 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     private Vector2 movement;
     private Vector3 previousPosition;
     private Animator animator;
+    private EvilSpiritSounds evilSpiritSounds;
+    private AudioSource inLightSounds;
     private State state;
 
     private void Awake()
@@ -89,6 +113,7 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
         redKeyShard.SetActive(false);
         redKeyShardImage = transform.Find("RedKeyShardImage").gameObject;
         animator = GetComponent<Animator>();
+        evilSpiritSounds = GetComponent<EvilSpiritSounds>();
         maxHitpoints = hitpoints;
         dashTimer = timeInLightToDash;
         G.characters.PlayerDied += OnPlayerDied;
@@ -148,6 +173,7 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     private void SetIdleSettings()
     {
         isAggro = false;
+        G.audio.PlayMusic(G.music.labyrinthMusic);
         redKeyShardImage.SetActive(true);
         redEyeTrail.emitting = false;
         animator.SetTrigger(PlayIdle);
@@ -168,7 +194,7 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     {
         redKeyShardImage.SetActive(false);
         redEyeTrail.emitting = true;
-        int countOfDashes = hitpoints / maxHitpoints > 0.5f ? Random.Range(1, 3) : Random.Range(2, 4);
+        int countOfDashes = hitpoints / maxHitpoints > 0.5f ? Random.Range(1, 4) : Random.Range(3, 5);
         StartCoroutine(DoDashes(countOfDashes));
         animator.SetTrigger(PlayDash);
     }
@@ -177,6 +203,7 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     {
         redKeyShard.SetActive(true);
         redEyeTrail.emitting = false;
+        G.audio.PlayMusic(G.music.labyrinthMusic);
         Die();
         animator.SetTrigger(PlayDie);
     }
@@ -212,6 +239,7 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
         for (int i = 0; i < countOfDashes; i++)
         {
             Vector3 dashPoint = target.position + Quaternion.Euler(0f, 0f, Random.Range(-90f, 90f)) * Vector3.ClampMagnitude(target.position - transform.position, maxDistanceToTargetAfterDash);
+            evilSpiritSounds.PlayDashSound();
             yield return transform.DOMove(dashPoint, dashDuration.Evaluate(hitpoints / maxHitpoints)).WaitForCompletion();
         }
         SetState(State.Hunt);

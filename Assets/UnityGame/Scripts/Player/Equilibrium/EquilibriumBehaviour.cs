@@ -151,7 +151,8 @@ public class EquilibriumBehaviour : MonoBehaviour, ISaveLoadObject
         transform.position = ((JObject)dataToUnpack.data[0]).ToObject<Vector3>();
         //data[1] - remainingTimeInEquilibriumForm
         if (float.TryParse(dataToUnpack.data[1].ToString(), out var parsedRemainingTimeInEquilibriumForm))
-            StartEquilibriumFormTimer(parsedRemainingTimeInEquilibriumForm);
+            if (G.characters.isUnited)
+                StartEquilibriumFormTimer(parsedRemainingTimeInEquilibriumForm);
         //data[2] - attackCooldownTimer
         if (float.TryParse(dataToUnpack.data[2].ToString(), out var parsedAttackCooldownTimer))
             attackCooldownTimer = parsedAttackCooldownTimer;

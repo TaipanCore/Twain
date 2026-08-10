@@ -5,11 +5,14 @@ public class MapOpenerAndCloser : MonoBehaviour
 {
     [SerializeField] private AudioClip mapOpenSound;
     
+    [Header("Hints")]
+    [SerializeField] private ButtonsHints buttonHints;
+    public HintsTrigger hintsTrigger;
+    
     private Camera mainCamera;
     private Camera mapCamera;
     private Canvas HUDCanvas;
     private bool isMapOpen;
-    private bool canOpenMap;
     private Tween expandTween;
 
     private void Start()
@@ -17,25 +20,18 @@ public class MapOpenerAndCloser : MonoBehaviour
         mainCamera = G.mainCamera.GetComponent<Camera>();
         mapCamera = G.mapCamera.GetComponent<Camera>();
         HUDCanvas = GameObject.Find("HUD").GetComponent<Canvas>();
-    }
-    
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-            canOpenMap = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-            canOpenMap = false;
+        hintsTrigger.Initialize
+        (
+            () => buttonHints.ShowHint(ButtonsHints.BtnKey.M),
+            () => buttonHints.HideHint(ButtonsHints.BtnKey.M)
+        );
     }
 
     private void Update()
     {
         if (G.input.mapBtnDown)
         {
-            if (!isMapOpen && canOpenMap)
+            if (!isMapOpen && hintsTrigger.charactersInTrigger.Contains(G.characters.currentCharacter))
                 OpenMap(G.characters.currentCharacter.transform.position);
             else if (isMapOpen)
                 CloseMap();
@@ -44,6 +40,7 @@ public class MapOpenerAndCloser : MonoBehaviour
 
     private void OpenMap(Vector3 openPosition)
     {
+        hintsTrigger.btnFirstActivated = true;
         G.mapCamera.SetActive(true);
         HUDCanvas.worldCamera = mapCamera;
         G.mainCamera.SetActive(false);

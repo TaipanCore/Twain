@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8090860309787218231}
   - component: {fileID: 3151754914727168990}
   - component: {fileID: 6597756467970467810}
+  - component: {fileID: -5469557378587203596}
   m_Layer: 0
   m_Name: MiddleTentacle
   m_TagString: Untagged
@@ -444,6 +445,18 @@ PolygonCollider2D:
       - {x: -0.3095398, y: -0.4445572}
       - {x: 0.06826782, y: -0.06854057}
   m_UseDelaunayMesh: 0
+--- !u!210 &-5469557378587203596
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510193576789175644}
+  m_Enabled: 1
+  m_SortingLayerID: 1887013877
+  m_SortingLayer: -1
+  m_SortingOrder: -1
+  m_SortAtRoot: 1
 --- !u!1001 &7942896985997555764
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class ShardBehaviour : MonoBehaviour, ISaveLoadObject
         {
             if (other.gameObject.IsInLayerMask(G.playerMask) && takeCollider.enabled)
             {
+                GetComponent<ShardSounds>().PlayPickUpSound();
                 takeCollider.enabled = false;
                 G.HUD.inventory.AddItem(gameObject);
             }

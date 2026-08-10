@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class HUD : MonoBehaviour
@@ -6,14 +7,27 @@ public class HUD : MonoBehaviour
     {
         Game,
         Pause,
-        GameOver
+        GameOver,
+        GameComplete
     }
     
     public PlayerInventory inventory;
     public HeathBar healthBar;
     public GameObject equilibriumCharge;
     public CursorBehaviour mouseCursor;
-    public State state = State.Game;
+
+    public Action<State> StateChange;
+
+    private State _state = State.Game;
+    public State state
+    {
+        get => _state;
+        set
+        {
+            _state = value;
+            StateChange?.Invoke(_state);
+        }
+    } 
     
     private void Awake()
     {

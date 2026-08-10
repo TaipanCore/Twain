@@ -27,6 +27,7 @@ public class SpikesSpawner : MonoBehaviour
     private Vector3 startPosition;
     private Vector3 endPosition;
     private Tilemap tilemap;
+    private SpikesSounds spikesSounds;
     private bool canBeDestroyed;
     
     private Dictionary<Vector3, Tween> activeSpikes;
@@ -36,6 +37,7 @@ public class SpikesSpawner : MonoBehaviour
         objectTransform = GetComponent<Transform>();
         spikesSpawnDelay = new WaitForSeconds(spikesSpawnTimeInterval);
         tilemap = GameObject.Find("Ground").GetComponent<Tilemap>();
+        spikesSounds = GetComponent<SpikesSounds>();
     }
 
     private void Update()
@@ -68,9 +70,14 @@ public class SpikesSpawner : MonoBehaviour
     private void CreateSpike(Vector3 position, float remainingLifetime)
     {
         GameObject spike = Instantiate(spikePrefab, position, Quaternion.identity, transform);
+        spikesSounds.PlaySpikeSpawnSound(position);
         spike.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(-position.y * 100);
         Tween destroyTween = DOVirtual.DelayedCall(remainingLifetime, () => Destroy(spike), false)
-            .OnComplete(() => activeSpikes.Remove(spike.transform.position));
+            .OnComplete(() =>
+            {
+                spikesSounds.PlaySpikeDespawnSound(position);
+                activeSpikes.Remove(spike.transform.position);
+            });
         activeSpikes.Add(spike.transform.position, destroyTween);
     }
 

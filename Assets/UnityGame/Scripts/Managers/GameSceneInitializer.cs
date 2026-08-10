@@ -11,5 +11,8 @@ public class GameSceneInitializer : MonoBehaviour
             G.gameSaveLoad.LoadGame("EmptyGameSave.json");
         
         G.gamePause.Resume();
+        
+        if (!G.audio.hasCurrentMusic)
+            G.audio.PlayMusic(G.music.labyrinthMusic);
     }
 }

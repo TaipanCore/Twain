@@ -12,6 +12,7 @@ public class SquidShrineBehaviour : MonoBehaviour, ISaveLoadObject
     private Transform firefly;
     private Vector3 fireflyOldLocalPosition;
     private SquidBossBehaviour.State bossState;
+    private AudioSource bossMusic;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class SquidShrineBehaviour : MonoBehaviour, ISaveLoadObject
                 {
                     firefly = lightSideBehaviour.TakeFirefly(fireflyPoint);
                     squidBossBehaviour.StartBattle();
+                    bossMusic = G.audio.PlayMusic(G.music.squidBossMusic, loop: false, fadeDuration: 1f);
                 }
                 else if (bossState == SquidBossBehaviour.State.Defeated || bossState == SquidBossBehaviour.State.Dead)
                 {
@@ -63,7 +65,8 @@ public class SquidShrineBehaviour : MonoBehaviour, ISaveLoadObject
             hasFirefly,
             bossState,
             squidBossBehaviour.currentNumberOfTentacles,
-            tentaclesData
+            tentaclesData,
+            bossMusic ? bossMusic.time : 0f
         });
     }
     public void UnpackData(ObjectSaveLoadData dataToUnpack)
@@ -99,6 +102,9 @@ public class SquidShrineBehaviour : MonoBehaviour, ISaveLoadObject
             TentacleData[] tentaclesData = ((JArray)dataToUnpack.data[3]).ToObject<TentacleData[]>();
             squidBossBehaviour.UnpackTentaclesData(tentaclesData);
             squidBossBehaviour.StartBattle(false);
+            //data[4] - bossMusicTime
+            if(float.TryParse(dataToUnpack.data[4].ToString(), out var parsedBossMusicTime))
+                bossMusic = G.audio.PlayMusic(G.music.squidBossMusic, loop: false, time: parsedBossMusicTime, fadeDuration: 1f);
         }
     }
 }

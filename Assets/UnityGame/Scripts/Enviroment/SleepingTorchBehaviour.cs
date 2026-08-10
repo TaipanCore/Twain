@@ -1,7 +1,8 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
-public class SleepingTorchBehaviour : MonoBehaviour, IAbleAggro, ISaveLoadObject
+public class SleepingTorchBehaviour : TorchBehaviour, IAbleAggro, ISaveLoadObject
 {
     private bool _isAggro;
     public bool isAggro
@@ -14,21 +15,28 @@ public class SleepingTorchBehaviour : MonoBehaviour, IAbleAggro, ISaveLoadObject
                 _isAggro = true;
                 lightSource.SetActive(true);
                 animator.Restart();
+                PlayFiringTorchSounds();
             }
         }
     }
     
     private SimpleAnimator animator;
-    private GameObject lightSource;
 
     private void Awake()
     {
         RegisterInSaveLoadSystem();
     }
-    private void Start()
+    protected override void Start()
     {
         animator = GetComponent<SimpleAnimator>();
         lightSource = transform.GetChild(0).gameObject;
+    }
+    
+    private void PlayFiringTorchSounds()
+    {
+        TorchSounds torchSounds = GetComponent<TorchSounds>();
+        AudioSource firingSound = torchSounds.PlayTorchFiringSound(lightSource.transform.position);
+        DOVirtual.DelayedCall(firingSound.clip.length, () => GetComponent<TorchSounds>().PlayTorchBurningSound(lightSource.transform.position), false);
     }
     
     public String objectId => GetComponent<ObjectId>().id;

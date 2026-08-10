@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9025491940123387579}
   - component: {fileID: 3381538432022993358}
   - component: {fileID: 5898960713276142717}
+  - component: {fileID: 965211329734334762}
   - component: {fileID: 7827227667393219806}
   - component: {fileID: 8035928655984261080}
   m_Layer: 8
@@ -135,6 +136,20 @@ MonoBehaviour:
   framerate: 10
   loopAnimation: 1
   playOnStart: 0
+--- !u!114 &965211329734334762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818651171315835873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19624c751a510e94f97769d0eb5cd827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torchFiringSound: {fileID: 8300000, guid: d4256ef1dea5ea8498bef63a9ee2b6bc, type: 3}
+  torchBurningSound: {fileID: 8300000, guid: a8db25e80b77c3542b719987a91deee9, type: 3}
 --- !u!114 &7827227667393219806
 MonoBehaviour:
   m_ObjectHideFlags: 0

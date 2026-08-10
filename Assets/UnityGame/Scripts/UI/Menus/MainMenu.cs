@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        G.audio.PlayMusic(G.music.menusMusic);
+    }
     private void OnEnable()
     {
         String defaultGameSavePath = Path.Combine(Application.persistentDataPath, "Saves", "DefaultGameSave.json");

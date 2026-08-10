@@ -22,12 +22,21 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fa2349037311e1e419ba82b4bb61794f
     m_Address: HUD_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ad5d3c27ab960d4c9ae8369a0e84752
+    m_Address: PlayerHints_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 96a3f78a841397748a1c0361aab7aa45, type: 2}

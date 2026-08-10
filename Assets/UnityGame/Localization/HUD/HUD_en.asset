@@ -34,6 +34,17 @@ MonoBehaviour:
     m_Localized: Press to respawn
     m_Metadata:
       m_Items: []
+  - m_Id: 23538701014552576
+    m_Localized: 'Congratulations, game complete!
+
+
+      <i>Thanks for playing<i>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23538782262415360
+    m_Localized: Press any button
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

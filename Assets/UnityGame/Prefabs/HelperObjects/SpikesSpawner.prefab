@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2998518013350845935}
   - component: {fileID: 26135192658752025}
+  - component: {fileID: -4653030632948350543}
   m_Layer: 0
   m_Name: SpikesSpawner
   m_TagString: Untagged
@@ -49,3 +50,17 @@ MonoBehaviour:
   spawnPositionOffset: 1
   spikesSpawnTimeInterval: 0.1
   particlesPrefab: {fileID: 3960427743103849942, guid: 5931b331e9093c84384941fec57fdf89, type: 3}
+--- !u!114 &-4653030632948350543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2636088503007124049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1eca690922a64c44adfdf132f0c3d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikeSpawnSound: {fileID: 8300000, guid: 4f41b4f7f52c31d439669fc18cccfcbd, type: 3}
+  spikeDespawnSound: {fileID: 8300000, guid: 61a9e03c4051a024bb4d8d164f0ef53f, type: 3}

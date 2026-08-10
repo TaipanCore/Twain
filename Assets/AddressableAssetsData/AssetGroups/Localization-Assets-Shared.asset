@@ -27,6 +27,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c447b00726764bf41b32f4267178d083
+    m_Address: Assets/UnityGame/Localization/PlayerHints/PlayerHints Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 96a3f78a841397748a1c0361aab7aa45, type: 2}
   m_SchemaSet:

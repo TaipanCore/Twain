@@ -31,6 +31,14 @@ MonoBehaviour:
     m_Key: hud_game_over_btn
     m_Metadata:
       m_Items: []
+  - m_Id: 23538701014552576
+    m_Key: hud_game_complete_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23538782262415360
+    m_Key: hud_game_complete_popup
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

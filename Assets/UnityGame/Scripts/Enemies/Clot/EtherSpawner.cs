@@ -21,11 +21,13 @@ public class EtherSpawner : MonoBehaviour, IEtherContainer
     private float etherSpawnCooldownTimer;
     private Transform etherSpawnPoint;
     private ShrineOfBalanceBehaviour shrineBehaviour;
+    private ClotSounds clotSounds;
 
     private void Start()
     {
         shrineBehaviour = GameObject.Find("ShrineOfBalance").GetComponent<ShrineOfBalanceBehaviour>();
         target = shrineBehaviour.transform.Find("EtherMagnetPoint").GetComponent<Transform>();
+        clotSounds = GetComponent<ClotSounds>();
         etherPool = GameObject.Find("EtherPool").GetComponent<GameObjectsPool>();
         etherSpawnPoint = transform.Find("EtherSpawnPoint");
         maxEtherCount = etherCount;
@@ -40,6 +42,7 @@ public class EtherSpawner : MonoBehaviour, IEtherContainer
         if (etherSpawnCooldownTimer <= 0f && etherCount > 0)
         {
             GameObject etherParticle = etherPool.Get(GetAction);
+            clotSounds.PlayEtherEjectSound();
             Sequence followPath = DOTween.Sequence();
             followPath
                 .Append(etherParticle.transform.DOMove((Vector2)etherSpawnPoint.position + Random.insideUnitCircle * spreadRange, 0.75f).SetEase(Ease.OutCubic))

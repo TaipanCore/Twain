@@ -27,6 +27,7 @@ public class GamePause : MonoBehaviour
     {
         G.HUD.state = HUD.State.Pause;
         G.input.canPlayerInput = false;
+        G.audio.PauseAll();
         G.audio.PlaySoundEffect(pauseSound);
         Time.timeScale = 0f;
         pauseElements.SetActive(true);
@@ -37,6 +38,7 @@ public class GamePause : MonoBehaviour
         G.HUD.state = HUD.State.Game;
         G.input.canPlayerInput = true;
         G.audio.PlaySoundEffect(unpauseSound);
+        G.audio.ResumeAll();
         Time.timeScale = 1f;
         pauseElements.SetActive(false);
     }

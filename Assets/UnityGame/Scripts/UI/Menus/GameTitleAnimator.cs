@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +19,7 @@ public class GameTitleAnimator : MonoBehaviour
     private Image gameTitleImage;
     private Image blockImage;
     private GameObject blockGameObject;
+    private Sequence blockDropSequence;
     private void Start()
     {
         gameTitleImage = GetComponent<Image>();
@@ -24,6 +27,11 @@ public class GameTitleAnimator : MonoBehaviour
         blockImage = blockGameObject.GetComponent<Image>();
         betweenBlockDropsWait = new WaitForSeconds(blockDropTime + delayBetweenBlockDrops);
         StartCoroutine(BlockDroppingCoroutine());
+    }
+
+    private void OnDisable()
+    {
+        EndAnimation();
     }
 
     private IEnumerator BlockDroppingCoroutine()
@@ -36,12 +44,13 @@ public class GameTitleAnimator : MonoBehaviour
             yield return betweenBlockDropsWait;
         }
         yield return new WaitForSeconds(0.25f);
-        Destroy(blockGameObject);
+        EndAnimation();
     }
     private void DropBlock(int stepIndex)
     {
-        Sequence sequence = DOTween.Sequence();
-        sequence
+        blockDropSequence?.Kill();
+        blockDropSequence = DOTween.Sequence();
+        blockDropSequence
             .AppendCallback(() => blockImage.sprite = blocks[stepIndex])
             .Join(blockImage.DOFade(1f, blockDropTime)
                 .From(0f))
@@ -49,5 +58,12 @@ public class GameTitleAnimator : MonoBehaviour
                 .From(blockGameObject.transform.position.y + blockDropOffset)
                 .OnComplete(() => gameTitleImage.sprite = gameTitleStepsSprites[stepIndex]))
             .Join(DOVirtual.DelayedCall(blockDropTime * 0.9f,() => G.audio.PlaySoundEffect(dropBlockSound)));
+    }
+
+    private void EndAnimation()
+    {
+        blockDropSequence?.Kill();
+        gameTitleImage.sprite = gameTitleStepsSprites.Last();
+        Destroy(blockGameObject);
     }
 }

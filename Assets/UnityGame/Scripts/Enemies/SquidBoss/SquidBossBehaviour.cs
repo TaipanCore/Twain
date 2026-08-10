@@ -31,15 +31,17 @@ public class SquidBossBehaviour : MonoBehaviour
     [SerializeField] private GameObject reward;
 
     public event Action<State> StateChanged;
-    public int currentNumberOfTentacles;
+    [HideInInspector] public int currentNumberOfTentacles;
     
     private ParticleSystem soundWaveParticles;
+    private SquidBossSounds squidBossSounds;
     private State currentState;
 
     private void Start()
     {
         eyeAppearTimer = new WaitForSeconds(eyeAppearDelay);
         soundWaveParticles = GetComponent<ParticleSystem>();
+        squidBossSounds = GetComponent<SquidBossSounds>();
         reward.SetActive(false);
         G.characters.PlayerDied += OnPlayerDied;
         SetState(State.Sleep);
@@ -90,10 +92,12 @@ public class SquidBossBehaviour : MonoBehaviour
         Sequence dyingSequence = DOTween.Sequence();
         dyingSequence
             .AppendCallback(RetreatAllTentacles)
+            .AppendCallback(squidBossSounds.PlayDieSound)
             .Append(transform.DOPunchPosition(Vector3.up * 0.35f, 1f, 4))
             .AppendCallback(HideEyes)
             .AppendInterval(2f)
             .Append(DropReward())
+            .AppendCallback(() => G.audio.PlayMusic(G.music.labyrinthMusic))
             .AppendCallback(() =>
             {
                 SetState(State.Dead);
@@ -132,14 +136,17 @@ public class SquidBossBehaviour : MonoBehaviour
     private IEnumerator SpawnEyesCoroutine()
     {
         G.input.canPlayerInput = false;
-        foreach (GameObject eye in eyes)
+        for (int i = 0; i < eyes.Length; i++)
         {
+            GameObject eye = eyes[i];
+            squidBossSounds.PlayEyePopSound(eye.transform.position, 0.4f + 0.4f * i / eyes.Length);
             eye.SetActive(true);
             eye.GetComponent<SpriteRenderer>().DOFade(1f, 0f);
             eye.GetComponent<SimpleAnimator>().Restart();
             yield return eyeAppearTimer;
         }
         soundWaveParticles.Play();
+        squidBossSounds.PlayAppearSound();
         yield return new WaitForSeconds(soundWaveParticles.main.duration);
         G.input.canPlayerInput = true;
         yield return TentaclesAttack();
@@ -166,6 +173,7 @@ public class SquidBossBehaviour : MonoBehaviour
     }
     private void OnTentacleDefeated()
     {
+        squidBossSounds.PlayTentacleHitSound();
         currentNumberOfTentacles++;
         if (currentNumberOfTentacles >= numberOfTentaclesToDefeatBoss && currentState == State.Battle)
         {

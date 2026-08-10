@@ -12,7 +12,6 @@ public class CharactersManager : MonoBehaviour, ISaveLoadObject
     
     [SerializeField] private float uniteDistance;
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private GameOver gameOver;
 
     [HideInInspector] public GameObject currentCharacter;
     [HideInInspector] public bool isUnited;
@@ -77,7 +76,7 @@ public class CharactersManager : MonoBehaviour, ISaveLoadObject
     public void GameOver()
     {
         PlayerDied?.Invoke();
-        gameOver.EndGame();
+        G.gameOver.EndGame();
         GameObject secondCharacter = currentCharacter == lightSide ? darkSide : lightSide;
         currentCharacter.transform.position = spawnPoint.position;
         secondCharacter.transform.position = spawnPoint.position + (Vector3)Random.insideUnitCircle;

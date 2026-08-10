@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2621176728787398916}
   - component: {fileID: 8271512349714269560}
   - component: {fileID: 8749779759447184621}
+  - component: {fileID: -5507980248793458572}
   m_Layer: 0
   m_Name: LowerTentacle
   m_TagString: Untagged
@@ -446,6 +447,18 @@ PolygonCollider2D:
       - {x: -1.558075, y: -2.6842327}
       - {x: -1.1872711, y: -2.5002651}
   m_UseDelaunayMesh: 0
+--- !u!210 &-5507980248793458572
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053083645924439949}
+  m_Enabled: 1
+  m_SortingLayerID: 1887013877
+  m_SortingLayer: -1
+  m_SortingOrder: -1
+  m_SortAtRoot: 1
 --- !u!1001 &6623527681772718239
 PrefabInstance:
   m_ObjectHideFlags: 0

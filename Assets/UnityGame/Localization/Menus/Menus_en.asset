@@ -77,7 +77,7 @@ MonoBehaviour:
   - m_Id: 1210374379687936
     m_Localized: '<sprite name="WASD"> - move
 
-      <sprite name="E"> - interactive
+      <sprite name="E"> - interact
 
       <sprite
       name="M"> - open/close map

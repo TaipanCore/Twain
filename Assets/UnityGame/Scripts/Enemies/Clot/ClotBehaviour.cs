@@ -49,6 +49,8 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         get => _isAggro;
         set
         {
+            if (!isAggro && value)
+                clotSounds.PlayAggroSound();
             if (!(isIgnoreLight && value))
             {
                 _isAggro = value;
@@ -65,6 +67,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
 
     protected ClotMovement movement;
     protected Animator animator;
+    private ClotSounds clotSounds;
     protected SpriteRenderer spriteRenderer;
     protected Collider2D objectCollider;
     private Tween cancelHuntTween;
@@ -79,6 +82,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     {
         movement = GetComponent<ClotMovement>();
         animator =  GetComponent<Animator>();
+        clotSounds = GetComponent<ClotSounds>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         objectCollider = GetComponent<Collider2D>();
         G.characters.PlayerDied += OnPlayerDied;
@@ -100,6 +104,13 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
                 Retreat();
                 break;
         }
+    }
+
+    private void OnDestroy()
+    {
+        DOTween.Kill(gameObject);
+        spriteRenderer.DOKill();
+        StopAllCoroutines();
     }
 
     protected void SetState(State newState)
@@ -162,7 +173,8 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             SetState(State.Retreat);
             return;
         }
-        movement.navMeshAgent.SetDestination(movement.target.position);
+        if (!Utils.IsAgentMoving(movement.navMeshAgent))
+            movement.navMeshAgent.SetDestination(movement.target.position);
         if (Utils.GetPathLength(movement.navMeshAgent.path) >= cancelHuntPathLenght)
         {
             cancelHuntTween ??= StartCancelHuntTween(timeToCancelHunt);
@@ -191,7 +203,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
 
     private Tween StartCancelHuntTween(float time)
     {
-        return DOVirtual.DelayedCall(time, () => SetState(State.Idle), false);
+        return DOVirtual.DelayedCall(time, () => SetState(State.Idle), false).SetTarget(gameObject);
     }
     private Tween StartStunTween(float time)
     {
@@ -202,15 +214,17 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             animator.Play(IdleAnim);
             movement.navMeshAgent.isStopped = false;
             stunTween = null;
-        }, false);
+        }, false).SetTarget(gameObject);
     }
+    
     private IEnumerator RetreatCoroutine()
     {
         while (state == State.Retreat)
         {
             if (!movement.isInPanic || (movement.isInPanic && !Utils.IsAgentMoving(movement.navMeshAgent)))
             {
-                movement.navMeshAgent.SetPath(movement.GetOnCirclePositionForCurrentState());
+                if (movement.navMeshAgent.isActiveAndEnabled)
+                    movement.navMeshAgent.SetPath(movement.GetOnCirclePositionForCurrentState());
             }
             yield return null;
         }
@@ -224,6 +238,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     {
         if (invulnerableTimer <= 0f)
         {
+            clotSounds.PlayHookHitSound();
             hitpoints -= receivedDamage;
             GiveInvulnerability();
         }
@@ -234,8 +249,11 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         isIgnoreLight = true;
         yield return new WaitForSeconds(time);
         isIgnoreLight = false;
-        objectCollider.enabled = false;
-        objectCollider.enabled = true;
+        if (objectCollider)
+        {
+            objectCollider.enabled = false;
+            objectCollider.enabled = true;
+        }
     }
     public void GiveInvulnerability()
     {
@@ -244,7 +262,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         {
             blinkingTween.Kill();
             spriteRenderer.DOFade(1f, 0f);
-        },false);
+        },false).SetTarget(gameObject);
         invulnerableTimer = invulnerableTime;
     }
     public void Die()
@@ -252,7 +270,11 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         G.enemiesDieStates.SetDieState(objectId);
         G.characters.PlayerDied -= OnPlayerDied;
         ParticleSystem smokeParticles = Instantiate(smokeParticlesPrefab, transform.position + new Vector3(0.15f, 0.5f), Quaternion.identity).GetComponent<ParticleSystem>();
-        spriteRenderer.DOFade(0f, smokeParticles.main.startLifetime.constantMin).SetEase(Ease.InQuad).OnComplete(() => Destroy(gameObject));
+        spriteRenderer.DOFade(0f, smokeParticles.main.startLifetime.constantMin).SetEase(Ease.InQuad).OnComplete(() =>
+        {
+            clotSounds.PlayDieSound();
+            Destroy(gameObject);
+        });
     }
     private void OnTriggerStay2D(Collider2D other)
     {

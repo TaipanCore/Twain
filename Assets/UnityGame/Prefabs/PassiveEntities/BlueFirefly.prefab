@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 379301949649240973}
   - component: {fileID: 6612633675044155435}
   - component: {fileID: 5228394907053833119}
+  - component: {fileID: -2074006985854665156}
   - component: {fileID: 6302971893454827075}
   - component: {fileID: 1626226339085072442}
   m_Layer: 0
@@ -103,6 +104,19 @@ MonoBehaviour:
   pathPointsSpread: 8
   pathPointsCount: 6
   lightRange: 1.25
+--- !u!114 &-2074006985854665156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4408648942888299298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40e2837a58037046bff7f3164f6e5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireflyLifeSound: {fileID: 8300000, guid: 2fee38fdabbb2254c97b45c51b833736, type: 3}
 --- !u!114 &6302971893454827075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be24fe4ec2e0afd4883b5460a93ec890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useParentPosition: 0
 --- !u!1001 &4322296614959574714
 PrefabInstance:
   m_ObjectHideFlags: 0
