@@ -7,6 +7,7 @@ public class HUD : MonoBehaviour
     {
         Game,
         Pause,
+        Map,
         GameOver,
         GameComplete
     }
@@ -18,7 +19,7 @@ public class HUD : MonoBehaviour
 
     public Action<State> StateChange;
 
-    private State _state = State.Game;
+    private State _state;
     public State state
     {
         get => _state;
@@ -32,5 +33,6 @@ public class HUD : MonoBehaviour
     private void Awake()
     {
         G.HUD = this;
+        state = State.Game;
     }
 }

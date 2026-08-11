@@ -40,6 +40,7 @@ public class MapOpenerAndCloser : MonoBehaviour
 
     private void OpenMap(Vector3 openPosition)
     {
+        G.HUD.state = HUD.State.Map;
         hintsTrigger.btnFirstActivated = true;
         G.mapCamera.SetActive(true);
         HUDCanvas.worldCamera = mapCamera;
@@ -58,6 +59,7 @@ public class MapOpenerAndCloser : MonoBehaviour
     
     private void CloseMap()
     {
+        G.HUD.state = HUD.State.Game;
         G.mainCamera.SetActive(true);
         HUDCanvas.worldCamera = mainCamera;
         if (expandTween.IsActive())

@@ -41,9 +41,9 @@ public class HintsTrigger : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        charactersInTrigger.Add(collision.gameObject);
         if (!(showHintOnlyBeforeFirstActivate && btnFirstActivated))
         {
-            charactersInTrigger.Add(collision.gameObject);
             if (collision.gameObject == G.characters.currentCharacter)
                 TriggerEnter?.Invoke();
         }
