@@ -74,6 +74,7 @@ public class SquidBossBehaviour : MonoBehaviour
             RetreatAllTentacles();
             HideEyes();
             currentNumberOfTentacles = 0;
+            G.audio.PlayMusic(G.music.labyrinthMusic, fadeDuration: 1f);
         }
     }
 

@@ -1,14 +1,16 @@
 using System.Collections;
+
 using UnityEngine;
 using UnityEngine.AI;
 
 public class ClotScareZone : MonoBehaviour
 {
     [SerializeField] protected float scaredMoveSpeed;
-    [SerializeField] private float scareMovingDistance;
+    [SerializeField] private float minScareMovingDistance;
+    [SerializeField] private float maxScareMovingDistance;
     [SerializeField] private int scarePointsOnCircle;
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out ClotBehaviour behaviour))
         {
@@ -17,15 +19,9 @@ public class ClotScareZone : MonoBehaviour
                 StartCoroutine(behaviour.IgnoreLight(5f));
                 ClotMovement movement = behaviour.GetComponent<ClotMovement>();
                 movement.navMeshAgent.speed = scaredMoveSpeed;
-                movement.navMeshAgent.SetPath(movement.GetOnCircleNavMeshPosition(scareMovingDistance, scarePointsOnCircle));
-                StartCoroutine(WaitForEndOfPath(movement.navMeshAgent, movement));
+                NavMeshPath retreatPath = movement.GetOnCircleNavMeshPosition(Random.Range(minScareMovingDistance, maxScareMovingDistance), scarePointsOnCircle);
+                movement.navMeshAgent.SetPath(retreatPath);
             }
         }
-    }
-
-    private IEnumerator WaitForEndOfPath(NavMeshAgent agent, ClotMovement movement)
-    {
-        yield return new WaitUntil(() => !Utils.IsAgentMoving(agent));
-        movement.SetMoveState(ClotBehaviour.State.Idle);
     }
 }

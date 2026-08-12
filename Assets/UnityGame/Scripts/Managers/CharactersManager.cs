@@ -75,6 +75,7 @@ public class CharactersManager : MonoBehaviour, ISaveLoadObject
 
     public void GameOver()
     {
+        G.audio.StopMusic();
         PlayerDied?.Invoke();
         G.gameOver.EndGame();
         GameObject secondCharacter = currentCharacter == lightSide ? darkSide : lightSide;

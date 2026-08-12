@@ -24,7 +24,7 @@ public class ButtonsHints : MonoBehaviour
     
     public void ShowHint(BtnKey key)
     {
-        if (btnKeysAndHints.ContainsKey(key))
+        if (btnKeysAndHints.ContainsKey(key) && btnKeysAndHints[key])
         {
             btnKeysAndHints[key].gameObject.SetActive(true);
             StartFade(btnKeysAndHints[key]);
@@ -33,7 +33,7 @@ public class ButtonsHints : MonoBehaviour
 
     public void HideHint(BtnKey key)
     {
-        if (btnKeysAndHints.ContainsKey(key))
+        if (btnKeysAndHints.ContainsKey(key) && btnKeysAndHints[key])
         {
             btnKeysAndHints[key].gameObject.SetActive(false);
             StopFade(btnKeysAndHints[key]);

@@ -7218,7 +7218,7 @@ Transform:
   m_GameObject: {fileID: 259643167}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1, y: 29.8, z: 0}
+  m_LocalPosition: {x: 6.77, y: 41.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -116731,8 +116731,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaredMoveSpeed: 5.5
-  scareMovingDistance: 30
-  scarePointsOnCircle: 72
+  minScareMovingDistance: 30
+  maxScareMovingDistance: 100
+  scarePointsOnCircle: 144
 --- !u!61 &874917342
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -69,6 +69,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     protected Animator animator;
     private ClotSounds clotSounds;
     protected SpriteRenderer spriteRenderer;
+    protected SpriteRenderer shadow;
     protected Collider2D objectCollider;
     private Tween cancelHuntTween;
     private Tween stunTween;
@@ -84,6 +85,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
         animator =  GetComponent<Animator>();
         clotSounds = GetComponent<ClotSounds>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        shadow = transform.Find("Shadow").GetComponent<SpriteRenderer>();
         objectCollider = GetComponent<Collider2D>();
         G.characters.PlayerDied += OnPlayerDied;
         SetState(State.Idle);
@@ -104,6 +106,11 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
                 Retreat();
                 break;
         }
+    }
+
+    private void LateUpdate()
+    {
+        shadow.sortingOrder = spriteRenderer.sortingOrder;
     }
 
     private void OnDestroy()
@@ -173,7 +180,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
             SetState(State.Retreat);
             return;
         }
-        if (!Utils.IsAgentMoving(movement.navMeshAgent))
+        if (!isIgnoreLight)
             movement.navMeshAgent.SetDestination(movement.target.position);
         if (Utils.GetPathLength(movement.navMeshAgent.path) >= cancelHuntPathLenght)
         {
@@ -248,6 +255,7 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     {
         isIgnoreLight = true;
         yield return new WaitForSeconds(time);
+        SetState(State.Idle);
         isIgnoreLight = false;
         if (objectCollider)
         {

@@ -46,6 +46,7 @@ public class CursorBehaviour : UICursorFollower
             case HUD.State.GameOver:
             case HUD.State.GameComplete:
             case HUD.State.Pause:
+            case HUD.State.Map:
                 Cursor.visible = true;
                 break;
         }

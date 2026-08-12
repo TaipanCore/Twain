@@ -84,7 +84,11 @@ public class AudioManager : MonoBehaviour
         return currentMusic;
     }
     
-    public void StopMusic() => currentMusic?.Stop();
+    public void StopMusic()
+    {
+        currentMusic?.Stop();
+        currentMusic = null;
+    }
 
     public AudioSource PlaySoundEffect(AudioClip clip, float volume = 1f, float pitchMin = 1f, float pitchMax = 1f, bool loop = false, float time = 0f)
     {
