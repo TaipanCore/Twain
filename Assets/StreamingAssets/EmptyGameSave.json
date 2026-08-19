@@ -1,0 +1,1042 @@
+{
+  "saveTime": "12.08.2026 0:00",
+  "objectsData": [
+    {
+      "dataObjectId": "Clot (36)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -10.87842,
+          "y": -7.522732,
+          "z": -0.0333107449
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (1)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -66.5305743,
+          "y": 39.27239,
+          "z": -0.0333163179
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (12)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (17)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (14)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "WanderingClot (2)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -94.02,
+          "y": 38.1544,
+          "z": -0.0333247669
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (12)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -92.66,
+          "y": 51.350975,
+          "z": -0.0333177634
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (18)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -34.0,
+          "y": 121.70195,
+          "z": -0.03332615
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "SleepingTorch (3)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (33)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 20.8,
+          "y": 141.901947,
+          "z": -0.03332856
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (23)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (2)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (26)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 57.1,
+          "y": 93.100975,
+          "z": -0.03332274
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "WanderingClot (3)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 37,
+          "y": 102.207853,
+          "z": -0.0333280079
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (1)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "WanderingClot (1)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -89.11815,
+          "y": 18.01656,
+          "z": -0.0333194323
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (2)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -89.86,
+          "y": 42.63049,
+          "z": -0.033316724
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (16)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -67.8,
+          "y": 70.20097,
+          "z": -0.03332001
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (31)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -1.90503,
+          "y": 119.1226,
+          "z": -0.0333258435
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (13)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (15)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (3)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -80.08,
+          "y": 20.8302441,
+          "z": -0.0333141275
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (11)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -103.88,
+          "y": 37.74049,
+          "z": -0.0333161429
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (21)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -70.95,
+          "y": 57.1109772,
+          "z": -0.0333184525
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "SleepingTorch (4)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (22)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "SleepingTorch (1)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (20)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -17.3,
+          "y": 64.00098,
+          "z": -0.0333192721
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "SleepingTorch",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (8)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -81.94,
+          "y": -4.970061,
+          "z": -0.03331105
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (4)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (15)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -43.1,
+          "y": 56.4009781,
+          "z": -0.0333183669
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (10)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -97.8,
+          "y": 12.6902437,
+          "z": -0.0333131552
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "WanderingClot (6)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -35.30156,
+          "y": -1.8095971,
+          "z": -0.0333111174
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (10)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (14)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -43.6,
+          "y": 38.50049,
+          "z": -0.0333162323
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (7)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (22)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -53.5,
+          "y": 2.00003052,
+          "z": -0.03331188
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "SleepingTorch (2)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (11)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (13)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -43.0,
+          "y": 17.9002438,
+          "z": -0.0333137773
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (5)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (34)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -7.6,
+          "y": 154.001953,
+          "z": -0.03333
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (30)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 22.8,
+          "y": 104.20195,
+          "z": -0.0333240628
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "WanderingClot (4)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -21.6307726,
+          "y": 85.399094,
+          "z": -0.0333257578
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (19)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (24)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 51.1,
+          "y": 59.7009773,
+          "z": -0.033318758
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (28)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 20.3,
+          "y": 66.50098,
+          "z": -0.03331957
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (6)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -110.9,
+          "y": 18.9202442,
+          "z": -0.0333138965
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "WanderingClot (5)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 42.0452,
+          "y": 89.46398,
+          "z": -0.033321593
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (25)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 74.4,
+          "y": 87.100975,
+          "z": -0.0333220251
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (32)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 53.4,
+          "y": 123.001953,
+          "z": -0.0333263054
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (19)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -19.0,
+          "y": 95.40098,
+          "z": -0.033323016
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (20)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (3)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (7)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -89.98,
+          "y": 8.640122,
+          "z": -0.03331267
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (29)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 10.53545551,
+          "y": 86.2590546,
+          "z": -0.03332122
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (4)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -67.87847,
+          "y": 18.10077,
+          "z": -0.0333138
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (27)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 74.1,
+          "y": 48.2009773,
+          "z": -0.0333173871
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (21)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -27.61862,
+          "y": 16.4043446,
+          "z": -0.0333136
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (17)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -44.0,
+          "y": 83.00098,
+          "z": -0.0333215371
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (35)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 40.0,
+          "y": 59.7009773,
+          "z": -0.033318758
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (9)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -97.51,
+          "y": -7.580122,
+          "z": -0.0333107375
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "Clot (5)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": -92.25663,
+          "y": 27.1211472,
+          "z": -0.0333148763
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (8)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (9)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (24)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (6)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "Clot (23)",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 18.0555325,
+          "y": 2.69130135,
+          "z": -0.0333119631
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "WanderingClot",
+      "data": [
+        50.0,
+        "Idle",
+        {
+          "x": 81.173,
+          "y": 67.106836,
+          "z": -0.0333264843
+        },
+        0.0,
+        0.0,
+        0.0,
+        100
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (16)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedTorch (18)",
+      "data": [
+        false
+      ]
+    },
+    {
+      "dataObjectId": "LightSide",
+      "data": [
+        {
+          "x": 6.01112843,
+          "y": 22.29087,
+          "z": 0.0
+        },
+        "Normal",
+        5.0,
+        0.0,
+        {
+          "isDieCoroutineActive": false,
+          "elapsedTime": 0.0,
+          "redEyesPositions": []
+        }
+      ]
+    },
+    {
+      "dataObjectId": "GreenForest",
+      "data": [
+        []
+      ]
+    },
+    {
+      "dataObjectId": "GreenKeyShard",
+      "data": [
+        {
+          "x": 136.5,
+          "y": 0.3125,
+          "z": 0.0
+        },
+	"World"
+      ]
+    },
+    {
+      "dataObjectId": "Equilibrium",
+      "data": [
+        {
+          "x": 6.77,
+          "y": 41.78,
+          "z": 0.0
+        },
+        15.0,
+        0.0,
+        0.0,
+        null
+      ]
+    },
+    {
+      "dataObjectId": "Inventory",
+      "data": [
+        []
+      ]
+    },
+    {
+      "dataObjectId": "EvilSpirit",
+      "data": [
+        30.0,
+        "Idle",
+        {
+          "x": -128.0,
+          "y": -5.0,
+          "z": 0.0
+        }
+      ]
+    },
+    {
+      "dataObjectId": "ShrineOfBalance",
+      "data": [
+        0,
+        false,
+        false
+      ]
+    },
+    {
+      "dataObjectId": "DarkSide",
+      "data": [
+        {
+          "x": 7.75190926,
+          "y": 22.6030445,
+          "z": 0.0
+        },
+        0,
+        [],
+        {
+          "isDieCoroutineActive": false,
+          "elapsedTime": 0.0,
+          "redEyesPositions": []
+        }
+      ]
+    },
+    {
+      "dataObjectId": "BlueKeyShard",
+      "data": [
+        {
+          "x": 7.0,
+          "y": 176,
+          "z": 0.0
+        },
+	"None"
+      ]
+    },
+    {
+      "dataObjectId": "FinalGates",
+      "data": [
+        0,
+        0,
+        false,
+        0.0
+      ]
+    },
+    {
+      "dataObjectId": "Map",
+      "data": [
+        []
+      ]
+    },
+    {
+      "dataObjectId": "EnemiesDieStates",
+      "data": [
+        {}
+      ]
+    },
+    {
+      "dataObjectId": "SquidShrine",
+      "data": [
+        false,
+        "Sleep",
+        0,
+        [],
+        0.0
+      ]
+    },
+    {
+      "dataObjectId": "CharactersManager",
+      "data": [
+        false,
+        "LightSide",
+        false
+      ]
+    },
+    {
+      "dataObjectId": "RedKeyShard",
+      "data": [
+        {
+          "x": -128.0938,
+          "y": -3.9375,
+          "z": 0.0
+        },
+	"None"
+      ]
+    }
+  ]
+}

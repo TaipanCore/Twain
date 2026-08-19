@@ -16,6 +16,9 @@ public class MainMenu : MonoBehaviour
         G.isDefaultGameSaveExists = File.Exists(defaultGameSavePath);
         if (!G.isDefaultGameSaveExists)
             transform.Find("ContinueBtn").gameObject.SetActive(false);
+        #if UNITY_WEBGL
+            transform.Find("QuitGameBtn").gameObject.SetActive(false);
+        #endif
         Time.timeScale = 1;
     }
     
@@ -31,6 +34,7 @@ public class MainMenu : MonoBehaviour
         if (isConfirmed)
         {
             DOTween.KillAll();
+            G.isDefaultGameSaveExists = false;
             SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
         }
         else

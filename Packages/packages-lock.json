@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.omiyagames.embedwebgltemplate": {
+      "version": "https://github.com/OmiyaGames/omiya-games-embed-webgl-template.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ext.nunit": "1.0.0"
+      },
+      "hash": "46c9517883a91b5669febb09d3e2374606865f51"
+    },
     "com.spoiledcat.git": {
       "version": "1.0.44",
       "depth": 0,

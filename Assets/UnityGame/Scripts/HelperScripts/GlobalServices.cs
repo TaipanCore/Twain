@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalServices : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class GlobalServices : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         DOTween.SetTweensCapacity(500, 125);
+        
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
     
 }

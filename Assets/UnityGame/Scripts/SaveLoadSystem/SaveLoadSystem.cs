@@ -1,18 +1,30 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class SaveLoadSystem
 {
+    private WebLoader webLoader;
+    
     private Dictionary<String, ISaveLoadObject> objectsToSave = new ();
     
     private String savesFolderPath => Path.Combine(Application.persistentDataPath, "Saves");
+    private String emptySaveFilePath => Path.Combine(Application.streamingAssetsPath, "EmptyGameSave.json");
     private JsonSerializerSettings serializerSettings = new ()
     {
-        Formatting = Formatting.Indented
+        Formatting = Formatting.Indented,
+        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
     };
+
+    public SaveLoadSystem(WebLoader webLoader)
+    {
+        this.webLoader = webLoader;
+    }
     
     public void AddObjectToSave(ISaveLoadObject saveLoadObject)
     {
@@ -43,21 +55,31 @@ public class SaveLoadSystem
         String serializedSaveFile = JsonConvert.SerializeObject(saveFile, serializerSettings);
         File.WriteAllText(Path.Combine(savesFolderPath, saveFileName), serializedSaveFile);
     }
-    public void Load(String saveFileName)
+    public void Load(String saveFileName, bool loadEmptySave)
     {
-        String fullSaveFilePath = Path.Combine(savesFolderPath, saveFileName);
-        if (!File.Exists(fullSaveFilePath))
+        String fullSaveFilePath = loadEmptySave ? emptySaveFilePath : Path.Combine(savesFolderPath, saveFileName);
+        if (loadEmptySave)
         {
-            Debug.LogError($"Save file {fullSaveFilePath} not found");
-            return;
+            #if UNITY_WEBGL
+                webLoader.LoadSaveUsingWebRequest(fullSaveFilePath, DeserializeSaveFile);
+            #else
+                DeserializeSaveFile(File.ReadAllText(fullSaveFilePath));
+            #endif
         }
-        String serializedSaveFile = File.ReadAllText(fullSaveFilePath);
+        else
+        {
+            if (!File.Exists(fullSaveFilePath))
+            {
+                Debug.LogError($"Save file {fullSaveFilePath} not found");
+                return;
+            }
+            DeserializeSaveFile(File.ReadAllText(fullSaveFilePath));
+        }
+    }
+
+    public void DeserializeSaveFile(String serializedSaveFile)
+    {
         SaveFile saveFile = JsonConvert.DeserializeObject<SaveFile>(serializedSaveFile, serializerSettings);
-        if (saveFile?.objectsData == null)
-        {
-            Debug.LogError($"Deserialized file {fullSaveFilePath} is empty");
-            return;
-        }
         foreach (ObjectSaveLoadData data in saveFile.objectsData)
         {
             if (!objectsToSave.ContainsKey(data.dataObjectId))
@@ -68,4 +90,6 @@ public class SaveLoadSystem
             objectsToSave[data.dataObjectId].UnpackData(data);
         }
     }
+    
+    
 }
