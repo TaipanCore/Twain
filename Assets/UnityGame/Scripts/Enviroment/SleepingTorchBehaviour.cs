@@ -22,12 +22,10 @@ public class SleepingTorchBehaviour : TorchBehaviour, IAbleAggro, ISaveLoadObjec
     
     private SimpleAnimator animator;
 
-    private void Awake()
+    protected override void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    protected override void Start()
-    {
+        
         animator = GetComponent<SimpleAnimator>();
         lightSource = transform.GetChild(0).gameObject;
     }

@@ -22,7 +22,7 @@ public class ClotMovement : MonoBehaviour
     private float currentSpeed;
     protected ClotBehaviour.State currentState;
 
-    private void Start()
+    private void Awake()
     {
         clotBehaviour = GetComponent<ClotBehaviour>();
         objectTransform = GetComponent<Transform>();

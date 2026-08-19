@@ -60,14 +60,16 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour, ISaveLoadObject
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         circleLight = transform.Find("CircleLight").GetComponent<CircleLight>();
         runesSpriteRenderer = transform.Find("Runes").GetComponent<SpriteRenderer>();
         shrineOfBalanceSounds = GetComponent<ShrineOfBalanceSounds>();
         runesParticleSystem = runesSpriteRenderer.transform.Find("BouncingUpRays").GetComponent<ParticleSystem>();
         runesTween = runesSpriteRenderer.DOFade(1f, 0.75f).SetLoops(-1, LoopType.Yoyo).Pause();
+    }
+
+    private void Start()
+    {
         equilibriumChargeBackground = G.HUD.equilibriumCharge.transform.Find("Background").GetComponent<Image>();
         hintsTrigger.Initialize
         (
@@ -120,6 +122,6 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour, ISaveLoadObject
             hintsTrigger.btnFirstActivated = parsedInteractHintActivated;
         //data[2] - mapHintActivated
         if(bool.TryParse(dataToUnpack.data[2].ToString(), out var parsedMapHintActivated))
-            GetComponent<MapOpenerAndCloser>().hintsTrigger.btnFirstActivated =  parsedMapHintActivated;
+            GetComponent<MapOpenerAndCloser>().hintsTrigger.btnFirstActivated = parsedMapHintActivated;
     }
 }

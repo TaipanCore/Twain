@@ -78,17 +78,25 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         movement = GetComponent<ClotMovement>();
-        animator =  GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         clotSounds = GetComponent<ClotSounds>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         shadow = transform.Find("Shadow").GetComponent<SpriteRenderer>();
         objectCollider = GetComponent<Collider2D>();
-        G.characters.PlayerDied += OnPlayerDied;
         SetState(State.Idle);
+    }
+    private void Start()
+    {
+        G.characters.PlayerDied += OnPlayerDied;
+    }
+    private void OnDestroy()
+    {
+        G.characters.PlayerDied -= OnPlayerDied;
+        DOTween.Kill(gameObject);
+        spriteRenderer.DOKill();
+        StopAllCoroutines();
     }
     private void Update()
     {
@@ -111,13 +119,6 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     private void LateUpdate()
     {
         shadow.sortingOrder = spriteRenderer.sortingOrder;
-    }
-
-    private void OnDestroy()
-    {
-        DOTween.Kill(gameObject);
-        spriteRenderer.DOKill();
-        StopAllCoroutines();
     }
 
     protected void SetState(State newState)
@@ -276,7 +277,6 @@ public class ClotBehaviour : MonoBehaviour, IDamageDealer, IInvulnerableDamageRe
     public void Die()
     {
         G.enemiesDieStates.SetDieState(objectId);
-        G.characters.PlayerDied -= OnPlayerDied;
         ParticleSystem smokeParticles = Instantiate(smokeParticlesPrefab, transform.position + new Vector3(0.15f, 0.5f), Quaternion.identity).GetComponent<ParticleSystem>();
         spriteRenderer.DOFade(0f, smokeParticles.main.startLifetime.constantMin).SetEase(Ease.InQuad).OnComplete(() =>
         {

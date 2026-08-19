@@ -47,17 +47,15 @@ public class EquilibriumBehaviour : MonoBehaviour, ISaveLoadObject
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-        gameObject.SetActive(false);
-    }
-    private void Start()
-    {
+        
         movement = GetComponent<PlayerMovement>();
         animator = transform.Find("Appearance").GetComponent<Animator>();
         hookBehaviour = transform.Find("Appearance").Find("Hook").GetComponent<HookBehaviour>();
         hookBehaviour.damage = damage;
         spawnPoint = transform.Find("BulletSpawnPoint");
+        gameObject.SetActive(false);
     }
-
+    
     private void OnEnable()
     {
         StartEquilibriumFormTimer(timeInEquilibriumForm);

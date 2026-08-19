@@ -60,9 +60,7 @@ public class LightSideBehaviour : MonoBehaviour, IInvulnerableDamageReceiver, IS
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         animator =  transform.Find("Appearance").GetComponent<Animator>();
         spriteRenderer = transform.Find("Appearance").GetComponent<SpriteRenderer>();
         movement = GetComponent<LightSideMovement>();

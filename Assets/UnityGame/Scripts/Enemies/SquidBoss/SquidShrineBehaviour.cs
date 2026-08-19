@@ -17,10 +17,11 @@ public class SquidShrineBehaviour : MonoBehaviour, ISaveLoadObject
     private void Awake()
     {
         RegisterInSaveLoadSystem();
+        
+        fireflyPoint = transform.Find("FireflyPoint");
     }
     private void Start()
     {
-        fireflyPoint = transform.Find("FireflyPoint");
         squidBossBehaviour.StateChanged += OnStateChanged;
     }
     private void OnTriggerStay2D(Collider2D other)

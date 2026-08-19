@@ -25,12 +25,13 @@ public class MapExplorer : MonoBehaviour, ISaveLoadObject
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         mapTilemap = GetComponent<Tilemap>();
         mapTilemapInfo = GetComponent<TilemapInfo>();
         timerBetweenMapUpdates = new WaitForSeconds(delayBetweenMapUpdates);
+    }
+    private void Start()
+    {
         if (!isInitialized)
             BuildUnexploredMap();
         StartMapExploration();

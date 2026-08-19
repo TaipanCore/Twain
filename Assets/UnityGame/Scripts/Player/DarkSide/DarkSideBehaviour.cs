@@ -22,9 +22,7 @@ public class DarkSideBehaviour : MonoBehaviour, ISaveLoadObject
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         objectTransform = GetComponent<Transform>();
     }
 

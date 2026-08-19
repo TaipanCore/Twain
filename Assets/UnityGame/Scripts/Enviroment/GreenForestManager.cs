@@ -26,9 +26,7 @@ public class GreenForestManager : MonoBehaviour, ISaveLoadObject
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         firefliesSpawnTimer = new WaitForSeconds(delayBetweenFirefliesSpawn);
         travelerFireflySpawnTimer = new WaitForSeconds(delayBetweenTravelerFirefliesSpawn);
     }

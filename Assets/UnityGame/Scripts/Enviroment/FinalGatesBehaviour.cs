@@ -44,19 +44,21 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         redShardSlot = redShardSprite.GetComponent<ShardSlot>();
-        redShardSlot.OnGetShard += OnGetRedShard;
         blueShardSlot = blueShardSprite.GetComponent<ShardSlot>();
-        blueShardSlot.OnGetShard += OnGetBlueShard;
         greenShardSlot = greenShardSprite.GetComponent<ShardSlot>();
-        greenShardSlot.OnGetShard += OnGetGreenShard;
         onGatesRunesSprite = transform.Find("ActiveRunes").GetComponent<SpriteRenderer>();
         finalGatesSounds = GetComponent<FinalGatesSounds>();
         onGatesRunesTween = onGatesRunesSprite.DOFade(1f, 0.75f).SetAutoKill(false).Pause();
         currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(0f);
+    }
+
+    private void Start()
+    {
+        redShardSlot.OnGetShard += OnGetRedShard;
+        blueShardSlot.OnGetShard += OnGetBlueShard;
+        greenShardSlot.OnGetShard += OnGetGreenShard;
     }
     private void Update()
     {
