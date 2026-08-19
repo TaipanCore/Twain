@@ -3,6 +3,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Owner = ShardBehaviour.Owner;
 
 public class SquidBossBehaviour : MonoBehaviour
 {
@@ -42,7 +43,9 @@ public class SquidBossBehaviour : MonoBehaviour
         eyeAppearTimer = new WaitForSeconds(eyeAppearDelay);
         soundWaveParticles = GetComponent<ParticleSystem>();
         squidBossSounds = GetComponent<SquidBossSounds>();
-        reward.SetActive(false);
+        ShardBehaviour rewardBehaviour = reward.GetComponent<ShardBehaviour>();
+        if (rewardBehaviour.owner == Owner.None)
+            rewardBehaviour.owner = Owner.Enemy;
         G.characters.PlayerDied += OnPlayerDied;
         SetState(State.Sleep);
     }
@@ -116,7 +119,7 @@ public class SquidBossBehaviour : MonoBehaviour
     }
     private Tween DropReward()
     {
-        reward.SetActive(true);
+        reward.GetComponent<ShardBehaviour>().owner = Owner.World;
         reward.transform.position = transform.position;
         Vector2 jumpToPosition = transform.position + (Vector3)Random.insideUnitCircle.normalized * 2f;
         ParticleSystem trailParticles = reward.GetComponent<ParticleSystem>();

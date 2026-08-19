@@ -12,8 +12,9 @@ public class ShardSlot : MonoBehaviour
     {
         if (collision.CompareTag("Player") && G.input.interactiveBtnDown && G.HUD.inventory.items.ContainsKey(requiredShard))
         {
-            MoveShardToSlot();
             G.HUD.inventory.RemoveItem(requiredShard);
+            requiredShard.GetComponent<ShardBehaviour>().owner = ShardBehaviour.Owner.FinalGates;
+            MoveShardToSlot();
             GetComponent<Collider2D>().enabled = false;
         }
     }

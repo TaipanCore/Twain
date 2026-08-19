@@ -4,6 +4,7 @@ using DG.Tweening;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Owner = ShardBehaviour.Owner;
 
 public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocusedLight, IAbleAggro, ISaveLoadObject
 {
@@ -104,20 +105,27 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     private void Awake()
     {
         RegisterInSaveLoadSystem();
-    }
-    private void Start()
-    {
+        
         redEyeTrail = transform.Find("RedEye").GetComponent<TrailRenderer>();
         steamParticles = transform.Find("SteamParticles").GetComponent<ParticleSystem>();
         transform.Find("RedEye").GetComponent<RedEyeBehaviour>().damage = damage;
-        redKeyShard.SetActive(false);
         redKeyShardImage = transform.Find("RedKeyShardImage").gameObject;
         animator = GetComponent<Animator>();
         evilSpiritSounds = GetComponent<EvilSpiritSounds>();
         maxHitpoints = hitpoints;
         dashTimer = timeInLightToDash;
+    }
+    private void Start()
+    {
+        ShardBehaviour redShardBehaviour = redKeyShard.GetComponent<ShardBehaviour>();
+        if (redShardBehaviour.owner == Owner.None)
+            redShardBehaviour.owner = Owner.Enemy;
         G.characters.PlayerDied += OnPlayerDied;
-        SetState(State.Idle);
+    }
+
+    private void OnDestroy()
+    {
+        G.characters.PlayerDied -= OnPlayerDied;
     }
     private void FixedUpdate()
     {
@@ -201,7 +209,6 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
 
     private void SetDieSettings()
     {
-        redKeyShard.SetActive(true);
         redEyeTrail.emitting = false;
         G.audio.PlayMusic(G.music.labyrinthMusic);
         Die();
@@ -250,13 +257,12 @@ public class EvilSpiritBehaviour : MonoBehaviour, IDamageReceiver, IReactToFocus
     }
     public void Die()
     {
-        G.enemiesDieStates.SetDieState(objectId);
-        G.characters.PlayerDied -= OnPlayerDied;
         GetComponent<SpriteRenderer>().DOFade(0f, 0.5f).SetEase(Ease.InSine).OnComplete(() =>
         {
-            redKeyShard.GetComponent<Collider2D>().enabled = true;
+            redKeyShard.GetComponent<ShardBehaviour>().owner = Owner.World;
             redKeyShard.transform.position = redKeyShardImage.transform.position;
             redKeyShard.transform.DOMoveY(transform.position.y, 0.25f).SetEase(Ease.InBack);
+            G.enemiesDieStates.SetDieState(objectId);
             Destroy(gameObject);
         });
     }

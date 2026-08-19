@@ -20,11 +20,15 @@ public class PlayerInventory : MonoBehaviour, ISaveLoadObject
         GameObject itemSlot = Instantiate(itemSlotPrefab, itemSlotPrefab.GetComponent<RectTransform>().position, Quaternion.identity, transform);
         itemSlot.GetComponent<Image>().sprite = item.GetComponent<ItemAvatar>().avatarSprite;
         items.Add(item, itemSlot);
+        if (item.TryGetComponent(out ShardBehaviour shardBehaviour))
+            shardBehaviour.owner = ShardBehaviour.Owner.Inventory;
         item.SetActive(false);
     }
     public void RemoveItem(GameObject item)
     {
         Destroy(items[item]);
+        if (item.TryGetComponent(out ShardBehaviour shardBehaviour))
+            shardBehaviour.owner = ShardBehaviour.Owner.World;
         items.Remove(item);
     }
 
