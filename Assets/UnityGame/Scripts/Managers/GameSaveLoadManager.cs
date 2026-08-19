@@ -5,6 +5,8 @@ using UnityEngine;
 [DefaultExecutionOrder(-5)]
 public class GameSaveLoadManager : MonoBehaviour
 {
+    [SerializeField] private WebLoader webLoader;
+    
     private List<ISaveLoadObject> saveLoadObjects = new ();
     
     private SaveLoadSystem saveLoadSystem;
@@ -12,7 +14,7 @@ public class GameSaveLoadManager : MonoBehaviour
     private void Awake()
     {
         G.gameSaveLoad = this;
-        saveLoadSystem = new SaveLoadSystem(); 
+        saveLoadSystem = new SaveLoadSystem(webLoader);
     }
 
     public void Register(ISaveLoadObject obj)
@@ -31,8 +33,8 @@ public class GameSaveLoadManager : MonoBehaviour
         saveLoadSystem.Save(saveFileName);
     }
 
-    public void LoadGame(String saveFileName = "DefaultGameSave.json")
+    public void LoadGame(String saveFileName = "DefaultGameSave.json", bool loadEmptySave = false)
     {
-        saveLoadSystem.Load(saveFileName);
+        saveLoadSystem.Load(saveFileName, loadEmptySave);
     }
 }

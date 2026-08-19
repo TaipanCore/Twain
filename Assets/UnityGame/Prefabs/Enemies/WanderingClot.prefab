@@ -264,7 +264,7 @@ MonoBehaviour:
   retreatPointsOnCircle: 36
   target: {fileID: 0}
   isInPanic: 0
-  navMeshAgent: {fileID: 0}
+  navMeshAgent: {fileID: 2661429094143619018}
   wanderingMoveSpeed: 2.5
   wanderingDistance: 25
   wanderingPointsOnCircle: 36
