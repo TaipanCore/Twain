@@ -50,7 +50,7 @@ public class FinalGatesBehaviour : MonoBehaviour, ISaveLoadObject
         greenShardSlot = greenShardSprite.GetComponent<ShardSlot>();
         onGatesRunesSprite = transform.Find("ActiveRunes").GetComponent<SpriteRenderer>();
         finalGatesSounds = GetComponent<FinalGatesSounds>();
-        onGatesRunesTween = onGatesRunesSprite.DOFade(1f, 0.5f).SetAutoKill(false).Pause();
+        onGatesRunesTween = onGatesRunesSprite.DOFade(1f, 0.75f).SetAutoKill(false).Pause();
         currentBetweenRunesDelay = betweenRunesDelayCurve.Evaluate(0f);
     }
 
