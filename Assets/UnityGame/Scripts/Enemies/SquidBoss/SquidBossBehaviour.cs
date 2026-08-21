@@ -99,8 +99,7 @@ public class SquidBossBehaviour : MonoBehaviour
             .AppendCallback(squidBossSounds.PlayDieSound)
             .Append(transform.DOPunchPosition(Vector3.up * 0.35f, 1f, 4))
             .AppendCallback(HideEyes)
-            .AppendInterval(2f)
-            .Append(DropReward())
+            .Append(DOVirtual.DelayedCall(2f, () => DropReward()))
             .AppendCallback(() => G.audio.PlayMusic(G.music.labyrinthMusic))
             .AppendCallback(() =>
             {
@@ -117,13 +116,13 @@ public class SquidBossBehaviour : MonoBehaviour
             eye.GetComponent<SpriteRenderer>().DOFade(0f, 0.5f).OnComplete(() => eye.SetActive(false));
         }
     }
-    private Tween DropReward()
+    private void DropReward()
     {
         reward.GetComponent<ShardBehaviour>().owner = Owner.World;
         reward.transform.position = transform.position;
         Vector2 jumpToPosition = transform.position + (Vector3)Random.insideUnitCircle.normalized * 2f;
         ParticleSystem trailParticles = reward.GetComponent<ParticleSystem>();
-        return reward.transform.DOJump(jumpToPosition, 2f, 1, 0.6f).SetEase(Ease.Linear).OnComplete(() => trailParticles.Stop());
+        reward.transform.DOJump(jumpToPosition, 2f, 1, 0.6f).SetEase(Ease.Linear).OnComplete(() => trailParticles.Stop());
     }
 
     public void SpawnEyes(bool playAnimation)
@@ -167,10 +166,13 @@ public class SquidBossBehaviour : MonoBehaviour
             int tentaclesInWaveCount = Mathf.CeilToInt(tentacles.Length * attackDifficultyOverTime.Evaluate((float)currentNumberOfTentacles / numberOfTentaclesToDefeatBoss));
             foreach (TentacleBehaviour tentacle in Utils.GetRandomElements(tentacles, tentaclesInWaveCount))
             {
-                tentacle.timeToReachTarget = timeToReachTarget;
-                tentacle.timeToRetreat = timeToRetreat;
-                tentacle.Attack();
-                yield return new WaitForSeconds(Random.Range(0f, maxDelayBetweenTentaclesAttacks));
+                if (currentState == State.Battle)
+                {
+                    tentacle.timeToReachTarget = timeToReachTarget;
+                    tentacle.timeToRetreat = timeToRetreat;
+                    tentacle.Attack();
+                    yield return new WaitForSeconds(Random.Range(0f, maxDelayBetweenTentaclesAttacks));
+                }
             }
             yield return new WaitForSeconds(Random.Range(minBossWavesDelay, maxBossWavesDelay));
         }

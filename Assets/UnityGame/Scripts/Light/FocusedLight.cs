@@ -20,16 +20,16 @@ public class FocusedLight : LightSource
             reactToFocusedLight.isInFocusedLight = true;
         }
     }
-    protected void OnTriggerStay2D(Collider2D collision)
+    protected override void OnTriggerStay2D(Collider2D collision)
     {
+        base.OnTriggerStay2D(collision);
         if (collision.TryGetComponent(out IEtherContainer etherContainer))
         {
             etherContainer.SpawnEtherParticle();
         }
     }
-    protected override void OnTriggerExit2D(Collider2D collision)
+    protected void OnTriggerExit2D(Collider2D collision)
     {
-        base.OnTriggerExit2D(collision);
         if (collision.TryGetComponent(out IReactToFocusedLight reactToFocusedLight))
         {
             reactToFocusedLight.isInFocusedLight = false;

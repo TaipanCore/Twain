@@ -33,6 +33,7 @@ public class ShardSlot : MonoBehaviour
             requiredShard.GetComponent<ParticleSystem>().Stop();
             requiredShard.GetComponent<SimpleAnimator>().Restart();
             requiredShard.GetComponent<ShardSounds>().PlayMoveToSlotSound();
+            requiredShard.GetComponent<Collider2D>().enabled = false;
             OnGetShard?.Invoke();
         });
     }

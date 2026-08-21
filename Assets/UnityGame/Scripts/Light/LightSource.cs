@@ -1,9 +1,13 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LightSource : MonoBehaviour
 {
     [SerializeField] private bool isAggroTrigger;
     protected float range;
+
+    private Dictionary<DarknessDeath, bool> charactersInLight = new ();
     
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,16 +18,42 @@ public class LightSource : MonoBehaviour
                 ableAggro.isAggro = true;
             }
         }
-        if (collision.TryGetComponent(out DarknessDeath darknessDeath))
+        
+    }
+    
+    protected virtual void FixedUpdate()
+    {
+        DarknessDeath[] keys = charactersInLight.Keys.ToArray();
+        foreach (DarknessDeath key in keys)
         {
-            darknessDeath.EnterLight(this);
+            if (charactersInLight.TryGetValue(key, out bool value))
+            {
+                if (!value)
+                {
+                    key.ExitLight(this);
+                    charactersInLight.Remove(key);
+                }
+                else
+                {
+                    charactersInLight[key] = false;
+                }
+            }
         }
     }
-    protected virtual void OnTriggerExit2D(Collider2D collision)
+
+    protected virtual void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out DarknessDeath darknessDeath))
         {
-            darknessDeath.ExitLight(this);
+            if (!charactersInLight.ContainsKey(darknessDeath))
+            {
+                darknessDeath.EnterLight(this);
+                charactersInLight.Add(darknessDeath, true);
+            }
+            else
+            {
+                charactersInLight[darknessDeath] = true;
+            }
         }
     }
     

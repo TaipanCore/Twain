@@ -84,7 +84,7 @@ public class ShrineOfBalanceBehaviour : MonoBehaviour, ISaveLoadObject
     
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (G.input.interactiveBtnDown && !G.characters.hasEquilibriumCharge)
+        if (G.input.interactiveBtnDown && !G.characters.hasEquilibriumCharge && isCharged)
         {
             hintsTrigger.btnFirstActivated = true;
             G.characters.hasEquilibriumCharge = true;
