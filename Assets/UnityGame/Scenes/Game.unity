@@ -7280,7 +7280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259ec77281a162647826c470aa603360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInEquilibriumForm: 15
+  timeInEquilibriumForm: 20
   _damage: 50
   attackCooldown: 2
   shootCooldown: 4
@@ -158488,7 +158488,7 @@ MonoBehaviour:
   equilibrium: {fileID: 259643167}
   lightSide: {fileID: 124919180}
   darkSide: {fileID: 840240922}
-  uniteDistance: 1.5
+  uniteDistance: 3.5
   spawnPoint: {fileID: 472732697}
   currentCharacter: {fileID: 0}
   isUnited: 0
